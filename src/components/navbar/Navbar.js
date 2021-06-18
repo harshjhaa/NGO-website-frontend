@@ -25,7 +25,7 @@ const Navbar = (props) => {
         </nav>
         <div class="nav-bottom-container">
             <div class="nav-bottom">
-                <img class="cts-logo-text" src="images/logo.png" />
+                <img class="nav-logo" src="images/logo.png" />
                 <ul class="nav-bottom-list">
                     <div class="nav-bottom-list-content">
                         <li><a href="#">Home  </a></li>

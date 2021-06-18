@@ -7,7 +7,7 @@
     padding: 0px 145px;
   }
 
-  .nav-top i, li{
+  .nav-top-list i, li{
     font-weight: 600;
   }
   
@@ -39,27 +39,28 @@
   }
 
   .nav-bottom-container {
-    width: 100%;
-    background-color: whitesmoke;
-    z-index: 5;
     position: sticky;
-    position: -webkit-sticky;
     top: 0; /* required */
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 5;
   }
   
   .nav-bottom {
+    position: sticky;
+    top: 0; /* required */
     width: 80%;
-    height: 50px;
+    height: 80px;
     margin: auto;
-    background: whitesmoke;
+    background: #ffffff;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   
-  .cts-logo-text {
-    height: 45px;
-    width: 80px;
+  .nav-logo {
+    height: 75px;
+    width: 270px;
   }
   
   .nav-bottom-list {
@@ -108,8 +109,3 @@
     height: 17px;
     width: 12px;
   }
-  
-  // .nav-bottom-list li:hover {
-  //   background-color: #0000b3;
-  //   color: #ffffff;
-  // }

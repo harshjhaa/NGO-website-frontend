@@ -4,19 +4,35 @@ import "./Home.scss";
 const Home = (props) => {
   return (
     <div>
-      <div class="feature-content-1"></div>
-      <h2>Images Side by Side</h2>
-      <p>Float images side by side:</p>
-      <div class="clearfix">
-        {/* <div class="img-container">
-          <img src="img_1.jpg" alt="abcd" style="width:100%" />
+      <div className="home-img-banner"></div>
+      <div className="home-feature-content-1">
+        <h3>Causes We Are Sering</h3>
+        <div className="home-causes-we-serving-container" id="style-1">
+          <div className="img-txt">
+            <img src="/images/img_1.jpg" alt="home_img-1" />
+            <h4>Help Senior Citizens</h4>
+          </div>
+          <div className="img-txt">
+            <img src="/images/img_2.jpg" alt="home_img-2" />
+            <h4>Help Children Education</h4>
+          </div>
+          <div className="img-txt">
+            <img src="/images/img_3.jpg" alt="home_img-3" />
+            <h4>Help Ecosystem</h4>
+          </div>
+          <div className="img-txt">
+            <img src="/images/img_1.jpg" alt="home_img-1" />
+            <h4>Help Senior Citizens</h4>
+          </div>
+          <div className="img-txt">
+            <img src="/images/img_2.jpg" alt="home_img-2" />
+            <h4>Help Children Education</h4>
+          </div>
+          <div className="img-txt">
+            <img src="/images/img_3.jpg" alt="home_img-3" />
+            <h4>Help Ecosystem</h4>
+          </div>
         </div>
-       /* <div class="img-container">
-          <img src="img_2.jpg" alt="qqdde"style="width:100%" />
-        </div>
-        <div class="img-container">
-          <img src="img_3.jpg" alt="NGo" style="width:100%" />
-        </div> */}
       </div>
     </div>
   );

@@ -1,6 +1,11 @@
+  header{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
   .nav-top {
     height: 33px;
-    background: #cc0000;
+    background: #FF5C5C;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,16 +44,12 @@
   }
 
   .nav-bottom-container {
-    position: sticky;
-    top: 0; /* required */
     width: 100%;
     background-color: #ffffff;
     z-index: 5;
   }
   
   .nav-bottom {
-    position: sticky;
-    top: 0; /* required */
     width: 80%;
     height: 80px;
     margin: auto;
@@ -82,21 +83,26 @@
   
   .nav-bottom-list li {
     list-style-type: none;
-    margin-left: 10px;
     padding: 10px;
     transition: 0.5s;
     font-size: 14px;
   }
   
+  .nav-bottom-list li:hover{
+    font-size: 21px;
+  }
+
   .nav-bottom-list li a {
     text-decoration: none;
     color: inherit;
   }
 
   #nav-donate{
-    background: #e50000;
-    padding: 5px 30px;
+    background: #FF5C5C;
+    color: #ffffff;
+    padding: 8px 30px;
     border-radius: 20px;
+    padding-bottom: 10px;
   }
   
   .triangle-img-down {

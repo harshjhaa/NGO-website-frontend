@@ -23,6 +23,7 @@ const Navbar = (props) => {
                 </div>
             </div>
         </nav>
+        <div>
         <div class="nav-bottom-container">
             <div class="nav-bottom">
                 <img class="nav-logo" src="images/logo.png" />
@@ -34,12 +35,13 @@ const Navbar = (props) => {
                         <li><a href="#">About Us  </a></li>
                         <li><a href="#">Contact Us  </a></li>
                         <li><a href="#">Our Partners  </a></li>
-                        <li><a id="nav-donate" href="#">Donate  </a></li>
+                        <li><a id="nav-donate" href="#">Donate</a></li>
                     </div>
                     <img src="option-icon.PNG" />
                 </ul>
             </div>
         </div >
+        </div>
     </header>
     );
 };

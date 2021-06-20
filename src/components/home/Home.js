@@ -5,6 +5,7 @@ const Home = (props) => {
   return (
     <div>
       <div className="home-img-banner"></div>
+      <marquee width="60%" direction="right" height="10px"><h4>Hi there</h4></marquee>
       <div className="home-feature-content-1">
         <h3>Causes We Are Sering</h3>
         <div className="home-causes-we-serving-container" id="style-1">

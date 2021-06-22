@@ -37,7 +37,10 @@ const Home = (props) => {
   return (
     <div>
       <div className="home-img-banner"></div>
-      <marquee width="60%" direction="right" height="10px"><h4>Hi there</h4></marquee>
+      <h2>
+        {" "}
+        <marquee direction="right"><h1>Your donation and contribution can make a huge difference.</h1></marquee>
+      </h2>
       <div className="home-feature-content-1">
         <h3>Causes We Are Serving</h3>
         <div className="home-causes-we-serving-container" id="style-1">
@@ -69,11 +72,12 @@ const Home = (props) => {
           </Carousel>
         </div>
       </div>
-      <div className="home-feature-content-2">
-        <div className="home-feature-content-2-container">
-          <div className="img-txt-container">
+      <div className="home-feature-content-2 flex-col">
+        <div className="col-left">
+          <div className="home-feature-content-2-container">
+            {/* <div className="img-txt-container"> */}
             <img src="/images/img_1.jpg" alt="home_img-1" />
-            <div className="txt-container">
+            {/* <div className="txt-container">
               <h4>Help Senior Citizens</h4>
               <p>
                 The “new” old age means that people are living longer than ever
@@ -82,13 +86,13 @@ const Home = (props) => {
                 spend years dependent on others for the most basic needs. That
                 burden falls to their baby boomer children.”
               </p>
-            </div>
+            </div> */}
+            {/* </div> */}
           </div>
-        </div>
-        <div className="home-feature-content-2-container">
-          <div className="img-txt-container">
+          <div className="home-feature-content-2-container">
+            {/* <div className="img-txt-container"> */}
             <img src="/images/img_2.jpg" alt="home_img-1" />
-            <div className="txt-container">
+            {/* <div className="txt-container">
               <h4>Help Senior Citizens</h4>
               <p>
                 The “new” old age means that people are living longer than ever
@@ -97,13 +101,13 @@ const Home = (props) => {
                 spend years dependent on others for the most basic needs. That
                 burden falls to their baby boomer children.”
               </p>
-            </div>
+            </div> */}
+            {/* </div> */}
           </div>
-        </div>
-        <div className="home-feature-content-2-container">
-          <div className="img-txt-container">
+          <div className="home-feature-content-2-container">
+            {/* <div className="img-txt-container"> */}
             <img src="/images/img_3.jpg" alt="home_img-1" />
-            <div className="txt-container">
+            {/* <div className="txt-container">
               <h4>Help Senior Citizens</h4>
               <p>
                 The “new” old age means that people are living longer than ever
@@ -112,9 +116,18 @@ const Home = (props) => {
                 spend years dependent on others for the most basic needs. That
                 burden falls to their baby boomer children.”
               </p>
-            </div>
+            </div> */}
+            {/* </div> */}
           </div>
         </div>
+        <div className="col-right"><h1>Our Mission
+                 To empower individuals, families, communities and society
+                 with prevention and intervention skills to reduce the occurrence
+                 of child sexual abuse and heal its psychological, social, sexual and physical consequences.</h1>
+        <h2>It is an initiative taken by the Truly helpfoundation, to promote environmental protection.
+             We strive for Undeserved and neglected communities. Become A Volunteer. See News.
+              Make A Donation. Highlights: Annual Reports Available, Volunteering Option Available.</h2>
+     </div>
       </div>
       {/* <div className="home-feature-content-row-container">
         <img src="/images/img_2.jpg" alt="image" />
@@ -185,11 +198,13 @@ const Home = (props) => {
               <a href="#" class="home-feature-content-button">
                 LEARN MORE
               </a>
+              
             </div>
           </div>
         </div>
       </div> */}
     </div>
+    
   );
 };
 

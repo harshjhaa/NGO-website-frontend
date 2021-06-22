@@ -9,11 +9,18 @@
 
 //home page--CSS
 
+.home-marquee{
+  h2{
+    margin-top: 2px;
+  }
+}
+
 .home-feature-content-1 {
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  margin-bottom: 30px;
 
   .sc-AxjAm.lhFzqP.rec.rec-arrow.rec.rec-arrow-right,
   .sc-AxjAm.lhFzqP.rec.rec-arrow.rec.rec-arrow-left {

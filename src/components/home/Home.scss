@@ -9,8 +9,8 @@
 
 //home page--CSS
 
-.home-marquee{
-  h2{
+.home-marquee {
+  h2 {
     margin-top: 2px;
   }
 }
@@ -151,5 +151,19 @@
     display: flex;
     flex-direction: column;
     padding-left: 20px;
+  }
+  .col-right {
+    margin: 100px 30px 100px 200px;
+    h1 {
+      text-align: center;
+      font-family: 'Work Sans', sans-serif;
+    }
+    p {
+      line-height: 35px;
+      padding: 0 110px;
+      text-align: center;
+      margin-top: 40px;
+      font-family: 'Work Sans', sans-serif;
+    }
   }
 }

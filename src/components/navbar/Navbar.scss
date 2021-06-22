@@ -1,4 +1,8 @@
 //nav-top starts
+.nav-top-container,.nav-bottom-container{
+  overflow-x: auto;
+}
+
 .nav-top-container {
   z-index: 99999;
   height: 33px;
@@ -45,18 +49,17 @@ li {
 //nav-top starts
 .nav-bottom-container {
   z-index: 99999;
-  position: -webkit-sticky;
   position: sticky;
+  position: -webkit-sticky;
   top: 0;
   width: 100%;
   background-color: #ffffff;
-  z-index: 5;
 }
 
 .nav-bottom {
   width: 80%;
-  height: 80px;
   margin: auto;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -124,19 +124,21 @@ const Home = (props) => {
             {/* </div> */}
           </div>
         </div>
-        <div className="col-right">
-          <h1>
-            Our Mission To empower individuals, families, communities and
-            society with prevention and intervention skills to reduce the
-            occurrence of child sexual abuse and heal its psychological, social,
-            sexual and physical consequences.
-          </h1>
-          <h2>
-            It is an initiative taken by the Truly helpfoundation, to promote
-            environmental protection. We strive for Undeserved and neglected
-            communities. Become A Volunteer. See News. Make A Donation.
-            Highlights: Annual Reports Available, Volunteering Option Available.
-          </h2>
+        <div className="col-right" data-aos="fade-up" data-aos-duration="1600">
+          <h1>WE HELP EACH</h1>
+          <div>
+            <p>
+            We strategically emphasize on promoting quality healthcare, inclusive education, gender equitable and 
+            sustainable livelihood opportunities and disaster relief and preparedness. Our efforts are focused to 
+            fight against underlying causes of poverty and ensuring a life of dignity for all women and girls from 
+            the most marginalised and vulnerable communities, especially among Dalits and Adivasis.
+            <br/>
+            <br/>
+            Our key programming approaches include social analysis and action, gender transformative change, building 
+            secure and resilient communities, promoting inclusive governance, advocacy on national and international 
+            platforms and facilitating links and dialogues between public, private and civil society.
+            </p>
+          </div>
         </div>
       </div>
       {/* <div className="home-feature-content-row-container">

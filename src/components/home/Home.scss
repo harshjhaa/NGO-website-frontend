@@ -1,6 +1,6 @@
 .home-img-banner {
-  height: 550px;
-  background-image: url(./homes.jpg);
+  height: 450px;
+  background-image: url(./home3.jpg);
   background-size: cover;
   display: flex;
   justify-content: space-between;
@@ -8,9 +8,6 @@
 }
 
 //home page--CSS
-* {
-  box-sizing: border-box;
-}
 
 .home-feature-content-1 {
   text-align: center;
@@ -19,10 +16,9 @@
   justify-content: space-around;
 
   .sc-AxjAm.lhFzqP.rec.rec-arrow.rec.rec-arrow-right,
-  .sc-AxjAm.lhFzqP.rec.rec-arrow.rec.rec-arrow-left{
-    background-color: #FF5C5C;
+  .sc-AxjAm.lhFzqP.rec.rec-arrow.rec.rec-arrow-left {
+    background-color: #ff5c5c;
   }
-
 }
 
 .img-txt {
@@ -32,10 +28,10 @@
 
 .home-causes-we-serving-container {
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   flex-direction: row;
   width: 84%;
-  margin: auto;
+  margin: 20px auto 0px auto;
   overflow-y: auto;
 }
 
@@ -115,12 +111,25 @@
   width: 50%;
 }
 
+.flex-col {
+  display: flex;
+  flex-direction: row;
+}
+
 .home-feature-content-2 {
+  height: 50%;
+  .col-left {
+    flex: 0.5;
+  }
+  .col-right {
+    flex: 1;
+  }
   .home-feature-content-2-container {
-    width: 52%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px auto;
     padding: 10px;
-    background-color: red;
-    margin: 20px 0;
   }
   .img-txt-container {
     display: flex;

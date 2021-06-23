@@ -131,7 +131,7 @@ const Home = (props) => {
             We strategically emphasize on promoting quality healthcare, inclusive education, gender equitable and 
             sustainable livelihood opportunities and disaster relief and preparedness. Our efforts are focused to 
             fight against underlying causes of poverty and ensuring a life of dignity for all women and girls from 
-            the most marginalised and vulnerable communities, especially among Dalits and Adivasis.
+            the most marginalised and vulnerable communities, especially from the backward casts.
             <br/>
             <br/>
             Our key programming approaches include social analysis and action, gender transformative change, building 

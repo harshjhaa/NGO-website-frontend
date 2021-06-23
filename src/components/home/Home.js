@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Carousel from "react-elastic-carousel";
 import gsap from "gsap";
+import AOS from 'aos';
 import "./Home.scss";
 
 const Home = (props) => {
@@ -34,15 +35,18 @@ const Home = (props) => {
       .to(div[2], { y: 0, x: 0, opacity: 0.05 }, "three");
   });
 
+  useEffect(()=>{
+    AOS.init();
+  },[])
+
   return (
     <div>
       <div className="home-img-banner"></div>
-      <h2>
-        {" "}
-        <marquee direction="right"><h1>Your donation and contribution can make a huge difference.</h1></marquee>
-      </h2>
-      <div className="home-feature-content-1">
-        <h3>Causes We Are Serving</h3>
+      <marquee className="home-marquee" direction="left">
+        <h2>Your donation and contribution can make a huge difference.</h2>
+      </marquee>
+      <div className="home-feature-content-1" data-aos="zoom-out-up" data-aos-duration="1000">
+        <h2>Causes We Are Serving</h2>
         <div className="home-causes-we-serving-container" id="style-1">
           <Carousel breakPoints={breakPoints} pagination={false}>
             <div className="img-txt">
@@ -120,14 +124,22 @@ const Home = (props) => {
             {/* </div> */}
           </div>
         </div>
-        <div className="col-right"><h1>Our Mission
-                 To empower individuals, families, communities and society
-                 with prevention and intervention skills to reduce the occurrence
-                 of child sexual abuse and heal its psychological, social, sexual and physical consequences.</h1>
-        <h2>It is an initiative taken by the Truly helpfoundation, to promote environmental protection.
-             We strive for Undeserved and neglected communities. Become A Volunteer. See News.
-              Make A Donation. Highlights: Annual Reports Available, Volunteering Option Available.</h2>
-     </div>
+        <div className="col-right" data-aos="fade-up" data-aos-duration="1600">
+          <h1>WE HELP EACH</h1>
+          <div>
+            <p>
+            We strategically emphasize on promoting quality healthcare, inclusive education, gender equitable and 
+            sustainable livelihood opportunities and disaster relief and preparedness. Our efforts are focused to 
+            fight against underlying causes of poverty and ensuring a life of dignity for all women and girls from 
+            the most marginalised and vulnerable communities, especially from the backward casts.
+            <br/>
+            <br/>
+            Our key programming approaches include social analysis and action, gender transformative change, building 
+            secure and resilient communities, promoting inclusive governance, advocacy on national and international 
+            platforms and facilitating links and dialogues between public, private and civil society.
+            </p>
+          </div>
+        </div>
       </div>
       {/* <div className="home-feature-content-row-container">
         <img src="/images/img_2.jpg" alt="image" />
@@ -204,7 +216,6 @@ const Home = (props) => {
         </div>
       </div> */}
     </div>
-    
   );
 };
 

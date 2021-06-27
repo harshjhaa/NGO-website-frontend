@@ -79,54 +79,18 @@ const Home = (props) => {
       <div className="home-feature-content-2 flex-col">
         <div className="col-left">
           <div className="home-feature-content-2-container">
-            {/* <div className="img-txt-container"> */}
             <img src="/images/img_1.jpg" alt="home_img-1" />
-            {/* <div className="txt-container">
-              <h4>Help Senior Citizens</h4>
-              <p>
-                The “new” old age means that people are living longer than ever
-                before. As this New York Times blog states: “Adults over age 80
-                are the fastest growing segment of the population; most will
-                spend years dependent on others for the most basic needs. That
-                burden falls to their baby boomer children.”
-              </p>
-            </div> */}
-            {/* </div> */}
           </div>
           <div className="home-feature-content-2-container">
-            {/* <div className="img-txt-container"> */}
             <img src="/images/img_2.jpg" alt="home_img-1" />
-            {/* <div className="txt-container">
-              <h4>Help Senior Citizens</h4>
-              <p>
-                The “new” old age means that people are living longer than ever
-                before. As this New York Times blog states: “Adults over age 80
-                are the fastest growing segment of the population; most will
-                spend years dependent on others for the most basic needs. That
-                burden falls to their baby boomer children.”
-              </p>
-            </div> */}
-            {/* </div> */}
           </div>
           <div className="home-feature-content-2-container">
-            {/* <div className="img-txt-container"> */}
             <img src="/images/img_3.jpg" alt="home_img-1" />
-            {/* <div className="txt-container">
-              <h4>Help Senior Citizens</h4>
-              <p>
-                The “new” old age means that people are living longer than ever
-                before. As this New York Times blog states: “Adults over age 80
-                are the fastest growing segment of the population; most will
-                spend years dependent on others for the most basic needs. That
-                burden falls to their baby boomer children.”
-              </p>
-            </div> */}
-            {/* </div> */}
           </div>
         </div>
-        <div className="col-right" data-aos="fade-up" data-aos-duration="1600">
-          <h1>WE HELP EACH</h1>
-          <div>
+        <div className="col-right">
+          <h1 data-aos="fade-down" data-aos-duration="1800">WE HELP EACH</h1>
+          <div data-aos="fade-up" data-aos-duration="1800">
             <p>
             We strategically emphasize on promoting quality healthcare, inclusive education, gender equitable and 
             sustainable livelihood opportunities and disaster relief and preparedness. Our efforts are focused to 
@@ -141,80 +105,149 @@ const Home = (props) => {
           </div>
         </div>
       </div>
-      {/* <div className="home-feature-content-row-container">
-        <img src="/images/img_2.jpg" alt="image" />
-        <div className="home-feature-content-info-container">
-          <div class="home-feature-content-info-box">
-            <p class="home-feature-content-info-heading">EDUCATING CHILDREN</p>
-            <br />
-            <h3 class="home-feature-content-info-subheading">
-              Discover why Gartner named us a Magic Quadrant Leader
-            </h3>
-            <p>
-              Cognizant’s excellence in public cloud services revolves around
-              our ability to deliver high-quality professional and managed
-              services that optimize the capabilities of the cloud platform.
-            </p>
-            <a href="#" class="home-feature-content-button">
-              VIEW MORE
-            </a>
+      <div class="home-currently-running-programs">
+        <h1 
+        data-aos="fade-up"
+        data-aos-anchor-placement="bottom-bottom"
+        data-aos-duration="1600">CURRENTLY RUNNING PROGRAMS</h1>
+        <div class="program-contents">
+            <div class="program-content" data-aos="flip-left" data-aos-duration="1600">
+                <div class="latest-thinking-image" style={{"background-image": "url(./video-call.jpg);"}}>
+                    <p class="feature-content-info-heading">PRESPECTIVES</p>
+                </div>
+                <div class="latest-thinking-info">
+                    <h3 class="latest-thinking-info-heading">Reinfrocing Productivity in the Age of Remote...</h3>
+                    <p class="latest-thinking-info-data">Thrust into large-scale work-from-home programs by
+                        COVID-19...</p>
+                </div>
+                <hr />
+                <div class="latest-thinking-footer">
+                    <div class="latest-thinking-footer-icons">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </div>
+                    <div class="latest-thinking-footer-arrow">
+                        <img src="triangle-right.PNG" />
+                    </div>
+                </div>
+            </div>
+            <div class="program-content" data-aos="flip-right" data-aos-duration="1600">
+                <div class="latest-thinking-image" style={{"background-image": "url(./video-call.jpg);"}}>
+                    <p class="feature-content-info-heading">WHITEPAPERS</p>
+                </div>
+                <div class="latest-thinking-info">
+                    <h3 class="latest-thinking-info-heading">Acceletate Healthy Outcome with Data and AI...</h3>
+                    <p class="latest-thinking-info-data">Learn how leading healthcare organizations are
+                        accelerating...</p>
+                </div>
+                <hr />
+                <div class="latest-thinking-footer">
+                    <div class="latest-thinking-footer-icons">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </div>
+                    <div class="latest-thinking-footer-arrow">
+                        <img src="triangle-right.PNG" />
+                    </div>
+                </div>
+            </div>
+            <div class="program-content" data-aos="flip-left" data-aos-duration="1600">
+                <div class="latest-thinking-image" style={{"background-image": "url(./video-call.jpg);"}}>
+                    <p class="feature-content-info-heading">PRESPECTIVES</p>
+                </div>
+                <div class="latest-thinking-info">
+                    <h3 class="latest-thinking-info-heading">Reinventing Clinical Trial for a New...</h3>
+                    <p class="latest-thinking-info-data">As curent social distancing guidelines prevent
+                        face-to-face...</p>
+                </div>
+                <hr />
+                <div class="latest-thinking-footer">
+                    <div class="latest-thinking-footer-icons">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </div>
+                    <div class="latest-thinking-footer-arrow">
+                        <img src="triangle-right.PNG" />
+                    </div>
+                </div>
+            </div>
+            <div class="program-content" data-aos="flip-right" data-aos-duration="1600">
+                <div class="latest-thinking-image" style={{"background-image": "url(./video-call.jpg);"}}>
+                    <p class="feature-content-info-heading">WHITEPAPERS</p>
+                </div>
+                <div class="latest-thinking-info">
+                    <h3 class="latest-thinking-info-heading">Decision-Making a New Frontier for...</h3>
+                    <p class="latest-thinking-info-data">Digital process automation is a forward-looking,
+                        practical...</p>
+                </div>
+                <hr />
+                <div class="latest-thinking-footer">
+                    <div class="latest-thinking-footer-icons">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </div>
+                    <div class="latest-thinking-footer-arrow">
+                        <img src="triangle-right.PNG" />
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div className="home-testimonial-container">
+        <h1 data-aos="fade-down" data-aos-duration="1500">TESTIMONIALS</h1>
+        <div className="testimonial-row">
+          <div className="testimonial-contents" data-aos="fade-right" data-aos-duration="1800">
+            <div className="testimonial-img">
+              <img src="/images/person1.jpg" alt="testimonial-person-img" />
+            </div>
+            <div className="testimonial-text">
+              Truly Help Foundation is one of the most orgnaised and well mentained NGO.
+              Their Covid Care India Program has helped many needful people during the pandemic.
+              I feel very obliged to be a part of such reputed NGO.
+            </div>
+          </div>
+          <div className="testimonial-contents" data-aos="fade-left" data-aos-duration="1800">
+            <div className="testimonial-img">
+              <img src="/images/person1.jpg" alt="testimonial-person-img" />
+            </div>
+            <div className="testimonial-text">
+              Truly Help Foundation is one of the most orgnaised and well mentained NGO.
+              Their Covid Care India Program has helped many needful people during the pandemic.
+              I feel very obliged to be a part of such reputed NGO.
+            </div>
+          </div>
+        </div>
+        <div className="testimonial-row">
+        <div className="testimonial-contents" data-aos="fade-right" data-aos-duration="1800">
+            <div className="testimonial-img">
+              <img src="/images/person1.jpg" alt="testimonial-person-img" />
+            </div>
+            <div className="testimonial-text">
+              Truly Help Foundation is one of the most orgnaised and well mentained NGO.
+              Their Covid Care India Program has helped many needful people during the pandemic.
+              I feel very obliged to be a part of such reputed NGO.
+            </div>
+          </div>
+          <div className="testimonial-contents" data-aos="fade-left" data-aos-duration="1800">
+            <div className="testimonial-img">
+              <img src="/images/person1.jpg" alt="testimonial-person-img" />
+            </div>
+            <div className="testimonial-text">
+              Truly Help Foundation is one of the most orgnaised and well mentained NGO.
+              Their Covid Care India Program has helped many needful people during the pandemic.
+              I feel very obliged to be a part of such reputed NGO.
+            </div>
           </div>
         </div>
       </div>
-      <div className="home-feature-content-column-container">
-        <div class="home-feature-content-column-container">
-          <div class="home-feature-content-column home-feature-content-col-1">
-            <div class="home-feature-content-3-img">
-              <img
-                src="/images/img_2.jpg"
-                height="320"
-                width="100%"
-                alt="image"
-              />
-            </div>
-            <div class="home-feature-content-info">
-              <p class="home-feature-content-info-heading">SPECIAL REPORT</p>
-              <br />
-              <h3 class="home-feature-content-info-subheading">
-                Responding to COVID-19
-              </h3>
-              <p>
-                Keeping people healthy (and businesses running) requires these
-                three essential tools: information, preparedness and compassion.
-              </p>
-              <a href="#" class="home-feature-content-button">
-                LEARN MORE
-              </a>
-            </div>
-          </div>
-          <div class="home-feature-content-column home-feature-content-col-2">
-            <div class="home-feature-content-3-img">
-              <img
-                src="/images/img_2.jpg"
-                height="320"
-                width="100%"
-                alt="image"
-              />
-            </div>
-            <div class="home-feature-content-info">
-              <p class="home-feature-content-info-heading">PERSPECTIVES</p>
-              <br />
-              <h3 class="home-feature-content-info-subheading">
-                Tomorrow’s jobs, shaped by COVID-19
-              </h3>
-              <p>
-                Across the U.S. the labor market has experienced a
-                pandemic-induced course correction. Our Jobs of the Future Index
-                highlights those changes.
-              </p>
-              <a href="#" class="home-feature-content-button">
-                LEARN MORE
-              </a>
-              
-            </div>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 };

@@ -44,6 +44,34 @@
 }
 
 .footer-container {
-  height: 150px;
+  height: 82px;
   background-color: #ff5c5c;
+  display: flex;
+  justify-content: flex-end;
+  .footer-contents{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+  }
+  .footer-list{
+    margin-bottom: 0px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+  }
+  .footer-list li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 13.5px;
+  }
+  .gap{
+    margin: 0px 10px;
+    color: #fff;
+  }
+  .copyright{
+    display: flex;
+    justify-content: flex-end;
+    color: #fff;
+    font-size: 13px;
+  }
 }

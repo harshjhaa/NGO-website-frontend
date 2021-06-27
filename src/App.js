@@ -10,6 +10,7 @@ import Donate from "./components/donate/Donate";
 import Partners from "./components/our_partners/Partners";
 import ContactUs from "./components/contact_us/ContactUs";
 import Volunteer from "./components/volunteer/Volunteer";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/volunteer" component={Volunteer} />
           <Route path="/contact-us" component={ContactUs} />
         </Switch>
+        <Route component={Footer} />
       </div>
     </Router>
   );

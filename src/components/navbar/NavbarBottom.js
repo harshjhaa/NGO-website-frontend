@@ -6,7 +6,9 @@ const NavbarBottom = () => {
   return (
     <div className="nav-bottom-container">
       <div className="nav-bottom">
-        <img className="nav-logo" alt="logo" src="images/logo.png" />
+        <Link to="/">
+          <img className="nav-logo" alt="logo" src="images/logo.png" /> 
+        </Link>      
         <ul className="nav-bottom-list">
           <div className="nav-bottom-list-content">
             <li>

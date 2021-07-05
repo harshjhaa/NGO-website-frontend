@@ -1,33 +1,43 @@
-import "./App.css";
+import "./App.scss";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import NavbarTop from "./components/navbar/NavbarTop";
 import NavbarBottom from "./components/navbar/NavbarBottom";
 import Home from "./components/home/Home";
 import AboutUs from "./components/about_us/AboutUs";
-import ActiveCases from "./components/active_cases_emergency/ActiveCases";
+import ActiveCases from "./components/active_cases/ActiveCases";
 import Donate from "./components/donate/Donate";
-import Partners from "./components/our_partners/Partners";
+import OurWork from "./components/our_work/OurWork";
 import ContactUs from "./components/contact_us/ContactUs";
-import Volunteer from "./components/volunteer/Volunteer";
+import TheFellowship from "./components/the_fellowship/TheFellowship";
+import GetInvolved from "./components/get_involved/GetInvolved";
+import Blog from "./components/blog/Blog";
+import ProtectionPolicy from "./components/protection_policy/ProtectionPolicy";
 import Footer from "./components/footer/Footer";
 
 function App() {
+
   return (
     <Router>
       <div className="app">
         {/* <Route render={props => <Navbar {...props} />} /> */}
-        <Route component={NavbarTop} />
+        {/* <Route component={NavbarTop} /> */}
         <Route component={NavbarBottom} />
-        <Route exact path="/" component={Home} />
+        {/* <Route exact path="/" component={Home} /> */}
+        <Route exact path="/" component={OurWork} />
         <Switch>
+          {/* header-links */}
           <Route path="/about-us" component={AboutUs} />
-          <Route path="/active-cases-emergency" component={ActiveCases} />
+          <Route path="/the-fellowship" component={TheFellowship} />
+          <Route path="/active-cases" component={ActiveCases} />
+          <Route path="/get-involved" component={GetInvolved} />
           <Route path="/donate" component={Donate} />
-          <Route path="/our-partners" component={Partners} />
-          <Route path="/volunteer" component={Volunteer} />
+          {/* footer-links */}
+          <Route path="/blog" component={Blog} />
+          <Route path="/protection-policy" component={ProtectionPolicy} />
           <Route path="/contact-us" component={ContactUs} />
         </Switch>
+        <a className="whatsapp-logo" href="https://api.whatsapp.com/send?phone=9999820474&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." target='_blank'></a>
         <Route component={Footer} />
       </div>
     </Router>

@@ -1,13 +1,14 @@
 {
   "name": "client",
-  "homepage": "https://www.trulyhelpfoundation.com/",
   "version": "0.1.0",
+  "homepage": "https://trulyhelpfoundation.org",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "aos": "^2.3.4",
+    "font-awesome": "^4.7.0",
     "gsap": "^3.7.0",
     "jquery": "^3.6.0",
     "node-sass": "^6.0.0",

@@ -51,13 +51,16 @@
   .footer-contents{
     display: flex;
     flex-direction: column;
-    margin-right: 20px;
+    justify-content: space-around;
+    margin: 0px 20px;
+    width: 100%;
   }
   .footer-list{
     margin-bottom: 0px;
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
   }
   .footer-list li a{
     text-decoration: none;
@@ -70,8 +73,11 @@
   }
   .copyright{
     display: flex;
-    justify-content: flex-end;
-    color: #fff;
-    font-size: 13px;
+    justify-content: space-between;
+    a,p{
+      color: #fff;
+      font-size: 14px;
+      text-decoration: none;
+    }
   }
 }

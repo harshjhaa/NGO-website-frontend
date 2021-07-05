@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Volunteer = () => {
+const GetInvolved = () => {
     return (
         <div>
-            Volunteer
+            GetInvolved
         </div>
     );
 };
 
-export default Volunteer;
+export default GetInvolved;

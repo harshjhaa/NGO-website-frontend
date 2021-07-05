@@ -1,5 +1,6 @@
 //nav-top starts
-.nav-top-container,.nav-bottom-container{
+.nav-top-container,
+.nav-bottom-container {
   overflow-x: auto;
 }
 
@@ -25,7 +26,8 @@ li {
   display: flex;
 }
 
-.nav-top-list li, i {
+.nav-top-list li,
+i {
   list-style-type: none;
   margin-left: 15px;
   color: whitesmoke;
@@ -49,25 +51,26 @@ li {
 //nav-bottom starts
 .nav-bottom-container {
   z-index: 99999;
-  position: sticky;
-  position: -webkit-sticky;
-  top: -1px;
   width: 100%;
   background-color: #ffffff;
+  overflow-y: hidden;
 }
 
 .nav-bottom {
-  width: 80%;
-  margin: auto;
-  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  margin: auto;
+  height: 80px;
+  background-color: #fff;
 }
 
 .nav-logo {
-  height: 75px;
-  width: 270px;
+  height: 50px;
+  width: 235px;
   cursor: pointer;
 }
 
@@ -86,23 +89,59 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  .fa{
+    color: #000;
+    margin-left: 10px;
+  }
 }
 
 .nav-bottom-list li {
   list-style-type: none;
   padding: 10px;
   transition: 0.5s;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .nav-bottom-list li:hover {
-  font-size: 21px;
   color: #ff5c5c;
+  .fa{
+    color: #ff5c5c;
+  }
 }
 
 .nav-bottom-list li a {
   text-decoration: none;
   color: inherit;
+}
+
+.nav-tabs {
+  position: relative;
+  margin-right: 10px;
+}
+
+.nav-dropdown-menu {
+  display: none;
+  background-color: whitesmoke;
+  position: absolute;
+  width: 200px;
+  border-radius: 0px 10px 10px 10px;
+}
+
+.nav-tabs:hover {
+  background-color: whitesmoke;
+  .nav-dropdown-menu {
+    display: block;
+    transition-duration: 3s;
+  }
+}
+.nav-tabs:last-child:hover {
+  background-color: transparent;
+}
+
+.nav-dropdown-menu li {
+  font-size: 13px;
+  padding: 8px;
+  // width: max-content;
 }
 
 #nav-donate {

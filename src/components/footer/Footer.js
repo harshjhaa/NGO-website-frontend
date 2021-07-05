@@ -32,42 +32,20 @@ const Footer = () => {
         <div className="footer-contents">
           <ul className="footer-list">
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/blog">Blog</Link>
             </li>
             <div className="gap">|</div>
             <li>
-              <Link to="/active-cases-emergency">Active Cases</Link>
-            </li>
-            <div className="gap">|</div>
-            <li>
-              <Link to="/volunteer">Volunteer</Link>
-            </li>
-            <div className="gap">|</div>
-            <li>
-              <Link to="/about-us">About Us</Link>
+              <Link to="/protection-policy">T.H.F. Protection Policy</Link>
             </li>
             <div className="gap">|</div>
             <li>
               <Link to="/contact-us">Cotact Us</Link>
             </li>
-            <div className="gap">|</div>
-            <li>
-              <Link to="/our-partners">Our Partners</Link>
-            </li>
-            <li>
-              <Link to="/privacy-policy">Privacy Policy</Link>
-            </li>
-            <div className="gap">|</div>
-            <li>
-              <Link to="/terms-and-contditions">Terms and Conditions</Link>
-            </li>
-            <div className="gap">|</div>
-            <li>
-              <Link to="/faq">FAQs</Link>
-            </li>
           </ul>
           <div className="copyright">
-            <p>© 2021 Truly Help Foundation India. All Rights Reserved | Website Designing By Vision</p>
+            <a href="mailto:info@trulyhelpfoundation.org">MAIL US: info@trulyhelpfoundation.org</a>
+            <p>© 2021 Truly Help Foundation India. All Rights Reserved</p>
           </div>
         </div>
       </div>

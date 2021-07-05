@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import Carousel from "react-elastic-carousel";
 import Slider from '../image_slider/Slider'
+import Carousel from "react-elastic-carousel";
 import gsap from "gsap";
 import AOS from 'aos';
-import "./Home.scss";
+import "./OurWork.scss";
 
-const Home = (props) => {
+const OurWork = (props) => {
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
     { width: 550, itemsToShow: 2 },
@@ -253,4 +253,4 @@ const Home = (props) => {
   );
 };
 
-export default Home;
+export default OurWork;

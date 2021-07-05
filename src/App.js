@@ -37,7 +37,7 @@ function App() {
           <Route path="/protection-policy" component={ProtectionPolicy} />
           <Route path="/contact-us" component={ContactUs} />
         </Switch>
-        <a className="whatsapp-logo" href="https://api.whatsapp.com/send?phone=9999820474&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." target='_blank'></a>
+        <a className="whatsapp-logo" href="https://api.whatsapp.com/send?phone=+919315653969&text=Hi, I need some information!." target='_blank'></a>
         <Route component={Footer} />
       </div>
     </Router>

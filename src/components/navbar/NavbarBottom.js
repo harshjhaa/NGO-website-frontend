@@ -15,7 +15,7 @@ const NavbarBottom = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/active-cases-emergency">Active Cases</Link>
+              <Link to="/active-cases-emergency">ACTIVE CASES</Link>
             </li>
             <li>
               <Link to="/volunteer">Volunteer</Link>

@@ -9,13 +9,14 @@ const NavbarBottom = () => {
     <div className="nav-bottom-container">
       <div className="nav-bottom">
         <Link to="/">
-          <img className="nav-logo" src="/images/logo-3.jpg" alt="logo" />
+          {/* <img className="nav-logo" alt="logo" /> */}
+          <img className="nav-logo" src="/images/logo_header2.svg" alt="Logo" />
         </Link>
         <ul className="nav-bottom-list">
           <div className="nav-bottom-list-content">
             <div className="nav-tabs">
               <li>
-                <Link to="/">Our Work</Link>
+                <Link>OUR WORK</Link>
                 <i className="fa fa-caret-down"></i>
               </li>
               <div className="nav-dropdown-menu">
@@ -26,33 +27,30 @@ const NavbarBottom = () => {
                   <Link to="/education">EDUCATION</Link>
                 </li>
                 <li>
-                  <Link to="/public-health">PUBLIC HEALTH</Link>
-                </li>
-                <li>
-                  <Link to="/nutraition">NUTRAITION</Link>
+                  <Link to="/healthcare">HEALTHCARE</Link>
                 </li>
                 <li>
                   <Link to="/livelihoods">LIVELIHOODS</Link>
                 </li>
                 <li>
-                  <Link to="/sports-and-activities">SPORTS AND ACTIVITIES</Link>
+                  <Link to="/sports">SPORTS</Link>
                 </li>
                 <li>
                   <Link to="/humanitarian">HUMANITARIAN</Link>
-                </li>
-                <li>
-                  <Link to="/covid-relief">COVID-19 RELIEF</Link>
                 </li>
               </div>
             </div>
             <div className="nav-tabs">
               <li>
-                <Link to="/about-us">About Us</Link>
+                <Link to="/about-us">ABOUT US</Link>
                 <i className="fa fa-caret-down"></i>
               </li>
               <div className="nav-dropdown-menu">
                 <li>
-                  <Link to="/mission-and-vision">MISSION AND VISION</Link>
+                  <Link to="/mission-vision-values">MISSION, VISION AND VALUES</Link>
+                </li>
+                <li>
+                  <Link to="/our-approach">OUR APPROACH</Link>
                 </li>
                 <li>
                   <Link to="/our-team">OUR TEAM</Link>
@@ -69,17 +67,17 @@ const NavbarBottom = () => {
                 <li>
                   <Link to="/stories-of-change">STORIES OF CHANGE</Link>
                 </li>
+                <li>
+                  <Link to="/success-story">SUCCESS STORY</Link>
+                </li>
               </div>
             </div>
             <div className="nav-tabs">
               <li>
-                <Link to="/the-fellowship">The Fellowship</Link>
+                <Link to="/the-fellowship">THE FELLOWSHIP</Link>
                 <i className="fa fa-caret-down"></i>
               </li>
               <div className="nav-dropdown-menu">
-                <li>
-                  <Link to="/mission-and-vision">MISSION AND VISION</Link>
-                </li>
                 <li>
                   <Link to="/volunteering">VOLUNTEERING</Link>
                 </li>
@@ -90,21 +88,21 @@ const NavbarBottom = () => {
             </div>
             <div className="nav-tabs">
               <li>
-                <Link to="/active-cases">Active Cases</Link>
+                <Link to="/emergency">EMERGENCY</Link>
                 <i className="fa fa-caret-down"></i>
               </li>
               <div className="nav-dropdown-menu">
                 <li>
-                  <Link to="/emergency-causes">EMERGENCY CAUSES</Link>
+                  <Link to="/emergency-case">EMERGENCY CASE</Link>
                 </li>
                 <li>
-                  <Link to="/success-stories">SUCCESS STORIES</Link>
+                  <Link to="/covid-19-relief">COVID-19 RELIEF</Link>
                 </li>
               </div>
             </div>
             <div className="nav-tabs">
               <li>
-                <Link to="/get-involved">Get Involved</Link>
+                <Link to="/get-involved">GET INVOLVED</Link>
                 <i className="fa fa-caret-down"></i>
               </li>
               <div className="nav-dropdown-menu">
@@ -113,6 +111,9 @@ const NavbarBottom = () => {
                 </li>
                 <li>
                   <Link to="/our-donor">OUR DONOR</Link>
+                </li>
+                <li>
+                  <Link to="/legacy">LEGACY</Link>
                 </li>
                 <li>
                   <Link to="/partnerships">PARTNERSHIPS</Link>
@@ -133,7 +134,7 @@ const NavbarBottom = () => {
                   <Link to="/careers">CAREERS</Link>
                 </li>
                 <li>
-                  <Link to="/contact">CONTACT</Link>
+                  <Link to="/contact-us">CONTACT US</Link>
                 </li>
               </div>
             </div>
@@ -143,6 +144,15 @@ const NavbarBottom = () => {
                   Donate
                 </Link>
               </li>
+            </div>
+            <div className="nav-tab-social">
+              <div className="social-media-icons">
+                <a className="social-icons icon-twitter" href="/"></a>
+                <a className="social-icons icon-facebook" href="/"></a>
+                <a className="social-icons icon-linkedin" href="/"></a>
+                <a className="social-icons icon-instagram" href="/"></a>
+                <a className="social-icons icon-youtube" href="/"></a>
+              </div>
             </div>
           </div>
         </ul>

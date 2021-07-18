@@ -98,9 +98,54 @@
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 50%;
   display: inline-block;
+  transition: all 0.6s;
 }
 
 .active-dot,
 .dot:hover {
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+.banner-contents {
+  position: absolute;
+  z-index: 10;
+  margin-top: 20px;
+  margin-left: 80px;
+  h1 {
+    color: #fff;
+    font-family: "Bitter", serif;
+    font-size: 34px;
+  }
+  h3 {
+    color: #fff;
+    font-family: 'Padauk', sans-serif;
+  }
+  .inp-btn {
+    display: flex;
+    flex-direction: row;
+  }
+  .donate-inp-btn {
+    margin-left: 50px;
+    background-color: #097;
+    color: #fff;
+    border: black;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 0 15px;
+  }
+  .input-donate {
+    width: 198px;
+    height: 45px;
+    padding-left: 10px;
+    border-radius: 25px;
+    outline: none;
+    border: #000;
+    background-color: honeydew;
+    font-family: "Oxygen";
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 }

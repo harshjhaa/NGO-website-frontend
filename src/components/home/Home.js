@@ -46,6 +46,8 @@ const Home = (props) => {
       <marquee className="home-marquee" direction="left">
         <h2>Your donation and contribution can make a huge difference.</h2>
       </marquee>
+      <div>
+      </div>
       <div className="home-feature-content-1" data-aos="zoom-out-up" data-aos-duration="1000">
         <h2>Causes We Are Serving</h2>
         <div className="home-causes-we-serving-container" id="style-1">

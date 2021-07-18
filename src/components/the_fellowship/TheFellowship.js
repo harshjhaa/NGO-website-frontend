@@ -2,7 +2,7 @@ import React from 'react';
 
 const TheFellowship = () => {
     return (
-        <div>
+        <div className="margin-top-80">
             TheFellowship
         </div>
     );

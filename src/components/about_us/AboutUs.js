@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutUs = props => {
     return (
-        <div>
+        <div className="margin-top-80">
             About Us
         </div>
     );

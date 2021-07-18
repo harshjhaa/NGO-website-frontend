@@ -14,7 +14,7 @@ const OurWork = (props) => {
   ];
 
   useEffect(() => {
-    const div = document.querySelectorAll(".home-feature-content-2-container");
+    const div = document.querySelectorAll(".home-feature-content-3-container");
 
     gsap.set(div[1], { x: 100, opacity: 1 });
     gsap
@@ -41,13 +41,35 @@ const OurWork = (props) => {
   },[])
 
   return (
-    <div>
+    <div className="margin-top-80">
       <div className="home-img-banner"><Slider/></div>
-      <marquee className="home-marquee" direction="left">
+      {/* <marquee className="home-marquee" direction="left">
         <h2>Your donation and contribution can make a huge difference.</h2>
-      </marquee>
-      <div className="home-feature-content-1" data-aos="zoom-out-up" data-aos-duration="1000">
-        <h2>Causes We Are Serving</h2>
+      </marquee> */}
+      <div className="home-feature-content-1">
+        <h1>Dreaming of a Brighter Future</h1>
+        <div className="home-feature-content-1-container">
+          <div className="home-feature-content-1-vid">
+            {/* <img src="/images/vid_bck_1.jpg" alt="home_img-1" /> */}
+            <video src="/videos/feature_content_1_vid.mp4" width="400" height="300" autoplay="true" muted="true" loop="true"/>
+          </div>
+          <div className="home-feature-content-1-content">
+            <p>
+                Be it nutiriton, healthcare, education, 
+                <br/>
+                sports and response in the time,
+                <br/>
+                Truly Help Foundation 
+                <br/>
+                has been on the forefront, reshaping the lives 
+                <br/>
+                of millions children, women and youth.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="home-feature-content-2" data-aos="zoom-out-up" data-aos-duration="1000">
+        <h1>Causes We Are Serving</h1>
         <div className="home-causes-we-serving-container" id="style-1">
           <Carousel breakPoints={breakPoints} pagination={false}>
             <div className="img-txt">
@@ -77,15 +99,15 @@ const OurWork = (props) => {
           </Carousel>
         </div>
       </div>
-      <div className="home-feature-content-2 flex-col">
+      <div className="home-feature-content-3 flex-col">
         <div className="col-left">
-          <div className="home-feature-content-2-container">
+          <div className="home-feature-content-3-container">
             <img src="/images/img_1.jpg" alt="home_img-1" />
           </div>
-          <div className="home-feature-content-2-container">
+          <div className="home-feature-content-3-container">
             <img src="/images/img_2.jpg" alt="home_img-1" />
           </div>
-          <div className="home-feature-content-2-container">
+          <div className="home-feature-content-3-container">
             <img src="/images/img_3.jpg" alt="home_img-1" />
           </div>
         </div>

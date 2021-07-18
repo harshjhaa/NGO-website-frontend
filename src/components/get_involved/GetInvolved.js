@@ -2,7 +2,7 @@ import React from 'react';
 
 const GetInvolved = () => {
     return (
-        <div>
+        <div className="margin-top-80">
             GetInvolved
         </div>
     );

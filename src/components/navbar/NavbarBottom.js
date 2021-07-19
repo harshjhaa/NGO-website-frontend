@@ -147,11 +147,11 @@ const NavbarBottom = () => {
             </div>
             <div className="nav-tab-social">
               <div className="social-media-icons">
-                <a className="social-icons icon-twitter" href="/"></a>
-                <a className="social-icons icon-facebook" href="/"></a>
-                <a className="social-icons icon-linkedin" href="/"></a>
-                <a className="social-icons icon-instagram" href="/"></a>
-                <a className="social-icons icon-youtube" href="/"></a>
+                <a className="social-icons icon-twitter" href="https://twitter.com/trulyhelp" target="_blank"></a>
+                <a className="social-icons icon-facebook" href="https://www.facebook.com/trulyhelpfoundation" target="_blank"></a>
+                <a className="social-icons icon-linkedin" href="https://www.linkedin.com/company/truly-help-foundation5aba50213" target="_blank"></a>
+                <a className="social-icons icon-instagram" href="https://www.instagram.com/trulyhelpfoundation" target="_blank"></a>
+                <a className="social-icons icon-youtube" href="https://www.youtube.com/channel/UCRIQBzF05ms8IF13-2ER8VA/featured" target="_blank"></a>
               </div>
             </div>
           </div>

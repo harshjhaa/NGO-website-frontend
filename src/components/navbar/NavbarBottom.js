@@ -56,7 +56,7 @@ const NavbarBottom = () => {
                   <Link to="/our-team">OUR TEAM</Link>
                 </li>
                 <li>
-                  <Link to="/financial">FINANCIAL</Link>
+                  <Link to="/financials">FINANCIALS</Link>
                 </li>
                 <li>
                   <Link to="/documents">DOCUMENTS</Link>
@@ -74,7 +74,7 @@ const NavbarBottom = () => {
             </div>
             <div className="nav-tabs">
               <li>
-                <Link to="/the-fellowship">THE FELLOWSHIP</Link>
+                <Link to="/thf-fellowship">THF FELLOWSHIP</Link>
                 <i className="fa fa-caret-down"></i>
               </li>
               <div className="nav-dropdown-menu">

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import Slider from '../image_slider/Slider'
 import Carousel from "react-elastic-carousel";
 import gsap from "gsap";
@@ -47,13 +48,13 @@ const OurWork = (props) => {
         <h2>Your donation and contribution can make a huge difference.</h2>
       </marquee> */}
       <div className="home-feature-content-1">
-        <h1>Dreaming of a Brighter Future</h1>
         <div className="home-feature-content-1-container">
           <div className="home-feature-content-1-vid">
             {/* <img src="/images/vid_bck_1.jpg" alt="home_img-1" /> */}
             <video src="/videos/feature_content_1_vid.mp4" width="400" height="300" autoplay="true" muted="true" loop="true"/>
           </div>
           <div className="home-feature-content-1-content">
+            <h1>Dreaming of a Brighter Future</h1>
             <p>
                 Be it nutiriton, healthcare, education, 
                 <br/>
@@ -68,36 +69,103 @@ const OurWork = (props) => {
           </div>
         </div>
       </div>
-      <div className="home-feature-content-2" data-aos="zoom-out-up" data-aos-duration="1000">
+      <div className="hr-line">
+        <hr/>
+      </div>
+      {/* <div className="home-feature-content-2" data-aos="zoom-out-up" data-aos-duration="1000">
         <h1>Causes We Are Serving</h1>
         <div className="home-causes-we-serving-container" id="style-1">
           <Carousel breakPoints={breakPoints} pagination={false}>
             <div className="img-txt">
               <img src="/images/img_1.jpg" alt="home_img-1" />
-              <h4>Help Senior Citizens</h4>
+              <h4>EDUCATION</h4>
+              <button className="btn"><Link className="btn" to="/education">EXPLORE</Link></button>
             </div>
             <div className="img-txt">
               <img src="/images/img_2.jpg" alt="home_img-2" />
-              <h4>Help Children Education</h4>
+              <h4>HEALTHCARE</h4>
+              <button className="btn"><Link className="btn" to="/healthcare">EXPLORE</Link></button>
             </div>
             <div className="img-txt">
               <img src="/images/img_3.jpg" alt="home_img-3" />
-              <h4>Help Ecosystem</h4>
+              <h4>LIVELIHOODS</h4>
+              <button className="btn"><Link className="btn" to="/livelihoods">EXPLORE</Link></button>
             </div>
             <div className="img-txt">
               <img src="/images/img_1.jpg" alt="home_img-1" />
-              <h4>Help Senior Citizens</h4>
+              <h4>SPORTS</h4>
+              <button className="btn"><Link className="btn" to="/sports">EXPLORE</Link></button>
             </div>
             <div className="img-txt">
               <img src="/images/img_2.jpg" alt="home_img-2" />
-              <h4>Help Children Education</h4>
-            </div>
-            <div className="img-txt">
-              <img src="/images/img_3.jpg" alt="home_img-3" />
-              <h4>Help Ecosystem</h4>
+              <h4>HUMANITARIAN</h4>
+              <button className="btn"><Link className="btn" to="/humanitarian">EXPLORE</Link></button>
             </div>
           </Carousel>
         </div>
+      </div> */}
+      <div className="causes-we-are-serving-container" data-aos="fade-up" data-aos-duration="1000">
+        <h1>CAUSES WE ARE SERVING</h1> 
+        <div className="causes-we-are-serving-contents">
+          <div className="box box-up box-border-red" >
+            <div className="content">
+              <img src="/images/img_2.jpg" alt="home_img-1" />
+              <h4>EDUCATION</h4>
+              <p>
+                Education is one of the main piller of the society, without it
+                India's future is lost!
+              </p>
+              <button className="btn btn-red"><Link className="btn" to="/education">EXPLORE</Link></button>
+            </div>
+          </div>
+          <div className="box box-down box-border-green" >
+            <div className="content">
+              <img src="/images/img_1.jpg" alt="home_img-2" />
+              <h4>HEALTHCARE</h4>
+              <p>
+               Good health makes people strong, increaes thier efficient and
+               inturn benefits society!
+              </p>
+              <button className="btn btn-green"><Link className="btn" to="/healthcare">EXPLORE</Link></button>
+            </div>
+          </div>
+          <div className="box box-up box-border-voilet" >
+            <div className="content">
+              <img src="/images/img_3.jpg" alt="home_img-2" />
+              <h4>LIVELIHOODS</h4>
+              <p>
+               Imporvement in the livelihood lead to the upgradation of the standard
+               of living!
+              </p>
+              <button className="btn btn-voilet"><Link className="btn" to="/livelihoods">EXPLORE</Link></button>
+            </div>
+          </div>
+          <div className="box box-down box-border-orange" >
+            <div className="content">
+              <img src="/images/img_3.jpg" alt="home_img-2" />
+              <h4>SPORTS</h4>
+              <p>
+               Sports helps to evolve the overall mentality of the person by making them
+               active, alert and friendly!
+              </p>
+              <button className="btn btn-orange"><Link className="btn" to="/sports">EXPLORE</Link></button>
+            </div>
+          </div>
+          <div className="box box-up box-border-blue" >
+            <div className="content">
+              <img src="/images/img_3.jpg" alt="home_img-2" />
+              <h4>HUMANITARIAN</h4>
+              <p>
+               Human wlfare is one of the important factor in keeping the society balanced,
+               evolving from time to time!
+              </p>
+              <button className="btn btn-blue"><Link className="btn" to="/humanitarian">EXPLORE</Link></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="hr-line">
+        <hr/>
       </div>
       <div className="home-feature-content-3 flex-col">
         <div className="col-left">
@@ -128,101 +196,107 @@ const OurWork = (props) => {
           </div>
         </div>
       </div>
-      <div class="home-currently-running-programs">
+      <div className="hr-line">
+        <hr/>
+      </div>
+      <div className="home-currently-running-programs">
         <h1 
         data-aos="fade-up"
         data-aos-anchor-placement="bottom-bottom"
         data-aos-duration="1600">CURRENTLY RUNNING PROGRAMS</h1>
-        <div class="program-contents">
-            <div class="program-content" data-aos="flip-left" data-aos-duration="1600">
-                <div class="latest-thinking-image" style={{"background-image": "url(./video-call.jpg);"}}>
-                    <p class="feature-content-info-heading">PRESPECTIVES</p>
+        <div className="program-contents">
+            <div className="program-content" data-aos="flip-left" data-aos-duration="1600">
+                <div className="latest-thinking-image" style={{"background-image": "url(./video-call.jpg);"}}>
+                    <p className="feature-content-info-heading">PRESPECTIVES</p>
                 </div>
-                <div class="latest-thinking-info">
-                    <h3 class="latest-thinking-info-heading">Reinfrocing Productivity in the Age of Remote...</h3>
-                    <p class="latest-thinking-info-data">Thrust into large-scale work-from-home programs by
+                <div className="latest-thinking-info">
+                    <h3 className="latest-thinking-info-heading">Reinfrocing Productivity in the Age of Remote...</h3>
+                    <p className="latest-thinking-info-data">Thrust into large-scale work-from-home programs by
                         COVID-19...</p>
                 </div>
                 <hr />
-                <div class="latest-thinking-footer">
-                    <div class="latest-thinking-footer-icons">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                <div className="latest-thinking-footer">
+                    <div className="latest-thinking-footer-icons">
+                        <i className="fa fa-envelope" aria-hidden="true"></i>
+                        <i className="fa fa-twitter" aria-hidden="true"></i>
+                        <i className="fa fa-facebook" aria-hidden="true"></i>
+                        <i className="fa fa-linkedin" aria-hidden="true"></i>
                     </div>
-                    <div class="latest-thinking-footer-arrow">
+                    <div className="latest-thinking-footer-arrow">
                         <img src="triangle-right.PNG" />
                     </div>
                 </div>
             </div>
-            <div class="program-content" data-aos="flip-right" data-aos-duration="1600">
-                <div class="latest-thinking-image" style={{"background-image": "url(./video-call.jpg);"}}>
-                    <p class="feature-content-info-heading">WHITEPAPERS</p>
+            <div className="program-content" data-aos="flip-right" data-aos-duration="1600">
+                <div className="latest-thinking-image" style={{"background-image": "url(./video-call.jpg);"}}>
+                    <p className="feature-content-info-heading">WHITEPAPERS</p>
                 </div>
-                <div class="latest-thinking-info">
-                    <h3 class="latest-thinking-info-heading">Acceletate Healthy Outcome with Data and AI...</h3>
-                    <p class="latest-thinking-info-data">Learn how leading healthcare organizations are
+                <div className="latest-thinking-info">
+                    <h3 className="latest-thinking-info-heading">Acceletate Healthy Outcome with Data and AI...</h3>
+                    <p className="latest-thinking-info-data">Learn how leading healthcare organizations are
                         accelerating...</p>
                 </div>
                 <hr />
-                <div class="latest-thinking-footer">
-                    <div class="latest-thinking-footer-icons">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                <div className="latest-thinking-footer">
+                    <div className="latest-thinking-footer-icons">
+                        <i className="fa fa-envelope" aria-hidden="true"></i>
+                        <i className="fa fa-twitter" aria-hidden="true"></i>
+                        <i className="fa fa-facebook" aria-hidden="true"></i>
+                        <i className="fa fa-linkedin" aria-hidden="true"></i>
                     </div>
-                    <div class="latest-thinking-footer-arrow">
+                    <div className="latest-thinking-footer-arrow">
                         <img src="triangle-right.PNG" />
                     </div>
                 </div>
             </div>
-            <div class="program-content" data-aos="flip-left" data-aos-duration="1600">
-                <div class="latest-thinking-image" style={{"background-image": "url(./video-call.jpg);"}}>
-                    <p class="feature-content-info-heading">PRESPECTIVES</p>
+            <div className="program-content" data-aos="flip-left" data-aos-duration="1600">
+                <div className="latest-thinking-image" style={{"background-image": "url(./video-call.jpg);"}}>
+                    <p className="feature-content-info-heading">PRESPECTIVES</p>
                 </div>
-                <div class="latest-thinking-info">
-                    <h3 class="latest-thinking-info-heading">Reinventing Clinical Trial for a New...</h3>
-                    <p class="latest-thinking-info-data">As curent social distancing guidelines prevent
+                <div className="latest-thinking-info">
+                    <h3 className="latest-thinking-info-heading">Reinventing Clinical Trial for a New...</h3>
+                    <p className="latest-thinking-info-data">As curent social distancing guidelines prevent
                         face-to-face...</p>
                 </div>
                 <hr />
-                <div class="latest-thinking-footer">
-                    <div class="latest-thinking-footer-icons">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                <div className="latest-thinking-footer">
+                    <div className="latest-thinking-footer-icons">
+                        <i className="fa fa-envelope" aria-hidden="true"></i>
+                        <i className="fa fa-twitter" aria-hidden="true"></i>
+                        <i className="fa fa-facebook" aria-hidden="true"></i>
+                        <i className="fa fa-linkedin" aria-hidden="true"></i>
                     </div>
-                    <div class="latest-thinking-footer-arrow">
+                    <div className="latest-thinking-footer-arrow">
                         <img src="triangle-right.PNG" />
                     </div>
                 </div>
             </div>
-            <div class="program-content" data-aos="flip-right" data-aos-duration="1600">
-                <div class="latest-thinking-image" style={{"background-image": "url(./video-call.jpg);"}}>
-                    <p class="feature-content-info-heading">WHITEPAPERS</p>
+            <div className="program-content" data-aos="flip-right" data-aos-duration="1600">
+                <div className="latest-thinking-image" style={{"background-image": "url(./video-call.jpg);"}}>
+                    <p className="feature-content-info-heading">WHITEPAPERS</p>
                 </div>
-                <div class="latest-thinking-info">
-                    <h3 class="latest-thinking-info-heading">Decision-Making a New Frontier for...</h3>
-                    <p class="latest-thinking-info-data">Digital process automation is a forward-looking,
+                <div className="latest-thinking-info">
+                    <h3 className="latest-thinking-info-heading">Decision-Making a New Frontier for...</h3>
+                    <p className="latest-thinking-info-data">Digital process automation is a forward-looking,
                         practical...</p>
                 </div>
                 <hr />
-                <div class="latest-thinking-footer">
-                    <div class="latest-thinking-footer-icons">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                <div className="latest-thinking-footer">
+                    <div className="latest-thinking-footer-icons">
+                        <i className="fa fa-envelope" aria-hidden="true"></i>
+                        <i className="fa fa-twitter" aria-hidden="true"></i>
+                        <i className="fa fa-facebook" aria-hidden="true"></i>
+                        <i className="fa fa-linkedin" aria-hidden="true"></i>
                     </div>
-                    <div class="latest-thinking-footer-arrow">
+                    <div className="latest-thinking-footer-arrow">
                         <img src="triangle-right.PNG" />
                     </div>
                 </div>
             </div>
         </div>
+      </div>
+      <div className="hr-line">
+        <hr/>
       </div>
       <div className="home-testimonial-container">
         <h1 data-aos="fade-down" data-aos-duration="1500">TESTIMONIALS</h1>

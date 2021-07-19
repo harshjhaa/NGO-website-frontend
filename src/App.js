@@ -73,13 +73,13 @@ function App() {
           <Route path="/mission-vision-values" component={Mission} />
           <Route path="/our-approach" component={OurApproach} />
           <Route path="/our-team" component={OurTeam} />
-          <Route path="/financial" component={Financial} />
+          <Route path="/financials" component={Financial} />
           <Route path="/documents" component={Documents} />
           <Route path="/latest-news" component={LatestNews} />
           <Route path="/stories-of-change" component={StoriesOfChange} />
           <Route path="/success-story" component={SuccessStory} />
           {/* TheFellowship Tabs */}
-          <Route path="/the-fellowship" component={TheFellowship} />
+          <Route path="/thf-fellowship" component={TheFellowship} />
           <Route path="/volunteering" component={Volunteering} />
           <Route path="/internships" component={Internships} />
           {/* Emergency Tabs */}

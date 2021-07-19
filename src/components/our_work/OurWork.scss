@@ -94,6 +94,7 @@
       margin-top: 220px;
     }
     .box:hover {
+      box-shadow: #dcdcdc 0 2px 2px,#dcdcdc 0 4px 4px,#dcdcdc 0 8px 8px,#dcdcdc 0 16px 16px,#dcdcdc 0 32px 32px;
       .content {
         transform: translate(0px, -150px);
       }

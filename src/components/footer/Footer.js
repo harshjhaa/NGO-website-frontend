@@ -69,7 +69,7 @@ const Footer = () => {
               </a>
             </div>
             <div className="copyright">
-              <p>© 2021 Truly Help Foundation India. All Rights Reserved</p>
+              <p>© Truly Help Foundation India is a registered Non-profit under Section 8 of the Indian Companies Act, 2013</p>
             </div>
           </div>
         </div>

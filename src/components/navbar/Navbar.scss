@@ -101,9 +101,7 @@ i {
 .nav-bottom-list li {
   list-style-type: none;
   padding: 10px;
-  transition: 0.5s;
   font-size: 14px;
-  // color: #0096FF;
 }
 
 .nav-bottom-list li:hover {
@@ -120,14 +118,13 @@ i {
 }
 
 .nav-tabs {
-  transition: 1s;
   position: relative;
   margin-right: 10px;
+  transition: 1s;
 }
 
 .nav-dropdown-menu {
-  transition: 1s;
-  display: none;
+  visibility: hidden;
   background-color: white;
   position: absolute;
   width: 200px;
@@ -136,12 +133,8 @@ i {
 }
 
 .nav-tabs:hover {
-  transition: 1s;
-  // box-shadow: 0 10px 16px 0 #000014, 0 6px 20px 0 #000014;
   .nav-dropdown-menu {
-    transition: 1s;
-    display: block;
-    // transition-duration: 3s;
+    visibility: visible;
   }
 }
 .nav-tabs:last-child:hover {

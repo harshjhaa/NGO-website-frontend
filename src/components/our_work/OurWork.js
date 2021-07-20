@@ -22,13 +22,13 @@ const OurWork = (props) => {
       .timeline({ repeat: -1, defaults: { duration: 3 } })
 
       .add("one")
-      .to(div[0], { y: 600, x: 0, opacity: 0.05 }, "one")
-      .to(div[1], { y: -350, x: 0, opacity: 0.05 }, "one")
-      .to(div[2], { y: -300, x: 100, opacity: 1 }, "one")
+      .to(div[0], { y: 500, x: 0, opacity: 0.05 }, "one")
+      .to(div[1], { y: -250, x: 0, opacity: 0.05 }, "one")
+      .to(div[2], { y: -200, x: 100, opacity: 1 }, "one")
 
       .add("two")
-      .to(div[0], { y: 300, x: 100, opacity: 1 }, "two")
-      .to(div[1], { y: 300, x: 0, opacity: 0.05 }, "two")
+      .to(div[0], { y: 200, x: 100, opacity: 1 }, "two")
+      .to(div[1], { y: 200, x: 0, opacity: 0.05 }, "two")
       .to(div[2], { y: -600, x: 0, opacity: 0.05 }, "two")
 
       .add("three")
@@ -44,9 +44,18 @@ const OurWork = (props) => {
   return (
     <div className="margin-top-80">
       <div className="home-img-banner"><Slider/></div>
-      {/* <marquee className="home-marquee" direction="left">
-        <h2>Your donation and contribution can make a huge difference.</h2>
-      </marquee> */}
+      <marquee className="home-marquee" direction="left" scrollamount="5" behavior="scroll">
+        <p>
+          TRULY HELP FOUNDATION is a registered NGO under Section 8 in India Members 
+          of THF confederation present in PAN India which works with the most marginalised 
+          people to alleviate poverty and reduce social injustice through comprehensive 
+          programmes in health, education, Sports, livelihoods and humanitarian assistance
+          and rehabilitation. We are responding to the second wave of COVID –19 by setting 
+          up temporary COVID Care Facilities and supporting marginalized communities by 
+          providing dry ration and hygiene kits . We are also awaring and preparing communities 
+          for covid third wave.
+        </p>
+      </marquee>
       <div className="home-feature-content-1">
         <div className="home-feature-content-1-container">
           <div className="home-feature-content-1-vid">
@@ -115,7 +124,7 @@ const OurWork = (props) => {
                 Education is one of the main piller of the society, without it
                 India's future is lost!
               </p>
-              <button className="btn btn-red"><Link className="btn" to="/education">EXPLORE</Link></button>
+              <button className="btn btn-red"><Link to="/education">EXPLORE</Link></button>
             </div>
           </div>
           <div className="box box-down box-border-green" >
@@ -126,7 +135,7 @@ const OurWork = (props) => {
                Good health makes people strong, increaes thier efficient and
                inturn benefits society!
               </p>
-              <button className="btn btn-green"><Link className="btn" to="/healthcare">EXPLORE</Link></button>
+              <button className="btn btn-green"><Link to="/healthcare">EXPLORE</Link></button>
             </div>
           </div>
           <div className="box box-up box-border-voilet" >
@@ -137,7 +146,7 @@ const OurWork = (props) => {
                Imporvement in the livelihood lead to the upgradation of the standard
                of living!
               </p>
-              <button className="btn btn-voilet"><Link className="btn" to="/livelihoods">EXPLORE</Link></button>
+              <button className="btn btn-voilet"><Link to="/livelihoods">EXPLORE</Link></button>
             </div>
           </div>
           <div className="box box-down box-border-orange" >
@@ -148,7 +157,7 @@ const OurWork = (props) => {
                Sports helps to evolve the overall mentality of the person by making them
                active, alert and friendly!
               </p>
-              <button className="btn btn-orange"><Link className="btn" to="/sports">EXPLORE</Link></button>
+              <button className="btn btn-orange"><Link to="/sports">EXPLORE</Link></button>
             </div>
           </div>
           <div className="box box-up box-border-blue" >
@@ -159,7 +168,7 @@ const OurWork = (props) => {
                Human wlfare is one of the important factor in keeping the society balanced,
                evolving from time to time!
               </p>
-              <button className="btn btn-blue"><Link className="btn" to="/humanitarian">EXPLORE</Link></button>
+              <button className="btn btn-blue"><Link to="/humanitarian">EXPLORE</Link></button>
             </div>
           </div>
         </div>
@@ -194,6 +203,40 @@ const OurWork = (props) => {
             platforms and facilitating links and dialogues between public, private and civil society.
             </p>
           </div>
+        </div>
+      </div>
+      <div className="hr-line">
+        <hr/>
+      </div>
+      <div className="about-us-container">
+        <div className="img-sec">
+          <img className="img-1" src="/images/img_1.jpg" alt="home_img-1" />
+          <img className="img-2" src="/images/img_2.jpg" alt="home_img-2" />
+          <img className="img-3" src="/images/img_3.jpg" alt="home_img-3" />
+        </div>
+        <div className="header-text-container">
+          <h1>ABOUT US</h1>
+          <p>
+                Be it nutiriton, healthcare, education, 
+                <br/>
+                sports and response in the time,
+                <br/>
+                Truly Help Foundation 
+                <br/>
+                has been on the forefront, reshaping the lives 
+                <br/>
+                of millions children, women and youth.            
+                Be it nutiriton, healthcare, education, 
+                <br/>
+                sports and response in the time,
+                <br/>
+                Truly Help Foundation 
+                <br/>
+                has been on the forefront, reshaping the lives 
+                <br/>
+                of millions children, women and youth.
+          </p>
+          <button className="btn btn-red"><Link to="/about-us">EXPLORE</Link></button>
         </div>
       </div>
       <div className="hr-line">

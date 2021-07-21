@@ -22,13 +22,13 @@ const OurWork = (props) => {
       .timeline({ repeat: -1, defaults: { duration: 3 } })
 
       .add("one")
-      .to(div[0], { y: 500, x: 0, opacity: 0.05 }, "one")
-      .to(div[1], { y: -250, x: 0, opacity: 0.05 }, "one")
-      .to(div[2], { y: -200, x: 100, opacity: 1 }, "one")
+      .to(div[0], { y: 600, x: 0, opacity: 0.05 }, "one")
+      .to(div[1], { y: -350, x: 0, opacity: 0.05 }, "one")
+      .to(div[2], { y: -300, x: 100, opacity: 1 }, "one")
 
       .add("two")
-      .to(div[0], { y: 200, x: 100, opacity: 1 }, "two")
-      .to(div[1], { y: 200, x: 0, opacity: 0.05 }, "two")
+      .to(div[0], { y: 300, x: 100, opacity: 1 }, "two")
+      .to(div[1], { y: 300, x: 0, opacity: 0.05 }, "two")
       .to(div[2], { y: -600, x: 0, opacity: 0.05 }, "two")
 
       .add("three")
@@ -217,25 +217,73 @@ const OurWork = (props) => {
         <div className="header-text-container">
           <h1>ABOUT US</h1>
           <p>
-                Be it nutiriton, healthcare, education, 
-                <br/>
-                sports and response in the time,
-                <br/>
-                Truly Help Foundation 
-                <br/>
-                has been on the forefront, reshaping the lives 
-                <br/>
-                of millions children, women and youth.            
-                Be it nutiriton, healthcare, education, 
-                <br/>
-                sports and response in the time,
-                <br/>
-                Truly Help Foundation 
-                <br/>
-                has been on the forefront, reshaping the lives 
-                <br/>
-                of millions children, women and youth.
+            Be it nutiriton, healthcare, education,
+            sports and response in the time,
+            Truly Help Foundation
+            has been on the forefront, reshaping the lives
+            of millions children, women and youth.            
+            Be it nutiriton, healthcare, education,
+            sports and response in the time,
+            Truly Help Foundation
+            has been on the forefront, reshaping the lives 
+            of millions children, women and youth.
           </p>
+          <button className="btn"><Link to="/about-us">EXPLORE</Link></button>
+        </div>
+      </div>
+      <div className="hr-line">
+        <hr/>
+      </div>
+      <div className="our-legacy-container">
+        <div className="who-we-are-container">
+          <h2>WHO WE ARE</h2>
+          <span className="span-line"></span>
+          <div className="img-container">
+            <img src="/images/img_1.jpg" alt="home_img-2" />
+          </div>
+          <div className="contents">
+            <p>
+              Be it nutiriton, healthcare, education,
+              sports and response in the time,
+              Truly Help Foundation
+              has been on the forefront, reshaping the lives
+              of millions children, women and youth. 
+            </p>
+          </div>
+          <button className="btn"><Link to="/about-us">EXPLORE</Link></button>
+        </div>
+        <div className="what-we-do-container">
+          <h2>WHAT WE DO</h2>
+          <span className="span-line"></span>
+          <div className="img-container">
+            <img src="/images/img_2.jpg" alt="home_img-2" />
+          </div>
+          <div className="contents">
+            <p>
+              Be it nutiriton, healthcare, education,
+              sports and response in the time,
+              Truly Help Foundation
+              has been on the forefront, reshaping the lives
+              of millions children, women and youth. 
+            </p>
+          </div>
+          <button className="btn"><Link to="/about-us">EXPLORE</Link></button>
+        </div>
+        <div className="get-involved-container">
+          <h2>GET INVOLVED</h2>
+          <span className="span-line"></span>
+          <div className="img-container">
+            <img src="/images/img_3.jpg" alt="home_img-2" />
+          </div>
+          <div className="contents">
+            <p>
+              Be it nutiriton, healthcare, education,
+              sports and response in the time,
+              Truly Help Foundation
+              has been on the forefront, reshaping the lives
+              of millions children, women and youth. 
+            </p>
+          </div>
           <button className="btn btn-red"><Link to="/about-us">EXPLORE</Link></button>
         </div>
       </div>

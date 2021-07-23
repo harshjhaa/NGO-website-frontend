@@ -209,3 +209,15 @@ i {
     display: flex;
   }
 }
+
+.home-marquee {
+  -webkit-marquee: auto medium infinite scroll normal;
+  overflow-x: -webkit-marquee;
+  margin-top: 80px;
+  padding: 12px;  
+  background-color: #D1D1D1;
+  p{
+    font-family: "Work Sans", sans-serif;
+    font-weight: 600;
+  }
+}

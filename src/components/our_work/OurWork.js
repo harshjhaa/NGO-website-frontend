@@ -42,20 +42,8 @@ const OurWork = (props) => {
   },[])
 
   return (
-    <div className="margin-top-80">
+    <div>
       <div className="home-img-banner"><Slider/></div>
-      <marquee className="home-marquee" direction="left" scrollamount="5" behavior="scroll">
-        <p>
-          TRULY HELP FOUNDATION is a registered NGO under Section 8 in India Members 
-          of THF confederation present in PAN India which works with the most marginalised 
-          people to alleviate poverty and reduce social injustice through comprehensive 
-          programmes in health, education, Sports, livelihoods and humanitarian assistance
-          and rehabilitation. We are responding to the second wave of COVID –19 by setting 
-          up temporary COVID Care Facilities and supporting marginalized communities by 
-          providing dry ration and hygiene kits . We are also awaring and preparing communities 
-          for covid third wave.
-        </p>
-      </marquee>
       <div className="home-feature-content-1">
         <div className="home-feature-content-1-container">
           <div className="home-feature-content-1-vid">

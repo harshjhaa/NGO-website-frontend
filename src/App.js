@@ -52,6 +52,8 @@ import ProtectionPolicy from "./components/footer/protection_policy/ProtectionPo
 
 function App() {
 
+  
+
   return (
     <Router>
       <div className="app">
@@ -102,10 +104,21 @@ function App() {
           <Route path="/protection-policy" component={ProtectionPolicy} />
           <Route path="/resource" component={Resource} />
         </Switch>
+        <div className="whatsapp-logo-container">
+          <a
+            className="whatsapp-logo"
+            href="https://api.whatsapp.com/send?phone=+919315653969&text=Hi, I need some information!."
+            target="_blank"
+          ></a>
+        </div>
         <a
-          className="whatsapp-logo"
-          href="https://api.whatsapp.com/send?phone=+919315653969&text=Hi, I need some information!."
-          target="_blank"
+          onClick={()=>window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          })}
+          className="scroll-up-icon"
+          // className={`${window.scrollY<528? "display-none":"scroll-up-icon"}`}
         ></a>
         <Route component={Footer} />
       </div>

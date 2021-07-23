@@ -63,7 +63,7 @@
       justify-content: space-between;
       padding: 10px 10px 10px 0px;
       p{
-        color: #fff;
+        color: whitesmoke;
       }
       .title{
         font-size: 25px;
@@ -84,7 +84,7 @@
         }
         .footer-list li a{
           text-decoration: none;
-          color: #fff;
+          color: whitesmoke;
           font-size: 13px;
           transition: .3s;
         }
@@ -132,7 +132,7 @@
       flex-direction: row;
     }
     .title{
-      color: #fff;
+      color: whitesmoke;
       font-size: 16px;
       font-family: 'Acme', sans-serif;
     }
@@ -146,7 +146,7 @@
         margin-top: 1px;
         font-size: 14px;
         text-decoration: none;
-        color: #fff;
+        color: whitesmoke;
         transition: .5s;
       }
       .text-link:hover{
@@ -208,7 +208,14 @@
       flex-direction: column;
       justify-content: flex-start;
       .footer-email{
-        margin-top: 20px;
+        margin-top: 15px;
+      }
+      .footer-call{
+        margin-top: 5px;
+      }
+      .fa{
+        margin-left: 0px;
+        color: #e5276a;
       }
     }
   }

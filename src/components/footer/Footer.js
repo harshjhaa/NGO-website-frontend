@@ -62,7 +62,7 @@ const Footer = () => {
                 </li>
                 <div className="gap">|</div>
                 <li>
-                  <Link to="/contact-us">Cotact Us</Link>
+                  <Link to="/contact-us">Contact Us</Link>
                 </li>
               </ul>
             </div>
@@ -107,10 +107,10 @@ const Footer = () => {
               <div className="text-links">
                 <Link className="text-link" to="/donate">Our Team</Link>
                 <Link className="text-link" to="/donate">Documents</Link>
-                <Link className="text-link" to="/donate">Financials</Link>
                 <Link className="text-link" to="/donate">Covid-19 Relief</Link>
                 <Link className="text-link" to="/donate">Partnerships</Link>
-                <a className="text-link footer-email" href="mailto:info@trulyhelpfoundation.org">Mail Us: info@trulyhelpfoundation.org</a>
+                <a className="text-link footer-email" href="mailto:info@trulyhelpfoundation.org"><i class="fa fa-envelope" aria-hidden="true"></i> info@trulyhelpfoundation.org</a>
+                <a className="text-link footer-call" href="tel:1800-1800-00"><i class="fa fa-phone" aria-hidden="true"></i> 1800-xxxx-xx</a>
               </div>
             </div>
           </div>

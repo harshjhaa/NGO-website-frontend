@@ -42,14 +42,13 @@ const OurWork = (props) => {
   },[])
 
   return (
-    <div>
+    <div className="our-work">
       <div className="home-img-banner"><Slider/></div>
       <div className="home-feature-content-1">
         <div className="home-feature-content-1-container">
-          <div className="home-feature-content-1-vid">
-            {/* <img src="/images/vid_bck_1.jpg" alt="home_img-1" /> */}
+          {/* <div className="home-feature-content-1-vid">
             <video src="/videos/feature_content_1_vid.mp4" width="400" height="300" autoplay="true" muted="true" loop="true"/>
-          </div>
+          </div> */}
           <div className="home-feature-content-1-content">
             <h1>Dreaming of a Brighter Future</h1>
             <p>
@@ -106,7 +105,7 @@ const OurWork = (props) => {
         <div className="causes-we-are-serving-contents">
           <div className="box box-up box-border-red" >
             <div className="content">
-              <img src="/images/img_2.jpg" alt="home_img-1" />
+              <img src="/gif/edu-2.gif" alt="home_img-1" />
               <h4>EDUCATION</h4>
               <p>
                 Education is one of the main piller of the society, without it
@@ -117,7 +116,7 @@ const OurWork = (props) => {
           </div>
           <div className="box box-down box-border-green" >
             <div className="content">
-              <img src="/images/img_1.jpg" alt="home_img-2" />
+              <img src="/gif/health-5.gif" alt="home_img-2" />
               <h4>HEALTHCARE</h4>
               <p>
                Good health makes people strong, increaes thier efficient and
@@ -128,7 +127,7 @@ const OurWork = (props) => {
           </div>
           <div className="box box-up box-border-voilet" >
             <div className="content">
-              <img src="/images/img_3.jpg" alt="home_img-2" />
+              <img src="/gif/liveli-4.gif" alt="home_img-2" />
               <h4>LIVELIHOODS</h4>
               <p>
                Imporvement in the livelihood lead to the upgradation of the standard
@@ -139,7 +138,7 @@ const OurWork = (props) => {
           </div>
           <div className="box box-down box-border-orange" >
             <div className="content">
-              <img src="/images/img_3.jpg" alt="home_img-2" />
+              <img src="/gif/sports-2.gif" alt="home_img-2" />
               <h4>SPORTS</h4>
               <p>
                Sports helps to evolve the overall mentality of the person by making them
@@ -150,7 +149,7 @@ const OurWork = (props) => {
           </div>
           <div className="box box-up box-border-blue" >
             <div className="content">
-              <img src="/images/img_3.jpg" alt="home_img-2" />
+              <img src="/gif/human-2.gif" alt="home_img-2" />
               <h4>HUMANITARIAN</h4>
               <p>
                Human wlfare is one of the important factor in keeping the society balanced,
@@ -423,6 +422,15 @@ const OurWork = (props) => {
             </div>
           </div>
         </div>
+         <div className="subscribe-us-container">
+           <div className="contact-no">
+             <p>Helpline Number: <span>1800-xxxx-xx</span></p>
+           </div>
+           <div className="email-id">
+             <input className="inp-email" type="email" placeholder="Enter Email-Id to Subscribe to News Letter"></input>
+             <button className="btn">SUBSCRIBE</button>
+           </div>
+         </div>
       </div>
     </div>
   );

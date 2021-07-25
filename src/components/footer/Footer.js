@@ -10,11 +10,7 @@ const Footer = () => {
 
   return (
     <div>
-      <div
-        className="donate-footer"
-        data-aos="zoom-in-down"
-        data-aos-duration="1500"
-      >
+      <div className="donate-footer">
         <div className="contents">
           <h2>HELP US FIGNT THE HUNGER IN RURAL AREAS</h2>
           <br />
@@ -40,21 +36,40 @@ const Footer = () => {
           </h3>
         </div>
       </div>
+      <div className="acknowledgement-container">
+        <div className="content display-row">
+          <div className="sec-1">
+            <img className="img-icon" src="/svg/heart.svg"/>
+            <p>All our efforts are made possible because of your support.</p>
+          </div>
+          <div className="sec-2">
+            <img className="img-icon" src="/svg/tax.svg"/>
+            <p>Your donation are Tax Exempted uder 80G of the Indian Income Tax Act.</p>
+          </div>
+          <div className="sec-3">
+            <img className="img-icon" src="/svg/security-2.svg"/>
+            <p>Your donations and transactions are completely safe and secure.</p>
+          </div>
+        </div>
+      </div>
       <div className="footer-container">
         <div className="footer-logo">
           <img className="foot-logo" src="/images/logo_footer1.svg" alt="Logo" />
           <div className="contents">
             <p className="title">TRULY HELP FOUNDATION</p>
             <p className="company-line">Truly Help Foundation India is a registered Non-profit under Section 8 of the Indian Companies Act, 2013.</p>
-            {/* <p style={{borderTop: "1px solid #fff", paddingTop: "4px"}}>Blog | T.H.F. Protection Policy | Resource | Cotact Us</p> */}
             <div className="footer-links-1">
               <ul className="footer-list">
                 <li>
-                  <Link to="/blog">Blog</Link>
+                  <Link to="/blog">Blogs</Link>
                 </li>
                 <div className="gap">|</div>
                 <li>
-                  <Link to="/protection-policy">T.H.F. Protection Policy</Link>
+                  <Link to="/media">Media</Link>
+                </li>
+                <div className="gap">|</div>
+                <li>
+                  <Link to="/partnerships">Partnerships</Link>
                 </li>
                 <div className="gap">|</div>
                 <li>
@@ -90,31 +105,51 @@ const Footer = () => {
               <div className="work-with-us-container display-col">
                 <p className="title">WORK WITH US</p>
                 <div className="text-links  display-col">
-                  <Link className="text-link" to="/donate">Careers</Link>
-                  <Link className="text-link" to="/donate">Volunteer</Link>
+                  <Link className="text-link" to="/careers">Careers</Link>
+                  <Link className="text-link" to="/volunteer">Volunteer</Link>
                 </div>
               </div>
               <div className="happenings-container display-col">
                 <p className="title">HAPPENINGS</p>
                 <div className="text-links  display-col">
-                  <Link className="text-link" to="/donate">Events</Link>
-                  <Link className="text-link" to="/donate">Our Campaigns</Link>
+                  <Link className="text-link" to="/events">Events</Link>
+                  <Link className="text-link" to="/our-campaigns">Our Campaigns</Link>
                 </div>
               </div>
             </div>
             <div className="sec-3">
               <p className="title">USEFUL LINKS</p>
               <div className="text-links">
-                <Link className="text-link" to="/donate">Our Team</Link>
-                <Link className="text-link" to="/donate">Documents</Link>
-                <Link className="text-link" to="/donate">Covid-19 Relief</Link>
-                <Link className="text-link" to="/donate">Partnerships</Link>
+                <Link className="text-link" to="/our-team">Our Team</Link>
+                <Link className="text-link" to="/documents">Documents</Link>
+                <Link className="text-link" to="/financails">Financails</Link>
+                <Link className="text-link" to="/emergency-info">Emergency Info</Link>
+                <Link className="text-link" to="/child-protection-policy">Child Protection Policy</Link>
                 <a className="text-link footer-email" href="mailto:info@trulyhelpfoundation.org"><i class="fa fa-envelope" aria-hidden="true"></i> info@trulyhelpfoundation.org</a>
                 <a className="text-link footer-call" href="tel:1800-1800-00"><i class="fa fa-phone" aria-hidden="true"></i> 1800-xxxx-xx</a>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div className="footer-bottom">
+        <ul className="footer-bottom-list">
+          <li>
+            <Link to="/copyright">© Copyright 2021 Truly Help Foundation All Rights Reserved Terms & Conditions</Link>
+          </li>
+          <div className="gap">|</div>
+          <li>
+            <Link to="/disclaimer">Disclaimer</Link>
+          </li>
+          <div className="gap">|</div>
+          <li>
+            <Link to="/privacy-policy">Privacy Policy</Link>
+          </li>
+          <div className="gap">|</div>
+          <li>
+            <Link to="/refund-policy">Refund Policy</Link>
+          </li>
+        </ul>
       </div>
     </div>
   );

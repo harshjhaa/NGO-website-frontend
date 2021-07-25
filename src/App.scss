@@ -48,7 +48,7 @@
 .whatsapp-logo-container{
   z-index: 9999;
   position: fixed;
-  bottom: 52px;
+  bottom: 35px;
   right: 10px;
   background-color: #35d766;
   border: 1px solid #7dffa5;
@@ -76,11 +76,12 @@
 }
 
 .scroll-up-icon{
+  opacity: .6;
   z-index: 9999;
   position: fixed;
   width: 40px;
   height: 40px;
-  bottom: 55px;
+  bottom: 38px;
   right: 85px;
   background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CgogPGc+CiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPgogIDxwYXRoIGZpbGw9IiM4NEQzREIiIGlkPSJzdmdfMSIgZD0ibTEyLDBjLTYuNjI3LDAgLTEyLDUuMzczIC0xMiwxMnM1LjM3MywxMiAxMiwxMnMxMiwtNS4zNzMgMTIsLTEycy01LjM3MywtMTIgLTEyLC0xMnptMCw3LjU4bDUuOTk1LDUuOTg4bC0xLjQxNiwxLjQxNGwtNC41NzksLTQuNTc0bC00LjU5LDQuNTc0bC0xLjQxNiwtMS40MTRsNi4wMDYsLTUuOTg4eiIvPgogPC9nPgo8L3N2Zz4=");
   background-size: 40px;

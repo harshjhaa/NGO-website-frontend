@@ -163,7 +163,7 @@ const NavbarBottom = () => {
           Truly Help Foundation is a registered NGO under Section 8 in India Members of THF confederation present 
           in PAN India which works with the most marginalised people to alleviate poverty and reduce social injustice 
           through comprehensive programmes in health, education, Sports, livelihoods and humanitarian assistance 
-          and rehabilitation. |We are responding to the second wave of COVID –19 by setting up temporary COVID Care 
+          and rehabilitation. | We are responding to the second wave of COVID –19 by setting up temporary COVID Care 
           Facilities and supporting marginalized communities by providing dry ration and hygiene kits . We are also 
           awaring and preparing communities for covid third wave.
         </p>

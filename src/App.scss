@@ -71,7 +71,6 @@
 }
 
 .whatsapp-logo-container:hover{
-  transform: rotate(-360deg);
   box-shadow: 0 0 0.7rem 0.1rem #73ec98;
 }
 
@@ -87,12 +86,15 @@
   background-size: 40px;
   background-repeat: no-repeat;
   cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+  text-align: center;
+  border-radius: 50%;
   transition: .5s;
 }
 
 .scroll-up-icon:hover{
-  transform: translate(0,-7px);
-  transition: .5s;
+  box-shadow: 0 0 23px 0px #000014;
 }
 
 .display-none{

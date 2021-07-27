@@ -67,7 +67,9 @@ const OurWork = (props) => {
       </div>
       <div className="hr-line">
         <hr/>
+        <hr/>
       </div>
+      <span className="span-line"></span>
       {/* <div className="home-feature-content-2" data-aos="zoom-out-up" data-aos-duration="1000">
         <h1>Causes We Are Serving</h1>
         <div className="home-causes-we-serving-container" id="style-1">
@@ -254,7 +256,7 @@ const OurWork = (props) => {
               of millions children, women and youth. 
             </p>
           </div>
-          <button className="btn"><Link to="/about-us">EXPLORE</Link></button>
+          <button className="btn"><Link to="/our-approach">EXPLORE</Link></button>
         </div>
         <div className="get-involved-container">
           <h2>GET INVOLVED</h2>
@@ -271,7 +273,7 @@ const OurWork = (props) => {
               of millions children, women and youth. 
             </p>
           </div>
-          <button className="btn btn-red"><Link to="/about-us">EXPLORE</Link></button>
+          <button className="btn btn-red"><Link to="/our-campaigns">EXPLORE</Link></button>
         </div>
       </div>
       <div className="hr-line">
@@ -279,158 +281,188 @@ const OurWork = (props) => {
       </div>
       <div className="home-currently-running-programs">
         <h1 
-        data-aos="fade-up"
-        data-aos-anchor-placement="bottom-bottom"
+        // data-aos="fade-up"
+        // data-aos-anchor-placement="bottom-bottom"
         data-aos-duration="1600">CURRENTLY RUNNING PROGRAMS</h1>
         <div className="program-contents">
-            <div className="program-content" data-aos="flip-left" data-aos-duration="1600">
-                <div className="latest-thinking-image" style={{"background-image": "url(./video-call.jpg);"}}>
-                    <p className="feature-content-info-heading">PRESPECTIVES</p>
-                </div>
-                <div className="latest-thinking-info">
-                    <h3 className="latest-thinking-info-heading">Reinfrocing Productivity in the Age of Remote...</h3>
-                    <p className="latest-thinking-info-data">Thrust into large-scale work-from-home programs by
-                        COVID-19...</p>
-                </div>
-                <hr />
-                <div className="latest-thinking-footer">
-                    <div className="latest-thinking-footer-icons">
-                        <i className="fa fa-envelope" aria-hidden="true"></i>
-                        <i className="fa fa-twitter" aria-hidden="true"></i>
-                        <i className="fa fa-facebook" aria-hidden="true"></i>
-                        <i className="fa fa-linkedin" aria-hidden="true"></i>
-                    </div>
-                    <div className="latest-thinking-footer-arrow">
-                        <img src="triangle-right.PNG" />
-                    </div>
-                </div>
+            <div className="program-content sec-1" data-aos-duration="1600">
+              <img src="/images/img_3.jpg" alt="home_img-2" />
+              <h3 className="title">EDUCATION</h3>
+              <br/>
+              <p className="info">Thrust into large-scale work-from-home programs by
+                  COVID-19...</p>
+              <button className="btn btn-red"><Link to="/our-campaigns">EXPLORE</Link></button>
             </div>
-            <div className="program-content" data-aos="flip-right" data-aos-duration="1600">
-                <div className="latest-thinking-image" style={{"background-image": "url(./video-call.jpg);"}}>
-                    <p className="feature-content-info-heading">WHITEPAPERS</p>
-                </div>
-                <div className="latest-thinking-info">
-                    <h3 className="latest-thinking-info-heading">Acceletate Healthy Outcome with Data and AI...</h3>
-                    <p className="latest-thinking-info-data">Learn how leading healthcare organizations are
-                        accelerating...</p>
-                </div>
-                <hr />
-                <div className="latest-thinking-footer">
-                    <div className="latest-thinking-footer-icons">
-                        <i className="fa fa-envelope" aria-hidden="true"></i>
-                        <i className="fa fa-twitter" aria-hidden="true"></i>
-                        <i className="fa fa-facebook" aria-hidden="true"></i>
-                        <i className="fa fa-linkedin" aria-hidden="true"></i>
-                    </div>
-                    <div className="latest-thinking-footer-arrow">
-                        <img src="triangle-right.PNG" />
-                    </div>
-                </div>
+            <div className="program-content sec-2" data-aos-duration="1600">
+              <img src="/images/img_3.jpg" alt="home_img-2" />
+              <h3 className="title">HEALTH AND NUTRITION</h3>
+              <p className="info">Thrust into large-scale work-from-home programs by
+                  COVID-19...</p>
+              <button className="btn btn-green"><Link to="/our-campaigns">EXPLORE</Link></button>
             </div>
-            <div className="program-content" data-aos="flip-left" data-aos-duration="1600">
-                <div className="latest-thinking-image" style={{"background-image": "url(./video-call.jpg);"}}>
-                    <p className="feature-content-info-heading">PRESPECTIVES</p>
-                </div>
-                <div className="latest-thinking-info">
-                    <h3 className="latest-thinking-info-heading">Reinventing Clinical Trial for a New...</h3>
-                    <p className="latest-thinking-info-data">As curent social distancing guidelines prevent
-                        face-to-face...</p>
-                </div>
-                <hr />
-                <div className="latest-thinking-footer">
-                    <div className="latest-thinking-footer-icons">
-                        <i className="fa fa-envelope" aria-hidden="true"></i>
-                        <i className="fa fa-twitter" aria-hidden="true"></i>
-                        <i className="fa fa-facebook" aria-hidden="true"></i>
-                        <i className="fa fa-linkedin" aria-hidden="true"></i>
-                    </div>
-                    <div className="latest-thinking-footer-arrow">
-                        <img src="triangle-right.PNG" />
-                    </div>
-                </div>
+            <div className="program-content sec-3" data-aos-duration="1600">
+              <img src="/images/img_3.jpg" alt="home_img-2" />
+              <h3 className="title">SPORTS</h3>
+              <br/>
+              <p className="info">Thrust into large-scale work-from-home programs by
+                  COVID-19...</p>
+              <button className="btn btn-voilet"><Link to="/our-campaigns">EXPLORE</Link></button>
             </div>
-            <div className="program-content" data-aos="flip-right" data-aos-duration="1600">
-                <div className="latest-thinking-image" style={{"background-image": "url(./video-call.jpg);"}}>
-                    <p className="feature-content-info-heading">WHITEPAPERS</p>
-                </div>
-                <div className="latest-thinking-info">
-                    <h3 className="latest-thinking-info-heading">Decision-Making a New Frontier for...</h3>
-                    <p className="latest-thinking-info-data">Digital process automation is a forward-looking,
-                        practical...</p>
-                </div>
-                <hr />
-                <div className="latest-thinking-footer">
-                    <div className="latest-thinking-footer-icons">
-                        <i className="fa fa-envelope" aria-hidden="true"></i>
-                        <i className="fa fa-twitter" aria-hidden="true"></i>
-                        <i className="fa fa-facebook" aria-hidden="true"></i>
-                        <i className="fa fa-linkedin" aria-hidden="true"></i>
-                    </div>
-                    <div className="latest-thinking-footer-arrow">
-                        <img src="triangle-right.PNG" />
-                    </div>
-                </div>
+            <div className="program-content sec-4" data-aos-duration="1600">
+              <img src="/images/img_3.jpg" alt="home_img-2" />
+              <h3 className="title">COVID-19 FOOD DISTRIBUTION</h3>
+              <p className="info">Thrust into large-scale work-from-home programs by
+                  COVID-19...</p>
+              <button className="btn btn-orange"><Link to="/our-campaigns">EXPLORE</Link></button>
             </div>
         </div>
       </div>
       <div className="hr-line">
         <hr/>
       </div>
-      <div className="home-testimonial-container">
-        <h1 data-aos="fade-down" data-aos-duration="1500">TESTIMONIALS</h1>
-        <div className="testimonial-row">
-          <div className="testimonial-contents" data-aos="fade-right" data-aos-duration="1800">
-            <div className="testimonial-img">
-              <img src="/images/person1.jpg" alt="testimonial-person-img" />
+      <div className="our-partners-and-supporters-container">
+        <h2>OUR PARTNERS AND SUPPORTERS</h2>
+        <div className="content">
+          <img src="/images/company-1.png" alt="home_img-2" />
+          <img src="/images/company-2.jpg" alt="home_img-2" />
+          <img src="/images/company-3.png" alt="home_img-2" />
+          <img src="/images/company-4.png" alt="home_img-2" />
+        </div>
+      </div>
+      <div className="testimonial-and-twitter-contaienr">
+        <div className="home-testimonial-list-container">
+          <h1 className="title">TESTIMONIALS</h1>
+          <div className="testimonial-row">
+            <div className="testimonial-contents" data-aos="fade-right" data-aos-duration="1800">
+              {/* <div className="testimonial-img">
+                <img src="/images/person1.jpg" alt="testimonial-person-img" />
+              </div> */}
+              <div className="testimonial-text">
+                Truly Help Foundation is one of the most orgnaised and well mentained NGO.
+                Their Covid Care India Program has helped many needful people during the pandemic.
+                I feel very obliged to be a part of such reputed NGO.
+              </div>
+              <div className="testimonial-name">
+                - Jhon Doe
+              </div>
             </div>
-            <div className="testimonial-text">
-              Truly Help Foundation is one of the most orgnaised and well mentained NGO.
-              Their Covid Care India Program has helped many needful people during the pandemic.
-              I feel very obliged to be a part of such reputed NGO.
+            <span className="span-line"></span>
+            <div className="testimonial-contents" data-aos="fade-left" data-aos-duration="1800">
+              {/* <div className="testimonial-img">
+                <img src="/images/person1.jpg" alt="testimonial-person-img" />
+              </div> */}
+              <div className="testimonial-text">
+                Truly Help Foundation is one of the most orgnaised and well mentained NGO.
+                Their Covid Care India Program has helped many needful people during the pandemic.
+                I feel very obliged to be a part of such reputed NGO.
+              </div>
+              <div className="testimonial-name">
+                - Jhon Doe
+              </div>
             </div>
+            <span className="span-line"></span>
+            <div className="testimonial-contents" data-aos="fade-right" data-aos-duration="1800">
+              {/* <div className="testimonial-img">
+                <img src="/images/person1.jpg" alt="testimonial-person-img" />
+              </div> */}
+              <div className="testimonial-text">
+                Truly Help Foundation is one of the most orgnaised and well mentained NGO.
+                Their Covid Care India Program has helped many needful people during the pandemic.
+                I feel very obliged to be a part of such reputed NGO.
+              </div>
+              <div className="testimonial-name">
+                - Jhon Doe
+              </div>
+            </div>
+            <span className="span-line"></span>
+            <div className="testimonial-contents" data-aos="fade-left" data-aos-duration="1800">
+              {/* <div className="testimonial-img">
+                <img src="/images/person1.jpg" alt="testimonial-person-img" />
+              </div> */}
+              <div className="testimonial-text">
+                Truly Help Foundation is one of the most orgnaised and well mentained NGO.
+                Their Covid Care India Program has helped many needful people during the pandemic.
+                I feel very obliged to be a part of such reputed NGO.
+              </div>
+              <div className="testimonial-name">
+                - Jhon Doe
+              </div>
           </div>
-          <div className="testimonial-contents" data-aos="fade-left" data-aos-duration="1800">
-            <div className="testimonial-img">
-              <img src="/images/person1.jpg" alt="testimonial-person-img" />
-            </div>
-            <div className="testimonial-text">
-              Truly Help Foundation is one of the most orgnaised and well mentained NGO.
-              Their Covid Care India Program has helped many needful people during the pandemic.
-              I feel very obliged to be a part of such reputed NGO.
-            </div>
+            <span className="span-line"></span>
           </div>
         </div>
-        <div className="testimonial-row">
-        <div className="testimonial-contents" data-aos="fade-right" data-aos-duration="1800">
-            <div className="testimonial-img">
-              <img src="/images/person1.jpg" alt="testimonial-person-img" />
+        <div className="twitter-list-container">
+          <h1 className="title">TWITTER NEWS</h1>
+          <div className="testimonial-row">
+            <div className="testimonial-contents" data-aos="fade-right" data-aos-duration="1800">
+              {/* <div className="testimonial-img">
+                <img src="/images/person1.jpg" alt="testimonial-person-img" />
+              </div> */}
+              <div className="testimonial-text">
+                Truly Help Foundation is one of the most orgnaised and well mentained NGO.
+                Their Covid Care India Program has helped many needful people during the pandemic.
+                I feel very obliged to be a part of such reputed NGO.
+              </div>
+              <div className="testimonial-name">
+                - Jhon Doe
+              </div>
             </div>
-            <div className="testimonial-text">
-              Truly Help Foundation is one of the most orgnaised and well mentained NGO.
-              Their Covid Care India Program has helped many needful people during the pandemic.
-              I feel very obliged to be a part of such reputed NGO.
+            <span className="span-line"></span>
+            <div className="testimonial-contents" data-aos="fade-left" data-aos-duration="1800">
+              {/* <div className="testimonial-img">
+                <img src="/images/person1.jpg" alt="testimonial-person-img" />
+              </div> */}
+              <div className="testimonial-text">
+                Truly Help Foundation is one of the most orgnaised and well mentained NGO.
+                Their Covid Care India Program has helped many needful people during the pandemic.
+                I feel very obliged to be a part of such reputed NGO.
+              </div>
+              <div className="testimonial-name">
+                - Jhon Doe
+              </div>
             </div>
+            <span className="span-line"></span>
+            <div className="testimonial-contents" data-aos="fade-right" data-aos-duration="1800">
+              {/* <div className="testimonial-img">
+                <img src="/images/person1.jpg" alt="testimonial-person-img" />
+              </div> */}
+              <div className="testimonial-text">
+                Truly Help Foundation is one of the most orgnaised and well mentained NGO.
+                Their Covid Care India Program has helped many needful people during the pandemic.
+                I feel very obliged to be a part of such reputed NGO.
+              </div>
+              <div className="testimonial-name">
+                - Jhon Doe
+              </div>
+            </div>
+            <span className="span-line"></span>
+            <div className="testimonial-contents" data-aos="fade-left" data-aos-duration="1800">
+              {/* <div className="testimonial-img">
+                <img src="/images/person1.jpg" alt="testimonial-person-img" />
+              </div> */}
+              <div className="testimonial-text">
+                Truly Help Foundation is one of the most orgnaised and well mentained NGO.
+                Their Covid Care India Program has helped many needful people during the pandemic.
+                I feel very obliged to be a part of such reputed NGO.
+              </div>
+              <div className="testimonial-name">
+                - Jhon Doe
+              </div>
           </div>
-          <div className="testimonial-contents" data-aos="fade-left" data-aos-duration="1800">
-            <div className="testimonial-img">
-              <img src="/images/person1.jpg" alt="testimonial-person-img" />
-            </div>
-            <div className="testimonial-text">
-              Truly Help Foundation is one of the most orgnaised and well mentained NGO.
-              Their Covid Care India Program has helped many needful people during the pandemic.
-              I feel very obliged to be a part of such reputed NGO.
-            </div>
+            <span className="span-line"></span>
           </div>
         </div>
-         <div className="subscribe-us-container">
-           <div className="contact-no">
-             <p>Helpline Number: <span>1800-xxxx-xx</span></p>
-           </div>
-           <div className="email-id">
-             <input className="inp-email" type="email" placeholder="Enter Email-Id to Subscribe to News Letter"></input>
-             <button className="btn">SUBSCRIBE</button>
-           </div>
-         </div>
+      </div>
+      <div className="subscribe-us-container">
+        <div className="contents">
+          <div className="contact-no">
+            <p>Helpline Number: <span>1800-xxxx-xx</span></p>
+          </div>
+          <div className="email-id">
+            <input className="inp-email" type="email" placeholder="Enter Email-Id to Subscribe to News Letter"></input>
+            <button className="btn">SUBSCRIBE</button>
+          </div>
+        </div>
       </div>
     </div>
   );

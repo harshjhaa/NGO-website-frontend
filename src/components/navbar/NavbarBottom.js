@@ -160,12 +160,11 @@ const NavbarBottom = () => {
       {/* <div className="home-img-banner"><Slider/></div> */}
       <marquee className="home-marquee margin-top-80" direction="left" scrollamount="5" behavior="scroll">
         <p>
-          Truly Help Foundation is a registered NGO under Section 8 in India Members of THF confederation present 
-          in PAN India which works with the most marginalised people to alleviate poverty and reduce social injustice 
-          through comprehensive programmes in health, education, Sports, livelihoods and humanitarian assistance 
-          and rehabilitation. |We are responding to the second wave of COVID –19 by setting up temporary COVID Care 
-          Facilities and supporting marginalized communities by providing dry ration and hygiene kits . We are also 
-          awaring and preparing communities for covid third wave.
+          Truly Help Foundation is a registered  Non-profit organization under section 8 company in india and a Members of  THF confederation present in PAN India
+           which works with the most marginalised people to alleviate poverty and reduce social injustice through comprehensive programmes in healthcare, education,
+            livelihoods, sports and humanitarian assistance and rehabilitation. | We are responding to the second wave of COVID-19 by setting up temporary COVID
+            Care Facilities and supporting marginalized communities by providing dry ration and hygiene kits . We are also awaring and preparing communities for
+            covid third wave.
         </p>
       </marquee>
     </div>

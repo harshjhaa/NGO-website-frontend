@@ -1,15 +1,18 @@
 import React from "react";
 
-function Dots({ activeIndex, onclick, sliderImage }) {
+function Dots({ activeIndex, onclick, contentComponet }) {
   return (
     <div className="all-dots">
-      {sliderImage.map((slide, index) => (
+      {
+        contentComponet &&
+        contentComponet.map((slide, index) => (
         <span
           key={index}
           className={`${activeIndex === index ? "dot active-dot" : "dot"}`}
           onClick={() => onclick(index)}
         ></span>
-      ))}
+        ))
+      }
     </div>
   );
 }

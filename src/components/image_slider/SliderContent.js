@@ -1,18 +1,21 @@
 import React from "react";
 
-function SliderContent({ activeIndex, sliderImage }) {
+function SliderContent({ activeIndex, contentComponet }) {
+  // console.log("contentComponet", contentComponet);
   return (
     <section>
-      {sliderImage.map((slide, index) => (
-        <div key={index} className={index === activeIndex ? "slides active" : "inactive"}>
-          <img className="slide-image" src={slide.urls} alt="" />
-          <div className="banner-contents">
-            <h1>{slide.title}</h1>
-            <br />
-            <h3>{slide.description}</h3>
+      {
+        contentComponet && contentComponet.map((slide, index) => (
+          <div key={index} className={index === activeIndex ? "slides active" : "inactive"}>
+            <img className="slide-image" src={slide.urls} alt="" />
+            <div className="banner-contents">
+              <h1>{slide.title}</h1>
+              <br />
+              <h3>{slide.description}</h3>
+            </div>
           </div>
-        </div>
-      ))}
+        ))
+      }
       {/* <br />
       <div className="inp-btn">
       <input

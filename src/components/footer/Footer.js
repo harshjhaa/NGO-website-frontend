@@ -44,7 +44,8 @@ const Footer = () => {
           </div>
           <div className="sec-2">
             <img className="img-icon" src="/svg/tax.svg"/>
-            <p>Your donation are Tax Exempted uder 80G of the Indian Income Tax Act.</p>
+            {/* <p>Your donation are Tax Exempted uder 80G of the Indian Income Tax Act.</p> */}
+            <p>Your donations are under right hand.</p>
           </div>
           <div className="sec-3">
             <img className="img-icon" src="/svg/security-2.svg"/>
@@ -126,7 +127,7 @@ const Footer = () => {
                 <Link className="text-link" to="/emergency-info">Emergency Info</Link>
                 <Link className="text-link" to="/child-protection-policy">Child Protection Policy</Link>
                 <a className="text-link footer-email" href="mailto:info@trulyhelpfoundation.org"><i class="fa fa-envelope" aria-hidden="true"></i> info@trulyhelpfoundation.org</a>
-                <a className="text-link footer-call" href="tel:1800-1800-00"><i class="fa fa-phone" aria-hidden="true"></i> 1800-xxxx-xx</a>
+                <a className="text-link footer-call" href="tel:+918800106833"><i class="fa fa-phone" aria-hidden="true"></i> +91 8800106833</a>
               </div>
             </div>
           </div>

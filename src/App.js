@@ -107,7 +107,7 @@ function App() {
         <div className="whatsapp-logo-container">
           <a
             className="whatsapp-logo"
-            href="https://api.whatsapp.com/send?phone=+919315653969&text=Hi, I need some information!."
+            href="https://api.whatsapp.com/send?phone=+918800106833&text=Hi, I need some information!."
             target="_blank"
           ></a>
         </div>

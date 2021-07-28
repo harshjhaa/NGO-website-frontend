@@ -7,6 +7,12 @@ import AOS from 'aos';
 import "./OurWork.scss";
 
 const OurWork = (props) => {
+
+  const sliderContent = [
+    "topBanner",
+    "covidBanner"
+  ]
+
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
     { width: 550, itemsToShow: 2 },
@@ -14,43 +20,20 @@ const OurWork = (props) => {
     { width: 1200, itemsToShow: 4 },
   ];
 
-  useEffect(() => {
-    const div = document.querySelectorAll(".home-feature-content-3-container");
-
-    gsap.set(div[1], { x: 100, opacity: 1 });
-    gsap
-      .timeline({ repeat: -1, defaults: { duration: 3 } })
-
-      .add("one")
-      .to(div[0], { y: 600, x: 0, opacity: 0.05 }, "one")
-      .to(div[1], { y: -350, x: 0, opacity: 0.05 }, "one")
-      .to(div[2], { y: -300, x: 100, opacity: 1 }, "one")
-
-      .add("two")
-      .to(div[0], { y: 300, x: 100, opacity: 1 }, "two")
-      .to(div[1], { y: 300, x: 0, opacity: 0.05 }, "two")
-      .to(div[2], { y: -600, x: 0, opacity: 0.05 }, "two")
-
-      .add("three")
-      .to(div[0], { y: 0, x: 0, opacity: 0.05 }, "three")
-      .to(div[1], { y: 0, x: 100, opacity: 1 }, "three")
-      .to(div[2], { y: 0, x: 0, opacity: 0.05 }, "three");
-  });
-
   useEffect(()=>{
     AOS.init();
   },[])
-
+  
   return (
     <div className="our-work">
-      <div className="home-img-banner"><Slider/></div>
+      <div className="home-img-banner"><Slider content={sliderContent[0]}/></div>
       <div className="home-feature-content-1">
         <div className="home-feature-content-1-container">
           {/* <div className="home-feature-content-1-vid">
             <video src="/videos/feature_content_1_vid.mp4" width="400" height="300" autoplay="true" muted="true" loop="true"/>
           </div> */}
           <div className="home-feature-content-1-content">
-            <h1>Dreaming of a Brighter Future</h1>
+            <p className="title">Dreaming of a Brighter Future</p>
             <p>
                 Be it nutiriton, healthcare, education, 
                 <br/>
@@ -103,7 +86,7 @@ const OurWork = (props) => {
         </div>
       </div> */}
       <div className="causes-we-are-serving-container" data-aos="fade-up" data-aos-duration="1000">
-        <h1>CAUSES WE ARE SERVING</h1> 
+        <p className="title">CAUSES WE ARE SERVING</p> 
         <div className="causes-we-are-serving-contents">
           <div className="box box-up box-border-red" >
             <div className="content">
@@ -167,7 +150,29 @@ const OurWork = (props) => {
       </div>
       <div className="home-feature-content-3 flex-col">
         <div className="col-left">
-          <div className="home-feature-content-3-container">
+          <h1
+          className="title" 
+          // data-aos="fade-down" 
+          // data-aos-duration="1800"
+          >WE HELP EACH</h1>
+          <div 
+          // data-aos="fade-up" 
+          // data-aos-duration="1800"
+          >
+            <p>
+            We strategically emphasize on promoting quality healthcare, inclusive education, gender equitable and 
+            sustainable livelihood opportunities and disaster relief and preparedness. Our efforts are focused to 
+            fight against underlying causes of poverty and ensuring a life of dignity for all women and girls from 
+            the most marginalised and vulnerable communities, especially from the backward casts.
+            <br/>
+            Our key programming approaches include social analysis and action, gender transformative change, building 
+            secure and resilient communities, promoting inclusive governance, advocacy on national and international 
+            platforms and facilitating links and dialogues between public, private and civil society.
+            </p>
+          </div>
+        </div>
+        <div className="col-right">
+          {/* <div className="home-feature-content-3-container">
             <img src="/images/img_1.jpg" alt="home_img-1" />
           </div>
           <div className="home-feature-content-3-container">
@@ -175,22 +180,30 @@ const OurWork = (props) => {
           </div>
           <div className="home-feature-content-3-container">
             <img src="/images/img_3.jpg" alt="home_img-1" />
-          </div>
-        </div>
-        <div className="col-right">
-          <h1 data-aos="fade-down" data-aos-duration="1800">WE HELP EACH</h1>
-          <div data-aos="fade-up" data-aos-duration="1800">
-            <p>
-            We strategically emphasize on promoting quality healthcare, inclusive education, gender equitable and 
-            sustainable livelihood opportunities and disaster relief and preparedness. Our efforts are focused to 
-            fight against underlying causes of poverty and ensuring a life of dignity for all women and girls from 
-            the most marginalised and vulnerable communities, especially from the backward casts.
-            <br/>
-            <br/>
-            Our key programming approaches include social analysis and action, gender transformative change, building 
-            secure and resilient communities, promoting inclusive governance, advocacy on national and international 
-            platforms and facilitating links and dialogues between public, private and civil society.
-            </p>
+          </div> */}
+          {/* Hi */}
+          <div className="grid-container">
+            <div class="grid">
+              <div class="cell cell-1">
+                <img src="/images/img_3.jpg" alt="home_img-1" />
+              </div>
+              <div class="cell cell-2"></div>
+              <div class="cell cell-3">
+                <img src="/images/img_3.jpg" alt="home_img-1" />
+              </div>
+              <div class="cell cell-4"></div>
+              <div class="cell cell-5">
+                <img className="grid-img-center" src="/images/img_3.jpg" alt="home_img-1" />
+              </div>
+              <div class="cell cell-6"></div>
+              <div class="cell cell-7">
+                <img src="/images/img_3.jpg" alt="home_img-1" />
+              </div>
+              <div class="cell cell-8"></div>
+              <div class="cell cell-9">
+                <img src="/images/img_3.jpg" alt="home_img-1" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -200,11 +213,11 @@ const OurWork = (props) => {
       <div className="about-us-container">
         <div className="img-sec">
           <img className="img-1" src="/images/img_1.jpg" alt="home_img-1" />
-          <img className="img-2" src="/images/img_2.jpg" alt="home_img-2" />
+          <img className="img-2" src="/images/about-us-1.jpg" alt="home_img-2" />
           <img className="img-3" src="/images/img_3.jpg" alt="home_img-3" />
         </div>
         <div className="header-text-container">
-          <h1>ABOUT US</h1>
+          <h1 className="title">ABOUT US</h1>
           <p>
             Be it nutiriton, healthcare, education,
             sports and response in the time,
@@ -225,10 +238,11 @@ const OurWork = (props) => {
       </div>
       <div className="our-legacy-container">
         <div className="who-we-are-container">
-          <h2>WHO WE ARE</h2>
+          <h2 className="title">WHO WE ARE</h2>
           <span className="span-line"></span>
           <div className="img-container">
-            <img src="/images/img_1.jpg" alt="home_img-2" />
+            {/* <img src="/images/who-we-are-1.jpg" alt="home_img-2" /> */}
+            <img src="/images/about-us-1.jpg"/>
           </div>
           <div className="contents">
             <p>
@@ -242,10 +256,10 @@ const OurWork = (props) => {
           <button className="btn"><Link to="/about-us">EXPLORE</Link></button>
         </div>
         <div className="what-we-do-container">
-          <h2>WHAT WE DO</h2>
+          <h2 className="title">WHAT WE DO</h2>
           <span className="span-line"></span>
           <div className="img-container">
-            <img src="/images/img_2.jpg" alt="home_img-2" />
+            <img src="/images/what-we-do-1.webp" alt="home_img-2" />
           </div>
           <div className="contents">
             <p>
@@ -259,10 +273,10 @@ const OurWork = (props) => {
           <button className="btn"><Link to="/our-approach">EXPLORE</Link></button>
         </div>
         <div className="get-involved-container">
-          <h2>GET INVOLVED</h2>
+          <h2 className="title">GET INVOLVED</h2>
           <span className="span-line"></span>
           <div className="img-container">
-            <img src="/images/img_3.jpg" alt="home_img-2" />
+            <img src="/images/join-us.jpg" alt="home_img-2" />
           </div>
           <div className="contents">
             <p>
@@ -280,37 +294,39 @@ const OurWork = (props) => {
         <hr/>
       </div>
       <div className="home-currently-running-programs">
-        <h1 
+        <p
         // data-aos="fade-up"
         // data-aos-anchor-placement="bottom-bottom"
-        data-aos-duration="1600">CURRENTLY RUNNING PROGRAMS</h1>
+        // data-aos-duration="1600"
+        className="head-title"
+        >CURRENTLY RUNNING PROGRAMS</p>
         <div className="program-contents">
             <div className="program-content sec-1" data-aos-duration="1600">
-              <img src="/images/img_3.jpg" alt="home_img-2" />
-              <h3 className="title">EDUCATION</h3>
+              <img src="/images/educ-1.jpg" alt="home_img-2" />
+              <p className="title">EDUCATION</p>
               <br/>
               <p className="info">Thrust into large-scale work-from-home programs by
                   COVID-19...</p>
               <button className="btn btn-red"><Link to="/our-campaigns">EXPLORE</Link></button>
             </div>
             <div className="program-content sec-2" data-aos-duration="1600">
-              <img src="/images/img_3.jpg" alt="home_img-2" />
-              <h3 className="title">HEALTH AND NUTRITION</h3>
+              <img src="/images/health-n-nutrition-1.jpg" alt="home_img-2" />
+              <p className="title">HEALTH AND NUTRITION</p>
               <p className="info">Thrust into large-scale work-from-home programs by
                   COVID-19...</p>
               <button className="btn btn-green"><Link to="/our-campaigns">EXPLORE</Link></button>
             </div>
             <div className="program-content sec-3" data-aos-duration="1600">
-              <img src="/images/img_3.jpg" alt="home_img-2" />
-              <h3 className="title">SPORTS</h3>
+              <img src="/images/sports-1.jpg" alt="home_img-2" />
+              <p className="title">SPORTS</p>
               <br/>
               <p className="info">Thrust into large-scale work-from-home programs by
                   COVID-19...</p>
               <button className="btn btn-voilet"><Link to="/our-campaigns">EXPLORE</Link></button>
             </div>
             <div className="program-content sec-4" data-aos-duration="1600">
-              <img src="/images/img_3.jpg" alt="home_img-2" />
-              <h3 className="title">COVID-19 FOOD DISTRIBUTION</h3>
+              <img src="/images/food-distribution-1.jpg" alt="home_img-2" />
+              <p className="title">COVID-19 FOOD DISTRIBUTION</p>
               <p className="info">Thrust into large-scale work-from-home programs by
                   COVID-19...</p>
               <button className="btn btn-orange"><Link to="/our-campaigns">EXPLORE</Link></button>

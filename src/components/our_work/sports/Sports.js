@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
+import BoxCube from "../BoxCube";
+import "./Sports.scss";
 
 function Sports() {
-    return (
-        <div className="margin-top-80">
-            Sports
-        </div>
-    )
+  return (
+    <div className="margin-top-80">
+      Sports
+    </div>
+  );
 }
 
-export default Sports
+export default Sports;

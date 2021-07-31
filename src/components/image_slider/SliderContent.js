@@ -1,12 +1,41 @@
 import React from "react";
 
-function SliderContent({ activeIndex, contentComponet }) {
-  // console.log("contentComponet", contentComponet);
-  return (
-    <section>
-      {
-        contentComponet && contentComponet.map((slide, index) => (
-          <div key={index} className={index === activeIndex ? "slides active" : "inactive"}>
+function SliderContent({ activeIndex, contentName, contentComponet }) {
+
+  console.log("contentName:::::", contentName);
+  console.log("contentComponet:::::", contentComponet);
+
+  const renderContent = () => {
+    if (contentName === "testimonialContent") {
+      return (
+        contentComponet &&
+        contentComponet.map((slide, index) => (
+          <div
+            key={index}
+            className={index === activeIndex ? "slides active" : "inactive"}
+          >
+            <div className="testimonial-row">
+              <div className="testimonial-img">
+                <img src={slide.image} alt="testimonial-person-img" />
+              </div>
+              <div className="testimonial-data">
+                <div className="testimonial-text">{slide.description}</div>
+                <br/>
+                <div className="testimonial-name">- {slide.name}</div>
+              </div>
+            </div>
+            {/* <span className="span-line"></span> */}
+          </div>
+        ))
+      );
+    } else {
+      return (
+        contentComponet &&
+        contentComponet.map((slide, index) => (
+          <div
+            key={index}
+            className={index === activeIndex ? "slides active" : "inactive"}
+          >
             <img className="slide-image" src={slide.urls} alt="" />
             <div className="banner-contents">
               <h1>{slide.title}</h1>
@@ -15,7 +44,13 @@ function SliderContent({ activeIndex, contentComponet }) {
             </div>
           </div>
         ))
-      }
+      );
+    }
+  };
+
+  return (
+    <section>
+      {renderContent()}
       {/* <br />
       <div className="inp-btn">
       <input

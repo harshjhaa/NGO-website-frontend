@@ -11,7 +11,7 @@
   //home page--CSS
   .hr-line {
     width: 20%;
-    margin: 30px auto;
+    margin: 30px auto 20px auto;
   }
 
   .span-line {
@@ -19,6 +19,7 @@
     margin-bottom: 10px;
     border-bottom: 1.5px solid #f90;
   }
+
   .header-text-container {
     display: flex;
     flex-direction: column;
@@ -55,21 +56,21 @@
   }
 
   .home-feature-content-1 {
-    margin-top: 15px;
+    position: relative;
+    margin-top: 50px;
     margin-bottom: 35px;
     text-align: center;
     font-family: "Work Sans", sans-serif;
-    .title{
+    .title {
       font-size: 30px;
-      margin-bottom: 20px !important;
-      // font-family: 'Dancing Script', cursive;
-      font-family: 'Merienda', cursive;
-      // font-family: 'Dancing Script', cursive;
+      font-family: "Merienda", cursive;
+      color: #c88200;
     }
     .home-feature-content-1-container {
       display: flex;
+      margin-top: 60px;
     }
-    .home-feature-content-1-vid,
+    .box-animation,
     .home-feature-content-1-content {
       flex: 1;
     }
@@ -78,9 +79,11 @@
       flex-direction: column;
       align-items: center;
       padding: 30px 0px;
-      p {
+      .info {
         width: 60%;
         margin: auto;
+        color: #3e2900;
+        line-height: 2rem;
       }
     }
   }
@@ -90,9 +93,10 @@
     font-family: "Work Sans", sans-serif;
     width: 96%;
     margin: auto;
-    .title{
+    .title {
       font-size: 30px;
-      font-family: 'Merienda', cursive;
+      font-family: "Merienda", cursive;
+      color: #c88200;
     }
     .causes-we-are-serving-contents {
       padding: 10px;
@@ -118,6 +122,7 @@
         }
         p {
           margin: 10px 0px;
+          color: #3e2900;
         }
       }
       .box-down {
@@ -187,6 +192,7 @@
   .home-feature-content-3 {
     height: 50%;
     text-align: center;
+    margin-bottom: 70px;
     .home-feature-content-3-container {
       display: flex;
       flex-direction: column;
@@ -210,11 +216,10 @@
     }
     .col-left {
       flex: 1;
-      .title{
+      .title {
         font-size: 30px;
-        font-family: 'Caveat', cursive;
-        // font-family: 'Gloria Hallelujah', cursive;
-        color: #c88200
+        font-family: "Caveat", cursive;
+        color: #c88200;
       }
       p {
         line-height: 35px;
@@ -241,16 +246,16 @@
           display: block;
           content: "";
           border: 2px dashed #e4e1cf;
-          height: 100%;
-          width: 73%;
+          height: 400px;
+          width: 400px;
           position: absolute;
           border-radius: 50%;
-          animation: rotate infinite;
+          animation: rotates infinite;
           animation-duration: 50s;
           animation-iteration-count: infinite;
           animation-timing-function: linear;
         }
-        @keyframes rotate {
+        @keyframes rotates {
           0% {
             transform: rotate(0deg);
           }
@@ -260,11 +265,16 @@
         }
         .grid {
           display: flex;
-          flex-wrap: wrap; 
+          flex-wrap: wrap;
           justify-content: center;
           align-items: center;
           transition: all 1s;
-          transition-delay: .5s;
+          transition-delay: 0.5s;
+          p {
+            text-align: center;
+            font-family: "Architects Daughter", cursive;
+            color: #3e2900;
+          }
           img {
             height: 100%;
             width: 100%;
@@ -272,12 +282,16 @@
             // visibility: hidden;
           }
           .grid-img-center {
-            height: 180px;
-            width: 180px;
+            height: 170px;
+            width: 170px;
+            animation: rotates infinite;
+            animation-duration: 50s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
           }
         }
         .cell {
-          flex: 0 0 30%;
+          flex: 0 0 28%;
           height: 130px;
           // background-color: green;
         }
@@ -288,18 +302,58 @@
     }
   }
 
+  .home-covid-banner {
+    // height: 450px;
+    text-align: center;
+    .title {
+      font-size: 30px;
+      font-family: "Caveat", cursive;
+      color: #c88200;
+      margin-bottom: 10px;
+    }
+    .slides {
+      height: 450px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: orange;
+    }
+    .slide-image {
+      width: 90%;
+      height: 99%;
+      object-fit: contain;
+    }
+    .banner-contents {
+      display: none;
+    }
+    .prev {
+      left: 0;
+    }
+    .all-dots {
+      width: 100%;
+      position: absolute;
+      display: flex;
+      top: 95%;
+      justify-content: center;
+      z-index: 200;
+    }
+    .dot {
+      height: 1rem;
+      width: 1rem;
+    }
+  }
+
   .about-us-container {
     padding: 0px 30px;
     display: flex;
     width: 98%;
-    margin: 30px auto;
-    .title{
+    margin: auto;
+    .title {
       font-size: 30px;
-      font-family: 'Caveat', cursive;
-      // font-family: 'Gloria Hallelujah', cursive;
-      color: #c88200
+      font-family: "Caveat", cursive;
+      color: #c88200;
     }
-    p{
+    p {
       color: #3e2900;
     }
     .img-sec {
@@ -313,23 +367,23 @@
         border-radius: 50%;
         margin: 0px 10px;
       }
-      .img-2 {
-        z-index: 10;
-        width: 250px;
-        height: 250px;
-        transition: 1s;
-      }
-      .img-1 {
-        transform: translate(110%, 0);
-      }
-      .img-3 {
-        transform: translate(-110%, 0);
-      }
-      .img-1,
-      .img-3 {
-        visibility: hidden;
-        transition: 1s;
-      }
+      // .img-2 {
+      //   z-index: 10;
+      //   width: 250px;
+      //   height: 250px;
+      //   transition: 1s;
+      // }
+      // .img-1 {
+      //   transform: translate(110%, 0);
+      // }
+      // .img-3 {
+      //   transform: translate(-110%, 0);
+      // }
+      // .img-1,
+      // .img-3 {
+      //   visibility: hidden;
+      //   transition: 1s;
+      // }
     }
     .contents {
       display: flex;
@@ -349,20 +403,20 @@
     }
   }
 
-  .about-us-container:hover {
-    .img-2 {
-      transform: scale(0.8);
-    }
-    .img-1,
-    .img-3 {
-      transform: translate(0, 0) rotate(-360deg);
-      visibility: visible;
-    }
-    .img-3 {
-      transform: translate(0, 0) rotate(360deg);
-      visibility: visible;
-    }
-  }
+  // .about-us-container:hover {
+  //   .img-2 {
+  //     transform: scale(0.8);
+  //   }
+  //   .img-1,
+  //   .img-3 {
+  //     transform: translate(0, 0) rotate(-360deg);
+  //     visibility: visible;
+  //   }
+  //   .img-3 {
+  //     transform: translate(0, 0) rotate(360deg);
+  //     visibility: visible;
+  //   }
+  // }
 
   .our-legacy-container {
     display: flex;
@@ -373,11 +427,11 @@
     margin: 30px auto;
     text-align: center;
     font-family: "Work Sans", sans-serif;
-    .title{
+    .title {
       margin-bottom: 10px;
       font-size: 28px;
-      font-family: 'Shadows Into Light', cursive;
-      color: #2b1c00 
+      font-family: "Shadows Into Light", cursive;
+      color: #2b1c00;
     }
     .span-line {
       border-bottom: 2px solid #f90;
@@ -565,23 +619,24 @@
     width: 100%;
     margin: auto;
     text-align: center;
-    .head-title{
+    .head-title {
       font-size: 32px;
       font-weight: 700;
       // font-family: 'Merienda', cursive;
-      font-family: 'Caveat', cursive;
+      font-family: "Caveat", cursive;
       color: #385165;
+      color: #c88200;
     }
     img {
       display: flex;
       border-radius: 20%;
       width: 100%;
-      // visibility: hidden;
+      height: 200px;
     }
     .title {
       padding: 10px;
       font-size: 23px;
-      font-family: 'Play', sans-serif;
+      font-family: "Play", sans-serif;
     }
     .info {
       padding: 0px 5px 5px 5px;
@@ -642,6 +697,11 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    .title {
+      font-size: 30px;
+      font-family: "Caveat", cursive;
+      color: #c88200;
+    }
     .content {
       margin-top: 20px;
       display: flex;
@@ -665,72 +725,118 @@
     }
   }
 
-  .testimonial-and-twitter-contaienr {
-    display: flex;
-    flex-direction: row;
-    .home-testimonial-list-container,
-    .twitter-list-container {
-      flex: 1;
+  .home-testimonial-container {
+    height: 400px;
+    margin-bottom: 80px;
+    text-align: center;
+    .title {
+      font-size: 30px;
+      font-family: "Caveat", cursive;
+      color: #c88200;
+    }
+    .testimonial-row {
+      height: 100%;
+      width: 66%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      .testimonial-img {
+        flex: 0.5;
+        display: flex;
+        justify-content: start;
+      }
+      .testimonial-data {
+        flex: 1;
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        .testimonial-text {
+          text-align: initial;
+          font-family: "Kalam", cursive;
+          font-size: 22px;
+          color: aliceblue;
+        }
+        .testimonial-name {
+          text-align: center;
+          font-style: italic;
+        }
+      }
+    }
+    .prev {
+      left: 0;
+    }
+    .prev,
+    .next {
+      color: aliceblue;
+    }
+    .slides {
+      margin-top: 10px;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #069;
+    }
+    img {
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
     }
   }
 
-  //testimonials
-  .home-testimonial-list-container,
-  .twitter-list-container {
-    margin-top: 50px;
-    // margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    .testimonial-row {
-      padding: 20px;
-      margin-right: 10px;
+  .latest-updates-container {
+    height: 500px;
+    text-align: center;
+    .head-title {
+      font-size: 35px;
+      font-family: "Caveat", cursive;
+      color: #c88200;
+    }
+    .contents {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: justify;
-    }
-    .span-line {
-      width: 10%;
-      margin-bottom: 10px;
-      border-bottom: 1.5px solid #f90;
-    }
-    .title {
-      padding: 10px;
-      text-align: center;
-      font-family: "Work Sans", sans-serif;
-      font-size: 21px;
-    }
-    .testimonial-col {
-      margin-top: 10px;
-      background-size: cover;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 0px auto;
+      height: 91%;
       width: 85%;
+      margin: auto;
     }
-    .testimonial-contents {
-      display: flex;
-      flex-direction: column;
-      .testimonial-name {
-        display: flex;
-        justify-content: flex-end;
+    .events-list-container,
+    .twitter-list-container {
+      flex: 1;
+      border: 1px solid #000;
+      margin: 10px;
+    }
+    .events-list-container {
+      // background-color: green;
+    }
+    .twitter-list-container {
+      // background-color: cyan;
+      .twitter {
+        height: 434px;
+        width: 100%;
+        // .twitter-timeline{
+        //   p{
+        //     font-size: 14px !important;
+        //   line-height: 20px !important;
+        //   }
+        // }
+        // #twitter-widget-0 {
+        //   body {
+        //     .timeline-Widget {
+        //       .timeline-Body.customisable-border {
+        //         .timeline-Viewport {
+        //           .timeline-TweetList-tweet {
+        //             .timeline-Tweet {
+        //               .timeline-Tweet-text {
+
+        //               }
+        //             }
+        //           }
+        //         }
+        //       }
+        //     }
+        //   }
+        // }
       }
-    }
-    .testimonial-img img {
-      height: 120px;
-      width: 120px;
-      border-radius: 75px;
-    }
-    .testimonial-text {
-      display: flex;
-      justify-content: center; /* align horizontal */
-      align-items: center; /* align vertical */
-      margin-left: 30px;
-      font-family: "Work Sans", sans-serif;
-      line-height: 18px;
-      font-size: 13px;
     }
   }
 
@@ -739,6 +845,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
+    margin-top: 20px;
     .contents {
       width: 80%;
       display: flex;

@@ -382,7 +382,7 @@ const OurWork = (props) => {
       <div
         className="home-currently-running-programs"
         data-aos="fade-up"
-        data-aos-duration="1000"
+        data-aos-duration="2000"
       >
         <p
           // data-aos="fade-up"

@@ -42,7 +42,6 @@ const OurWork = (props) => {
       </div>
       <div className="hr-line">
         <hr />
-        <hr />
       </div>
       <div
         className="home-feature-content-1"
@@ -73,7 +72,6 @@ const OurWork = (props) => {
         </div>
       </div>
       <div className="hr-line">
-        <hr />
         <hr />
       </div>
       <span className="span-line"></span>

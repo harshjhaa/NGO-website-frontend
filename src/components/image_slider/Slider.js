@@ -10,7 +10,7 @@ import "./slider.scss";
 const sliderContentComp = {
   "topBannerContent" : topBannerContent,
   "covidBannerContent" : covidBannerContent,
-  "testimonialContent": testimonialContent
+  "testimonialContent": testimonialContent,
 }
 
 function Slider({contentName}) {
@@ -38,7 +38,6 @@ function Slider({contentName}) {
   },[])
 
   useEffect(() => {
-    console.log("contetntComp: ", contetntComp);
     if(contetntComp){
       setLen(contetntComp.length-1)
     }
@@ -47,7 +46,7 @@ function Slider({contentName}) {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex(activeIndex === len ? 0 : activeIndex + 1);
-    }, 3000);
+    }, 3000000);
     return () => clearInterval(interval);
   }, [activeIndex]);
 

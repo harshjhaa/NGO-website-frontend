@@ -89,6 +89,37 @@
   }
 
   .causes-we-are-serving-container {
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-container-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+      bottom: 5px;
+    }
+    .swiper-pagination {
+      .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+      }
+    }
+    .swiper-slide {
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
     text-align: center;
     font-family: "Work Sans", sans-serif;
     width: 96%;
@@ -100,10 +131,7 @@
     }
     .causes-we-are-serving-contents {
       padding: 10px;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
+      height: 320px;
       h4 {
         margin: 5px 0px;
       }
@@ -245,7 +273,7 @@
           z-index: -1;
           display: block;
           content: "";
-          border: 2px dashed #e4e1cf;
+          border: 2px dashed rgb(125, 255, 255);
           height: 400px;
           width: 400px;
           position: absolute;
@@ -274,16 +302,17 @@
             text-align: center;
             font-family: "Architects Daughter", cursive;
             color: #3e2900;
+            font-size: 14px;
           }
           img {
-            height: 100%;
-            width: 100%;
+            height: 65%;
+            width: 65%;
             border-radius: 50%;
             // visibility: hidden;
           }
           .grid-img-center {
-            height: 170px;
-            width: 170px;
+            height: 110px;
+            width: 110px;
             animation: rotates infinite;
             animation-duration: 50s;
             animation-iteration-count: infinite;
@@ -294,9 +323,6 @@
           flex: 0 0 28%;
           height: 130px;
           // background-color: green;
-        }
-        .cell-5 {
-          height: 170px;
         }
       }
     }

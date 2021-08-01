@@ -3,11 +3,19 @@ import { Link } from "react-router-dom";
 import Slider from "../image_slider/Slider";
 import BoxCube from "./BoxCube";
 import Carousel from "react-elastic-carousel";
-import gsap from "gsap";
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/swiper.min.css";
+import "swiper/components/pagination/pagination.min.css";
+import "swiper/components/navigation/navigation.min.css";
 import AOS from "aos";
 import "./OurWork.scss";
 
-const OurWork = (props) => {
+// import Swiper core and required modules
+import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper/core";
+// install Swiper modules
+SwiperCore.use([Autoplay, Pagination, Navigation]);
+const OurWork = () => {
   const sliderContent = {
     topBannerContent: "topBannerContent",
     covidBannerContent: "covidBannerContent",
@@ -22,6 +30,9 @@ const OurWork = (props) => {
   ];
 
   useEffect(() => {
+    AOS.init();
+    AOS.init();
+    AOS.init();
     AOS.init();
     const anchor = document.createElement("a");
     anchor.setAttribute("class", "twitter-timeline");
@@ -75,34 +86,62 @@ const OurWork = (props) => {
         <hr />
       </div>
       <span className="span-line"></span>
-      {/* <div className="home-feature-content-2" data-aos="zoom-out-up" data-aos-duration="1000">
+      {/* <div
+        className="home-feature-content-2"
+        data-aos="zoom-out-up"
+        data-aos-duration="1000"
+      >
         <h1>Causes We Are Serving</h1>
         <div className="home-causes-we-serving-container" id="style-1">
-          <Carousel breakPoints={breakPoints} pagination={false}>
+          <Carousel
+            breakPoints={breakPoints}
+            pagination={false}
+            infiniteLoop={true}
+          >
             <div className="img-txt">
               <img src="/images/img_1.jpg" alt="home_img-1" />
               <h4>EDUCATION</h4>
-              <button className="btn"><Link className="btn" to="/education">EXPLORE</Link></button>
+              <button className="btn">
+                <Link className="btn" to="/education">
+                  EXPLORE
+                </Link>
+              </button>
             </div>
             <div className="img-txt">
               <img src="/images/img_2.jpg" alt="home_img-2" />
               <h4>HEALTHCARE</h4>
-              <button className="btn"><Link className="btn" to="/healthcare">EXPLORE</Link></button>
+              <button className="btn">
+                <Link className="btn" to="/healthcare">
+                  EXPLORE
+                </Link>
+              </button>
             </div>
             <div className="img-txt">
               <img src="/images/img_3.jpg" alt="home_img-3" />
               <h4>LIVELIHOODS</h4>
-              <button className="btn"><Link className="btn" to="/livelihoods">EXPLORE</Link></button>
+              <button className="btn">
+                <Link className="btn" to="/livelihoods">
+                  EXPLORE
+                </Link>
+              </button>
             </div>
             <div className="img-txt">
               <img src="/images/img_1.jpg" alt="home_img-1" />
               <h4>SPORTS</h4>
-              <button className="btn"><Link className="btn" to="/sports">EXPLORE</Link></button>
+              <button className="btn">
+                <Link className="btn" to="/sports">
+                  EXPLORE
+                </Link>
+              </button>
             </div>
             <div className="img-txt">
               <img src="/images/img_2.jpg" alt="home_img-2" />
               <h4>HUMANITARIAN</h4>
-              <button className="btn"><Link className="btn" to="/humanitarian">EXPLORE</Link></button>
+              <button className="btn">
+                <Link className="btn" to="/humanitarian">
+                  EXPLORE
+                </Link>
+              </button>
             </div>
           </Carousel>
         </div>
@@ -113,8 +152,131 @@ const OurWork = (props) => {
         data-aos-duration="1000"
       >
         <p className="title">CAUSES WE ARE SERVING</p>
-        <div className="causes-we-are-serving-contents">
-          <div className="box box-up box-border-red">
+        <div
+          className="causes-we-are-serving-contents"
+          style={{ position: "relative" }}
+        >
+          <Swiper
+            slidesPerView={3}
+            slidesPerGroup={3}
+            spaceBetween={10}
+            breakpoints={{
+              960: {
+                slidesPerView: 3,
+                spaceBetween: 8,
+                slidesPerGroup: 3,
+              },
+              720: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+                slidesPerGroup: 2,
+              },
+              540: {
+                slidesPerView: 1,
+                spaceBetween: 2,
+                slidesPerGroup: 1,
+              },
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 2,
+                slidesPerGroup: 1,
+              },
+            }}
+            autoplay={{
+              delay: 7000,
+              disableOnInteraction: false,
+            }}
+            centeredSlides={true}
+            loop={true}
+            loopFillGroupWithBlank={false}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <div className="box box-border-red">
+                <div className="content">
+                  <img src="/gif/edu-2.gif" alt="home_img-1" />
+                  <h4>EDUCATION</h4>
+                  <p>
+                    Education is one of the main piller of the society, without
+                    it India's future is lost!
+                  </p>
+                  <button className="btn btn-red">
+                    <Link to="/education">EXPLORE</Link>
+                  </button>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <div className="box box-border-green">
+                <div className="content">
+                  <img src="/gif/health-5.gif" alt="home_img-2" />
+                  <h4>HEALTHCARE</h4>
+                  <p>
+                    Good health makes people strong, increaes thier efficient
+                    and inturn benefits society!
+                  </p>
+                  <button className="btn btn-green">
+                    <Link to="/healthcare">EXPLORE</Link>
+                  </button>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <div className="box box-border-voilet">
+                <div className="content">
+                  <img src="/gif/liveli-4.gif" alt="home_img-2" />
+                  <h4>LIVELIHOODS</h4>
+                  <p>
+                    Imporvement in the livelihood lead to the upgradation of the
+                    standard of living!
+                  </p>
+                  <button className="btn btn-voilet">
+                    <Link to="/livelihoods">EXPLORE</Link>
+                  </button>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <div className="box box-border-orange">
+                <div className="content">
+                  <img src="/gif/sports-2.gif" alt="home_img-2" />
+                  <h4>SPORTS</h4>
+                  <p>
+                    Sports helps to evolve the overall mentality of the person
+                    by making them active, alert and friendly!
+                  </p>
+                  <button className="btn btn-orange">
+                    <Link to="/sports">EXPLORE</Link>
+                  </button>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <div className="box box-border-blue">
+                <div className="content">
+                  <img src="/gif/human-2.gif" alt="home_img-2" />
+                  <h4>HUMANITARIAN</h4>
+                  <p>
+                    Human wlfare is one of the important factor in keeping the
+                    society balanced, evolving from time to time!
+                  </p>
+                  <button className="btn btn-blue">
+                    <Link to="/humanitarian">EXPLORE</Link>
+                  </button>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+          {/* <Slider contentName={sliderContent["causesServingContent"]} /> */}
+          {/* <div className="box box-up box-border-red">
             <div className="content">
               <img src="/gif/edu-2.gif" alt="home_img-1" />
               <h4>EDUCATION</h4>
@@ -178,7 +340,7 @@ const OurWork = (props) => {
                 <Link to="/humanitarian">EXPLORE</Link>
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="hr-line">
@@ -232,27 +394,27 @@ const OurWork = (props) => {
           <div className="grid-container">
             <div className="grid">
               <div className="cell cell-1">
-                <img src="/images/children-1.jpg" alt="children_img" />
-                <p>CHILDREN</p>
+                <img src="/images/family-1.png" alt="family_img" />
+                <p>FAMILY</p>
               </div>
               <div className="cell cell-2"></div>
               <div className="cell cell-3">
-                <img src="/images/home-1.png" alt="home_img" />
-                <p>HOME</p>
+                <img src="/images/community-1.png" alt="community_img" />
+                <p>COMMUNITY</p>
               </div>
               <div className="cell cell-4"></div>
               <div className="cell cell-5">
                 <img
                   className="grid-img-center"
-                  src="/images/community-1.png"
-                  alt="community_img"
+                  src="/images/children-1.jpg"
+                  alt="children_img"
                 />
-                <p>COMMUNITY</p>
+                <p>CHILDREN</p>
               </div>
               <div className="cell cell-6"></div>
               <div className="cell cell-7">
-                <img src="/images/family-1.png" alt="family_img" />
-                <p>FAMILY</p>
+                <img src="/images/home-1.png" alt="home_img" />
+                <p>HOME</p>
               </div>
               <div className="cell cell-8"></div>
               <div className="cell cell-9">
@@ -336,7 +498,7 @@ const OurWork = (props) => {
             </p>
           </div>
           <button className="btn">
-            <Link to="/about-us">EXPLORE</Link>
+            <Link to="/about-us">LEARN MORE</Link>
           </button>
         </div>
         <div className="what-we-do-container">
@@ -353,7 +515,7 @@ const OurWork = (props) => {
             </p>
           </div>
           <button className="btn">
-            <Link to="/our-approach">EXPLORE</Link>
+            <Link to="/our-approach">SEE OUR WORK</Link>
           </button>
         </div>
         <div className="get-involved-container">
@@ -370,7 +532,7 @@ const OurWork = (props) => {
             </p>
           </div>
           <button className="btn btn-red">
-            <Link to="/our-campaigns">EXPLORE</Link>
+            <Link to="/our-campaigns">START NOW</Link>
           </button>
         </div>
       </div>
@@ -380,7 +542,7 @@ const OurWork = (props) => {
       <div
         className="home-currently-running-programs"
         data-aos="fade-up"
-        data-aos-duration="2000"
+        data-aos-duration="1000"
       >
         <p
           // data-aos="fade-up"

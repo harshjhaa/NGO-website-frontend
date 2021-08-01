@@ -1,10 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function SliderContent({ activeIndex, contentName, contentComponet }) {
-
-  console.log("contentName:::::", contentName);
-  console.log("contentComponet:::::", contentComponet);
-
   const renderContent = () => {
     if (contentName === "testimonialContent") {
       return (
@@ -20,11 +17,10 @@ function SliderContent({ activeIndex, contentName, contentComponet }) {
               </div>
               <div className="testimonial-data">
                 <div className="testimonial-text">{slide.description}</div>
-                <br/>
+                <br />
                 <div className="testimonial-name">- {slide.name}</div>
               </div>
             </div>
-            {/* <span className="span-line"></span> */}
           </div>
         ))
       );

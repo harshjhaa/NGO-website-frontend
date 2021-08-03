@@ -31,9 +31,9 @@ const OurWork = () => {
 
   useEffect(() => {
     AOS.init();
-    AOS.init();
-    AOS.init();
-    AOS.init();
+    document.getElementsByTagName('marquee')[0].style.display = 'block';
+    document.getElementsByClassName("donate-footer")[0].style.display = "block";
+    //for handelling twitter
     const anchor = document.createElement("a");
     anchor.setAttribute("class", "twitter-timeline");
     anchor.setAttribute("data-theme", "dark");

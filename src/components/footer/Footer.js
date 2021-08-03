@@ -10,7 +10,7 @@ const Footer = () => {
 
   return (
     <div>
-      <div className="donate-footer" data-aos="fade-up" data-aos-duration="700">
+      <div className="donate-footer">
         <div className="contents">
           <h2>HELP US FIGNT THE HUNGER IN RURAL AREAS</h2>
           <br />

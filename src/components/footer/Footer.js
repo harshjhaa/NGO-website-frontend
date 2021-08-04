@@ -10,51 +10,6 @@ const Footer = () => {
 
   return (
     <div>
-      <div className="donate-footer">
-        <div className="contents">
-          <h2>HELP US FIGNT THE HUNGER IN RURAL AREAS</h2>
-          <br />
-          <br />
-          <div className="inp-btn">
-            <input
-              className="input-donate"
-              type="number"
-              placeholder="DONATE ANY AMOUNT (INR)"
-            ></input>
-            <button className="donate-inp-btn">PROCEED</button>
-          </div>
-          <br />
-          <br />
-          <h3>
-            Some rural residents and households are food insecure,
-            <br />
-            meaning they cannot rely on access to sufficient
-            <br />
-            affordable and nutritious food at all times,
-            <br />
-            increasing the risk of poor health outcomes.
-          </h3>
-        </div>
-      </div>
-      <div className="acknowledgement-container">
-        <div className="content display-row">
-          <div className="sec-1">
-            <img className="img-icon" src="/svg/heart.svg" />
-            <p>All our efforts are made possible because of your support.</p>
-          </div>
-          <div className="sec-2">
-            <img className="img-icon" src="/svg/tax.svg" />
-            {/* <p>Your donation are Tax Exempted uder 80G of the Indian Income Tax Act.</p> */}
-            <p>Your donations are under right hand.</p>
-          </div>
-          <div className="sec-3">
-            <img className="img-icon" src="/svg/security-2.svg" />
-            <p>
-              Your donations and transactions are completely safe and secure.
-            </p>
-          </div>
-        </div>
-      </div>
       <div className="footer-container">
         <div className="footer-logo">
           <img

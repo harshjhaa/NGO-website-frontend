@@ -30,9 +30,11 @@ const OurWork = () => {
   ];
 
   useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+    })
     AOS.init();
-    document.getElementsByTagName('marquee')[0].style.display = 'block';
-    document.getElementsByClassName("donate-footer")[0].style.display = "block";
     //for handelling twitter
     const anchor = document.createElement("a");
     anchor.setAttribute("class", "twitter-timeline");
@@ -48,6 +50,25 @@ const OurWork = () => {
 
   return (
     <div className="our-work">
+      <marquee
+        className="home-marquee margin-top-80"
+        direction="left"
+        scrollamount="5"
+        behavior="scroll"
+      >
+        <p>
+          Truly Help Foundation is a registered Non-profit organization under
+          section 8 company in india and a Members of THF confederation present
+          in PAN India which works with the most marginalised people to
+          alleviate poverty and reduce social injustice through comprehensive
+          programmes in healthcare, education, livelihoods, sports and
+          humanitarian assistance and rehabilitation. | We are responding to the
+          second wave of COVID-19 by setting up temporary COVID Care Facilities
+          and supporting marginalized communities by providing dry ration and
+          hygiene kits . We are also awaring and preparing communities for covid
+          third wave.
+        </p>
+      </marquee>
       <div className="home-img-banner">
         <Slider contentName={sliderContent["topBannerContent"]} />
       </div>
@@ -57,7 +78,7 @@ const OurWork = () => {
       <div
         className="home-feature-content-1"
         data-aos="fade-up"
-        data-aos-duration="1000"
+        data-aos-duration="700"
       >
         <p className="title">Dreaming of a Brighter Future</p>
         <div className="home-feature-content-1-container">
@@ -682,6 +703,51 @@ const OurWork = () => {
       </div>
       <div className="hr-line">
         <hr />
+      </div>
+      <div className="donate-rural-area">
+        <div className="contents">
+          <h2>HELP US FIGNT THE HUNGER IN RURAL AREAS</h2>
+          <br />
+          <br />
+          <div className="inp-btn">
+            <input
+              className="input-donate"
+              type="number"
+              placeholder="DONATE ANY AMOUNT (INR)"
+            ></input>
+            <button className="donate-inp-btn">PROCEED</button>
+          </div>
+          <br />
+          <br />
+          <h3>
+            Some rural residents and households are food insecure,
+            <br />
+            meaning they cannot rely on access to sufficient
+            <br />
+            affordable and nutritious food at all times,
+            <br />
+            increasing the risk of poor health outcomes.
+          </h3>
+        </div>
+      </div>
+      <div className="acknowledgement-container">
+        <div className="content">
+          <div className="sec-1">
+            <img className="img-icon" src="/svg/heart.svg" />
+            <p>All our efforts are made possible because of your support.</p>
+          </div>
+          <div className="sec-2">
+            <img className="img-icon" src="/svg/tax.svg" />
+            {/* <p>Your donation are Tax Exempted uder 80G of the Indian Income Tax Act.</p> */}
+            <p>Your donations are under right hand.</p>
+          </div>
+          <div className="sec-3">
+            <img className="img-icon" src="/svg/security-2.svg" />
+            <p>
+              Your donations and transactions are completely safe and secure.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

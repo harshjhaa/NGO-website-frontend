@@ -10,51 +10,6 @@
   text-decoration: none;
 }
 
-.donate-footer {
-  // margin-top: 5px;
-  height: 400px;
-  background-image: url(./donate-bck-1.jpg);
-  background-size: cover;
-  align-items: center;
-  padding-left: 30px;
-  .contents {
-    display: inline-block;
-    margin-top: 10px;
-    h2,
-    h3 {
-      color: #fff;
-      font-family: "Oxygen", sans-serif;
-    }
-  }
-  .inp-btn {
-    display: flex;
-    flex-direction: row;
-  }
-  .donate-inp-btn {
-    margin-left: 50px;
-    background-color: #ff5c5c;
-    color: #fff;
-    border: black;
-    border-radius: 20px;
-    cursor: pointer;
-  }
-  .input-donate {
-    width: 225px;
-    height: 45px;
-    padding-left: 10px;
-    border-radius: 25px;
-    outline: none;
-    border: #000;
-    background-color: honeydew;
-    font-family: "Oxygen";
-  }
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-}
-
 .display-col {
   display: flex;
   flex-direction: column;
@@ -63,43 +18,6 @@
 .display-row {
   display: flex;
   flex-direction: row;
-}
-
-.acknowledgement-container{
-  display: flex;
-  justify-content: center;
-  .content{
-    display: flex;
-    width: 85%;
-    height: 80px;
-    border-radius: 50px;
-    margin: 10px 0px;
-    align-items: center;
-    text-align: center;
-    font-family: 'Otomanopee One', sans-serif;
-    background-color: lightyellow;
-    .sec-1,
-    .sec-2,
-    .sec-3{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0px 10px;
-      p{
-        font-size: 14px;
-        padding: 0px 5px;
-      }
-      .img-icon{
-        height: 45px;
-        transition: 0.5s;
-      }
-    }
-  }
-  .content:hover{
-    .img-icon{
-      transform: rotate(360deg);
-    }
-  }
 }
 
 .footer-container {

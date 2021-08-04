@@ -1,0 +1,154 @@
+.one-edge-shadow {
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
+}
+.education-tab,
+.healthcare-tab,
+.livelihood-tab,
+.sports-tab,
+.humanitarian-tab {
+  .title {
+    font-size: 35px;
+    font-family: "Caveat", cursive;
+    color: #c88200;
+    text-align: center;
+  }
+  .banner {
+    position: relative;
+    .edu-banner-img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+    }
+    .banner-text {
+      position: absolute;
+      bottom: 0px;
+      left: 20px;
+      padding: 15px;
+      color: #fff;
+      font-size: 50px;
+    }
+  }
+  .page-routing {
+    padding: 10px;
+    .active-link {
+      text-decoration: none;
+      color: #000;
+      transition: 0.3s;
+    }
+    .active-link:hover {
+      color: orange;
+    }
+    p {
+      display: inline-block;
+      color: orange;
+    }
+    .right-arrow {
+      margin: 0px 3px;
+    }
+  }
+  .quote-text-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    margin-bottom: 80px;
+    padding-left: 50px;
+    .quote-text {
+      width: 40%;
+      font-style: italic;
+      font-family: "Work Sans", sans-serif;
+      line-height: 1.7rem;
+    }
+    .opening-quote-svg,
+    .closing-quote-svg {
+      position: absolute;
+      background-repeat: no-repeat;
+      height: 60px;
+      width: 66px;
+      background-size: 64px;
+      display: block;
+      transition: all 0.3s;
+    }
+    .opening-quote-svg {
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEzIDE0LjcyNWMwLTUuMTQxIDMuODkyLTEwLjUxOSAxMC0xMS43MjVsLjk4NCAyLjEyNmMtMi4yMTUuODM1LTQuMTYzIDMuNzQyLTQuMzggNS43NDYgMi40OTEuMzkyIDQuMzk2IDIuNTQ3IDQuMzk2IDUuMTQ5IDAgMy4xODItMi41ODQgNC45NzktNS4xOTkgNC45NzktMy4wMTUgMC01LjgwMS0yLjMwNS01LjgwMS02LjI3NXptLTEzIDBjMC01LjE0MSAzLjg5Mi0xMC41MTkgMTAtMTEuNzI1bC45ODQgMi4xMjZjLTIuMjE1LjgzNS00LjE2MyAzLjc0Mi00LjM4IDUuNzQ2IDIuNDkxLjM5MiA0LjM5NiAyLjU0NyA0LjM5NiA1LjE0OSAwIDMuMTgyLTIuNTg0IDQuOTc5LTUuMTk5IDQuOTc5LTMuMDE1IDAtNS44MDEtMi4zMDUtNS44MDEtNi4yNzV6Ii8+PC9zdmc+);
+      left: 25%;
+      top: -43%;
+    }
+    .closing-quote-svg {
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTExIDkuMjc1YzAgNS4xNDEtMy44OTIgMTAuNTE5LTEwIDExLjcyNWwtLjk4NC0yLjEyNmMyLjIxNS0uODM1IDQuMTYzLTMuNzQyIDQuMzgtNS43NDYtMi40OTEtLjM5Mi00LjM5Ni0yLjU0Ny00LjM5Ni01LjE0OSAwLTMuMTgyIDIuNTg0LTQuOTc5IDUuMTk5LTQuOTc5IDMuMDE1IDAgNS44MDEgMi4zMDUgNS44MDEgNi4yNzV6bTEzIDBjMCA1LjE0MS0zLjg5MiAxMC41MTktMTAgMTEuNzI1bC0uOTg0LTIuMTI2YzIuMjE1LS44MzUgNC4xNjMtMy43NDIgNC4zOC01Ljc0Ni0yLjQ5MS0uMzkyLTQuMzk2LTIuNTQ3LTQuMzk2LTUuMTQ5IDAtMy4xODIgMi41ODQtNC45NzkgNS4xOTktNC45NzkgMy4wMTUgMCA1LjgwMSAyLjMwNSA1LjgwMSA2LjI3NXoiLz48L3N2Zz4=);
+      right: 24%;
+      bottom: -22%;
+    }
+  }
+  .quote-text-container:hover {
+    .opening-quote-svg {
+      transform: rotate(360deg);
+    }
+    .closing-quote-svg {
+      transform: rotate(-360deg);
+    }
+  }
+  .feature-content-1,
+  .feature-content-2 {
+    margin-top: 30px;
+    .contents {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      padding: 20px;
+      height: 350px;
+    }
+    .img-container {
+      flex: 1;
+      img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        border-bottom-left-radius: 40px;
+      }
+    }
+    .text-container {
+      flex: 1;
+      margin: 10px auto 0px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      .text {
+        flex: 1;
+        line-height: 2.5rem;
+        width: 65%;
+        color: #272727;
+        font-family: "Work Sans", sans-serif;
+        text-align: center;
+      }
+    }
+  }
+  .feature-content-2 {
+    margin-top: 50px;
+    img {
+      border-top-left-radius: 0px !important;
+      border-top-right-radius: 40px;
+      border-bottom-right-radius: 40px;
+      border-bottom-left-radius: 40px;
+    }
+  }
+  .what-we-have-done-container {
+    margin-top: 20px;
+    .text-container {
+      margin: 10px auto 0px auto;
+      width: 65%;
+      .text {
+        color: #272727;
+        font-family: "Work Sans", sans-serif;
+        line-height: 2rem;
+        font-weight: normal;
+        text-align: initial;
+      }
+    }
+  }
+}

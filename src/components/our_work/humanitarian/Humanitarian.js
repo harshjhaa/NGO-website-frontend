@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import Image from "../../images/Image";
 import AOS from "aos";
 
+import "../../CommonCSS.scss";
 import "../CommonOurWork.scss";
 import "./Humanitarian.scss";
 
@@ -12,27 +14,39 @@ function Humanitarian() {
       top: 0,
       left: 0,
     });
+    document.getElementById("our-work-tab-id").style.color = "#a943a5";
+    document.getElementById("our-work-arrow-id").style.color = "#a943a5";
+
+    return () => {
+      document.getElementById("our-work-tab-id").style.color = "#000";
+      document.getElementById("our-work-arrow-id").style.color = "#000";
+    };
   }, []);
 
   return (
     <div className="humanitarian-tab margin-top-80">
       <div className="banner">
-        <img
+        {/* <img
           className="edu-banner-img one-edge-shadow"
           src="/images/humanitarian-tab/humanitarian-banner.jpg"
           alt="sport-banner-img"
+        /> */}
+        {/* <Image classNm={"banner-img"} componentName={"Humanitarian"} /> */}
+        <Image
+          classNm="banner-img"
+          source="/images/humanitarian-tab/humanitarian-banner.jpg"
         />
         <h1 className="banner-text">HUMANITARIAN</h1>
       </div>
-      <div className="page-routing">
+      <div className="bread-crum">
         <Link className="active-link" to="/">
           Home
         </Link>
-        <span class="right-arrow">&#62;</span>
+        <span className="right-arrow">&#62;</span>
         <Link className="active-link" to="/overview">
           Our Work
         </Link>
-        <span class="right-arrow">&#62;</span>
+        <span className="right-arrow">&#62;</span>
         <p>Humanitarian</p>
       </div>
       <hr style={{ margin: "0px 10px" }} />

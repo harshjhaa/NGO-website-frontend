@@ -16,8 +16,8 @@ const NavbarBottom = () => {
           <div className="nav-bottom-list-content">
             <div className="nav-tabs">
               <li>
-                <Link>OUR WORK</Link>
-                <i className="fa fa-caret-down"></i>
+                <Link id="our-work-tab-id">OUR WORK</Link>
+                <i id="our-work-arrow-id" className="fa fa-caret-down"></i>
               </li>
               <div className="nav-dropdown-menu">
                 <li>
@@ -42,8 +42,8 @@ const NavbarBottom = () => {
             </div>
             <div className="nav-tabs">
               <li>
-                <Link to="/about-us">ABOUT US</Link>
-                <i className="fa fa-caret-down"></i>
+                <Link id="about-us-tab-id" to="/about-us">ABOUT US</Link>
+                <i id="about-us-arrow-id" className="fa fa-caret-down"></i>
               </li>
               <div className="nav-dropdown-menu">
                 <li>
@@ -74,8 +74,8 @@ const NavbarBottom = () => {
             </div>
             <div className="nav-tabs">
               <li>
-                <Link to="/thf-fellowship">THF FELLOWSHIP</Link>
-                <i className="fa fa-caret-down"></i>
+                <Link id="thf-fellowship-tab-id" to="/thf-fellowship">THF FELLOWSHIP</Link>
+                <i id="thf-fellowship-arrow-id" className="fa fa-caret-down"></i>
               </li>
               <div className="nav-dropdown-menu">
                 <li>
@@ -88,8 +88,8 @@ const NavbarBottom = () => {
             </div>
             <div className="nav-tabs">
               <li>
-                <Link to="/emergency">EMERGENCY</Link>
-                <i className="fa fa-caret-down"></i>
+                <Link id="emergency-tab-id" to="/emergency">EMERGENCY</Link>
+                <i id="emergency-arrow-id" className="fa fa-caret-down"></i>
               </li>
               <div className="nav-dropdown-menu">
                 <li>
@@ -102,8 +102,8 @@ const NavbarBottom = () => {
             </div>
             <div className="nav-tabs">
               <li>
-                <Link to="/get-involved">GET INVOLVED</Link>
-                <i className="fa fa-caret-down"></i>
+                <Link id="get-involved-tab-id" to="/get-involved">GET INVOLVED</Link>
+                <i id="get-involved-arrow-id" className="fa fa-caret-down"></i>
               </li>
               <div className="nav-dropdown-menu">
                 <li>

@@ -1,0 +1,52 @@
+.one-edge-shadow {
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
+}
+.education-tab,
+.healthcare-tab,
+.livelihood-tab,
+.sports-tab,
+.humanitarian-tab,
+.aboutus-tab {
+  .banner {
+    position: relative;
+    .banner-img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+    }
+    .banner-text {
+      position: absolute;
+      bottom: 0px;
+      left: 20px;
+      padding: 15px;
+      color: #fff;
+      font-size: 50px;
+    }
+  }
+  .bread-crum {
+    padding: 10px;
+    .active-link {
+      text-decoration: none;
+      color: #000;
+      transition: 0.3s;
+    }
+    .active-link:hover {
+      color: orange;
+    }
+    p {
+      display: inline-block;
+      color: orange;
+    }
+    .right-arrow {
+      margin: 0px 3px;
+    }
+  }
+  .title {
+    font-size: 35px;
+    font-family: "Caveat", cursive;
+    color: #c88200;
+    text-align: center;
+  }
+}

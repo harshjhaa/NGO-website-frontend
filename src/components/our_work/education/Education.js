@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import Image from "../../images/Image";
 import AOS from "aos";
 
+import "../../CommonCSS.scss";
 import "../CommonOurWork.scss";
 import "./Education.scss";
 
@@ -12,27 +14,39 @@ function Education() {
       top: 0,
       left: 0,
     });
+    document.getElementById("our-work-tab-id").style.color = "#a943a5";
+    document.getElementById("our-work-arrow-id").style.color = "#a943a5";
+
+    return () => {
+      document.getElementById("our-work-tab-id").style.color = "#000";
+      document.getElementById("our-work-arrow-id").style.color = "#000";
+    };
   }, []);
 
   return (
     <div className="education-tab margin-top-80">
       <div className="banner">
-        <img
-          className="edu-banner-img"
+        {/* <img
+          className="banner-img"
           src="/images/education-tab/edu-banners-3.jpg"
           alt="education-banner-img"
+        /> */}
+        {/* <Image classNm={"banner-img"} componentName={"Education"} /> */}
+        <Image
+          classNm="banner-img"
+          source="/images/education-tab/edu-banners-3.jpg"
         />
         <h1 className="banner-text">EDUCATION</h1>
       </div>
-      <div className="page-routing">
+      <div className="bread-crum">
         <Link className="active-link" to="/">
           Home
         </Link>
-        <span class="right-arrow">&#62;</span>
+        <span className="right-arrow">&#62;</span>
         <Link className="active-link" to="/overview">
           Our Work
         </Link>
-        <span class="right-arrow">&#62;</span>
+        <span className="right-arrow">&#62;</span>
         <p>Education</p>
       </div>
       <hr style={{ margin: "0px 10px" }} />
@@ -40,7 +54,11 @@ function Education() {
         <h1 className="title">EDUCATION: For a Brighter Future</h1>
         <div className="contents" data-aos="fade-up" data-aos-duration="1000">
           <div className="img-container">
-            <img className="one-edge-shadow" src="/images/education-tab/edu-1.jpg" alt="education-img" />
+            <img
+              className="one-edge-shadow"
+              src="/images/education-tab/edu-1.jpg"
+              alt="education-img"
+            />
           </div>
           <div className="text-container">
             <p className="text">

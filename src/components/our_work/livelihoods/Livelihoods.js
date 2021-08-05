@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 
+import "../../CommonCSS.scss";
 import "../CommonOurWork.scss";
 import "./Livelihoods.scss";
 
@@ -12,6 +13,13 @@ function Livelihoods() {
       top: 0,
       left: 0,
     });
+    document.getElementById("our-work-tab-id").style.color = "#a943a5";
+    document.getElementById("our-work-arrow-id").style.color = "#a943a5";
+
+    return () => {
+      document.getElementById("our-work-tab-id").style.color = "#000";
+      document.getElementById("our-work-arrow-id").style.color = "#000";
+    };
   }, []);
 
   return (
@@ -19,15 +27,15 @@ function Livelihoods() {
       <div className="banner">
         <h1 className="banner-text">LIVELIHOODS</h1>
       </div>
-      <div className="page-routing">
+      <div className="bread-crum">
         <Link className="active-link" to="/">
           Home
         </Link>
-        <span class="right-arrow">&#62;</span>
+        <span className="right-arrow">&#62;</span>
         <Link className="active-link" to="/overview">
           Our Work
         </Link>
-        <span class="right-arrow">&#62;</span>
+        <span className="right-arrow">&#62;</span>
         <p>Livelihoods</p>
       </div>
       <hr style={{ margin: "0px 10px" }} />

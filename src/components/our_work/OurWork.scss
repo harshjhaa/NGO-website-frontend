@@ -404,23 +404,6 @@
         border-radius: 50%;
         margin: 0px 10px;
       }
-      // .img-2 {
-      //   z-index: 10;
-      //   width: 250px;
-      //   height: 250px;
-      //   transition: 1s;
-      // }
-      // .img-1 {
-      //   transform: translate(110%, 0);
-      // }
-      // .img-3 {
-      //   transform: translate(-110%, 0);
-      // }
-      // .img-1,
-      // .img-3 {
-      //   visibility: hidden;
-      //   transition: 1s;
-      // }
     }
     .contents {
       display: flex;
@@ -693,8 +676,6 @@
       padding: 10px;
       border-radius: 20%;
       border-top: 0.01rem solid;
-      // border-right: 0.01rem solid;
-      // border-left: 0.01rem solid;
       border-bottom: 0.2rem solid;
     }
     .program-content:hover {
@@ -961,7 +942,7 @@
   .donate-rural-area {
     // margin-top: 5px;
     height: 400px;
-    background-image: url(../assets/images//donate-bck-1.jpg);
+    background-image: url(../assets/images/donate-bck-1.jpg);
     background-size: cover;
     align-items: center;
     padding-left: 30px;

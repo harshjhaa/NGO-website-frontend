@@ -1,10 +1,14 @@
+import React from "react";
 import "./App.scss";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavbarTop from "./components/navbar/NavbarTop";
 import NavbarBottom from "./components/navbar/NavbarBottom";
 
+import Home from "./components/home/Home";
+
 //OurWork Tabs
 import OurWork from "./components/our_work/OurWork";
+import Overview from "./components/our_work/overview/Overview";
 import Education from "./components/our_work/education/Education";
 import Healthcare from "./components/our_work/healthcare/Healthcare";
 import Livelihoods from "./components/our_work/livelihoods/Livelihoods";
@@ -51,20 +55,18 @@ import Resource from "./components/footer/resource/Resource";
 import ProtectionPolicy from "./components/footer/protection_policy/ProtectionPolicy";
 
 function App() {
-
-  
-
   return (
     <Router>
       <div className="app">
         {/* <Route render={props => <Navbar {...props} />} /> */}
         {/* <Route component={NavbarTop} /> */}
         <Route component={NavbarBottom} />
-        {/* <Route exact path="/" component={Home} /> */}
-        <Route exact path="/" component={OurWork} />
+        <Route exact path="/" component={Home} />
         <Switch>
           {/* header-links */}
           {/* OurWork Tabs */}
+          <Route exact path="/our-work" component={OurWork} />
+          <Route path="/overview" component={Overview} />
           <Route path="/education" component={Education} />
           <Route path="/healthcare" component={Healthcare} />
           <Route path="/livelihoods" component={Livelihoods} />
@@ -112,11 +114,13 @@ function App() {
           ></a>
         </div>
         <a
-          onClick={()=>window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: 'smooth'
-          })}
+          onClick={() =>
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            })
+          }
           className="scroll-up-icon"
           // className={`${window.scrollY<528? "display-none":"scroll-up-icon"}`}
         ></a>

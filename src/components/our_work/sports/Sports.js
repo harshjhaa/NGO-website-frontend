@@ -14,8 +14,8 @@ function Sports() {
       top: 0,
       left: 0,
     });
-    document.getElementById("our-work-tab-id").style.color = "#a943a5";
-    document.getElementById("our-work-arrow-id").style.color = "#a943a5";
+    document.getElementById("our-work-tab-id").style.color = "#0096ff";
+    document.getElementById("our-work-arrow-id").style.color = "#0096ff";
 
     return () => {
       document.getElementById("our-work-tab-id").style.color = "#000";

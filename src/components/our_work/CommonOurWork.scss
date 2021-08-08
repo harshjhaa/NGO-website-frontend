@@ -1,8 +1,16 @@
+.overview-tab,
 .education-tab,
 .healthcare-tab,
 .livelihood-tab,
 .sports-tab,
 .humanitarian-tab {
+  // .title {
+  //   position: sticky;
+  //   top: 0px;
+  //   background-color: #fff;
+  //   z-index: 2;
+  //   box-shadow: #dcdcdc 0 0px 5px;
+  // }
   .quote-text-container {
     position: relative;
     display: flex;
@@ -104,6 +112,50 @@
         font-weight: normal;
         text-align: initial;
       }
+    }
+  }
+  .feature-content-1 {
+    margin-top: 30px;
+    .contents {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      padding: 20px;
+      height: 350px;
+    }
+    .img-container {
+      flex: 1;
+      img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        border-bottom-left-radius: 40px;
+      }
+    }
+    .text-container {
+      flex: 1;
+      margin: 10px auto 0px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      .text {
+        flex: 1;
+        line-height: 2.5rem;
+        width: 65%;
+        color: #272727;
+        font-family: "Work Sans", sans-serif;
+        text-align: center;
+      }
+    }
+  }
+  .only-text-container {
+    .contents {
+      height: 100%;
+      margin-top: 0px;
+      padding: 0px;
     }
   }
 }

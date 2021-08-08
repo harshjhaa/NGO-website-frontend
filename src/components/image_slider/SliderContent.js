@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 
 function SliderContent({ activeIndex, contentName, contentComponet }) {
   const renderContent = () => {
-    if (contentName === "testimonialContent") {
+    if (
+      contentName === "testimonialContent" ||
+      contentName === "valuesContent"
+    ) {
       return (
         contentComponet &&
         contentComponet.map((slide, index) => (
@@ -12,13 +15,20 @@ function SliderContent({ activeIndex, contentName, contentComponet }) {
             className={index === activeIndex ? "slides active" : "inactive"}
           >
             <div className="testimonial-row">
-              <div className="testimonial-img">
-                <img src={slide.image} alt="testimonial-person-img" />
-              </div>
-              <div className="testimonial-data">
-                <div className="testimonial-text">{slide.description}</div>
-                <br />
-                <div className="testimonial-name">- {slide.name}</div>
+              {contentName === "valuesContent" && (
+                <h1 className="content-title">{slide.title}</h1>
+              )}
+              <div className="contents">
+                <div className="testimonial-img">
+                  <img src={slide.image} alt="testimonial-person-img" />
+                </div>
+                <div className="testimonial-data">
+                  <div className="testimonial-text">{slide.description}</div>
+                  <br />
+                  {contentName === "testimonialContent" && (
+                    <div className="testimonial-name">- {slide.name}</div>
+                  )}
+                </div>
               </div>
             </div>
           </div>

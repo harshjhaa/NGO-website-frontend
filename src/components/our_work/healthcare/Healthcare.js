@@ -14,8 +14,8 @@ function Healthcare() {
       top: 0,
       left: 0,
     });
-    document.getElementById("our-work-tab-id").style.color = "#a943a5";
-    document.getElementById("our-work-arrow-id").style.color = "#a943a5";
+    document.getElementById("our-work-tab-id").style.color = "#0096ff";
+    document.getElementById("our-work-arrow-id").style.color = "#0096ff";
 
     return () => {
       document.getElementById("our-work-tab-id").style.color = "#000";
@@ -69,22 +69,22 @@ function Healthcare() {
             </p>
           </div>
         </div>
-      </div>
-      <div className="feature-content-2">
-        <div className="contents" data-aos="fade-up" data-aos-duration="1000">
-          <div className="text-container">
-            <p className="text">
-              Health statistics of rural India continue to be poor, the health
-              status and access to health for the poor in urban slum dwellers
-              has surfaced to be equally deplorable and have less than 4% of
-              government primary public health care facilities. Uneducated
-              parents in rural and urban areas belongs to weaker sections they
-              are unaware of the risk lack of proper food. In India there are so
-              many families can afford 1 time meal for themselves.
-            </p>
-          </div>
-          <div className="img-container">
-            <img src="/images/healthcare-tab/health-2.jpg" alt="health-img" />
+        <div className="feature-content-2">
+          <div className="contents" data-aos="fade-up" data-aos-duration="1000">
+            <div className="text-container">
+              <p className="text">
+                Health statistics of rural India continue to be poor, the health
+                status and access to health for the poor in urban slum dwellers
+                has surfaced to be equally deplorable and have less than 4% of
+                government primary public health care facilities. Uneducated
+                parents in rural and urban areas belongs to weaker sections they
+                are unaware of the risk lack of proper food. In India there are
+                so many families can afford 1 time meal for themselves.
+              </p>
+            </div>
+            <div className="img-container">
+              <img src="/images/healthcare-tab/health-2.jpg" alt="health-img" />
+            </div>
           </div>
         </div>
       </div>

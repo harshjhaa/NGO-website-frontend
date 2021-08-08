@@ -1,11 +1,29 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import Slider from "../image_slider/Slider";
+import BoxCube from "./BoxCube";
 import Carousel from "react-elastic-carousel";
-import Slider from '../image_slider/Slider'
-import gsap from "gsap";
-import AOS from 'aos';
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/swiper.min.css";
+import "swiper/components/pagination/pagination.min.css";
+import "swiper/components/navigation/navigation.min.css";
+import AOS from "aos";
+
+import "../CommonCSS.scss";
 import "./Home.scss";
 
-const Home = (props) => {
+// import Swiper core and required modules
+import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper/core";
+// install Swiper modules
+SwiperCore.use([Autoplay, Pagination, Navigation]);
+const Home = () => {
+  const sliderContent = {
+    topBannerContent: "topBannerContent",
+    covidBannerContent: "covidBannerContent",
+    testimonialContent: "testimonialContent",
+  };
+
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
     { width: 550, itemsToShow: 2 },
@@ -14,240 +32,716 @@ const Home = (props) => {
   ];
 
   useEffect(() => {
-    const div = document.querySelectorAll(".home-feature-content-2-container");
-
-    gsap.set(div[1], { x: 100, opacity: 1 });
-    gsap
-      .timeline({ repeat: -1, defaults: { duration: 3 } })
-
-      .add("one")
-      .to(div[0], { y: 600, x: 0, opacity: 0.05 }, "one")
-      .to(div[1], { y: -350, x: 0, opacity: 0.05 }, "one")
-      .to(div[2], { y: -300, x: 100, opacity: 1 }, "one")
-
-      .add("two")
-      .to(div[0], { y: 300, x: 100, opacity: 1 }, "two")
-      .to(div[1], { y: 300, x: 0, opacity: 0.05 }, "two")
-      .to(div[2], { y: -600, x: 0, opacity: 0.05 }, "two")
-
-      .add("three")
-      .to(div[0], { y: 0, x: 0, opacity: 0.05 }, "three")
-      .to(div[1], { y: 0, x: 100, opacity: 1 }, "three")
-      .to(div[2], { y: 0, x: 0, opacity: 0.05 }, "three");
-  });
-
-  useEffect(()=>{
+    window.scrollTo({
+      top: 0,
+      left: 0,
+    });
     AOS.init();
-  },[])
+    //for handelling twitter
+    const anchor = document.createElement("a");
+    anchor.setAttribute("class", "twitter-timeline");
+    anchor.setAttribute("data-theme", "dark");
+    anchor.setAttribute("data-tweet-limit", "5");
+    anchor.setAttribute("data-chrome", "noheader nofooter noborders");
+    anchor.setAttribute("href", "https://twitter.com/trulyhelp");
+    document.getElementsByClassName("twitter-embed")[0].appendChild(anchor);
+    const script = document.createElement("script");
+    script.setAttribute("src", "https://platform.twitter.com/widgets.js");
+    document.getElementsByClassName("twitter-embed")[0].appendChild(script);
+  }, []);
 
   return (
-    <div>
-      <div className="home-img-banner"><Slider/></div>
-      <marquee className="home-marquee" direction="left">
-        <h2>Your donation and contribution can make a huge difference.</h2>
+    <div className="home-tab">
+      <marquee
+        className="home-marquee margin-top-80"
+        direction="left"
+        scrollamount="5"
+        behavior="scroll"
+      >
+        <p>
+          Truly Help Foundation is a registered Non-profit organization under
+          section 8 company in india and a Members of THF confederation present
+          in PAN India which works with the most marginalised people to
+          alleviate poverty and reduce social injustice through comprehensive
+          programmes in healthcare, education, livelihoods, sports and
+          humanitarian assistance and rehabilitation. | We are responding to the
+          second wave of COVID-19 by setting up temporary COVID Care Facilities
+          and supporting marginalized communities by providing dry ration and
+          hygiene kits . We are also awaring and preparing communities for covid
+          third wave.
+        </p>
       </marquee>
-      <div>
+      <div className="home-img-banner">
+        <Slider contentName={sliderContent["topBannerContent"]} />
       </div>
-      <div className="home-feature-content-1" data-aos="zoom-out-up" data-aos-duration="1000">
-        <h2>Causes We Are Serving</h2>
-        <div className="home-causes-we-serving-container" id="style-1">
-          <Carousel breakPoints={breakPoints} pagination={false}>
-            <div className="img-txt">
-              <img src="/images/img_1.jpg" alt="home_img-1" />
-              <h4>Help Senior Citizens</h4>
-            </div>
-            <div className="img-txt">
-              <img src="/images/img_2.jpg" alt="home_img-2" />
-              <h4>Help Children Education</h4>
-            </div>
-            <div className="img-txt">
-              <img src="/images/img_3.jpg" alt="home_img-3" />
-              <h4>Help Ecosystem</h4>
-            </div>
-            <div className="img-txt">
-              <img src="/images/img_1.jpg" alt="home_img-1" />
-              <h4>Help Senior Citizens</h4>
-            </div>
-            <div className="img-txt">
-              <img src="/images/img_2.jpg" alt="home_img-2" />
-              <h4>Help Children Education</h4>
-            </div>
-            <div className="img-txt">
-              <img src="/images/img_3.jpg" alt="home_img-3" />
-              <h4>Help Ecosystem</h4>
-            </div>
-          </Carousel>
-        </div>
+      <div className="hr-line">
+        <hr />
       </div>
-      <div className="home-feature-content-2 flex-col">
-        <div className="col-left">
-          <div className="home-feature-content-2-container">
-            <img src="/images/img_1.jpg" alt="home_img-1" />
+      <div
+        className="home-feature-content-1"
+        data-aos="fade-up"
+        data-aos-duration="700"
+      >
+        <p className="title">Dreaming of a Brighter Future</p>
+        <div className="home-feature-content-1-container">
+          {/* <div className="home-feature-content-1-vid">
+            <video src="/videos/feature_content_1_vid.mp4" width="400" height="300" autoplay="true" muted="true" loop="true"/>
+          </div> */}
+          <div className="box-animation">
+            <BoxCube />
           </div>
-          <div className="home-feature-content-2-container">
-            <img src="/images/img_2.jpg" alt="home_img-1" />
-          </div>
-          <div className="home-feature-content-2-container">
-            <img src="/images/img_3.jpg" alt="home_img-1" />
-          </div>
-        </div>
-        <div className="col-right">
-          <h1 data-aos="fade-down" data-aos-duration="1800">WE HELP EACH</h1>
-          <div data-aos="fade-up" data-aos-duration="1800">
-            <p>
-            We strategically emphasize on promoting quality healthcare, inclusive education, gender equitable and 
-            sustainable livelihood opportunities and disaster relief and preparedness. Our efforts are focused to 
-            fight against underlying causes of poverty and ensuring a life of dignity for all women and girls from 
-            the most marginalised and vulnerable communities, especially from the backward casts.
-            <br/>
-            <br/>
-            Our key programming approaches include social analysis and action, gender transformative change, building 
-            secure and resilient communities, promoting inclusive governance, advocacy on national and international 
-            platforms and facilitating links and dialogues between public, private and civil society.
+          <div className="home-feature-content-1-content">
+            <p className="info">
+              Truly Help Foundation has been on the forefront, reshaping the
+              lives of millions children, women and youth. Be it nutiriton,
+              healthcare, education, sports and response in the time.
             </p>
           </div>
         </div>
       </div>
-      <div class="home-currently-running-programs">
-        <h1 
+      <div className="hr-line">
+        <hr />
+      </div>
+      <span className="span-line"></span>
+      {/* <div
+        className="home-feature-content-2"
+        data-aos="zoom-out-up"
+        data-aos-duration="1000"
+      >
+        <h1>Causes We Are Serving</h1>
+        <div className="home-causes-we-serving-container" id="style-1">
+          <Carousel
+            breakPoints={breakPoints}
+            pagination={false}
+            infiniteLoop={true}
+          >
+            <div className="img-txt">
+              <img src="/images/img_1.jpg" alt="home_img-1" />
+              <h4>EDUCATION</h4>
+              <button className="btn">
+                <Link className="btn" to="/education">
+                  EXPLORE
+                </Link>
+              </button>
+            </div>
+            <div className="img-txt">
+              <img src="/images/img_2.jpg" alt="home_img-2" />
+              <h4>HEALTHCARE</h4>
+              <button className="btn">
+                <Link className="btn" to="/healthcare">
+                  EXPLORE
+                </Link>
+              </button>
+            </div>
+            <div className="img-txt">
+              <img src="/images/img_3.jpg" alt="home_img-3" />
+              <h4>LIVELIHOODS</h4>
+              <button className="btn">
+                <Link className="btn" to="/livelihoods">
+                  EXPLORE
+                </Link>
+              </button>
+            </div>
+            <div className="img-txt">
+              <img src="/images/img_1.jpg" alt="home_img-1" />
+              <h4>SPORTS</h4>
+              <button className="btn">
+                <Link className="btn" to="/sports">
+                  EXPLORE
+                </Link>
+              </button>
+            </div>
+            <div className="img-txt">
+              <img src="/images/img_2.jpg" alt="home_img-2" />
+              <h4>HUMANITARIAN</h4>
+              <button className="btn">
+                <Link className="btn" to="/humanitarian">
+                  EXPLORE
+                </Link>
+              </button>
+            </div>
+          </Carousel>
+        </div>
+      </div> */}
+      <div
+        className="causes-we-are-serving-container"
         data-aos="fade-up"
-        data-aos-anchor-placement="bottom-bottom"
-        data-aos-duration="1600">CURRENTLY RUNNING PROGRAMS</h1>
-        <div class="program-contents">
-            <div class="program-content" data-aos="flip-left" data-aos-duration="1600">
-                <div class="latest-thinking-image" style={{"background-image": "url(./video-call.jpg);"}}>
-                    <p class="feature-content-info-heading">PRESPECTIVES</p>
+        data-aos-duration="1000"
+      >
+        <p className="title">CAUSES WE ARE SERVING</p>
+        <div
+          className="causes-we-are-serving-contents"
+          style={{ position: "relative" }}
+        >
+          <Swiper
+            slidesPerView={3}
+            slidesPerGroup={3}
+            spaceBetween={10}
+            breakpoints={{
+              960: {
+                slidesPerView: 3,
+                spaceBetween: 8,
+                slidesPerGroup: 3,
+              },
+              720: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+                slidesPerGroup: 2,
+              },
+              540: {
+                slidesPerView: 1,
+                spaceBetween: 2,
+                slidesPerGroup: 1,
+              },
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 2,
+                slidesPerGroup: 1,
+              },
+            }}
+            autoplay={{
+              delay: 7000,
+              disableOnInteraction: false,
+            }}
+            centeredSlides={true}
+            loop={true}
+            loopFillGroupWithBlank={false}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <div className="box box-border-red">
+                <div className="content">
+                  <img src="/gif/edu-2.gif" alt="home_img-1" />
+                  <h4>EDUCATION</h4>
+                  <p>
+                    Education is one of the main piller of the society, without
+                    it India's future is lost!
+                  </p>
+                  <button className="btn btn-red">
+                    <Link to="/education">EXPLORE</Link>
+                  </button>
                 </div>
-                <div class="latest-thinking-info">
-                    <h3 class="latest-thinking-info-heading">Reinfrocing Productivity in the Age of Remote...</h3>
-                    <p class="latest-thinking-info-data">Thrust into large-scale work-from-home programs by
-                        COVID-19...</p>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <div className="box box-border-green">
+                <div className="content">
+                  <img src="/gif/health-5.gif" alt="home_img-2" />
+                  <h4>HEALTHCARE</h4>
+                  <p>
+                    Good health makes people strong, increaes thier efficient
+                    and inturn benefits society!
+                  </p>
+                  <button className="btn btn-green">
+                    <Link to="/healthcare">EXPLORE</Link>
+                  </button>
                 </div>
-                <hr />
-                <div class="latest-thinking-footer">
-                    <div class="latest-thinking-footer-icons">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                        <i class="fa fa-linkedin" aria-hidden="true"></i>
-                    </div>
-                    <div class="latest-thinking-footer-arrow">
-                        <img src="triangle-right.PNG" />
-                    </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <div className="box box-border-voilet">
+                <div className="content">
+                  <img src="/gif/liveli-4.gif" alt="home_img-2" />
+                  <h4>LIVELIHOODS</h4>
+                  <p>
+                    Imporvement in the livelihood lead to the upgradation of the
+                    standard of living!
+                  </p>
+                  <button className="btn btn-voilet">
+                    <Link to="/livelihoods">EXPLORE</Link>
+                  </button>
                 </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <div className="box box-border-orange">
+                <div className="content">
+                  <img src="/gif/sports-2.gif" alt="home_img-2" />
+                  <h4>SPORTS</h4>
+                  <p>
+                    Sports helps to evolve the overall mentality of the person
+                    by making them active, alert and friendly!
+                  </p>
+                  <button className="btn btn-orange">
+                    <Link to="/sports">EXPLORE</Link>
+                  </button>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <div className="box box-border-blue">
+                <div className="content">
+                  <img src="/gif/human-2.gif" alt="home_img-2" />
+                  <h4>HUMANITARIAN</h4>
+                  <p>
+                    Human wlfare is one of the important factor in keeping the
+                    society balanced, evolving from time to time!
+                  </p>
+                  <button className="btn btn-blue">
+                    <Link to="/humanitarian">EXPLORE</Link>
+                  </button>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+          {/* <Slider contentName={sliderContent["causesServingContent"]} /> */}
+          {/* <div className="box box-up box-border-red">
+            <div className="content">
+              <img src="/gif/edu-2.gif" alt="home_img-1" />
+              <h4>EDUCATION</h4>
+              <p>
+                Education is one of the main piller of the society, without it
+                India's future is lost!
+              </p>
+              <button className="btn btn-red">
+                <Link to="/education">EXPLORE</Link>
+              </button>
             </div>
-            <div class="program-content" data-aos="flip-right" data-aos-duration="1600">
-                <div class="latest-thinking-image" style={{"background-image": "url(./video-call.jpg);"}}>
-                    <p class="feature-content-info-heading">WHITEPAPERS</p>
-                </div>
-                <div class="latest-thinking-info">
-                    <h3 class="latest-thinking-info-heading">Acceletate Healthy Outcome with Data and AI...</h3>
-                    <p class="latest-thinking-info-data">Learn how leading healthcare organizations are
-                        accelerating...</p>
-                </div>
-                <hr />
-                <div class="latest-thinking-footer">
-                    <div class="latest-thinking-footer-icons">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                        <i class="fa fa-linkedin" aria-hidden="true"></i>
-                    </div>
-                    <div class="latest-thinking-footer-arrow">
-                        <img src="triangle-right.PNG" />
-                    </div>
-                </div>
+          </div>
+          <div className="box box-down box-border-green">
+            <div className="content">
+              <img src="/gif/health-5.gif" alt="home_img-2" />
+              <h4>HEALTHCARE</h4>
+              <p>
+                Good health makes people strong, increaes thier efficient and
+                inturn benefits society!
+              </p>
+              <button className="btn btn-green">
+                <Link to="/healthcare">EXPLORE</Link>
+              </button>
             </div>
-            <div class="program-content" data-aos="flip-left" data-aos-duration="1600">
-                <div class="latest-thinking-image" style={{"background-image": "url(./video-call.jpg);"}}>
-                    <p class="feature-content-info-heading">PRESPECTIVES</p>
-                </div>
-                <div class="latest-thinking-info">
-                    <h3 class="latest-thinking-info-heading">Reinventing Clinical Trial for a New...</h3>
-                    <p class="latest-thinking-info-data">As curent social distancing guidelines prevent
-                        face-to-face...</p>
-                </div>
-                <hr />
-                <div class="latest-thinking-footer">
-                    <div class="latest-thinking-footer-icons">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                        <i class="fa fa-linkedin" aria-hidden="true"></i>
-                    </div>
-                    <div class="latest-thinking-footer-arrow">
-                        <img src="triangle-right.PNG" />
-                    </div>
-                </div>
+          </div>
+          <div className="box box-up box-border-voilet">
+            <div className="content">
+              <img src="/gif/liveli-4.gif" alt="home_img-2" />
+              <h4>LIVELIHOODS</h4>
+              <p>
+                Imporvement in the livelihood lead to the upgradation of the
+                standard of living!
+              </p>
+              <button className="btn btn-voilet">
+                <Link to="/livelihoods">EXPLORE</Link>
+              </button>
             </div>
-            <div class="program-content" data-aos="flip-right" data-aos-duration="1600">
-                <div class="latest-thinking-image" style={{"background-image": "url(./video-call.jpg);"}}>
-                    <p class="feature-content-info-heading">WHITEPAPERS</p>
-                </div>
-                <div class="latest-thinking-info">
-                    <h3 class="latest-thinking-info-heading">Decision-Making a New Frontier for...</h3>
-                    <p class="latest-thinking-info-data">Digital process automation is a forward-looking,
-                        practical...</p>
-                </div>
-                <hr />
-                <div class="latest-thinking-footer">
-                    <div class="latest-thinking-footer-icons">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                        <i class="fa fa-linkedin" aria-hidden="true"></i>
-                    </div>
-                    <div class="latest-thinking-footer-arrow">
-                        <img src="triangle-right.PNG" />
-                    </div>
-                </div>
+          </div>
+          <div className="box box-down box-border-orange">
+            <div className="content">
+              <img src="/gif/sports-2.gif" alt="home_img-2" />
+              <h4>SPORTS</h4>
+              <p>
+                Sports helps to evolve the overall mentality of the person by
+                making them active, alert and friendly!
+              </p>
+              <button className="btn btn-orange">
+                <Link to="/sports">EXPLORE</Link>
+              </button>
             </div>
+          </div>
+          <div className="box box-up box-border-blue">
+            <div className="content">
+              <img src="/gif/human-2.gif" alt="home_img-2" />
+              <h4>HUMANITARIAN</h4>
+              <p>
+                Human wlfare is one of the important factor in keeping the
+                society balanced, evolving from time to time!
+              </p>
+              <button className="btn btn-blue">
+                <Link to="/humanitarian">EXPLORE</Link>
+              </button>
+            </div>
+          </div> */}
         </div>
       </div>
-      <div className="home-testimonial-container">
-        <h1 data-aos="fade-down" data-aos-duration="1500">TESTIMONIALS</h1>
-        <div className="testimonial-row">
-          <div className="testimonial-contents" data-aos="fade-right" data-aos-duration="1800">
-            <div className="testimonial-img">
-              <img src="/images/person1.jpg" alt="testimonial-person-img" />
-            </div>
-            <div className="testimonial-text">
-              Truly Help Foundation is one of the most orgnaised and well mentained NGO.
-              Their Covid Care India Program has helped many needful people during the pandemic.
-              I feel very obliged to be a part of such reputed NGO.
-            </div>
+      <div className="hr-line">
+        <hr />
+      </div>
+      <div
+        className="home-feature-content-3 flex-col"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <div className="col-left">
+          <h1
+            className="title"
+            // data-aos="fade-down"
+            // data-aos-duration="1800"
+          >
+            WE HELP EACH
+          </h1>
+          <div
+          // data-aos="fade-up"
+          // data-aos-duration="1800"
+          >
+            <p>
+              We place a strategic emphasis on promoting quality health care,
+              inclusive education, sustainable and gender-fair livelihood
+              opportunities, and disaster preparedness and relief. Our efforts
+              are focused on combating the root causes of poverty and on
+              ensuring a dignified life for all women and girls in the most
+              marginalized and vulnerable communities, especially the most
+              backward populations.
+              <br />
+              Our key programming approaches include social analysis and action,
+              transformative gender change, building safe and resilient
+              communities, promoting inclusive governance, supporting national
+              and international platforms and facilitating connections and
+              dialogues between the public, private and civil society.
+            </p>
           </div>
-          <div className="testimonial-contents" data-aos="fade-left" data-aos-duration="1800">
-            <div className="testimonial-img">
-              <img src="/images/person1.jpg" alt="testimonial-person-img" />
-            </div>
-            <div className="testimonial-text">
-              Truly Help Foundation is one of the most orgnaised and well mentained NGO.
-              Their Covid Care India Program has helped many needful people during the pandemic.
-              I feel very obliged to be a part of such reputed NGO.
+        </div>
+        <div className="col-right">
+          {/* <div className="home-feature-content-3-container">
+            <img src="/images/img_1.jpg" alt="home_img-1" />
+          </div>
+          <div className="home-feature-content-3-container">
+            <img src="/images/img_2.jpg" alt="home_img-1" />
+          </div>
+          <div className="home-feature-content-3-container">
+            <img src="/images/img_3.jpg" alt="home_img-1" />
+          </div> */}
+          {/* Hi */}
+          <div className="grid-container">
+            <div className="grid">
+              <div className="cell cell-1">
+                <img src="/images/family-1.png" alt="family_img" />
+                <p>FAMILY</p>
+              </div>
+              <div className="cell cell-2"></div>
+              <div className="cell cell-3">
+                <img src="/images/community-1.png" alt="community_img" />
+                <p>COMMUNITY</p>
+              </div>
+              <div className="cell cell-4"></div>
+              <div className="cell cell-5">
+                <img
+                  className="grid-img-center"
+                  src="/images/children-1.jpg"
+                  alt="children_img"
+                />
+                <p>CHILDREN</p>
+              </div>
+              <div className="cell cell-6"></div>
+              <div className="cell cell-7">
+                <img src="/images/home-1.png" alt="home_img" />
+                <p>HOME</p>
+              </div>
+              <div className="cell cell-8"></div>
+              <div className="cell cell-9">
+                <img src="/images/government-1.png" alt="government_img" />
+                <p>GOVERNMENT</p>
+              </div>
             </div>
           </div>
         </div>
-        <div className="testimonial-row">
-        <div className="testimonial-contents" data-aos="fade-right" data-aos-duration="1800">
-            <div className="testimonial-img">
-              <img src="/images/person1.jpg" alt="testimonial-person-img" />
-            </div>
-            <div className="testimonial-text">
-              Truly Help Foundation is one of the most orgnaised and well mentained NGO.
-              Their Covid Care India Program has helped many needful people during the pandemic.
-              I feel very obliged to be a part of such reputed NGO.
+      </div>
+      <div className="hr-line">
+        <hr />
+      </div>
+      <div
+        className="about-us-container"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <div className="img-sec">
+          <img
+            className="img-1"
+            src="/images/about-us-2.jpg"
+            alt="home_img-1"
+          />
+          <img
+            className="img-2"
+            src="/images/about-us-1.jpg"
+            alt="home_img-2"
+          />
+          <img
+            className="img-3"
+            src="/images/about-us-3.jpg"
+            alt="home_img-3"
+          />
+        </div>
+        <div className="header-text-container">
+          <h1 className="title">ABOUT US</h1>
+          <p>
+            Truly Help Foundation is the independent organization creating
+            lasting change in the life of children's in the India. We are
+            recognized for our commitment towards accountability, innovation and
+            collaboration, we believe in bringing change by empowering children
+            and families so that they can help themselves.
+          </p>
+          <button className="btn">
+            <Link to="/about-us">EXPLORE</Link>
+          </button>
+        </div>
+      </div>
+      <div className="hr-line">
+        <hr />
+      </div>
+      <div
+        className="home-covid-banner"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <h1 className="title">COVID-19 GUIDANCE</h1>
+        <Slider contentName={sliderContent["covidBannerContent"]} />
+      </div>
+      <div className="hr-line">
+        <hr />
+      </div>
+      <div
+        className="our-legacy-container"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <div className="who-we-are-container">
+          <h2 className="title">WHO WE ARE</h2>
+          <span className="span-line"></span>
+          <div className="img-container">
+            {/* <img src="/images/who-we-are-1.jpg" alt="home_img-2" /> */}
+            <img src="/images/who-we-are.jpg" />
+          </div>
+          <div className="contents">
+            <p>
+              Be it nutiriton, healthcare, education, sports and response in the
+              time, Truly Help Foundation has been on the forefront, reshaping
+              the lives of millions children, women and youth.
+            </p>
+          </div>
+          <button className="btn">
+            <Link to="/about-us">LEARN MORE</Link>
+          </button>
+        </div>
+        <div className="what-we-do-container">
+          <h2 className="title">WHAT WE DO</h2>
+          <span className="span-line"></span>
+          <div className="img-container">
+            <img src="/images/what-we-do-1.webp" alt="home_img-2" />
+          </div>
+          <div className="contents">
+            <p>
+              Be it nutiriton, healthcare, education, sports and response in the
+              time, Truly Help Foundation has been on the forefront, reshaping
+              the lives of millions children, women and youth.
+            </p>
+          </div>
+          <button className="btn">
+            <Link to="/our-approach">SEE OUR WORK</Link>
+          </button>
+        </div>
+        <div className="get-involved-container">
+          <h2 className="title">GET INVOLVED</h2>
+          <span className="span-line"></span>
+          <div className="img-container">
+            <img src="/images/join-us.jpg" alt="home_img-2" />
+          </div>
+          <div className="contents">
+            <p>
+              Be it nutiriton, healthcare, education, sports and response in the
+              time, Truly Help Foundation has been on the forefront, reshaping
+              the lives of millions children, women and youth.
+            </p>
+          </div>
+          <button className="btn btn-red">
+            <Link to="/our-campaigns">START NOW</Link>
+          </button>
+        </div>
+      </div>
+      <div className="hr-line">
+        <hr />
+      </div>
+      <div
+        className="home-currently-running-programs"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <p
+          // data-aos="fade-up"
+          // data-aos-anchor-placement="bottom-bottom"
+          // data-aos-duration="1600"
+          className="head-title"
+        >
+          CURRENTLY RUNNING PROGRAMES
+        </p>
+        <div className="program-contents">
+          <div className="program-content sec-1" data-aos-duration="1600">
+            <img src="/images/educ-1.jpg" alt="home_img-2" />
+            <p className="title">EDUCATION</p>
+            <br />
+            <p className="info">
+              Education gives a chance to every child to empowers himself and
+              break the vicious...
+            </p>
+            <button className="btn btn-red">
+              <Link to="/our-campaigns">READ MORE</Link>
+            </button>
+          </div>
+          <div className="program-content sec-2" data-aos-duration="1600">
+            <img src="/images/health-n-nutrition-1.jpg" alt="home_img-2" />
+            <p className="title">HEALTH AND NUTRITION</p>
+            <p className="info">
+              Adequate nutrition and quality primary care play’s an essential
+              role in a child's...
+            </p>
+            <button className="btn btn-green">
+              <Link to="/our-campaigns">READ MORE</Link>
+            </button>
+          </div>
+          <div className="program-content sec-3" data-aos-duration="1600">
+            <img src="/images/sports-1.jpg" alt="home_img-2" />
+            <p className="title">SPORTS</p>
+            <br />
+            <p className="info">
+              We wish to use sports to make a healthy future generation. Our
+              mission to create inclusive...
+            </p>
+            <button className="btn btn-voilet">
+              <Link to="/our-campaigns">READ MORE</Link>
+            </button>
+          </div>
+          <div className="program-content sec-4" data-aos-duration="1600">
+            <img src="/images/food-distribution-1.jpg" alt="home_img-2" />
+            <p className="title">COVID-19 FOOD DISTRIBUTION</p>
+            <p className="info">
+              THF helps the people who are deprived of food due to the COVID-19
+              situation, we distribute...
+            </p>
+            <button className="btn btn-orange">
+              <Link to="/our-campaigns">READ MORE</Link>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className="hr-line">
+        <hr />
+      </div>
+      <div
+        className="our-partners-and-supporters-container"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <h1 className="title">OUR PARTNERS AND SUPPORTERS</h1>
+        <div className="content">
+          <img src="/images/company-1.png" alt="home_img-2" />
+          <img src="/images/company-2.jpg" alt="home_img-2" />
+          <img src="/images/company-3.png" alt="home_img-2" />
+          <img src="/images/company-4.png" alt="home_img-2" />
+        </div>
+      </div>
+      <div className="hr-line">
+        <hr />
+      </div>
+      <div
+        className="home-testimonial-container"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <h1 className="title">TESTIMONIALS</h1>
+        <Slider contentName={sliderContent["testimonialContent"]} />
+      </div>
+      <div className="hr-line">
+        <hr />
+      </div>
+      <div
+        className="latest-updates-container"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <h1 className="head-title">LATEST UPDATES</h1>
+        <div className="contents">
+          <div className="events-list-container">
+            <h1 className="title">EVENTS</h1>
+            <div className="testimonial-row">Events</div>
+          </div>
+          <div className="twitter-list-container">
+            <div className="twitter">
+              <a
+                className="twitter-timeline"
+                href="https://twitter.com/trulyhelp"
+                data-height="100%"
+                data-chrome="nofooter"
+                data-border-color="#a80000"
+              >
+                Tweets by @trulyhelp
+              </a>
+              <section className="twitterContainer" style={{ display: "none" }}>
+                <div className="twitter-embed"></div>
+              </section>
             </div>
           </div>
-          <div className="testimonial-contents" data-aos="fade-left" data-aos-duration="1800">
-            <div className="testimonial-img">
-              <img src="/images/person1.jpg" alt="testimonial-person-img" />
-            </div>
-            <div className="testimonial-text">
-              Truly Help Foundation is one of the most orgnaised and well mentained NGO.
-              Their Covid Care India Program has helped many needful people during the pandemic.
-              I feel very obliged to be a part of such reputed NGO.
-            </div>
+        </div>
+      </div>
+      <div className="hr-line">
+        <hr />
+      </div>
+      <div className="subscribe-us-container">
+        <div className="contents">
+          <div className="contact-no">
+            <p>
+              Helpline Number: <span>1800-xxxx-xx</span>
+            </p>
+          </div>
+          <div className="email-id">
+            <input
+              className="inp-email"
+              type="email"
+              placeholder="Enter Email-Id to Subscribe to News Letter"
+            ></input>
+            <button className="btn">SUBSCRIBE</button>
+          </div>
+        </div>
+      </div>
+      <div className="hr-line">
+        <hr />
+      </div>
+      <div className="donate-rural-area">
+        <div className="contents">
+          <h2>HELP US FIGNT THE HUNGER IN RURAL AREAS</h2>
+          <br />
+          <br />
+          <div className="inp-btn">
+            <input
+              className="input-donate"
+              type="number"
+              placeholder="DONATE ANY AMOUNT (INR)"
+            ></input>
+            <button className="donate-inp-btn">PROCEED</button>
+          </div>
+          <br />
+          <br />
+          <h3>
+            Some rural residents and households are food insecure,
+            <br />
+            meaning they cannot rely on access to sufficient
+            <br />
+            affordable and nutritious food at all times,
+            <br />
+            increasing the risk of poor health outcomes.
+          </h3>
+        </div>
+      </div>
+      <div className="acknowledgement-container">
+        <div className="content">
+          <div className="sec-1">
+            <img className="img-icon" src="/svg/heart.svg" />
+            <p>All our efforts are made possible because of your support.</p>
+          </div>
+          <div className="sec-2">
+            <img className="img-icon" src="/svg/tax.svg" />
+            {/* <p>Your donation are Tax Exempted uder 80G of the Indian Income Tax Act.</p> */}
+            <p>Your donations are under right hand.</p>
+          </div>
+          <div className="sec-3">
+            <img className="img-icon" src="/svg/security-2.svg" />
+            <p>
+              Your donations and transactions are completely safe and secure.
+            </p>
           </div>
         </div>
       </div>

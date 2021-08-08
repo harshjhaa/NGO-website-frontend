@@ -5,12 +5,14 @@ import Arrows from "./Arrows";
 import topBannerContent from "./topBannerContent";
 import covidBannerContent from "./covidBannerContent";
 import testimonialContent from "./testimonialContent";
+import valuesContent from "./valuesContent";
 import "./slider.scss";
 
 const sliderContentComp = {
   topBannerContent: topBannerContent,
   covidBannerContent: covidBannerContent,
   testimonialContent: testimonialContent,
+  valuesContent: valuesContent,
 };
 
 function Slider({ contentName }) {
@@ -25,6 +27,9 @@ function Slider({ contentName }) {
       setContentComp(sliderContentComp["covidBannerContent"]);
     } else if (contentName === "testimonialContent") {
       setContentComp(sliderContentComp["testimonialContent"]);
+    }
+    else if (contentName === "valuesContent") {
+      setContentComp(sliderContentComp["valuesContent"]);
     }
     setTimeout(() => {
       // console.log("Triggered")

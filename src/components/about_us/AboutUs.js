@@ -13,28 +13,21 @@ function AboutUs() {
       top: 0,
       left: 0,
     });
-    document.getElementById("about-us-tab-id").style.color = "#a943a5";
-    document.getElementById("about-us-arrow-id").style.color = "#a943a5";
+    document.getElementById("about-us-tab-id").style.color = "#0096ff";
+    document.getElementById("about-us-arrow-id").style.color = "#0096ff";
 
     return () => {
       document.getElementById("about-us-tab-id").style.color = "#000";
       document.getElementById("about-us-arrow-id").style.color = "#000";
     };
-    
   }, []);
 
   return (
     <div className="aboutus-tab margin-top-80">
       <div className="banner">
-        {/* <img
-          className="banner-img"
-          src="/images/education-tab/edu-banners-3.jpg"
-          alt="education-banner-img"
-        /> */}
-        {/* <Image classNm={"banner-img"} componentName={"Education"} /> */}
         <img
           className="banner-img"
-          src="/images/education-tab/edu-banners-3.jpg"
+          src="/images/aboutus-tab/about-us-banner-1.jpg"
         />
         <h1 className="banner-text">ABOUT US</h1>
       </div>
@@ -47,64 +40,78 @@ function AboutUs() {
       </div>
       <hr style={{ margin: "0px 10px" }} />
       <div className="feature-content-1">
-        <h1 className="title">EDUCATION: For a Brighter Future</h1>
+        <h1 className="title">ABOUT US</h1>
         <div className="contents" data-aos="fade-up" data-aos-duration="1000">
           <div className="img-container">
             <img
               className="one-edge-shadow"
-              src="/images/education-tab/edu-1.jpg"
+              src="/images/aboutus-tab/aboutus-1.jpg"
               alt="education-img"
             />
           </div>
           <div className="text-container">
             <p className="text">
-              Education is one of the essential tools that impart knowledge and
-              every child has a right to Education. Education gives a chance to
-              every child to empowers himself and break the vicious cycle of
-              poverty, inequality, discrimination and lack of livelihood
-              opportunities. Truly Help Foundation ensures overall development
-              of children by giving them an opportunity to enroll them back into
-              schools – thereby ensuring child rights.
+              Truly Help Foundation is the independent organization creating
+              lasting change in the life of children's in the India. We are
+              recognized for our commitment towards accountability, innovation
+              and collaboration, we believe in bringing change by empowering
+              children and families so that they can help themselves.
             </p>
           </div>
         </div>
       </div>
-      <div className="quote-text-container">
-        <span className="opening-quote-svg"></span>
-        <p className="quote-text">
-          Truly Help Foundation believe that every child has an opportunity to
-          empower himself &#38; understand the social behavior one's rights, and
-          in the process evolve as a better citizen.
-        </p>
-        <span className="closing-quote-svg"></span>
+      <div className="feature-content-2">
+        <div className="contents" data-aos="fade-up" data-aos-duration="1000">
+          <div className="text-container">
+            <p className="text">
+              We are committed to providing basic education and a healthy
+              environment to underprivileged children. We work for poor child
+              education believes that whether you are addressing healthcare,
+              poverty, population control, unemployment or human rights, there's
+              no better place to start than in the corridors of education.
+            </p>
+          </div>
+          <div className="img-container">
+            <img
+              className="one-edge-shadow"
+              src="/images/aboutus-tab/aboutus-2.jpg"
+              alt="education-img"
+            />
+          </div>
+        </div>
       </div>
-      <div className="what-we-have-done-container">
-        <h1 className="title">WHAT WE HAVE DONE</h1>
-        <ul
-          className="text-container"
-          data-aos="fade-up"
-          data-aos-duration="500"
-        >
-          <li className="text">
-            Truly Help Foundation's has taken an educational initiative to
-            provide education to all include Pre-school (3-6 yrs) and Non-Formal
-            Education (6-14 yrs non-school going/ drop outs).
-          </li>
-          <br />
-          <li className="text">
-            We work for education for underprivileged children who are under
-            difficult circumstances, such as child labor, children of poorest of
-            the parents, street and runaway children, children with rare
-            disabilities, disaster struck children and slum children.
-          </li>
-          <br />
-          <li className="text">
-            Special emphasis is given on girl education and women education, so
-            that they and their families get empowered.
-          </li>
-        </ul>
+      <div className="hr-line">
+        <hr />
       </div>
-      <br />
+      <div className="feature-content-1 only-text-container">
+        <h1 className="title">OUR STRATEGY</h1>
+        <div className="contents" data-aos="fade-up" data-aos-duration="1000">
+          <div className="text-container">
+            <p className="text">
+              Our strategy is to Engage, Empower, Execute and Exit: To engage
+              rural communities with corporates, young urban India,
+              not-for-profit organizations and government to empower our
+              communities to execute programs that transform their own lives.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="hr-line">
+        <hr />
+      </div>
+      <div className="feature-content-1 only-text-container">
+        <h1 className="title">OUR PHILOSOPHY</h1>
+        <div className="contents" data-aos="fade-up" data-aos-duration="1000">
+          <div className="text-container">
+            <p className="text">
+              At the Truly help foundation, we believe that the partnership of
+              rural India with corporates, young urban India, the Government and
+              other foundations is the key to create a permanent and
+              irreversible change for good.
+            </p>
+          </div>
+        </div>
+      </div>
       <br />
     </div>
   );

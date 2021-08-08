@@ -1,0 +1,69 @@
+.mission-tab {
+  .mission-our-core-values-container {
+    height: 400px;
+    margin-bottom: 80px;
+    text-align: center;
+    .slides {
+      display: flex;
+      align-items: baseline !important;
+    }
+    .testimonial-row {
+      .content-title {
+        font-family: 'Philosopher', sans-serif;
+        text-align: center;
+        text-transform: uppercase;
+        color: aliceblue;
+        font-size: 30px;
+        margin: 20px 0px;
+      }
+      .contents {
+        height: 100%;
+        width: 66%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        .testimonial-img {
+          flex: 0.5;
+          display: flex;
+          justify-content: start;
+        }
+        .testimonial-data {
+          flex: 1;
+          display: flex;
+          justify-content: start;
+          flex-direction: column;
+          .testimonial-text {
+            text-align: initial;
+            font-family: "Kalam", cursive;
+            font-size: 22px;
+            color: aliceblue;
+          }
+          .testimonial-name {
+            text-align: center;
+            font-style: italic;
+          }
+        }
+      }
+    }
+    .prev {
+      left: 0;
+    }
+    .prev,
+    .next {
+      color: aliceblue;
+    }
+    .slides {
+      margin-top: 10px;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #069;
+    }
+    img {
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+    }
+  }
+}

@@ -3,8 +3,8 @@ import React, { useEffect } from "react";
 function EmergencyCase() {
 
     useEffect(() => {
-        document.getElementById("emergency-tab-id").style.color = "#a943a5";
-        document.getElementById("emergency-arrow-id").style.color = "#a943a5";
+        document.getElementById("emergency-tab-id").style.color = "#0096ff";
+        document.getElementById("emergency-arrow-id").style.color = "#0096ff";
     
         return () => {
           document.getElementById("emergency-tab-id").style.color = "#000";

@@ -70,6 +70,27 @@ i {
   -webkit-box-shadow: -1px 7px 20px -7px #b9b5b5;
   -moz-box-shadow: -1px 7px 20px -7px #afa2a2;
   box-shadow: -1px 7px 20px -7px #afa2a2;
+  // opacity: 1;
+  // -webkit-transition: .1s ease-in-out,color .1s,opacity .1s;
+  // -moz-transition: .1s ease-in-out,color .1s,opacity .1s;
+  // -ms-transition: .1s ease-in-out,color .1s,opacity .1s;
+  // -o-transition: .1s ease-in-out,color .1s,opacity .1s;
+  // transition: .1s ease-in-out,color .1s,opacity .1s;
+}
+
+.nav-not-show {
+  // opacity: 0;
+  // -moz-transform: translate(0, -110px);
+  // -o-transform: translate(0, -110px);
+  // -ms-transform: translate(0, -110px);
+  // -webkit-transform: translate(0, -110px);
+  // transform: translate(0, -110px);
+  // -webkit-transition: transform 1.9s, opacity 0.2s;
+  // -moz-transition: transform 1.9s, opacity 0.2s;
+  // -ms-transition: transform 1.9s, opacity 0.2s;
+  // -o-transition: transform 1.9s, opacity 0.2s;
+  // transition: transform 1.9s, opacity 0.2s;
+  display: none;
 }
 
 .nav-logo {
@@ -109,9 +130,9 @@ i {
 }
 
 .nav-bottom-list li:hover {
-  color: #a943a5;
+  color: #0096ff;
   .fa {
-    color: #a943a5;
+    color: #0096ff;
     transform: rotate(180deg);
   }
 }

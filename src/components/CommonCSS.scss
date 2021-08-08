@@ -3,12 +3,38 @@
   -moz-box-shadow: 0 8px 6px -6px black;
   box-shadow: 0 8px 6px -6px black;
 }
+.hr-line {
+  width: 20%;
+  margin: 30px auto 20px auto;
+}
+
+.btn {
+  margin-top: 7px;
+  border: none;
+  color: #fff;
+  font-size: 13px;
+  padding: 7px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btn {
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
 .education-tab,
 .healthcare-tab,
 .livelihood-tab,
 .sports-tab,
 .humanitarian-tab,
-.aboutus-tab {
+.aboutus-tab,
+.mission-tab,
+.overview-tab {
   .banner {
     position: relative;
     .banner-img {

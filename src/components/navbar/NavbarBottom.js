@@ -1,12 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // import Slider from '../image_slider/Slider'
 import { Link } from "react-router-dom";
 import "font-awesome/css/font-awesome.min.css";
 import "./Navbar.scss";
 
 const NavbarBottom = () => {
+  // const [navNotshow, setNavNotShow] = useState(false);
+
+  // const [lastScroll, setLastScroll] = useState(0);
+  // const [currentScroll, setCurrentScroll] = useState(0);
+
+  // const handleScroll = () => {
+  //   console.log("Page Scrolled", window.pageYOffset);
+  //   setCurrentScroll(window.pageYOffset);
+  // };
+
+  // useEffect(() => {
+  //   if (currentScroll > lastScroll) {
+  //     setNavNotShow(true);
+  //   } else {
+  //     setNavNotShow(false);
+  //   }
+  //   setLastScroll(currentScroll);
+  // }, [currentScroll]);
+
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
+
   return (
-    <div className="nav-bottom-container">
+    <div id="navbar-id" className="nav-bottom-container">
+      {/* <div className={`nav-bottom ${navNotshow && "nav-not-show"}`}> */}
       <div className="nav-bottom">
         <Link to="/">
           {/* <img className="nav-logo" alt="logo" /> */}
@@ -21,7 +46,10 @@ const NavbarBottom = () => {
               </li>
               <div className="nav-dropdown-menu">
                 <li>
-                  <Link to="/">OVERVIEW</Link>
+                  <Link to="/our-work">OUR WORK</Link>
+                </li>
+                <li>
+                  <Link to="/overview">OVERVIEW</Link>
                 </li>
                 <li>
                   <Link to="/education">EDUCATION</Link>
@@ -42,12 +70,19 @@ const NavbarBottom = () => {
             </div>
             <div className="nav-tabs">
               <li>
-                <Link id="about-us-tab-id" to="/about-us">ABOUT US</Link>
+                <Link id="about-us-tab-id">ABOUT US</Link>
                 <i id="about-us-arrow-id" className="fa fa-caret-down"></i>
               </li>
               <div className="nav-dropdown-menu">
                 <li>
-                  <Link to="/mission-vision-values">MISSION, VISION AND VALUES</Link>
+                  <Link to="/about-us">
+                    ABOUT US
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/mission-vision-values">
+                    MISSION, VISION AND VALUES
+                  </Link>
                 </li>
                 <li>
                   <Link to="/our-approach">OUR APPROACH</Link>
@@ -74,8 +109,13 @@ const NavbarBottom = () => {
             </div>
             <div className="nav-tabs">
               <li>
-                <Link id="thf-fellowship-tab-id" to="/thf-fellowship">THF FELLOWSHIP</Link>
-                <i id="thf-fellowship-arrow-id" className="fa fa-caret-down"></i>
+                <Link id="thf-fellowship-tab-id" to="/thf-fellowship">
+                  THF FELLOWSHIP
+                </Link>
+                <i
+                  id="thf-fellowship-arrow-id"
+                  className="fa fa-caret-down"
+                ></i>
               </li>
               <div className="nav-dropdown-menu">
                 <li>
@@ -88,7 +128,9 @@ const NavbarBottom = () => {
             </div>
             <div className="nav-tabs">
               <li>
-                <Link id="emergency-tab-id" to="/emergency">EMERGENCY</Link>
+                <Link id="emergency-tab-id" to="/emergency">
+                  EMERGENCY
+                </Link>
                 <i id="emergency-arrow-id" className="fa fa-caret-down"></i>
               </li>
               <div className="nav-dropdown-menu">
@@ -102,7 +144,9 @@ const NavbarBottom = () => {
             </div>
             <div className="nav-tabs">
               <li>
-                <Link id="get-involved-tab-id" to="/get-involved">GET INVOLVED</Link>
+                <Link id="get-involved-tab-id" to="/get-involved">
+                  GET INVOLVED
+                </Link>
                 <i id="get-involved-arrow-id" className="fa fa-caret-down"></i>
               </li>
               <div className="nav-dropdown-menu">
@@ -147,11 +191,31 @@ const NavbarBottom = () => {
             </div>
             <div className="nav-tab-social">
               <div className="social-media-icons">
-                <a className="social-icons icon-twitter" href="https://twitter.com/trulyhelp" target="_blank"></a>
-                <a className="social-icons icon-facebook" href="https://www.facebook.com/trulyhelpfoundation" target="_blank"></a>
-                <a className="social-icons icon-linkedin" href="https://www.linkedin.com/company/truly-help-foundation5aba50213" target="_blank"></a>
-                <a className="social-icons icon-instagram" href="https://www.instagram.com/trulyhelpfoundation" target="_blank"></a>
-                <a className="social-icons icon-youtube" href="https://www.youtube.com/channel/UCRIQBzF05ms8IF13-2ER8VA/featured" target="_blank"></a>
+                <a
+                  className="social-icons icon-twitter"
+                  href="https://twitter.com/trulyhelp"
+                  target="_blank"
+                ></a>
+                <a
+                  className="social-icons icon-facebook"
+                  href="https://www.facebook.com/trulyhelpfoundation"
+                  target="_blank"
+                ></a>
+                <a
+                  className="social-icons icon-linkedin"
+                  href="https://www.linkedin.com/company/truly-help-foundation5aba50213"
+                  target="_blank"
+                ></a>
+                <a
+                  className="social-icons icon-instagram"
+                  href="https://www.instagram.com/trulyhelpfoundation"
+                  target="_blank"
+                ></a>
+                <a
+                  className="social-icons icon-youtube"
+                  href="https://www.youtube.com/channel/UCRIQBzF05ms8IF13-2ER8VA/featured"
+                  target="_blank"
+                ></a>
               </div>
             </div>
           </div>

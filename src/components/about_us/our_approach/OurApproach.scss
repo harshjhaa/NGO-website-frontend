@@ -1,0 +1,26 @@
+.our-approach-tab {
+  .title {
+    margin-top: 10px;
+  }
+  .niche-contents {
+    display: flex;
+    width: 75%;
+    margin: auto;
+    justify-content: space-between;
+    .circle {
+      width: 150px;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #0096ff;
+      border-radius: 50%;
+      p {
+        text-align: center;
+        color: aliceblue;
+        font-family: "Merienda", cursive;
+        font-weight: bold;
+      }
+    }
+  }
+}

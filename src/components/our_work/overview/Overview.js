@@ -169,7 +169,7 @@ function Overview() {
             <Link to="/covid-19-relief">VISIT</Link>
           </button>
         </div>
-      </div>{" "}
+      </div>
       <div className="hr-line">
         <hr />
       </div>

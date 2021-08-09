@@ -1,0 +1,112 @@
+.we-help-each-container {
+  display: flex;
+  flex-direction: row;
+  height: 50%;
+  text-align: center;
+  margin-bottom: 70px;
+  .we-help-each-contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 10px;
+  }
+  .img-txt-container {
+    display: flex;
+    flex-direction: row;
+  }
+  img {
+    border-radius: 20px;
+    width: 300px;
+    height: 250px;
+  }
+  .txt-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+  }
+  .col-left {
+    flex: 1;
+    .title {
+      font-size: 30px;
+      font-family: "Caveat", cursive;
+      color: #c88200;
+    }
+    p {
+      line-height: 35px;
+      padding: 0 60px;
+      text-align: center;
+      margin-top: 10px;
+      color: #3e2900;
+    }
+  }
+  .col-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .grid-container {
+      height: 80%;
+      width: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      .grid::before {
+        z-index: -1;
+        display: block;
+        content: "";
+        border: 2px dashed rgb(125, 255, 255);
+        height: 400px;
+        width: 400px;
+        position: absolute;
+        border-radius: 50%;
+        animation: rotates infinite;
+        animation-duration: 50s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+      @keyframes rotates {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        transition: all 1s;
+        transition-delay: 0.5s;
+        p {
+          text-align: center;
+          font-family: "Architects Daughter", cursive;
+          color: #3e2900;
+          font-size: 14px;
+        }
+        img {
+          height: 65%;
+          width: 65%;
+          border-radius: 50%;
+          // visibility: hidden;
+        }
+        .grid-img-center {
+          height: 110px;
+          width: 110px;
+          animation: rotates infinite;
+          animation-duration: 50s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+        }
+      }
+      .cell {
+        flex: 0 0 28%;
+        height: 130px;
+        // background-color: green;
+      }
+    }
+  }
+}

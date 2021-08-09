@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import HungerRuralDonate from "../../common_components/hunger_rural_donate/HungerRuralDonate";
+import SubscribeNewsletter from "../../common_components/subscribe_newsletter/SubscribeNewsletter";
 import AOS from "aos";
 
 import "../../CommonCSS.scss";
@@ -35,7 +37,6 @@ function Overview() {
         <Link className="active-link" to="/">
           Home
         </Link>
-        <span className="right-arrow">&#62;</span>
         <span className="right-arrow">&#62;</span>
         <p>Overview</p>
       </div>
@@ -150,10 +151,33 @@ function Overview() {
             <Link to="/humanitarian">VISIT</Link>
           </button>
         </div>
-      </div>
+        <div className="humanitarian-container">
+          <h2 className="title">COVID-13 RELIEF</h2>
+          <span className="span-line"></span>
+          <div className="img-container">
+            <img src="/images/overview-tab/covid-1.jpeg" />
+          </div>
+          <div className="contents">
+            <p>
+              Our world has undergone a crisis due to COVID-19. Humanity is
+              fighting one of its biggest crises, and it’s our time to come
+              together and support each other inorder to make world a better
+              place to live.
+            </p>
+          </div>
+          <button className="btn">
+            <Link to="/covid-19-relief">VISIT</Link>
+          </button>
+        </div>
+      </div>{" "}
       <div className="hr-line">
         <hr />
       </div>
+      <SubscribeNewsletter />
+      <div className="hr-line">
+        <hr />
+      </div>
+      <HungerRuralDonate />
     </div>
   );
 }

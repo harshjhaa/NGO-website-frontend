@@ -1,0 +1,37 @@
+.acknowledgement-container {
+  display: flex;
+  justify-content: center;
+  .content {
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    height: 80px;
+    border-radius: 50px;
+    margin: 10px 0px;
+    align-items: center;
+    text-align: center;
+    font-family: "Otomanopee One", sans-serif;
+    background-color: lightyellow;
+    .sec-1,
+    .sec-2,
+    .sec-3 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0px 10px;
+      p {
+        font-size: 14px;
+        padding: 0px 5px;
+      }
+      .img-icon {
+        height: 45px;
+        transition: 0.5s;
+      }
+    }
+  }
+  .content:hover {
+    .img-icon {
+      transform: rotate(360deg);
+    }
+  }
+}

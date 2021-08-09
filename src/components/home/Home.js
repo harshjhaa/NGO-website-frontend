@@ -1,8 +1,16 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+
+//components
 import Slider from "../image_slider/Slider";
 import BoxCube from "./BoxCube";
+import HungerRuralDonate from "../common_components/hunger_rural_donate/HungerRuralDonate";
+import SubscribeNewsletter from "../common_components/subscribe_newsletter/SubscribeNewsletter";
+import Acknowledgement from "../common_components/acknowlwdgement/Acknowledgement";
+import WeHelpEach from "../common_components/we_help_each/WeHelpEach";
+
 import Carousel from "react-elastic-carousel";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/swiper.min.css";
@@ -363,85 +371,7 @@ const Home = () => {
       <div className="hr-line">
         <hr />
       </div>
-      <div
-        className="home-feature-content-3 flex-col"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-      >
-        <div className="col-left">
-          <h1
-            className="title"
-            // data-aos="fade-down"
-            // data-aos-duration="1800"
-          >
-            WE HELP EACH
-          </h1>
-          <div
-          // data-aos="fade-up"
-          // data-aos-duration="1800"
-          >
-            <p>
-              We place a strategic emphasis on promoting quality health care,
-              inclusive education, sustainable and gender-fair livelihood
-              opportunities, and disaster preparedness and relief. Our efforts
-              are focused on combating the root causes of poverty and on
-              ensuring a dignified life for all women and girls in the most
-              marginalized and vulnerable communities, especially the most
-              backward populations.
-              <br />
-              Our key programming approaches include social analysis and action,
-              transformative gender change, building safe and resilient
-              communities, promoting inclusive governance, supporting national
-              and international platforms and facilitating connections and
-              dialogues between the public, private and civil society.
-            </p>
-          </div>
-        </div>
-        <div className="col-right">
-          {/* <div className="home-feature-content-3-container">
-            <img src="/images/img_1.jpg" alt="home_img-1" />
-          </div>
-          <div className="home-feature-content-3-container">
-            <img src="/images/img_2.jpg" alt="home_img-1" />
-          </div>
-          <div className="home-feature-content-3-container">
-            <img src="/images/img_3.jpg" alt="home_img-1" />
-          </div> */}
-          {/* Hi */}
-          <div className="grid-container">
-            <div className="grid">
-              <div className="cell cell-1">
-                <img src="/images/family-1.png" alt="family_img" />
-                <p>FAMILY</p>
-              </div>
-              <div className="cell cell-2"></div>
-              <div className="cell cell-3">
-                <img src="/images/community-1.png" alt="community_img" />
-                <p>COMMUNITY</p>
-              </div>
-              <div className="cell cell-4"></div>
-              <div className="cell cell-5">
-                <img
-                  className="grid-img-center"
-                  src="/images/children-1.jpg"
-                  alt="children_img"
-                />
-                <p>CHILDREN</p>
-              </div>
-              <div className="cell cell-6"></div>
-              <div className="cell cell-7">
-                <img src="/images/home-1.png" alt="home_img" />
-                <p>HOME</p>
-              </div>
-              <div className="cell cell-8"></div>
-              <div className="cell cell-9">
-                <img src="/images/government-1.png" alt="government_img" />
-                <p>GOVERNMENT</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <WeHelpEach />
       <div className="hr-line">
         <hr />
       </div>
@@ -504,7 +434,6 @@ const Home = () => {
           <h2 className="title">WHO WE ARE</h2>
           <span className="span-line"></span>
           <div className="img-container">
-            {/* <img src="/images/who-we-are-1.jpg" alt="home_img-2" /> */}
             <img src="/images/who-we-are.jpg" />
           </div>
           <div className="contents">
@@ -561,14 +490,7 @@ const Home = () => {
         data-aos="fade-up"
         data-aos-duration="1000"
       >
-        <p
-          // data-aos="fade-up"
-          // data-aos-anchor-placement="bottom-bottom"
-          // data-aos-duration="1600"
-          className="head-title"
-        >
-          CURRENTLY RUNNING PROGRAMES
-        </p>
+        <p className="head-title">CURRENTLY RUNNING PROGRAMES</p>
         <div className="program-contents">
           <div className="program-content sec-1" data-aos-duration="1600">
             <img src="/images/educ-1.jpg" alt="home_img-2" />
@@ -680,71 +602,12 @@ const Home = () => {
       <div className="hr-line">
         <hr />
       </div>
-      <div className="subscribe-us-container">
-        <div className="contents">
-          <div className="contact-no">
-            <p>
-              Helpline Number: <span>1800-xxxx-xx</span>
-            </p>
-          </div>
-          <div className="email-id">
-            <input
-              className="inp-email"
-              type="email"
-              placeholder="Enter Email-Id to Subscribe to News Letter"
-            ></input>
-            <button className="btn">SUBSCRIBE</button>
-          </div>
-        </div>
-      </div>
+      <SubscribeNewsletter />
       <div className="hr-line">
         <hr />
       </div>
-      <div className="donate-rural-area">
-        <div className="contents">
-          <h2>HELP US FIGNT THE HUNGER IN RURAL AREAS</h2>
-          <br />
-          <br />
-          <div className="inp-btn">
-            <input
-              className="input-donate"
-              type="number"
-              placeholder="DONATE ANY AMOUNT (INR)"
-            ></input>
-            <button className="donate-inp-btn">PROCEED</button>
-          </div>
-          <br />
-          <br />
-          <h3>
-            Some rural residents and households are food insecure,
-            <br />
-            meaning they cannot rely on access to sufficient
-            <br />
-            affordable and nutritious food at all times,
-            <br />
-            increasing the risk of poor health outcomes.
-          </h3>
-        </div>
-      </div>
-      <div className="acknowledgement-container">
-        <div className="content">
-          <div className="sec-1">
-            <img className="img-icon" src="/svg/heart.svg" />
-            <p>All our efforts are made possible because of your support.</p>
-          </div>
-          <div className="sec-2">
-            <img className="img-icon" src="/svg/tax.svg" />
-            {/* <p>Your donation are Tax Exempted uder 80G of the Indian Income Tax Act.</p> */}
-            <p>Your donations are under right hand.</p>
-          </div>
-          <div className="sec-3">
-            <img className="img-icon" src="/svg/security-2.svg" />
-            <p>
-              Your donations and transactions are completely safe and secure.
-            </p>
-          </div>
-        </div>
-      </div>
+      <HungerRuralDonate />
+      <Acknowledgement />
     </div>
   );
 };

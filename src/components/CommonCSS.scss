@@ -35,8 +35,13 @@
 .humanitarian-tab,
 .aboutus-tab,
 .mission-tab,
+.our-work-tab,
 .overview-tab,
 .our-approach-tab {
+  .home-img-banner {
+    height: 485px;
+    margin-top: -4px;
+  }
   .banner {
     position: relative;
     .banner-img {

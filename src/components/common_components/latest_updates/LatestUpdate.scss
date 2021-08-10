@@ -1,0 +1,51 @@
+.latest-updates-container {
+    height: 500px;
+    text-align: center;
+    .head-title {
+      font-size: 35px;
+      font-family: "Caveat", cursive;
+      color: #c88200;
+    }
+    .contents {
+      display: flex;
+      height: 91%;
+      width: 71%;
+      margin: auto;
+    }
+    .events-list-container,
+    .twitter-list-container {
+      flex: 1;
+      border: 1px solid #000;
+      margin: 10px;
+    }
+    .twitter-list-container {
+      // background-color: cyan;
+      .twitter {
+        height: 434px;
+        width: 100%;
+        // .twitter-timeline{
+        //   p{
+        //     font-size: 14px !important;
+        //   line-height: 20px !important;
+        //   }
+        // }
+        // #twitter-widget-0 {
+        //   body {
+        //     .timeline-Widget {
+        //       .timeline-Body.customisable-border {
+        //         .timeline-Viewport {
+        //           .timeline-TweetList-tweet {
+        //             .timeline-Tweet {
+        //               .timeline-Tweet-text {
+
+        //               }
+        //             }
+        //           }
+        //         }
+        //       }
+        //     }
+        //   }
+        // }
+      }
+    }
+  }

@@ -5,6 +5,7 @@ import Slider from "../image_slider/Slider";
 
 import "../CommonCSS.scss";
 import "./OurWork.scss";
+import LatestUpdates from "../common_components/latest_updates/LatestUpdates";
 
 const OurWork = (props) => {
   useEffect(() => {
@@ -13,6 +14,19 @@ const OurWork = (props) => {
       top: 0,
       left: 0,
     });
+
+    //for handelling twitter
+    const anchor = document.createElement("a");
+    anchor.setAttribute("class", "twitter-timeline");
+    anchor.setAttribute("data-theme", "dark");
+    anchor.setAttribute("data-tweet-limit", "5");
+    anchor.setAttribute("data-chrome", "noheader nofooter noborders");
+    anchor.setAttribute("href", "https://twitter.com/trulyhelp");
+    document.getElementsByClassName("twitter-embed")[0].appendChild(anchor);
+    const script = document.createElement("script");
+    script.setAttribute("src", "https://platform.twitter.com/widgets.js");
+    document.getElementsByClassName("twitter-embed")[0].appendChild(script);
+
     document.getElementById("our-work-tab-id").style.color = "#0096ff";
     document.getElementById("our-work-arrow-id").style.color = "#0096ff";
 
@@ -117,7 +131,7 @@ const OurWork = (props) => {
             <h4>SPORTS</h4>
             <p>
               Sports helps to evolve the overall mentality of the person by
-              making them active, alert and friendly!
+              making them active and friendly!
             </p>
             <button className="btn btn-orange">
               <Link to="/sports">EXPLORE</Link>
@@ -168,9 +182,16 @@ const OurWork = (props) => {
               lives of millions children, women and youth. Be it nutiriton,
               healthcare, education, sports and response in the time.
             </p>
+            <button className="btn btn-blue">
+              <Link to="/about-us">LEARN MORE</Link>
+            </button>
           </div>
         </div>
       </section>
+      <div className="hr-line">
+        <hr />
+      </div>
+      <LatestUpdates />
       <div className="hr-line">
         <hr />
       </div>

@@ -62,17 +62,17 @@ function OurApproach() {
           </div>
         </div>
         <div className="niche-contents">
-          <div className="circle">
-            <p>CREATE PARTNERSHIPS</p>
+          <div className="circle circle-1">
+            <p>Create local & partnerships</p>
           </div>
-          <div className="circle">
-            <p>CREATE PARTNERSHIPS</p>
+          <div className="circle circle-2">
+            <p>Child participation</p>
           </div>
-          <div className="circle">
-            <p>CREATE PARTNERSHIPS</p>
+          <div className="circle circle-3">
+            <p>Innovation idea</p>
           </div>
-          <div className="circle">
-            <p>CREATE PARTNERSHIPS</p>
+          <div className="circle circle-4">
+            <p>Evidence & Development</p>
           </div>
         </div>
       </div>

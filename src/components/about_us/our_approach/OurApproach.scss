@@ -13,7 +13,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #0096ff;
+      background-color: #e5276a;
       border-radius: 50%;
       p {
         text-align: center;
@@ -21,6 +21,18 @@
         font-family: "Merienda", cursive;
         font-weight: bold;
       }
+    }
+    .circle-1 {
+      background-color: #e5276a;
+    }
+    .circle-2 {
+      background-color: #419b9c;
+    }
+    .circle-3 {
+      background-color: #a943a5;
+    }
+    .circle-4 {
+      background-color: #f6910e;
     }
   }
 }

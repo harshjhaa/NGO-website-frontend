@@ -75,9 +75,7 @@ const NavbarBottom = () => {
               </li>
               <div className="nav-dropdown-menu">
                 <li>
-                  <Link to="/about-us">
-                    ABOUT US
-                  </Link>
+                  <Link to="/about-us">ABOUT US</Link>
                 </li>
                 <li>
                   <Link to="/mission-vision-values">
@@ -112,19 +110,19 @@ const NavbarBottom = () => {
                 <Link id="thf-fellowship-tab-id" to="/thf-fellowship">
                   THF FELLOWSHIP
                 </Link>
-                <i
+                {/* <i
                   id="thf-fellowship-arrow-id"
                   className="fa fa-caret-down"
-                ></i>
+                ></i> */}
               </li>
-              <div className="nav-dropdown-menu">
+              {/* <div className="nav-dropdown-menu">
                 <li>
                   <Link to="/volunteering">VOLUNTEERING</Link>
                 </li>
                 <li>
                   <Link to="/internships">INTERNSHIPS</Link>
                 </li>
-              </div>
+              </div> */}
             </div>
             <div className="nav-tabs">
               <li>

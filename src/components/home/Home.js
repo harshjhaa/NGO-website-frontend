@@ -41,10 +41,10 @@ const Home = () => {
   ];
 
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-    });
+    // window.scrollTo({
+    //   top: 0,
+    //   left: 0,
+    // });
     AOS.init();
     //for handelling twitter
     const anchor = document.createElement("a");
@@ -184,8 +184,8 @@ const Home = () => {
         >
           <Swiper
             slidesPerView={3}
+            spaceBetween={30}
             slidesPerGroup={3}
-            spaceBetween={10}
             breakpoints={{
               960: {
                 slidesPerView: 3,
@@ -209,12 +209,10 @@ const Home = () => {
               },
             }}
             autoplay={{
-              delay: 7000,
+              delay: 5000,
               disableOnInteraction: false,
             }}
-            centeredSlides={true}
             loop={true}
-            loopFillGroupWithBlank={false}
             pagination={{
               clickable: true,
             }}
@@ -237,7 +235,6 @@ const Home = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              {" "}
               <div className="box box-border-green">
                 <div className="content">
                   <img src="/gif/health-5.gif" alt="home_img-2" />
@@ -253,7 +250,6 @@ const Home = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              {" "}
               <div className="box box-border-voilet">
                 <div className="content">
                   <img src="/gif/liveli-4.gif" alt="home_img-2" />
@@ -269,7 +265,21 @@ const Home = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              {" "}
+              <div className="box box-border-blue">
+                <div className="content">
+                  <img src="/gif/human-2.gif" alt="home_img-2" />
+                  <h4>HUMANITARIAN</h4>
+                  <p>
+                    Human wlfare is one of the important factor in keeping the
+                    society balanced, evolving from time to time!
+                  </p>
+                  <button className="btn btn-blue">
+                    <Link to="/humanitarian">EXPLORE</Link>
+                  </button>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
               <div className="box box-border-orange">
                 <div className="content">
                   <img src="/gif/sports-2.gif" alt="home_img-2" />
@@ -285,17 +295,16 @@ const Home = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              {" "}
-              <div className="box box-border-blue">
+              <div className="box box-border-red">
                 <div className="content">
-                  <img src="/gif/human-2.gif" alt="home_img-2" />
-                  <h4>HUMANITARIAN</h4>
+                  <img src="/gif/edu-2.gif" alt="home_img-1" />
+                  <h4>EDUCATION</h4>
                   <p>
-                    Human wlfare is one of the important factor in keeping the
-                    society balanced, evolving from time to time!
+                    Education is one of the main piller of the society, without
+                    it India's future is lost!
                   </p>
-                  <button className="btn btn-blue">
-                    <Link to="/humanitarian">EXPLORE</Link>
+                  <button className="btn btn-red">
+                    <Link to="/education">EXPLORE</Link>
                   </button>
                 </div>
               </div>
@@ -571,7 +580,7 @@ const Home = () => {
       <div className="hr-line">
         <hr />
       </div>
-      <LatestUpdates/>
+      <LatestUpdates />
       <div className="hr-line">
         <hr />
       </div>

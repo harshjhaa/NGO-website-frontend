@@ -27,7 +27,7 @@ import StoriesOfChange from "./components/about_us/stories_of_change/StoriesOfCh
 import SuccessStory from "./components/about_us/success_story/SuccessStory";
 
 //TheFellowship Tabs
-import TheFellowship from "./components/the_fellowship/TheFellowship";
+import ThfFellowship from "./components/the_fellowship/ThfFellowship";
 import Volunteering from "./components/the_fellowship/volunteering/Volunteering";
 import Internships from "./components/the_fellowship/internships/Internships";
 
@@ -83,7 +83,7 @@ function App() {
           <Route path="/stories-of-change" component={StoriesOfChange} />
           <Route path="/success-story" component={SuccessStory} />
           {/* TheFellowship Tabs */}
-          <Route path="/thf-fellowship" component={TheFellowship} />
+          <Route path="/thf-fellowship" component={ThfFellowship} />
           <Route path="/volunteering" component={Volunteering} />
           <Route path="/internships" component={Internships} />
           {/* Emergency Tabs */}

@@ -16,7 +16,7 @@ function SubscribeNewsletter() {
             type="email"
             placeholder="Enter Email-Id to Subscribe to News Letter"
           ></input>
-          <button className="btn">SUBSCRIBE</button>
+          <button className="bttn">SUBSCRIBE</button>
         </div>
       </div>
     </div>

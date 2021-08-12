@@ -10,8 +10,6 @@ import Acknowledgement from "../common_components/acknowlwdgement/Acknowledgemen
 import WeHelpEach from "../common_components/we_help_each/WeHelpEach";
 import LatestUpdates from "../common_components/latest_updates/LatestUpdates";
 
-import Carousel from "react-elastic-carousel";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/swiper.min.css";
@@ -127,8 +125,8 @@ const Home = () => {
             <div className="img-txt">
               <img src="/images/img_1.jpg" alt="home_img-1" />
               <h4>EDUCATION</h4>
-              <button className="btn">
-                <Link className="btn" to="/education">
+              <button className="bttn">
+                <Link className="bttn" to="/education">
                   EXPLORE
                 </Link>
               </button>
@@ -136,8 +134,8 @@ const Home = () => {
             <div className="img-txt">
               <img src="/images/img_2.jpg" alt="home_img-2" />
               <h4>HEALTHCARE</h4>
-              <button className="btn">
-                <Link className="btn" to="/healthcare">
+              <button className="bttn">
+                <Link className="bttn" to="/healthcare">
                   EXPLORE
                 </Link>
               </button>
@@ -145,8 +143,8 @@ const Home = () => {
             <div className="img-txt">
               <img src="/images/img_3.jpg" alt="home_img-3" />
               <h4>LIVELIHOODS</h4>
-              <button className="btn">
-                <Link className="btn" to="/livelihoods">
+              <button className="bttn">
+                <Link className="bttn" to="/livelihoods">
                   EXPLORE
                 </Link>
               </button>
@@ -154,8 +152,8 @@ const Home = () => {
             <div className="img-txt">
               <img src="/images/img_1.jpg" alt="home_img-1" />
               <h4>SPORTS</h4>
-              <button className="btn">
-                <Link className="btn" to="/sports">
+              <button className="bttn">
+                <Link className="bttn" to="/sports">
                   EXPLORE
                 </Link>
               </button>
@@ -163,8 +161,8 @@ const Home = () => {
             <div className="img-txt">
               <img src="/images/img_2.jpg" alt="home_img-2" />
               <h4>HUMANITARIAN</h4>
-              <button className="btn">
-                <Link className="btn" to="/humanitarian">
+              <button className="bttn">
+                <Link className="bttn" to="/humanitarian">
                   EXPLORE
                 </Link>
               </button>
@@ -228,7 +226,7 @@ const Home = () => {
                     Education is one of the main piller of the society, without
                     it India's future is lost!
                   </p>
-                  <button className="btn btn-red">
+                  <button className="bttn bttn-red">
                     <Link to="/education">EXPLORE</Link>
                   </button>
                 </div>
@@ -243,7 +241,7 @@ const Home = () => {
                     Good health makes people strong, increaes thier efficient
                     and inturn benefits society!
                   </p>
-                  <button className="btn btn-green">
+                  <button className="bttn bttn-green">
                     <Link to="/healthcare">EXPLORE</Link>
                   </button>
                 </div>
@@ -258,7 +256,7 @@ const Home = () => {
                     Imporvement in the livelihood lead to the upgradation of the
                     standard of living!
                   </p>
-                  <button className="btn btn-voilet">
+                  <button className="bttn bttn-voilet">
                     <Link to="/livelihoods">EXPLORE</Link>
                   </button>
                 </div>
@@ -273,7 +271,7 @@ const Home = () => {
                     Human wlfare is one of the important factor in keeping the
                     society balanced, evolving from time to time!
                   </p>
-                  <button className="btn btn-blue">
+                  <button className="bttn bttn-blue">
                     <Link to="/humanitarian">EXPLORE</Link>
                   </button>
                 </div>
@@ -288,7 +286,7 @@ const Home = () => {
                     Sports helps to evolve the overall mentality of the person
                     by making them active, alert and friendly!
                   </p>
-                  <button className="btn btn-orange">
+                  <button className="bttn bttn-orange">
                     <Link to="/sports">EXPLORE</Link>
                   </button>
                 </div>
@@ -303,7 +301,7 @@ const Home = () => {
                     Education is one of the main piller of the society, without
                     it India's future is lost!
                   </p>
-                  <button className="btn btn-red">
+                  <button className="bttn bttn-red">
                     <Link to="/education">EXPLORE</Link>
                   </button>
                 </div>
@@ -319,7 +317,7 @@ const Home = () => {
                 Education is one of the main piller of the society, without it
                 India's future is lost!
               </p>
-              <button className="btn btn-red">
+              <button className="bttn bttn-red">
                 <Link to="/education">EXPLORE</Link>
               </button>
             </div>
@@ -332,7 +330,7 @@ const Home = () => {
                 Good health makes people strong, increaes thier efficient and
                 inturn benefits society!
               </p>
-              <button className="btn btn-green">
+              <button className="bttn bttn-green">
                 <Link to="/healthcare">EXPLORE</Link>
               </button>
             </div>
@@ -345,7 +343,7 @@ const Home = () => {
                 Imporvement in the livelihood lead to the upgradation of the
                 standard of living!
               </p>
-              <button className="btn btn-voilet">
+              <button className="bttn bttn-voilet">
                 <Link to="/livelihoods">EXPLORE</Link>
               </button>
             </div>
@@ -358,7 +356,7 @@ const Home = () => {
                 Sports helps to evolve the overall mentality of the person by
                 making them active, alert and friendly!
               </p>
-              <button className="btn btn-orange">
+              <button className="bttn bttn-orange">
                 <Link to="/sports">EXPLORE</Link>
               </button>
             </div>
@@ -371,7 +369,7 @@ const Home = () => {
                 Human wlfare is one of the important factor in keeping the
                 society balanced, evolving from time to time!
               </p>
-              <button className="btn btn-blue">
+              <button className="bttn bttn-blue">
                 <Link to="/humanitarian">EXPLORE</Link>
               </button>
             </div>
@@ -416,7 +414,7 @@ const Home = () => {
             collaboration, we believe in bringing change by empowering children
             and families so that they can help themselves.
           </p>
-          <button className="btn">
+          <button className="bttn">
             <Link to="/about-us">EXPLORE</Link>
           </button>
         </div>
@@ -453,7 +451,7 @@ const Home = () => {
               the lives of millions children, women and youth.
             </p>
           </div>
-          <button className="btn">
+          <button className="bttn">
             <Link to="/about-us">LEARN MORE</Link>
           </button>
         </div>
@@ -470,7 +468,7 @@ const Home = () => {
               the lives of millions children, women and youth.
             </p>
           </div>
-          <button className="btn">
+          <button className="bttn">
             <Link to="/our-approach">SEE OUR WORK</Link>
           </button>
         </div>
@@ -487,7 +485,7 @@ const Home = () => {
               the lives of millions children, women and youth.
             </p>
           </div>
-          <button className="btn btn-red">
+          <button className="bttn bttn-red">
             <Link to="/our-campaigns">START NOW</Link>
           </button>
         </div>
@@ -510,7 +508,7 @@ const Home = () => {
               Education gives a chance to every child to empowers himself and
               break the vicious...
             </p>
-            <button className="btn btn-red">
+            <button className="bttn bttn-red">
               <Link to="/our-campaigns">READ MORE</Link>
             </button>
           </div>
@@ -521,7 +519,7 @@ const Home = () => {
               Adequate nutrition and quality primary care play’s an essential
               role in a child's...
             </p>
-            <button className="btn btn-green">
+            <button className="bttn bttn-green">
               <Link to="/our-campaigns">READ MORE</Link>
             </button>
           </div>
@@ -533,7 +531,7 @@ const Home = () => {
               We wish to use sports to make a healthy future generation. Our
               mission to create inclusive...
             </p>
-            <button className="btn btn-voilet">
+            <button className="bttn bttn-voilet">
               <Link to="/our-campaigns">READ MORE</Link>
             </button>
           </div>
@@ -544,7 +542,7 @@ const Home = () => {
               THF helps the people who are deprived of food due to the COVID-19
               situation, we distribute...
             </p>
-            <button className="btn btn-orange">
+            <button className="bttn bttn-orange">
               <Link to="/our-campaigns">READ MORE</Link>
             </button>
           </div>

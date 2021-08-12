@@ -94,7 +94,7 @@ const OurWork = (props) => {
               Education is one of the main piller of the society, without it
               India's future is lost!
             </p>
-            <button className="btn btn-red">
+            <button className="bttn bttn-red">
               <Link to="/education">EXPLORE</Link>
             </button>
           </div>
@@ -107,7 +107,7 @@ const OurWork = (props) => {
               Good health makes people strong, increaes thier efficient and
               inturn benefits society!
             </p>
-            <button className="btn btn-green">
+            <button className="bttn bttn-green">
               <Link to="/healthcare">EXPLORE</Link>
             </button>
           </div>
@@ -120,7 +120,7 @@ const OurWork = (props) => {
               Imporvement in the livelihood lead to the upgradation of the
               standard of living!
             </p>
-            <button className="btn btn-voilet">
+            <button className="bttn bttn-voilet">
               <Link to="/livelihoods">EXPLORE</Link>
             </button>
           </div>
@@ -133,7 +133,7 @@ const OurWork = (props) => {
               Sports helps to evolve the overall mentality of the person by
               making them active and friendly!
             </p>
-            <button className="btn btn-orange">
+            <button className="bttn bttn-orange">
               <Link to="/sports">EXPLORE</Link>
             </button>
           </div>
@@ -146,7 +146,7 @@ const OurWork = (props) => {
               Human wlfare is one of the important factor in keeping the society
               balanced, evolving!
             </p>
-            <button className="btn btn-blue">
+            <button className="bttn bttn-blue">
               <Link to="/humanitarian">EXPLORE</Link>
             </button>
           </div>
@@ -159,7 +159,7 @@ const OurWork = (props) => {
               We all need to get vaccinated and follow the government
               regulations to rid of this virus!
             </p>
-            <button className="btn btn-blue">
+            <button className="bttn bttn-blue">
               <Link to="/humanitarian">EXPLORE</Link>
             </button>
           </div>
@@ -182,7 +182,7 @@ const OurWork = (props) => {
               lives of millions children, women and youth. Be it nutiriton,
               healthcare, education, sports and response in the time.
             </p>
-            <button className="btn btn-blue">
+            <button className="bttn bttn-blue">
               <Link to="/about-us">LEARN MORE</Link>
             </button>
           </div>

@@ -79,7 +79,7 @@ function Overview() {
               thinking, attitude of helping, attitude of giving to society.
             </p>
           </div>
-          <button className="btn">
+          <button className="bttn">
             <Link to="/education">VISIT</Link>
           </button>
         </div>
@@ -96,7 +96,7 @@ function Overview() {
               as health policies. As we all know health is wealth.
             </p>
           </div>
-          <button className="btn">
+          <button className="bttn">
             <Link to="/healthcare">VISIT</Link>
           </button>
         </div>
@@ -113,7 +113,7 @@ function Overview() {
               secure the necessities of life.
             </p>
           </div>
-          <button className="btn btn-red">
+          <button className="bttn bttn-red">
             <Link to="/livelihoods">VISIT</Link>
           </button>
         </div>
@@ -130,7 +130,7 @@ function Overview() {
               skills. It upskills the social and metal state of a person.
             </p>
           </div>
-          <button className="btn">
+          <button className="bttn">
             <Link to="/sports">VISIT</Link>
           </button>
         </div>
@@ -147,7 +147,7 @@ function Overview() {
               grounds of gender, religious, or national divisions.
             </p>
           </div>
-          <button className="btn">
+          <button className="bttn">
             <Link to="/humanitarian">VISIT</Link>
           </button>
         </div>
@@ -165,7 +165,7 @@ function Overview() {
               place to live.
             </p>
           </div>
-          <button className="btn">
+          <button className="bttn">
             <Link to="/covid-19-relief">VISIT</Link>
           </button>
         </div>

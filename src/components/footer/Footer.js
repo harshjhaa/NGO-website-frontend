@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import { Link } from "react-router-dom";
+
+import "../CommonCSS.scss";
 import "./Footer.scss";
 
 const Footer = () => {
@@ -83,7 +85,7 @@ const Footer = () => {
               </div>
               <div className="support-us display-col">
                 <p className="title">SUPPORT US</p>
-                <Link className="btn" to="/donate">
+                <Link className="bttn" to="/donate">
                   DONATE
                 </Link>
               </div>

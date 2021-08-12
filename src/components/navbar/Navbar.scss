@@ -142,7 +142,7 @@ i {
   color: inherit;
 }
 
-.nav-tabs {
+.nav-tab {
   position: relative;
   margin-right: 10px;
   transition: 1s;
@@ -157,12 +157,12 @@ i {
   box-shadow: 0 10px 16px 0 #000014, 0 6px 20px 0 #000014;
 }
 
-.nav-tabs:hover {
+.nav-tab:hover {
   .nav-dropdown-menu {
     visibility: visible;
   }
 }
-.nav-tabs:last-child:hover {
+.nav-tab:last-child:hover {
   background-color: transparent;
 }
 

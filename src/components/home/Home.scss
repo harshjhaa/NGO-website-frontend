@@ -2,6 +2,7 @@
   .home-marquee {
     -webkit-marquee: auto medium infinite scroll normal;
     overflow-x: -webkit-marquee;
+    height: 35px;
     margin-top: 80px;
     padding: 7px;
     background-color: #d1d1d1;
@@ -145,22 +146,22 @@
           transform: translate(0px, -150px);
         }
       }
-      .btn {
+      .bttn {
         transition: 0.5s;
       }
-      .btn-red {
+      .bttn-red {
         background-color: #e5276a;
       }
-      .btn-green {
+      .bttn-green {
         background-color: #20b7b9;
       }
-      .btn-voilet {
+      .bttn-voilet {
         background-color: #a943a5;
       }
-      .btn-orange {
+      .bttn-orange {
         background-color: #f6910e;
       }
-      .btn-blue {
+      .bttn-blue {
         background-color: #0096ff;
       }
       .box-border-red {
@@ -193,7 +194,7 @@
         border-left: 0.1rem solid #0096ff;
         border-bottom: 0.4rem solid #0096ff;
       }
-      .btn:hover {
+      .bttn:hover {
         transform: scale(1.2);
       }
     }
@@ -271,13 +272,13 @@
       flex: 1.5;
       background-color: green;
     }
-    .btn {
+    .bttn {
       margin-top: 20px;
       transition: 0.5s;
       background-color: #20b7b9;
       box-shadow: 0 0 1px 1px #46dddf;
     }
-    .btn:hover {
+    .bttn:hover {
       box-shadow: 0 0 0 0.3rem #d9fafb;
       transform: scale(1.2);
     }
@@ -343,13 +344,13 @@
       margin-top: 15px;
       color: #3e2900;
     }
-    .btn {
+    .bttn {
       margin-top: 15px;
       transition: 0.5s;
       background-color: #20b7b9;
       box-shadow: 0 0 1px 1px #46dddf;
     }
-    .btn:hover {
+    .bttn:hover {
       transform: scale(1.2);
       box-shadow: 0 0 0 0.3rem #d9fafb;
     }
@@ -392,7 +393,7 @@
       transition: 0.3s;
     }
 
-    .btn {
+    .bttn {
       background-color: #188;
     }
 
@@ -527,16 +528,16 @@
       box-shadow: #dcdcdc 0 2px 2px, #dcdcdc 0 4px 4px, #dcdcdc 0 8px 8px,
         #dcdcdc 0 16px 16px, #dcdcdc 0 32px 32px;
     }
-    .btn-red {
+    .bttn-red {
       background-color: #e5276a;
     }
-    .btn-green {
+    .bttn-green {
       background-color: #20b7b9;
     }
-    .btn-voilet {
+    .bttn-voilet {
       background-color: #a943a5;
     }
-    .btn-orange {
+    .bttn-orange {
       background-color: #f6910e;
     }
     .sec-1 {

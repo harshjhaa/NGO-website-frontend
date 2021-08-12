@@ -39,7 +39,7 @@ const NavbarBottom = () => {
         </Link>
         <ul className="nav-bottom-list">
           <div className="nav-bottom-list-content">
-            <div className="nav-tabs">
+            <div className="nav-tab">
               <li>
                 <Link id="our-work-tab-id">OUR WORK</Link>
                 <i id="our-work-arrow-id" className="fa fa-caret-down"></i>
@@ -68,7 +68,7 @@ const NavbarBottom = () => {
                 </li>
               </div>
             </div>
-            <div className="nav-tabs">
+            <div className="nav-tab">
               <li>
                 <Link id="about-us-tab-id">ABOUT US</Link>
                 <i id="about-us-arrow-id" className="fa fa-caret-down"></i>
@@ -105,7 +105,7 @@ const NavbarBottom = () => {
                 </li>
               </div>
             </div>
-            <div className="nav-tabs">
+            <div className="nav-tab">
               <li>
                 <Link id="thf-fellowship-tab-id" to="/thf-fellowship">
                   THF FELLOWSHIP
@@ -124,7 +124,7 @@ const NavbarBottom = () => {
                 </li>
               </div> */}
             </div>
-            <div className="nav-tabs">
+            <div className="nav-tab">
               <li>
                 <Link id="emergency-tab-id" to="/emergency">
                   EMERGENCY
@@ -140,7 +140,7 @@ const NavbarBottom = () => {
                 </li>
               </div>
             </div>
-            <div className="nav-tabs">
+            <div className="nav-tab">
               <li>
                 <Link id="get-involved-tab-id" to="/get-involved">
                   GET INVOLVED
@@ -180,7 +180,7 @@ const NavbarBottom = () => {
                 </li>
               </div>
             </div>
-            <div className="nav-tabs">
+            <div className="nav-tab">
               <li>
                 <Link to="/donate" id="nav-donate">
                   Donate

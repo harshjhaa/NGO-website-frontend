@@ -8,7 +8,7 @@
   margin: 30px auto 20px auto;
 }
 
-.btn {
+.bttn {
   margin-top: 7px;
   border: none;
   color: #fff;
@@ -21,9 +21,12 @@
   transition: 0.5s;
 }
 
-.btn {
+.bttn {
   a {
     text-decoration: none;
+    color: #fff;
+  }
+  a:hover{
     color: #fff;
   }
 }
@@ -61,6 +64,7 @@
   }
   .bread-crum {
     padding: 10px;
+    padding-bottom: 0px;
     .active-link {
       text-decoration: none;
       color: #000;

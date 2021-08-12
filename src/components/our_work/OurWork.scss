@@ -1,5 +1,5 @@
 .our-work-tab {
-  .btn:hover {
+  .bttn:hover {
     transform: scale(1.2);
   }
   .home-img-banner {
@@ -65,19 +65,19 @@
         transform: translate(0px, -150px);
       }
     }
-    .btn-red {
+    .bttn-red {
       background-color: #e5276a;
     }
-    .btn-green {
+    .bttn-green {
       background-color: #20b7b9;
     }
-    .btn-voilet {
+    .bttn-voilet {
       background-color: #a943a5;
     }
-    .btn-orange {
+    .bttn-orange {
       background-color: #f6910e;
     }
-    .btn-blue {
+    .bttn-blue {
       background-color: #0096ff;
     }
     .box-border-red {
@@ -133,7 +133,7 @@
         justify-content: center;
         align-items: center;
         padding-left: 20px;
-        .btn-blue {
+        .bttn-blue {
           background-color: #0096ff;
           margin-top: 20px;
         }

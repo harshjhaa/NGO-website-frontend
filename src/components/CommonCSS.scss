@@ -18,7 +18,7 @@
   cursor: pointer;
   font-weight: bold;
   text-decoration: none;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .bttn {
@@ -101,7 +101,15 @@
     color: #c88200;
     text-align: center;
   }
-
+  .text {
+    line-height: 2.5rem;
+    color: #3e2900;
+    font-family: "Work Sans", sans-serif;
+    text-align: center;
+  }
+  .text-bold {
+    font-weight: bold;
+  }
   .feature-content-1,
   .feature-content-2 {
     margin-top: 30px;
@@ -130,14 +138,6 @@
       align-items: center;
       justify-content: center;
       padding: 20px;
-      .text {
-        flex: 1;
-        line-height: 2.5rem;
-        width: 65%;
-        color: #272727;
-        font-family: "Work Sans", sans-serif;
-        text-align: center;
-      }
     }
   }
   .feature-content-2 {

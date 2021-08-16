@@ -83,7 +83,7 @@ function AboutUs() {
       <div className="hr-line">
         <hr />
       </div>
-      <div className="feature-content-1 only-text-container">
+      <div className="only-text-container">
         <h1 className="title">OUR STRATEGY</h1>
         <div className="contents" data-aos="fade-up" data-aos-duration="1000">
           <div className="text-container">
@@ -99,7 +99,7 @@ function AboutUs() {
       <div className="hr-line">
         <hr />
       </div>
-      <div className="feature-content-1 only-text-container">
+      <div className="only-text-container">
         <h1 className="title">OUR PHILOSOPHY</h1>
         <div className="contents" data-aos="fade-up" data-aos-duration="1000">
           <div className="text-container">

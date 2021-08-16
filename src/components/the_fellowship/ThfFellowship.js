@@ -8,6 +8,10 @@ const ThfFellowship = () => {
   const [formData, setFormData] = useState({});
 
   useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+    });
     AOS.init();
     document.getElementById("thf-fellowship-tab-id").style.color = "#0096ff";
     return () => {
@@ -67,14 +71,14 @@ const ThfFellowship = () => {
         <p>THF Fellowship</p>
       </div>
       <hr style={{ margin: "0px 10px" }} />
-      <section className="joining-thf-container">
+      <section className="two-col-text-container">
         <h1 className="title">BECOME A PART OF THF</h1>
         <div className="contents" data-aos="fade-up" data-aos-duration="700">
-          <div className="only-text-container volunteer-container">
+          <div className="only-text-container col-1-container">
             <h1 className="title">Volunteer</h1>
             <p className="text">
-              Truly Help Foundation believes that until and unless all
-              people come together and get involved actively in the process of
+              Truly Help Foundation believes that until and unless all people
+              come together and get involved actively in the process of
               remodeling and evolution, nothing can happen. To make this
               transformational change happen, we would like to request you to
               come and join us – to work for the well-being of underprivileged
@@ -86,17 +90,14 @@ const ThfFellowship = () => {
               heroes of the organization.
             </p>
           </div>
-          <div className="only-text-container internship-container">
+          <div className="only-text-container col-2-container">
             <h1 className="title">Internship</h1>
             <p className="text">
               Truly Help Foundation Intership Programme is a Skill development
               model for young passionate who have a keen interest in working in
               the development area, and are dedicated to build a world in which
               marginalized communities and underprivileged children are able to
-              live a life of diginity and security. Undertaking various
-              initiatives in the field of education, health & nutrition, and
-              Sports, we are constantly on the lookout for passionate, energetic
-              individuals driven to make a difference in the society.
+              live a life of diginity and security.
               <br />
               Through the internship Programme, the interns are able to develop
               their leadership abilities, professional skills and social
@@ -109,10 +110,18 @@ const ThfFellowship = () => {
         <hr />
       </div>
       <p style={{ margin: "10px 0px" }} className="text text-bold">
-        Be yourself a life changer in someone’s life!
-        <br />
         Fill up the Truly Help Foundation registration form below to get
         started!
+      </p>
+      <br />
+      <p className="text p-tag">
+        Undertaking various initiatives in the field of education, health &
+        nutrition, and Sports, we are constantly on the lookout for passionate,
+        energetic individuals driven to make a difference in the society.
+      </p>
+      <br />
+      <p style={{ margin: "10px 0px" }} className="text text-bold">
+        Be yourself a life changer in someone’s life!
       </p>
       <form
         data-aos="fade-up"
@@ -315,6 +324,15 @@ const ThfFellowship = () => {
           </div>
         </div>
       </form>
+      <p className="text text-bold">
+        For any query regarding volunteering opportunities, reach out to us{" "}
+        <a
+          style={{ color: "red" }}
+          href="mailto:volunteers@trulyhelpfoundation.org"
+        >
+          volunteers@trulyhelpfoundation.org
+        </a>
+      </p>
     </div>
   );
 };

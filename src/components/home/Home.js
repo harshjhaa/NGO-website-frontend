@@ -4,11 +4,13 @@ import { Link } from "react-router-dom";
 //components
 import Slider from "../image_slider/Slider";
 import BoxCube from "./BoxCube";
-import HungerRuralDonate from "../common_components/hunger_rural_donate/HungerRuralDonate";
+import DonateBanner from "../common_components/donate_banner/DonateBanner";
 import SubscribeNewsletter from "../common_components/subscribe_newsletter/SubscribeNewsletter";
 import Acknowledgement from "../common_components/acknowlwdgement/Acknowledgement";
 import WeHelpEach from "../common_components/we_help_each/WeHelpEach";
 import LatestUpdates from "../common_components/latest_updates/LatestUpdates";
+
+import hungerDonateImg from "../assets/images/donate-us-container/donate-hunger.jpg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
@@ -37,6 +39,10 @@ const Home = () => {
     { width: 769, itemsToShow: 3 },
     { width: 1200, itemsToShow: 4 },
   ];
+
+  const donateImgTitle = "Help us Fight Hunger in Rural Areas";
+  const donateImgDescription =
+    "Some rural residents and households are food insecure,meaning they cannot rely on access to sufficient affordable and nutritious food at all times, increasing the risk of poor health outcomes.";
 
   useEffect(() => {
     window.scrollTo({
@@ -475,7 +481,7 @@ const Home = () => {
             </p>
           </div>
           <button className="bttn">
-            <Link to="/our-approach">SEE OUR WORK</Link>
+            <Link to="/our-work">SEE OUR WORK</Link>
           </button>
         </div>
         <div className="get-involved-container">
@@ -495,7 +501,7 @@ const Home = () => {
             </p>
           </div>
           <button className="bttn bttn-red">
-            <Link to="/our-campaigns">START NOW</Link>
+            <Link to="/thf-fellowship">START NOW</Link>
           </button>
         </div>
       </div>
@@ -595,7 +601,11 @@ const Home = () => {
       <div className="hr-line">
         <hr />
       </div>
-      <HungerRuralDonate />
+      <DonateBanner
+        contentImage={hungerDonateImg}
+        title={donateImgTitle}
+        description={donateImgDescription}
+      />
       <Acknowledgement />
     </div>
   );

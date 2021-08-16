@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import HungerRuralDonate from "../../common_components/hunger_rural_donate/HungerRuralDonate";
+import DonateBanner from "../../common_components/donate_banner/DonateBanner";
 import SubscribeNewsletter from "../../common_components/subscribe_newsletter/SubscribeNewsletter";
 import WeHelpEach from "../../common_components/we_help_each/WeHelpEach";
+import hungerDonateImg from "../../assets/images/donate-us-container/donate-hunger.jpg";
 
 import "./OurApproach.scss";
 
@@ -20,6 +21,10 @@ function OurApproach() {
       document.getElementById("about-us-arrow-id").style.color = "#000";
     };
   }, []);
+
+  const donateImgTitle = "Help us Fight Hunger in Rural Areas";
+  const donateImgDescription =
+    "Some rural residents and households are food insecure,meaning they cannot rely on access to sufficient affordable and nutritious food at all times, increasing the risk of poor health outcomes.";
 
   return (
     <div className="our-approach-tab margin-top-4px">
@@ -83,7 +88,11 @@ function OurApproach() {
       <div className="hr-line">
         <hr />
       </div>
-      <HungerRuralDonate />
+      <DonateBanner
+        contentImage={hungerDonateImg}
+        title={donateImgTitle}
+        description={donateImgDescription}
+      />
     </div>
   );
 }

@@ -1,0 +1,61 @@
+.donate-img-banner {
+  height: 400px;
+  width: 100%;
+  position: relative;
+  h2,
+  h3 {
+    color: #fff;
+    font-family: "Oxygen", sans-serif;
+  }
+  .banner-img {
+    width: 100%;
+    height: 100%;
+  }
+  .banner-title {
+    position: absolute;
+    top: 15px;
+    left: 40px;
+    font-family: "Merienda", cursive;
+    font-size: 30px;
+  }
+  .input-button-container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 96px;
+    left: 40px;
+    .input-donate {
+      width: 250px;
+      height: 45px;
+      padding-left: 10px;
+      border-radius: 25px;
+      outline: none;
+      border: #000;
+      background-color: honeydew;
+      font-family: "Oxygen";
+      text-align: center;
+    }
+    .donate-inp-btn {
+      width: 102px;
+      margin-left: 50px;
+      background-color: #ff5c5c;
+      color: #fff;
+      border: black;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+  }
+  .banner-description {
+    position: absolute;
+    width: 40%;
+    top: 182px;
+    left: 40px;
+    font-size: 23px;
+    font-family: "Kalam", cursive;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}

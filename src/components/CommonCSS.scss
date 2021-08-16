@@ -170,4 +170,23 @@
   input[type="number"] {
     -moz-appearance: textfield;
   }
+  .p-tag {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 0px;
+  }
+  .two-col-text-container {
+    margin-top: 20px;
+    .contents {
+      display: flex;
+      flex-direction: row;
+    }
+    .col-1-container,
+    .col-2-container {
+      flex: 1;
+    }
+  }
+  .text-align-justify{
+    text-align:justify;
+  }
 }

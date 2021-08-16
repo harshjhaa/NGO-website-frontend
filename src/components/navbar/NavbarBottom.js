@@ -126,7 +126,7 @@ const NavbarBottom = () => {
             </div>
             <div className="nav-tab">
               <li>
-                <Link id="emergency-tab-id" to="/emergency">
+                <Link id="emergency-tab-id">
                   EMERGENCY
                 </Link>
                 <i id="emergency-arrow-id" className="fa fa-caret-down"></i>
@@ -142,7 +142,7 @@ const NavbarBottom = () => {
             </div>
             <div className="nav-tab">
               <li>
-                <Link id="get-involved-tab-id" to="/get-involved">
+                <Link id="get-involved-tab-id">
                   GET INVOLVED
                 </Link>
                 <i id="get-involved-arrow-id" className="fa fa-caret-down"></i>

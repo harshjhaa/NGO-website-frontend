@@ -7,7 +7,7 @@ function SubscribeNewsletter() {
       <div className="contents">
         <div className="contact-no">
           <p>
-            Helpline Number: <span>1800-xxxx-xx</span>
+            Helpline Number: <span>+91 8800202926</span>
           </p>
         </div>
         <div className="email-id">

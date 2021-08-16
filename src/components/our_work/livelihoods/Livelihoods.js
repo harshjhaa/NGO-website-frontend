@@ -23,7 +23,7 @@ function Livelihoods() {
   }, []);
 
   return (
-    <div className="livelihood-tab margin-top-80">
+    <div className="livelihood-tab margin-top-4px">
       <div className="banner">
         <h1 className="banner-text">LIVELIHOODS</h1>
       </div>

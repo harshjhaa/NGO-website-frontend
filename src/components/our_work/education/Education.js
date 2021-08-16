@@ -24,7 +24,7 @@ function Education() {
   }, []);
 
   return (
-    <div className="education-tab margin-top-80">
+    <div className="education-tab margin-top-4px">
       <div className="banner">
         {/* <img
           className="banner-img"

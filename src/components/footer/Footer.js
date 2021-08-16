@@ -105,11 +105,14 @@ const Footer = () => {
               <div className="happenings-container display-col">
                 <p className="title">HAPPENINGS</p>
                 <div className="text-links  display-col">
-                  <Link className="text-link" to="/events">
+                  {/* <Link className="text-link" to="/events">
                     Events
-                  </Link>
+                  </Link> */}
                   <Link className="text-link" to="/our-campaigns">
                     Our Campaigns
+                  </Link>
+                  <Link className="text-link" to="/emergency-case">
+                    Emergency Case
                   </Link>
                 </div>
               </div>
@@ -139,9 +142,16 @@ const Footer = () => {
                   <i class="fa fa-envelope" aria-hidden="true"></i>{" "}
                   info@trulyhelpfoundation.org
                 </a>
-                <a className="text-link footer-call" href="tel:+918800106833">
-                  <i class="fa fa-phone" aria-hidden="true"></i> +91 8800106833
-                </a>
+                <div>
+                  <a className="text-link footer-call" href="tel:+918800106833">
+                    <i class="fa fa-phone" aria-hidden="true"></i> +91
+                    8800202926
+                  </a>
+                  <span style={{ color: "#fff" }}> or </span>
+                  <a className="text-link footer-call" href="tel:+918800106833">
+                    +91 8800202933
+                  </a>
+                </div>
               </div>
             </div>
           </div>

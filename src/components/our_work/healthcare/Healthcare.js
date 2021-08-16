@@ -24,7 +24,7 @@ function Healthcare() {
   }, []);
 
   return (
-    <div className="healthcare-tab margin-top-80">
+    <div className="healthcare-tab margin-top-4px">
       <div className="banner">
         {/* <img
           className="banner-img one-edge-shadow"

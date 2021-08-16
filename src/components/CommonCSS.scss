@@ -42,7 +42,20 @@
 .our-work-tab,
 .overview-tab,
 .our-approach-tab,
-.thf-fellowship-tab {
+.thf-fellowship-tab,
+.nav-bottom-container {
+  .marquee-container {
+    -webkit-marquee: auto medium infinite scroll normal;
+    overflow-x: -webkit-marquee;
+    height: 35px;
+    margin-top: 80px;
+    padding: 7px;
+    background-color: #d1d1d1;
+    p {
+      font-family: "Work Sans", sans-serif;
+      font-weight: 600;
+    }
+  }
   .home-img-banner {
     height: 485px;
     margin-top: -4px;
@@ -137,10 +150,13 @@
     }
   }
   .only-text-container {
-    .contents {
-      height: 100%;
-      margin-top: 0px;
-      padding: 0px;
+    .text {
+      line-height: 2.5rem;
+      width: 90%;
+      color: #272727;
+      font-family: "Work Sans", sans-serif;
+      text-align: center;
+      margin: auto;
     }
   }
   /* Chrome, Safari, Edge, Opera */

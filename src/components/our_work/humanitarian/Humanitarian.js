@@ -24,7 +24,7 @@ function Humanitarian() {
   }, []);
 
   return (
-    <div className="humanitarian-tab margin-top-80">
+    <div className="humanitarian-tab margin-top-4px">
       <div className="banner">
         {/* <img
           className="edu-banner-img one-edge-shadow"

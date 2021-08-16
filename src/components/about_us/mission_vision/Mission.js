@@ -24,7 +24,7 @@ function Mission() {
   }, []);
 
   return (
-    <div className="mission-tab margin-top-80">
+    <div className="mission-tab margin-top-4px">
       <div className="banner">
         <img
           className="banner-img"

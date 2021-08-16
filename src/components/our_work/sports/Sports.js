@@ -24,7 +24,7 @@ function Sports() {
   }, []);
 
   return (
-    <div className="sports-tab margin-top-80">
+    <div className="sports-tab margin-top-4px">
       <div className="banner">
         {/* <img
           className="edu-banner-img one-edge-shadow"

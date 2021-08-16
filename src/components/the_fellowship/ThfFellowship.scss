@@ -1,6 +1,14 @@
 .thf-fellowship-tab {
   .joining-thf-container {
     margin-top: 20px;
+    .contents {
+      display: flex;
+      flex-direction: row;
+    }
+    .volunteer-container,
+    .internship-container {
+      flex: 1;
+    }
   }
   form {
     width: 60%;

@@ -73,10 +73,12 @@ const OurWork = (props) => {
             />
           </div>
           <div className="home-feature-content-1-content">
-            <p className="info">
-              Truly Help Foundation has been on the forefront, reshaping the
-              lives of millions children, women and youth. Be it nutiriton,
-              healthcare, education, sports and response in the time.
+            <p className="text">
+              THF PLAYS AN IMPORTANT ROLE IN BRINGING UP THE MARGINALIZED
+              COMMUNITY AND YOUTH TO BECOME ACTIVE CONTRIBUTORS TO INDIA’S
+              DEVELOPMENT. BY SUPPORTING THE THF BRIDGE, YOU ARE NOT ONLY
+              HELPING TRULY HELP FOUNDATION REMAIN AN OPPORTUNITY FOR THE
+              COUNTRY’S MARGINALIZED COMMUNITY.
             </p>
           </div>
         </div>
@@ -177,10 +179,13 @@ const OurWork = (props) => {
             alt="volunteer_img"
           />
           <div className="volunteer-content">
-            <p className="info">
-              Truly Help Foundation has been on the forefront, reshaping the
-              lives of millions children, women and youth. Be it nutiriton,
-              healthcare, education, sports and response in the time.
+            <p className="text">
+              We truly believe that volunteers are the face of every
+              organization – not only there learning experience and skills help
+              the organization in implementing them on the ground, they also
+              spread the message far and beyond, enable you to make a difference
+              in the society . Volunteers are the true heroes of the
+              organization.
             </p>
             <button className="bttn bttn-blue">
               <Link to="/about-us">LEARN MORE</Link>

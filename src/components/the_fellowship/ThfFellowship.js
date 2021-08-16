@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import AOS from "aos";
 import { Link } from "react-router-dom";
 import "../CommonCSS.scss";
 import "./ThfFellowship.scss";
@@ -7,6 +8,7 @@ const ThfFellowship = () => {
   const [formData, setFormData] = useState({});
 
   useEffect(() => {
+    AOS.init();
     document.getElementById("thf-fellowship-tab-id").style.color = "#0096ff";
     return () => {
       document.getElementById("thf-fellowship-tab-id").style.color = "#000";
@@ -67,33 +69,56 @@ const ThfFellowship = () => {
       <hr style={{ margin: "0px 10px" }} />
       <section className="joining-thf-container">
         <h1 className="title">BECOME A PART OF THF</h1>
-        <div className="only-text-container">
-          <p className="text">
-            Truly Help Foundation believes that until and unless all people come
-            together and get involved actively in the process of remodeling and
-            evolution, nothing can happen. To make this transformational change
-            happen, we would like to request you to come and join us – to work
-            for the well-being of underprivileged children and the community.
-            <br />
-            We truly believe that volunteers are the face of every organization
-            – not only there learning experience and skills help the
-            organization in implementing them on the ground, they also spread
-            the message far and beyond, enable you to make a difference in the
-            society . Volunteers are the true heroes of the organization.
-            <br />
-            Undertaking various initiatives in the field of education, health &
-            nutrition, and Sports, we are constantly on the lookout for
-            passionate, energetic individuals driven to make a difference in the
-            society. Be yourself a life changer in someone’s life!!
-            <br />
-            <span style={{ fontWeight: "bold" }}>
-              Fill up the Truly Help Foundation Volunteer/Internship registration form
-              below to get started!
-            </span>
-          </p>
+        <div className="contents" data-aos="fade-up" data-aos-duration="700">
+          <div className="only-text-container volunteer-container">
+            <h1 className="title">Volunteer</h1>
+            <p className="text">
+              Truly Help Foundation believes that until and unless all
+              people come together and get involved actively in the process of
+              remodeling and evolution, nothing can happen. To make this
+              transformational change happen, we would like to request you to
+              come and join us – to work for the well-being of underprivileged
+              children and the community. We truly believe that volunteers are
+              the face of every organization – not only there learning
+              experience and skills help the organization in implementing them
+              on the ground, they also spread the message far and beyond, enable
+              you to make a difference in the society. Volunteers are the true
+              heroes of the organization.
+            </p>
+          </div>
+          <div className="only-text-container internship-container">
+            <h1 className="title">Internship</h1>
+            <p className="text">
+              Truly Help Foundation Intership Programme is a Skill development
+              model for young passionate who have a keen interest in working in
+              the development area, and are dedicated to build a world in which
+              marginalized communities and underprivileged children are able to
+              live a life of diginity and security. Undertaking various
+              initiatives in the field of education, health & nutrition, and
+              Sports, we are constantly on the lookout for passionate, energetic
+              individuals driven to make a difference in the society.
+              <br />
+              Through the internship Programme, the interns are able to develop
+              their leadership abilities, professional skills and social
+              conscientiousness.
+            </p>
+          </div>
         </div>
       </section>
-      <form onSubmit={(e) => handleSubmit(e)}>
+      <div className="hr-line">
+        <hr />
+      </div>
+      <p style={{ margin: "10px 0px" }} className="text text-bold">
+        Be yourself a life changer in someone’s life!
+        <br />
+        Fill up the Truly Help Foundation registration form below to get
+        started!
+      </p>
+      <form
+        data-aos="fade-up"
+        data-aos-duration="700"
+        onSubmit={(e) => handleSubmit(e)}
+      >
         <div class="form-group row">
           <label class="col-form-label col-sm-3 pt-0">
             SERVE AS <span className="mandatory-red">*</span>

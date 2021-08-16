@@ -446,9 +446,12 @@ const Home = () => {
           </div>
           <div className="contents">
             <p>
-              Be it nutiriton, healthcare, education, sports and response in the
-              time, Truly Help Foundation has been on the forefront, reshaping
-              the lives of millions children, women and youth.
+              From the very begining, our founding members understood that the
+              in-depth we require the collective will, knowledge and
+              participation of all society. THF built on this vision and
+              creating countless opportunities for India's poor to live
+              successful, productive lices while creating impactful change at an
+              unprecendented scale, changing the lives of many people.
             </p>
           </div>
           <button className="bttn">
@@ -463,9 +466,12 @@ const Home = () => {
           </div>
           <div className="contents">
             <p>
-              Be it nutiriton, healthcare, education, sports and response in the
-              time, Truly Help Foundation has been on the forefront, reshaping
-              the lives of millions children, women and youth.
+              THF is committed to meet long-term social and economic change in
+              India and building a lasting bridge between the community and
+              children through high-impact interventions in education,
+              livelihoods, healthcare, sports and leadership development.
+              Working closely with local partners. We aim to systematically
+              address and resolvethese deterrents.
             </p>
           </div>
           <button className="bttn">
@@ -480,9 +486,12 @@ const Home = () => {
           </div>
           <div className="contents">
             <p>
-              Be it nutiriton, healthcare, education, sports and response in the
-              time, Truly Help Foundation has been on the forefront, reshaping
-              the lives of millions children, women and youth.
+              Truly Help Foundation believes that until and unless all people
+              come together and get involved actively in the process of
+              remodeling and evolution, nothing can happen. To make this
+              transformational change happen, we would like to request you to
+              come and join us – to work for the well-being of underprivileged
+              children and the community.
             </p>
           </div>
           <button className="bttn bttn-red">

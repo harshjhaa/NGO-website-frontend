@@ -90,8 +90,7 @@ function Covid() {
           </div>
         </div>
       </div>
-      <br />
-      <p className="text p-tag" style={{ fontWeight: "bold" }}>
+      <p className="text p-tag" style={{ fontWeight: "bold", marginTop: "20px" }}>
         With your help we can be able to reachout those families and children
         who need the most – their health is our first priority! They need your
         support NOW.

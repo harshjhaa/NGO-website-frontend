@@ -39,10 +39,10 @@ const Home = () => {
   ];
 
   useEffect(() => {
-    // window.scrollTo({
-    //   top: 0,
-    //   left: 0,
-    // });
+    window.scrollTo({
+      top: 0,
+      left: 0,
+    });
     AOS.init();
     //for handelling twitter
     const anchor = document.createElement("a");
@@ -59,7 +59,7 @@ const Home = () => {
 
   return (
     <div className="home-tab">
-      <marquee
+      {/* <marquee
         className="home-marquee margin-top-80"
         direction="left"
         scrollamount="5"
@@ -77,7 +77,7 @@ const Home = () => {
           hygiene kits . We are also awaring and preparing communities for covid
           third wave.
         </p>
-      </marquee>
+      </marquee> */}
       <div className="home-img-banner">
         <Slider contentName={sliderContent["topBannerContent"]} />
       </div>

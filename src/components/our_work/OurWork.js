@@ -43,7 +43,7 @@ const OurWork = (props) => {
   };
 
   return (
-    <div className="our-work-tab margin-top-80">
+    <div className="our-work-tab margin-top-4px">
       <div className="home-img-banner">
         <Slider contentName={sliderContent["topBannerContent"]} />
       </div>

@@ -49,7 +49,7 @@ const ThfFellowship = () => {
   };
 
   return (
-    <div className="thf-fellowship-tab margin-top-80">
+    <div className="thf-fellowship-tab margin-top-4px">
       <div className="banner">
         <img
           className="banner-img"
@@ -65,7 +65,71 @@ const ThfFellowship = () => {
         <p>THF Fellowship</p>
       </div>
       <hr style={{ margin: "0px 10px" }} />
+      <section className="joining-thf-container">
+        <h1 className="title">BECOME A PART OF THF</h1>
+        <div className="only-text-container">
+          <p className="text">
+            Truly Help Foundation believes that until and unless all people come
+            together and get involved actively in the process of remodeling and
+            evolution, nothing can happen. To make this transformational change
+            happen, we would like to request you to come and join us – to work
+            for the well-being of underprivileged children and the community.
+            <br />
+            We truly believe that volunteers are the face of every organization
+            – not only there learning experience and skills help the
+            organization in implementing them on the ground, they also spread
+            the message far and beyond, enable you to make a difference in the
+            society . Volunteers are the true heroes of the organization.
+            <br />
+            Undertaking various initiatives in the field of education, health &
+            nutrition, and Sports, we are constantly on the lookout for
+            passionate, energetic individuals driven to make a difference in the
+            society. Be yourself a life changer in someone’s life!!
+            <br />
+            <span style={{ fontWeight: "bold" }}>
+              Fill up the Truly Help Foundation Volunteer/Internship registration form
+              below to get started!
+            </span>
+          </p>
+        </div>
+      </section>
       <form onSubmit={(e) => handleSubmit(e)}>
+        <div class="form-group row">
+          <label class="col-form-label col-sm-3 pt-0">
+            SERVE AS <span className="mandatory-red">*</span>
+          </label>
+          <div class="col-sm-4">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gridRadios"
+                id="volunteer-radio"
+                value="option1"
+                checked
+              />
+              <label class="form-check-label" for="volunteer-radio">
+                VOLUNTEER
+              </label>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-check">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="gridRadios"
+                  id="internship-radio"
+                  value="option2"
+                />
+                <label class="form-check-label" for="internship-radio">
+                  INTERNSHIP
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="form-group row">
           <label for="inputEmail3" class="col-sm-3 col-form-label">
             NAME <span className="mandatory-red">*</span>
@@ -134,27 +198,6 @@ const ThfFellowship = () => {
               placeholder="Enter State"
               required
             />
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-3 col-form-label">
-            SERVE AS <span className="mandatory-red">*</span>
-          </label>
-          <div class="col-sm-9 drop-down">
-            <select ref={serveAsField} className="form-control" required>
-              {["Select Here", "Volunteer", "Internship"].map((n) =>
-                n === "Select Here" ? (
-                  <option value="" key={n}>
-                    {n}
-                  </option>
-                ) : (
-                  <option value={n} key={n}>
-                    {n}
-                  </option>
-                )
-              )}
-            </select>
-            <i id="our-work-arrow-id" className="fa fa-caret-down"></i>
           </div>
         </div>
         <div class="form-group row">

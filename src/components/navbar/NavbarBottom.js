@@ -48,9 +48,9 @@ const NavbarBottom = () => {
                 <li>
                   <Link to="/our-work">OUR WORK</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/overview">OVERVIEW</Link>
-                </li>
+                </li> */}
                 <li>
                   <Link to="/education">EDUCATION</Link>
                 </li>
@@ -97,12 +97,12 @@ const NavbarBottom = () => {
                 <li>
                   <Link to="/latest-news">LATEST NEWS</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/stories-of-change">STORIES OF CHANGE</Link>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <Link to="/success-story">SUCCESS STORY</Link>
-                </li>
+                </li> */}
               </div>
             </div>
             <div className="nav-tab">
@@ -151,12 +151,12 @@ const NavbarBottom = () => {
                 <li>
                   <Link to="/donate">DONATE</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/our-donor">OUR DONOR</Link>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <Link to="/legacy">LEGACY</Link>
-                </li>
+                </li> */}
                 <li>
                   <Link to="/partnerships">PARTNERSHIPS</Link>
                 </li>
@@ -169,9 +169,9 @@ const NavbarBottom = () => {
                 <li>
                   <Link to="/our-campaigns">OUR CAMPAIGNS</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/events">EVENTS</Link>
-                </li>
+                </li> */}
                 <li>
                   <Link to="/careers">CAREERS</Link>
                 </li>
@@ -219,7 +219,25 @@ const NavbarBottom = () => {
           </div>
         </ul>
       </div>
-      {/* <div className="home-img-banner"><Slider/></div> */}
+      <marquee
+        className="marquee-container margin-top-80"
+        direction="left"
+        scrollamount="5"
+        behavior="scroll"
+      >
+        <p>
+          Truly Help Foundation is a registered Non-profit organization under
+          section 8 company in india and a Members of THF confederation present
+          in PAN India which works with the most marginalised people to
+          alleviate poverty and reduce social injustice through comprehensive
+          programmes in healthcare, education, livelihoods, sports and
+          humanitarian assistance and rehabilitation. | We are responding to the
+          second wave of COVID-19 by setting up temporary COVID Care Facilities
+          and supporting marginalized communities by providing dry ration and
+          hygiene kits . We are also awaring and preparing communities for covid
+          third wave.
+        </p>
+      </marquee>
     </div>
   );
 };

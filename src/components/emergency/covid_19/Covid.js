@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import DonateBanner from "../../common_components/donate_banner/DonateBanner";
-import covidDonateImg from "../../assets/images/donate-us-container/donate-covid.jpg";
+import covidDonateImg from "../../assets/images/donate-us-container/covid-11.webp";
 
 import "../../CommonCSS.scss";
 import "./Covid.scss";

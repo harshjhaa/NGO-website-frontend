@@ -79,7 +79,6 @@
   .bread-crum {
     padding: 10px;
     .active-link {
-      text-decoration: none;
       color: #000;
       transition: 0.3s;
     }
@@ -186,7 +185,14 @@
       flex: 1;
     }
   }
-  .text-align-justify{
-    text-align:justify;
+  .text-align-justify {
+    text-align: justify;
+  }
+  .font-12 {
+    font-size: 12px;
+  }
+  .width-60-prcnt {
+    width: 60%;
+    margin: auto;
   }
 }

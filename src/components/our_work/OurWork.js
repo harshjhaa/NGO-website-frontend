@@ -162,7 +162,7 @@ const OurWork = (props) => {
               regulations to rid of this virus!
             </p>
             <button className="bttn bttn-blue">
-              <Link to="/humanitarian">EXPLORE</Link>
+              <Link to="/covid-19-relief">EXPLORE</Link>
             </button>
           </div>
         </div>
@@ -188,7 +188,7 @@ const OurWork = (props) => {
               organization.
             </p>
             <button className="bttn bttn-blue">
-              <Link to="/about-us">LEARN MORE</Link>
+              <Link to="/thf-fellowship">LEARN MORE</Link>
             </button>
           </div>
         </div>

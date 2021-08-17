@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import DonateBanner from "../../common_components/donate_banner/DonateBanner";
-import covidDonateImg from "../../assets/images/donate-us-container/donate-covid.jpg";
+import covidDonateImg from "../../assets/images/donate-us-container/covid-11.webp";
 
 import "../../CommonCSS.scss";
 import "./Covid.scss";
@@ -90,8 +90,7 @@ function Covid() {
           </div>
         </div>
       </div>
-      <br />
-      <p className="text p-tag" style={{ fontWeight: "bold" }}>
+      <p className="text p-tag" style={{ fontWeight: "bold", marginTop: "20px" }}>
         With your help we can be able to reachout those families and children
         who need the most – their health is our first priority! They need your
         support NOW.

@@ -24,7 +24,7 @@ function Covid() {
   
   const donateImgTitle = "Help us Fight Covid-19";
   const donateImgDescription =
-    "Some rural residents and households are food insecure,meaning they cannot rely on access to sufficient affordable and nutritious food at all times, increasing the risk of poor health outcomes.";
+    "With your help we can be able to reachout those families and children who need the most – their health is our first priority.";
 
   return (
     <div className="aboutus-tab margin-top-4px">

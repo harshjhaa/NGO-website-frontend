@@ -524,7 +524,7 @@ const Home = () => {
               break the vicious...
             </p>
             <button className="bttn bttn-red">
-              <Link to="/our-campaigns">READ MORE</Link>
+              <Link to="/education">READ MORE</Link>
             </button>
           </div>
           <div className="program-content sec-2" data-aos-duration="1600">
@@ -535,7 +535,7 @@ const Home = () => {
               role in a child's...
             </p>
             <button className="bttn bttn-green">
-              <Link to="/our-campaigns">READ MORE</Link>
+              <Link to="/healthcare">READ MORE</Link>
             </button>
           </div>
           <div className="program-content sec-3" data-aos-duration="1600">
@@ -547,7 +547,7 @@ const Home = () => {
               mission to create inclusive...
             </p>
             <button className="bttn bttn-voilet">
-              <Link to="/our-campaigns">READ MORE</Link>
+              <Link to="/sports">READ MORE</Link>
             </button>
           </div>
           <div className="program-content sec-4" data-aos-duration="1600">
@@ -558,7 +558,7 @@ const Home = () => {
               situation, we distribute...
             </p>
             <button className="bttn bttn-orange">
-              <Link to="/our-campaigns">READ MORE</Link>
+              <Link to="/covid-19-relief">READ MORE</Link>
             </button>
           </div>
         </div>

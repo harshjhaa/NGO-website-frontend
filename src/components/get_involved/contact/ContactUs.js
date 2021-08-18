@@ -182,7 +182,7 @@ const ContactUs = () => {
         <Link style={{ color: "red" }} to="thf-fellowship">
           Click here
         </Link>{" "}
-        to view job opportunities with Save the Children. You may also write
+        to view job opportunities with Truly Help Foundation. You may also write
         into{" "}
         <a
           style={{ color: "red" }}

@@ -19,7 +19,7 @@ const LatestUpdates = () => {
       <div className="contents">
         <div className="events-list-container">
           <h1 className="title">EVENTS</h1>
-          <div className="testimonial-row">Events</div>
+          <div className="testimonial-row">Events Comming Soon</div>
         </div>
         <div className="twitter-list-container">
           <div className="twitter">

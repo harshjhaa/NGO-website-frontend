@@ -57,7 +57,7 @@ function Slider({ contentName }) {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex(activeIndex === len ? 0 : activeIndex + 1);
-    }, 3000);
+    }, 3000000);
     return () => clearInterval(interval);
   }, [activeIndex]);
 

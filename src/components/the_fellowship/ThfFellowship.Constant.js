@@ -1,0 +1,5 @@
+export const ADD_DATA_SUCCESS = "ADD_DATA_SUCCESS";
+export const FAILURE = "FAILURE";
+export const JOIN_US_FORM_INITIAL_STATE = "JOIN_US_FORM_INITIAL_STATE";
+
+

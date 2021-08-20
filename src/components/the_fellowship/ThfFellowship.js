@@ -1,11 +1,23 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
+import { connect } from "react-redux";
 import AOS from "aos";
 import { Link } from "react-router-dom";
 import "../CommonCSS.scss";
 import "./ThfFellowship.scss";
+import { joinFormDataAdd } from "./ThfFellowship.Action";
 
-const ThfFellowship = () => {
-  const [formData, setFormData] = useState({});
+const ThfFellowship = ({ joinFormDataAdd, addDataResponse }) => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    mobile_no: "",
+    city: "",
+    state: "",
+    area_of_intrest: "",
+    skill: "",
+    availability: "",
+    serve_as: "",
+  });
 
   useEffect(() => {
     window.scrollTo({
@@ -19,39 +31,16 @@ const ThfFellowship = () => {
     };
   }, []);
 
-  const serveAsField = useRef(null);
-  const areasOfIntrestField = useRef(null);
-  const skillSetField = useRef(null);
-  const availabilityField = useRef(null);
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log("Submit Clicked");
-    // console.log("serveAsField.current.value", serveAsField.current.value);
-    // console.log("areasOfIntrestField.current.value", areasOfIntrestField.current.value);
-    // console.log("skillSetField.current.value", skillSetField.current.value);
-    // console.log("availabilityField.current.value", availabilityField.current.value);
-    if (
-      serveAsField.current.value === "Select Here" ||
-      areasOfIntrestField.current.value === "Select Here" ||
-      skillSetField.current.value === "Select Here" ||
-      availabilityField.current.value === "Select Here"
-    ) {
-      // alert("Please fill all the fields!");
-    } else {
-      // if (departCityField.current.value === arrivalCityField.current.value) {
-      //     alert("Departure City and Arrival City can't be same!")
-      // } else {
-      //     let journeyD = {
-      //         departLoc: departCityField.current.value,
-      //         arriveLoc: arrivalCityField.current.value,
-      //         journeyDate: journeyDateField.current.value
-      //     }
-      //     setJourneyData(journeyD)
-      //     console.log(journeyData)
-      //     tooglePlanJourney(true)
-      // }
-    }
+    console.log("formData: ", formData);
+    joinFormDataAdd(formData);
+    console.log("addDataResponse: ", addDataResponse);
+  };
+
+  const handleChangeEvent = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
   return (
@@ -128,118 +117,125 @@ const ThfFellowship = () => {
         data-aos-duration="700"
         onSubmit={(e) => handleSubmit(e)}
       >
-        <div class="form-group row">
-          <label class="col-form-label col-sm-3 pt-0">
+        <div className="form-group row">
+          <label className="col-form-label col-sm-3 pt-0">
             SERVE AS <span className="mandatory-red">*</span>
           </label>
-          <div class="col-sm-4">
-            <div class="form-check">
+          <div className="col-sm-4">
+            <div className="form-check">
               <input
-                class="form-check-input"
+                className="form-check-input"
                 type="radio"
-                name="gridRadios"
+                name="serve_as"
                 id="volunteer-radio"
-                value="option1"
-                checked
+                value="Volunteer"
+                onChange={(e) => handleChangeEvent(e)}
               />
-              <label class="form-check-label" for="volunteer-radio">
-                VOLUNTEER
-              </label>
+              <label className="form-check-label">VOLUNTEER</label>
             </div>
           </div>
-          <div class="col-sm-4">
-            <div class="form-check">
-              <div class="form-check">
+          <div className="col-sm-4">
+            <div className="form-check">
+              <div className="form-check">
                 <input
-                  class="form-check-input"
+                  className="form-check-input"
                   type="radio"
-                  name="gridRadios"
+                  name="serve_as"
                   id="internship-radio"
-                  value="option2"
+                  value="Internship"
+                  onChange={(e) => handleChangeEvent(e)}
                 />
-                <label class="form-check-label" for="internship-radio">
-                  INTERNSHIP
-                </label>
+                <label className="form-check-label">INTERNSHIP</label>
               </div>
             </div>
           </div>
         </div>
-        <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-3 col-form-label">
+        <div className="form-group row">
+          <label className="col-sm-3 col-form-label">
             NAME <span className="mandatory-red">*</span>
           </label>
-          <div class="col-sm-9">
+          <div className="col-sm-9">
             <input
               type="text"
-              class="form-control"
-              id="inputEmail3"
+              name="name"
+              className="form-control"
               placeholder="Enter Full Name"
               required
+              onChange={(e) => handleChangeEvent(e)}
             />
           </div>
         </div>
-        <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-3 col-form-label">
+        <div className="form-group row">
+          <label className="col-sm-3 col-form-label">
             EMAIL <span className="mandatory-red">*</span>
           </label>
-          <div class="col-sm-9">
+          <div className="col-sm-9">
             <input
               type="email"
-              class="form-control"
-              id="inputEmail3"
+              name="email"
+              className="form-control"
               placeholder="Enter Email"
               required
+              onChange={(e) => handleChangeEvent(e)}
             />
           </div>
         </div>
-        <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-3 col-form-label">
+        <div className="form-group row">
+          <label className="col-sm-3 col-form-label">
             MOBILE <span className="mandatory-red">*</span>
           </label>
-          <div class="col-sm-9">
+          <div className="col-sm-9">
             <input
               type="number"
-              class="form-control"
-              id="inputEmail3"
+              name="mobile_no"
+              className="form-control"
               placeholder="Enter Mobile Number"
               required
+              onChange={(e) => handleChangeEvent(e)}
             />
           </div>
         </div>
-        <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-3 col-form-label">
+        <div className="form-group row">
+          <label className="col-sm-3 col-form-label">
             CITY <span className="mandatory-red">*</span>
           </label>
-          <div class="col-sm-9">
+          <div className="col-sm-9">
             <input
               type="text"
-              class="form-control"
-              id="inputEmail3"
+              name="city"
+              className="form-control"
               placeholder="Enter City"
               required
+              onChange={(e) => handleChangeEvent(e)}
             />
           </div>
         </div>
-        <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-3 col-form-label">
+        <div className="form-group row">
+          <label className="col-sm-3 col-form-label">
             STATE <span className="mandatory-red">*</span>
           </label>
-          <div class="col-sm-9">
+          <div className="col-sm-9">
             <input
               type="text"
-              class="form-control"
-              id="inputEmail3"
+              name="state"
+              className="form-control"
               placeholder="Enter State"
               required
+              onChange={(e) => handleChangeEvent(e)}
             />
           </div>
         </div>
-        <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-3 col-form-label">
+        <div className="form-group row">
+          <label className="col-sm-3 col-form-label">
             AREAS OF INTREST <span className="mandatory-red">*</span>
           </label>
-          <div class="col-sm-9 drop-down">
-            <select ref={areasOfIntrestField} className="form-control" required>
+          <div className="col-sm-9 drop-down">
+            <select
+              onChange={(e) => handleChangeEvent(e)}
+              name="area_of_intrest"
+              className="form-control"
+              required
+            >
               {[
                 "Select Here",
                 "Education",
@@ -263,12 +259,17 @@ const ThfFellowship = () => {
             <i id="our-work-arrow-id" className="fa fa-caret-down"></i>
           </div>
         </div>
-        <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-3 col-form-label">
+        <div className="form-group row">
+          <label className="col-sm-3 col-form-label">
             SKILL SET <span className="mandatory-red">*</span>
           </label>
-          <div class="col-sm-9 drop-down">
-            <select ref={skillSetField} className="form-control" required>
+          <div className="col-sm-9 drop-down">
+            <select
+              onChange={(e) => handleChangeEvent(e)}
+              name="skill"
+              className="form-control"
+              required
+            >
               {[
                 "Select Here",
                 "Doctor",
@@ -295,12 +296,17 @@ const ThfFellowship = () => {
             <i id="our-work-arrow-id" className="fa fa-caret-down"></i>
           </div>
         </div>
-        <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-3 col-form-label">
+        <div className="form-group row">
+          <label className="col-sm-3 col-form-label">
             AVAILABILITY <span className="mandatory-red">*</span>
           </label>
-          <div class="col-sm-9 drop-down">
-            <select ref={availabilityField} className="form-control" required>
+          <div className="col-sm-9 drop-down">
+            <select
+              onChange={(e) => handleChangeEvent(e)}
+              name="availability"
+              className="form-control"
+              required
+            >
               {["Select Here", "Part Time", "Full Time"].map((n) =>
                 n === "Select Here" ? (
                   <option value="" key={n}>
@@ -316,9 +322,9 @@ const ThfFellowship = () => {
             <i id="our-work-arrow-id" className="fa fa-caret-down"></i>
           </div>
         </div>
-        <div class="form-group row">
-          <div class="col-sm-12">
-            <button type="submit" class="btn btn-danger">
+        <div className="form-group row">
+          <div className="col-sm-12">
+            <button type="submit" className="btn btn-danger">
               SUBMIT
             </button>
           </div>
@@ -337,4 +343,13 @@ const ThfFellowship = () => {
   );
 };
 
-export default ThfFellowship;
+const mapStateToProps = (state) => ({
+  addDataResponse: state.thfFellowshipReducer.addDataResponse,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  joinFormDataAdd: (value) => dispatch(joinFormDataAdd(value)),
+});
+
+// export default ThfFellowship;
+export default connect(mapStateToProps, mapDispatchToProps)(ThfFellowship);

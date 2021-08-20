@@ -4,6 +4,10 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavbarTop from "./components/navbar/NavbarTop";
 import NavbarBottom from "./components/navbar/NavbarBottom";
 
+//redux
+import store from "./redux-tools/store/store";
+import { Provider } from "react-redux";
+
 import Home from "./components/home/Home";
 
 //OurWork Tabs
@@ -28,8 +32,6 @@ import SuccessStory from "./components/about_us/success_story/SuccessStory";
 
 //TheFellowship Tabs
 import ThfFellowship from "./components/the_fellowship/ThfFellowship";
-import Volunteering from "./components/the_fellowship/volunteering/Volunteering";
-import Internships from "./components/the_fellowship/internships/Internships";
 
 //Emergency Tabs
 import EmergencyCase from "./components/emergency/emergency_case/EmergencyCase";
@@ -56,77 +58,77 @@ import ProtectionPolicy from "./components/footer/protection_policy/ProtectionPo
 
 function App() {
   return (
-    <Router>
-      <div className="app">
-        {/* <Route render={props => <Navbar {...props} />} /> */}
-        {/* <Route component={NavbarTop} /> */}
-        <Route component={NavbarBottom} />
-        <Route exact path="/" component={Home} />
-        <Switch>
-          {/* header-links */}
-          {/* OurWork Tabs */}
-          <Route exact path="/our-work" component={OurWork} />
-          <Route path="/overview" component={Overview} />
-          <Route path="/education" component={Education} />
-          <Route path="/healthcare" component={Healthcare} />
-          <Route path="/livelihoods" component={Livelihoods} />
-          <Route path="/sports" component={Sports} />
-          <Route path="/humanitarian" component={Humanitarian} />
-          {/* AboutUs Tabs */}
-          <Route path="/about-us" component={AboutUs} />
-          <Route path="/mission-vision-values" component={Mission} />
-          <Route path="/our-approach" component={OurApproach} />
-          <Route path="/our-team" component={OurTeam} />
-          <Route path="/financials" component={Financial} />
-          <Route path="/documents" component={Documents} />
-          <Route path="/latest-news" component={LatestNews} />
-          <Route path="/stories-of-change" component={StoriesOfChange} />
-          <Route path="/success-story" component={SuccessStory} />
-          {/* TheFellowship Tabs */}
-          <Route path="/thf-fellowship" component={ThfFellowship} />
-          <Route path="/volunteering" component={Volunteering} />
-          <Route path="/internships" component={Internships} />
-          {/* Emergency Tabs */}
-          <Route path="/emergency-case" component={EmergencyCase} />
-          <Route path="/covid-19-relief" component={Covid} />
-          {/* GetInvolved Tabs */}
-          <Route path="/get-involved" component={GetInvolved} />
-          <Route path="/donate" component={Donate} />
-          <Route path="/our-donor" component={OurDonor} />
-          <Route path="/legacy" component={Legacy} />
-          <Route path="/partnerships" component={Partnerships} />
-          <Route path="/other-ways-to-help" component={OtherWays} />
-          <Route path="/our-programmes" component={OurProgrammes} />
-          <Route path="/our-campaigns" component={OurCampaigns} />
-          <Route path="/events" component={Events} />
-          <Route path="/careers" component={Careers} />
-          <Route path="/contact-us" component={ContactUs} />
-          {/* footer-links */}
-          <Route path="/blog" component={Blog} />
-          <Route path="/protection-policy" component={ProtectionPolicy} />
-          <Route path="/resource" component={Resource} />
-        </Switch>
-        <div className="whatsapp-logo-container">
+    <Provider store={store}>
+      <Router>
+        <div className="app">
+          {/* <Route render={props => <Navbar {...props} />} /> */}
+          {/* <Route component={NavbarTop} /> */}
+          <Route component={NavbarBottom} />
+          <Route exact path="/" component={Home} />
+          <Switch>
+            {/* header-links */}
+            {/* OurWork Tabs */}
+            <Route exact path="/our-work" component={OurWork} />
+            <Route path="/overview" component={Overview} />
+            <Route path="/education" component={Education} />
+            <Route path="/healthcare" component={Healthcare} />
+            <Route path="/livelihoods" component={Livelihoods} />
+            <Route path="/sports" component={Sports} />
+            <Route path="/humanitarian" component={Humanitarian} />
+            {/* AboutUs Tabs */}
+            <Route path="/about-us" component={AboutUs} />
+            <Route path="/mission-vision-values" component={Mission} />
+            <Route path="/our-approach" component={OurApproach} />
+            <Route path="/our-team" component={OurTeam} />
+            <Route path="/financials" component={Financial} />
+            <Route path="/documents" component={Documents} />
+            <Route path="/latest-news" component={LatestNews} />
+            <Route path="/stories-of-change" component={StoriesOfChange} />
+            <Route path="/success-story" component={SuccessStory} />
+            {/* TheFellowship Tabs */}
+            <Route path="/thf-fellowship" component={ThfFellowship} />
+            {/* Emergency Tabs */}
+            <Route path="/emergency-case" component={EmergencyCase} />
+            <Route path="/covid-19-relief" component={Covid} />
+            {/* GetInvolved Tabs */}
+            <Route path="/get-involved" component={GetInvolved} />
+            <Route path="/donate" component={Donate} />
+            <Route path="/our-donor" component={OurDonor} />
+            <Route path="/legacy" component={Legacy} />
+            <Route path="/partnerships" component={Partnerships} />
+            <Route path="/other-ways-to-help" component={OtherWays} />
+            <Route path="/our-programmes" component={OurProgrammes} />
+            <Route path="/our-campaigns" component={OurCampaigns} />
+            <Route path="/events" component={Events} />
+            <Route path="/careers" component={Careers} />
+            <Route path="/contact-us" component={ContactUs} />
+            {/* footer-links */}
+            <Route path="/blog" component={Blog} />
+            <Route path="/protection-policy" component={ProtectionPolicy} />
+            <Route path="/resource" component={Resource} />
+          </Switch>
+          <div className="whatsapp-logo-container">
+            <a
+              className="whatsapp-logo"
+              href="https://api.whatsapp.com/send?phone=+918800202933&text=Hi, I need some information!."
+              target="_blank"
+            ></a>
+          </div>
           <a
-            className="whatsapp-logo"
-            href="https://api.whatsapp.com/send?phone=+918800202933&text=Hi, I need some information!."
-            target="_blank"
+            onClick={() =>
+              window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth",
+              })
+            }
+            className="scroll-up-icon"
+            // className={`${window.scrollY<528? "display-none":"scroll-up-icon"}`}
           ></a>
+          <Route component={Footer} />
         </div>
-        <a
-          onClick={() =>
-            window.scrollTo({
-              top: 0,
-              left: 0,
-              behavior: "smooth",
-            })
-          }
-          className="scroll-up-icon"
-          // className={`${window.scrollY<528? "display-none":"scroll-up-icon"}`}
-        ></a>
-        <Route component={Footer} />
-      </div>
-    </Router>
+      </Router>
+    </Provider>
   );
 }
 

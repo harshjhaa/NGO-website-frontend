@@ -4,9 +4,13 @@ import AOS from "aos";
 import { Link } from "react-router-dom";
 import "../CommonCSS.scss";
 import "./ThfFellowship.scss";
-import { joinFormDataAdd } from "./ThfFellowship.Action";
+import { joinFormDataAdd, setInitialState } from "./ThfFellowship.Action";
 
-const ThfFellowship = ({ joinFormDataAdd, addDataResponse }) => {
+const ThfFellowship = ({
+  joinFormDataAdd,
+  setInitialState,
+  addDataResponse,
+}) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -28,8 +32,49 @@ const ThfFellowship = ({ joinFormDataAdd, addDataResponse }) => {
     document.getElementById("thf-fellowship-tab-id").style.color = "#0096ff";
     return () => {
       document.getElementById("thf-fellowship-tab-id").style.color = "#000";
+      setFormData({
+        name: "",
+        email: "",
+        mobile_no: "",
+        city: "",
+        state: "",
+        area_of_intrest: "",
+        skill: "",
+        availability: "",
+        serve_as: "",
+      });
     };
   }, []);
+
+  useEffect(() => {
+    console.log("formData: ", formData);
+  }, [formData]);
+
+  useEffect(() => {
+    if (addDataResponse.success === 1) {
+      //cleanup
+      setFormData({
+        name: "",
+        email: "",
+        mobile_no: "",
+        city: "",
+        state: "",
+        area_of_intrest: "",
+        skill: "",
+        availability: "",
+        serve_as: "",
+      });
+      document.getElementById("volunteer-radio").checked = false;
+      document.getElementById("internship-radio").checked = false;
+      setTimeout(() => {
+        setInitialState();
+      }, 5000);
+    } else if (addDataResponse.success === 0) {
+      setTimeout(() => {
+        setInitialState();
+      }, 5000);
+    }
+  }, [addDataResponse]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -129,7 +174,9 @@ const ThfFellowship = ({ joinFormDataAdd, addDataResponse }) => {
                 value="Volunteer"
                 onChange={(e) => handleChangeEvent(e)}
               />
-              <label className="form-check-label">VOLUNTEER</label>
+              <label for="volunteer-radio" className="form-check-label">
+                VOLUNTEER
+              </label>
             </div>
           </div>
           <div className="col-sm-4">
@@ -143,7 +190,9 @@ const ThfFellowship = ({ joinFormDataAdd, addDataResponse }) => {
                   value="Internship"
                   onChange={(e) => handleChangeEvent(e)}
                 />
-                <label className="form-check-label">INTERNSHIP</label>
+                <label for="internship-radio" className="form-check-label">
+                  INTERNSHIP
+                </label>
               </div>
             </div>
           </div>
@@ -158,6 +207,7 @@ const ThfFellowship = ({ joinFormDataAdd, addDataResponse }) => {
               name="name"
               className="form-control"
               placeholder="Enter Full Name"
+              value={formData.name}
               required
               onChange={(e) => handleChangeEvent(e)}
             />
@@ -173,6 +223,7 @@ const ThfFellowship = ({ joinFormDataAdd, addDataResponse }) => {
               name="email"
               className="form-control"
               placeholder="Enter Email"
+              value={formData.email}
               required
               onChange={(e) => handleChangeEvent(e)}
             />
@@ -188,6 +239,7 @@ const ThfFellowship = ({ joinFormDataAdd, addDataResponse }) => {
               name="mobile_no"
               className="form-control"
               placeholder="Enter Mobile Number"
+              value={formData.mobile_no}
               required
               onChange={(e) => handleChangeEvent(e)}
             />
@@ -203,6 +255,7 @@ const ThfFellowship = ({ joinFormDataAdd, addDataResponse }) => {
               name="city"
               className="form-control"
               placeholder="Enter City"
+              value={formData.city}
               required
               onChange={(e) => handleChangeEvent(e)}
             />
@@ -218,6 +271,7 @@ const ThfFellowship = ({ joinFormDataAdd, addDataResponse }) => {
               name="state"
               className="form-control"
               placeholder="Enter State"
+              value={formData.state}
               required
               onChange={(e) => handleChangeEvent(e)}
             />
@@ -232,6 +286,7 @@ const ThfFellowship = ({ joinFormDataAdd, addDataResponse }) => {
               onChange={(e) => handleChangeEvent(e)}
               name="area_of_intrest"
               className="form-control"
+              value={formData.area_of_intrest}
               required
             >
               {[
@@ -266,6 +321,7 @@ const ThfFellowship = ({ joinFormDataAdd, addDataResponse }) => {
               onChange={(e) => handleChangeEvent(e)}
               name="skill"
               className="form-control"
+              value={formData.skill}
               required
             >
               {[
@@ -303,6 +359,7 @@ const ThfFellowship = ({ joinFormDataAdd, addDataResponse }) => {
               onChange={(e) => handleChangeEvent(e)}
               name="availability"
               className="form-control"
+              value={formData.availability}
               required
             >
               {["Select Here", "Part Time", "Full Time"].map((n) =>
@@ -320,7 +377,7 @@ const ThfFellowship = ({ joinFormDataAdd, addDataResponse }) => {
             <i id="our-work-arrow-id" className="fa fa-caret-down"></i>
           </div>
         </div>
-        <div className="form-group row">
+        <div style={{ marginTop: "10px" }} className="form-group row">
           <div className="col-sm-3">
             <button type="submit" className="btn btn-danger">
               SUBMIT
@@ -335,7 +392,7 @@ const ThfFellowship = ({ joinFormDataAdd, addDataResponse }) => {
               style={{ display: "flex", alignItems: "center" }}
             >
               <p
-                style={{ marginBottom: "0px", padding: "5px" }}
+                style={{ marginBottom: "30px", padding: "5px" }}
                 className={`${
                   addDataResponse.success === 0 ? "btn-danger" : "btn-success"
                 }`}
@@ -365,7 +422,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   joinFormDataAdd: (value) => dispatch(joinFormDataAdd(value)),
+  setInitialState: () => dispatch(setInitialState()),
 });
 
-// export default ThfFellowship;
 export default connect(mapStateToProps, mapDispatchToProps)(ThfFellowship);

@@ -1,4 +1,8 @@
-import { ADD_DATA_SUCCESS, FAILURE } from "./ThfFellowship.Constant";
+import {
+  ADD_DATA_SUCCESS,
+  FAILURE,
+  SET_INITIAL_STATE,
+} from "./ThfFellowship.Constant";
 
 const initialState = {
   addDataResponse: {},
@@ -23,6 +27,8 @@ const thfFellowshipReducer = (state = initialState, action) => {
           message: action.payload.data.message,
         },
       };
+    case SET_INITIAL_STATE:
+      return initialState;
     default:
       return state;
   }

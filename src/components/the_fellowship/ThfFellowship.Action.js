@@ -7,7 +7,7 @@ const joinUfFormAddDataSuccess = (res) => ({
   payload: res,
 });
 
-const joinUfFormAddDataFailure = (errorCode) => ({
+const joinUsFormAddDataFailure = (errorCode) => ({
   type: FAILURE,
   payload: errorCode,
 });
@@ -45,17 +45,17 @@ export const addData = (
   axios
     .post("/api/join-us", body, config)
     .then((res) => {
-      if (res) {
-        console.log("Data Save Success");
+      if (res.data.success === 0) {
+        // console.log("Database Error: ", res.data.message);
+        dispatch(joinUsFormAddDataFailure(res));
+      } else if (res.data.success === 1) {
+        // console.log("Data Save Success: ", res.data.message);
         dispatch(joinUfFormAddDataSuccess(res));
-      } else {
-        console.log("Data Save Failedddd: ", res);
-        dispatch(joinUfFormAddDataFailure("Failed:"));
       }
     })
     .catch((err) => {
-      console.log("Data Save Failedd: ", err);
-      dispatch(joinUfFormAddDataFailure("Failed"));
+      // console.log("Data Save Failed: ", err);
+      dispatch(joinUsFormAddDataFailure("Failed"));
     });
 };
 

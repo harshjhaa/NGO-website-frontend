@@ -33,9 +33,7 @@ const ThfFellowship = ({ joinFormDataAdd, addDataResponse }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("formData: ", formData);
     joinFormDataAdd(formData);
-    console.log("addDataResponse: ", addDataResponse);
   };
 
   const handleChangeEvent = (e) => {
@@ -323,11 +321,29 @@ const ThfFellowship = ({ joinFormDataAdd, addDataResponse }) => {
           </div>
         </div>
         <div className="form-group row">
-          <div className="col-sm-12">
+          <div className="col-sm-3">
             <button type="submit" className="btn btn-danger">
               SUBMIT
             </button>
           </div>
+          {Object.keys(addDataResponse).length === 0 &&
+          addDataResponse.constructor === Object ? (
+            ""
+          ) : (
+            <div
+              className="col-sm-9"
+              style={{ display: "flex", alignItems: "center" }}
+            >
+              <p
+                style={{ marginBottom: "0px", padding: "5px" }}
+                className={`${
+                  addDataResponse.success === 0 ? "btn-danger" : "btn-success"
+                }`}
+              >
+                {addDataResponse.message}
+              </p>
+            </div>
+          )}
         </div>
       </form>
       <p className="text text-bold">

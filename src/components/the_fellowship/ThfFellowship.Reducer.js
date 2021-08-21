@@ -10,12 +10,18 @@ const thfFellowshipReducer = (state = initialState, action) => {
     case ADD_DATA_SUCCESS:
       return {
         ...state,
-        addDataResponse: action.payload,
+        addDataResponse: {
+          success: action.payload.data.success,
+          message: action.payload.data.message,
+        },
       };
     case FAILURE:
       return {
         ...state,
-        addDataResponse: action.payload,
+        addDataResponse: {
+          success: action.payload.data.success,
+          message: action.payload.data.message,
+        },
       };
     default:
       return state;

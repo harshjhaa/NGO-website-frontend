@@ -1,6 +1,10 @@
 import axios from "axios";
 
-import { ADD_DATA_SUCCESS, FAILURE } from "./ThfFellowship.Constant";
+import {
+  ADD_DATA_SUCCESS,
+  FAILURE,
+  SET_INITIAL_STATE,
+} from "./ThfFellowship.Constant";
 
 const joinUfFormAddDataSuccess = (res) => ({
   type: ADD_DATA_SUCCESS,
@@ -12,7 +16,13 @@ const joinUsFormAddDataFailure = (errorCode) => ({
   payload: errorCode,
 });
 
-export const addData = (
+const setInitState = (dispatch) => {
+  dispatch({
+    type: SET_INITIAL_STATE,
+  });
+};
+
+const addData = (
   {
     name,
     email,
@@ -60,5 +70,11 @@ export const addData = (
 };
 
 export const joinFormDataAdd = (value) => (dispatch) => {
+  console.log("joinFormDataAdd Called");
   addData(value, dispatch);
+};
+
+export const setInitialState = () => (dispatch) => {
+  console.log("setInitialState Called");
+  setInitState(dispatch);
 };

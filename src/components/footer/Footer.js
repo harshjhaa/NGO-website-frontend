@@ -144,12 +144,12 @@ const Footer = () => {
                   className="text-link footer-email"
                   href="mailto:info@trulyhelpfoundation.org"
                 >
-                  <i class="fa fa-envelope" aria-hidden="true"></i>{" "}
+                  <i className="fa fa-envelope" aria-hidden="true"></i>{" "}
                   info@trulyhelpfoundation.org
                 </a>
                 <div>
                   <a className="text-link footer-call" href="tel:+918800106833">
-                    <i class="fa fa-phone" aria-hidden="true"></i> +91
+                    <i className="fa fa-phone" aria-hidden="true"></i> +91
                     8800202926
                   </a>
                   <span style={{ color: "#fff" }}> or </span>

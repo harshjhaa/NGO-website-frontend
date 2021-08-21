@@ -46,9 +46,9 @@ const ThfFellowship = ({
     };
   }, []);
 
-  useEffect(() => {
-    console.log("formData: ", formData);
-  }, [formData]);
+  // useEffect(() => {
+  //   console.log("formData: ", formData);
+  // }, [formData]);
 
   useEffect(() => {
     if (addDataResponse.success === 1) {

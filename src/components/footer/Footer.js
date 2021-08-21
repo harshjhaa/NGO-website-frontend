@@ -60,26 +60,31 @@ const Footer = () => {
                     className="icons icon-twitter"
                     href="https://twitter.com/trulyhelp"
                     target="_blank"
+                    rel="noreferrer"
                   ></a>
                   <a
                     className="icons icon-facebook"
                     href="https://www.facebook.com/trulyhelpfoundation"
                     target="_blank"
+                    rel="noreferrer"
                   ></a>
                   <a
                     className="icons icon-linkedin"
                     href="https://www.linkedin.com/company/truly-help-foundation5aba50213"
                     target="_blank"
+                    rel="noreferrer"
                   ></a>
                   <a
                     className="icons icon-instagram"
                     href="https://www.instagram.com/trulyhelpfoundation"
                     target="_blank"
+                    rel="noreferrer"
                   ></a>
                   <a
                     className="icons icon-youtube"
                     href="https://www.youtube.com/channel/UCRIQBzF05ms8IF13-2ER8VA/featured"
                     target="_blank"
+                    rel="noreferrer"
                   ></a>
                 </div>
               </div>
@@ -97,8 +102,8 @@ const Footer = () => {
                   <Link className="text-link" to="/careers">
                     Careers
                   </Link>
-                  <Link className="text-link" to="/volunteer">
-                    Volunteer
+                  <Link className="text-link" to="/thf-fellowship">
+                    Join Us
                   </Link>
                 </div>
               </div>

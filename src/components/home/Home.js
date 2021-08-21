@@ -33,13 +33,6 @@ const Home = () => {
     testimonialContent: "testimonialContent",
   };
 
-  const breakPoints = [
-    { width: 1, itemsToShow: 1 },
-    { width: 550, itemsToShow: 2 },
-    { width: 769, itemsToShow: 3 },
-    { width: 1200, itemsToShow: 4 },
-  ];
-
   const donateImgTitle = "Help us Fight Hunger in Rural Areas";
   const donateImgDescription =
     "Some rural residents and households are food insecure,meaning they cannot rely on access to sufficient affordable and nutritious food at all times, increasing the risk of poor health outcomes.";
@@ -116,66 +109,6 @@ const Home = () => {
         <hr />
       </div>
       <span className="span-line"></span>
-      {/* <div
-        className="home-feature-content-2"
-        data-aos="zoom-out-up"
-        data-aos-duration="1000"
-      >
-        <h1>Causes We Are Serving</h1>
-        <div className="home-causes-we-serving-container" id="style-1">
-          <Carousel
-            breakPoints={breakPoints}
-            pagination={false}
-            infiniteLoop={true}
-          >
-            <div className="img-txt">
-              <img src="/images/img_1.jpg" alt="home_img-1" />
-              <h4>EDUCATION</h4>
-              <button className="bttn">
-                <Link className="bttn" to="/education">
-                  EXPLORE
-                </Link>
-              </button>
-            </div>
-            <div className="img-txt">
-              <img src="/images/img_2.jpg" alt="home_img-2" />
-              <h4>HEALTHCARE</h4>
-              <button className="bttn">
-                <Link className="bttn" to="/healthcare">
-                  EXPLORE
-                </Link>
-              </button>
-            </div>
-            <div className="img-txt">
-              <img src="/images/img_3.jpg" alt="home_img-3" />
-              <h4>LIVELIHOODS</h4>
-              <button className="bttn">
-                <Link className="bttn" to="/livelihoods">
-                  EXPLORE
-                </Link>
-              </button>
-            </div>
-            <div className="img-txt">
-              <img src="/images/img_1.jpg" alt="home_img-1" />
-              <h4>SPORTS</h4>
-              <button className="bttn">
-                <Link className="bttn" to="/sports">
-                  EXPLORE
-                </Link>
-              </button>
-            </div>
-            <div className="img-txt">
-              <img src="/images/img_2.jpg" alt="home_img-2" />
-              <h4>HUMANITARIAN</h4>
-              <button className="bttn">
-                <Link className="bttn" to="/humanitarian">
-                  EXPLORE
-                </Link>
-              </button>
-            </div>
-          </Carousel>
-        </div>
-      </div> */}
       <div
         className="causes-we-are-serving-container"
         data-aos="fade-up"
@@ -314,72 +247,6 @@ const Home = () => {
               </div>
             </SwiperSlide>
           </Swiper>
-          {/* <Slider contentName={sliderContent["causesServingContent"]} /> */}
-          {/* <div className="box box-up box-border-red">
-            <div className="content">
-              <img src="/gif/edu-2.gif" alt="home_img-1" />
-              <h4>EDUCATION</h4>
-              <p>
-                Education is one of the main piller of the society, without it
-                India's future is lost!
-              </p>
-              <button className="bttn bttn-red">
-                <Link to="/education">EXPLORE</Link>
-              </button>
-            </div>
-          </div>
-          <div className="box box-down box-border-green">
-            <div className="content">
-              <img src="/gif/health-5.gif" alt="home_img-2" />
-              <h4>HEALTHCARE</h4>
-              <p>
-                Good health makes people strong, increaes thier efficient and
-                inturn benefits society!
-              </p>
-              <button className="bttn bttn-green">
-                <Link to="/healthcare">EXPLORE</Link>
-              </button>
-            </div>
-          </div>
-          <div className="box box-up box-border-voilet">
-            <div className="content">
-              <img src="/gif/liveli-4.gif" alt="home_img-2" />
-              <h4>LIVELIHOODS</h4>
-              <p>
-                Imporvement in the livelihood lead to the upgradation of the
-                standard of living!
-              </p>
-              <button className="bttn bttn-voilet">
-                <Link to="/livelihoods">EXPLORE</Link>
-              </button>
-            </div>
-          </div>
-          <div className="box box-down box-border-orange">
-            <div className="content">
-              <img src="/gif/sports-2.gif" alt="home_img-2" />
-              <h4>SPORTS</h4>
-              <p>
-                Sports helps to evolve the overall mentality of the person by
-                making them active, alert and friendly!
-              </p>
-              <button className="bttn bttn-orange">
-                <Link to="/sports">EXPLORE</Link>
-              </button>
-            </div>
-          </div>
-          <div className="box box-up box-border-blue">
-            <div className="content">
-              <img src="/gif/human-2.gif" alt="home_img-2" />
-              <h4>HUMANITARIAN</h4>
-              <p>
-                Human wlfare is one of the important factor in keeping the
-                society balanced, evolving from time to time!
-              </p>
-              <button className="bttn bttn-blue">
-                <Link to="/humanitarian">EXPLORE</Link>
-              </button>
-            </div>
-          </div> */}
         </div>
       </div>
       <div className="hr-line">

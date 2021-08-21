@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 // import Slider from '../image_slider/Slider'
 import { Link } from "react-router-dom";
 import "font-awesome/css/font-awesome.min.css";
@@ -126,9 +126,7 @@ const NavbarBottom = () => {
             </div>
             <div className="nav-tab">
               <li>
-                <Link id="emergency-tab-id">
-                  EMERGENCY
-                </Link>
+                <Link id="emergency-tab-id">EMERGENCY</Link>
                 <i id="emergency-arrow-id" className="fa fa-caret-down"></i>
               </li>
               <div className="nav-dropdown-menu">
@@ -142,9 +140,7 @@ const NavbarBottom = () => {
             </div>
             <div className="nav-tab">
               <li>
-                <Link id="get-involved-tab-id">
-                  GET INVOLVED
-                </Link>
+                <Link id="get-involved-tab-id">GET INVOLVED</Link>
                 <i id="get-involved-arrow-id" className="fa fa-caret-down"></i>
               </li>
               <div className="nav-dropdown-menu">
@@ -193,26 +189,31 @@ const NavbarBottom = () => {
                   className="social-icons icon-twitter"
                   href="https://twitter.com/trulyhelp"
                   target="_blank"
+                  rel="noreferrer"
                 ></a>
                 <a
                   className="social-icons icon-facebook"
                   href="https://www.facebook.com/trulyhelpfoundation"
                   target="_blank"
+                  rel="noreferrer"
                 ></a>
                 <a
                   className="social-icons icon-linkedin"
                   href="https://www.linkedin.com/company/truly-help-foundation5aba50213"
                   target="_blank"
+                  rel="noreferrer"
                 ></a>
                 <a
                   className="social-icons icon-instagram"
                   href="https://www.instagram.com/trulyhelpfoundation"
                   target="_blank"
+                  rel="noreferrer"
                 ></a>
                 <a
                   className="social-icons icon-youtube"
                   href="https://www.youtube.com/channel/UCRIQBzF05ms8IF13-2ER8VA/featured"
                   target="_blank"
+                  rel="noreferrer"
                 ></a>
               </div>
             </div>

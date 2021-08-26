@@ -1,11 +1,27 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
+import { connect } from "react-redux";
 import AOS from "aos";
 import { Link } from "react-router-dom";
 import "../CommonCSS.scss";
 import "./ThfFellowship.scss";
+import { joinFormDataAdd, setInitialState } from "./ThfFellowship.Action";
 
-const ThfFellowship = () => {
-  const [formData, setFormData] = useState({});
+const ThfFellowship = ({
+  joinFormDataAdd,
+  setInitialState,
+  addDataResponse,
+}) => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    mobile_no: "",
+    city: "",
+    state: "",
+    area_of_intrest: "",
+    skill: "",
+    availability: "",
+    serve_as: "",
+  });
 
   useEffect(() => {
     window.scrollTo({
@@ -14,44 +30,65 @@ const ThfFellowship = () => {
     });
     AOS.init();
     document.getElementById("thf-fellowship-tab-id").style.color = "#0096ff";
+    document
+      .getElementById("inp_mobile_no")
+      .addEventListener("mousewheel", function (event) {
+        this.blur();
+      });
     return () => {
       document.getElementById("thf-fellowship-tab-id").style.color = "#000";
+      setFormData({
+        name: "",
+        email: "",
+        mobile_no: "",
+        city: "",
+        state: "",
+        area_of_intrest: "",
+        skill: "",
+        availability: "",
+        serve_as: "",
+      });
     };
   }, []);
 
-  const serveAsField = useRef(null);
-  const areasOfIntrestField = useRef(null);
-  const skillSetField = useRef(null);
-  const availabilityField = useRef(null);
+  // useEffect(() => {
+  //   console.log("formData: ", formData);
+  // }, [formData]);
+
+  useEffect(() => {
+    if (addDataResponse.success === 1) {
+      //cleanup
+      setFormData({
+        name: "",
+        email: "",
+        mobile_no: "",
+        city: "",
+        state: "",
+        area_of_intrest: "",
+        skill: "",
+        availability: "",
+        serve_as: "",
+      });
+      document.getElementById("volunteer-radio").checked = false;
+      document.getElementById("internship-radio").checked = false;
+      setTimeout(() => {
+        setInitialState();
+      }, 5000);
+    } else if (addDataResponse.success === 0) {
+      setTimeout(() => {
+        setInitialState();
+      }, 5000);
+    }
+  }, [addDataResponse]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log("Submit Clicked");
-    // console.log("serveAsField.current.value", serveAsField.current.value);
-    // console.log("areasOfIntrestField.current.value", areasOfIntrestField.current.value);
-    // console.log("skillSetField.current.value", skillSetField.current.value);
-    // console.log("availabilityField.current.value", availabilityField.current.value);
-    if (
-      serveAsField.current.value === "Select Here" ||
-      areasOfIntrestField.current.value === "Select Here" ||
-      skillSetField.current.value === "Select Here" ||
-      availabilityField.current.value === "Select Here"
-    ) {
-      // alert("Please fill all the fields!");
-    } else {
-      // if (departCityField.current.value === arrivalCityField.current.value) {
-      //     alert("Departure City and Arrival City can't be same!")
-      // } else {
-      //     let journeyD = {
-      //         departLoc: departCityField.current.value,
-      //         arriveLoc: arrivalCityField.current.value,
-      //         journeyDate: journeyDateField.current.value
-      //     }
-      //     setJourneyData(journeyD)
-      //     console.log(journeyData)
-      //     tooglePlanJourney(true)
-      // }
-    }
+    joinFormDataAdd(formData);
+  };
+
+  const handleChangeEvent = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
   return (
@@ -71,12 +108,12 @@ const ThfFellowship = () => {
         <p>THF Fellowship</p>
       </div>
       <hr style={{ margin: "0px 10px" }} />
-      <section className="two-col-text-container">
-        <h1 className="title">BECOME A PART OF THF</h1>
-        <div className="contents" data-aos="fade-up" data-aos-duration="700">
-          <div className="only-text-container col-1-container">
+      <section>
+        <h1 className="title margin-bottom-20">BECOME A PART OF THF</h1>
+        <div className="contents" data-aos="fade-up" data-aos-duration="900">
+          <div className="only-text-container margin-bottom-30">
             <h1 className="title">Volunteer</h1>
-            <p className="text">
+            <p className="text text-justify">
               Truly Help Foundation believes that until and unless all people
               come together and get involved actively in the process of
               remodeling and evolution, nothing can happen. To make this
@@ -86,22 +123,24 @@ const ThfFellowship = () => {
               the face of every organization – not only there learning
               experience and skills help the organization in implementing them
               on the ground, they also spread the message far and beyond, enable
-              you to make a difference in the society. Volunteers are the true
-              heroes of the organization.
+              you to make a difference in the society . Volunteers are the true
+              heroes of the organization
             </p>
           </div>
-          <div className="only-text-container col-2-container">
+          <div
+            className="only-text-container"
+            data-aos="fade-up"
+            data-aos-duration="900"
+          >
             <h1 className="title">Internship</h1>
-            <p className="text">
+            <p className="text text-justify">
               Truly Help Foundation Intership Programme is a Skill development
               model for young passionate who have a keen interest in working in
               the development area, and are dedicated to build a world in which
               marginalized communities and underprivileged children are able to
-              live a life of diginity and security.
-              <br />
-              Through the internship Programme, the interns are able to develop
-              their leadership abilities, professional skills and social
-              conscientiousness.
+              live a life of diginity and security. Through the internship
+              Programme, the interns are able to develop their leadership
+              abilities, professional skills and social conscientiousness.
             </p>
           </div>
         </div>
@@ -121,125 +160,149 @@ const ThfFellowship = () => {
       </p>
       <br />
       <p style={{ margin: "10px 0px" }} className="text text-bold">
-        Be yourself a life changer in someone’s life!
+        Be yourself a life changemaker in someone’s life!!
       </p>
       <form
         data-aos="fade-up"
         data-aos-duration="700"
         onSubmit={(e) => handleSubmit(e)}
       >
-        <div class="form-group row">
-          <label class="col-form-label col-sm-3 pt-0">
+        <h4
+          style={{ textAlign: "center", paddingBottom: "10px" }}
+          className="text text-danger"
+        >
+          Registration Form
+        </h4>
+        <div className="form-group row">
+          <label className="col-form-label col-sm-3 pt-0">
             SERVE AS <span className="mandatory-red">*</span>
           </label>
-          <div class="col-sm-4">
-            <div class="form-check">
+          <div className="col-sm-4">
+            <div className="form-check">
               <input
-                class="form-check-input"
+                className="form-check-input"
                 type="radio"
-                name="gridRadios"
+                name="serve_as"
                 id="volunteer-radio"
-                value="option1"
-                checked
+                value="Volunteer"
+                onChange={(e) => handleChangeEvent(e)}
               />
-              <label class="form-check-label" for="volunteer-radio">
+              <label for="volunteer-radio" className="form-check-label">
                 VOLUNTEER
               </label>
             </div>
           </div>
-          <div class="col-sm-4">
-            <div class="form-check">
-              <div class="form-check">
+          <div className="col-sm-4">
+            <div className="form-check">
+              <div className="form-check">
                 <input
-                  class="form-check-input"
+                  className="form-check-input"
                   type="radio"
-                  name="gridRadios"
+                  name="serve_as"
                   id="internship-radio"
-                  value="option2"
+                  value="Internship"
+                  onChange={(e) => handleChangeEvent(e)}
                 />
-                <label class="form-check-label" for="internship-radio">
+                <label for="internship-radio" className="form-check-label">
                   INTERNSHIP
                 </label>
               </div>
             </div>
           </div>
         </div>
-        <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-3 col-form-label">
+        <div className="form-group row">
+          <label className="col-sm-3 col-form-label">
             NAME <span className="mandatory-red">*</span>
           </label>
-          <div class="col-sm-9">
+          <div className="col-sm-9">
             <input
               type="text"
-              class="form-control"
-              id="inputEmail3"
+              name="name"
+              className="form-control"
               placeholder="Enter Full Name"
+              value={formData.name}
               required
+              onChange={(e) => handleChangeEvent(e)}
             />
           </div>
         </div>
-        <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-3 col-form-label">
+        <div className="form-group row">
+          <label className="col-sm-3 col-form-label">
             EMAIL <span className="mandatory-red">*</span>
           </label>
-          <div class="col-sm-9">
+          <div className="col-sm-9">
             <input
               type="email"
-              class="form-control"
-              id="inputEmail3"
+              name="email"
+              className="form-control"
               placeholder="Enter Email"
+              value={formData.email}
               required
+              onChange={(e) => handleChangeEvent(e)}
             />
           </div>
         </div>
-        <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-3 col-form-label">
+        <div className="form-group row">
+          <label className="col-sm-3 col-form-label">
             MOBILE <span className="mandatory-red">*</span>
           </label>
-          <div class="col-sm-9">
+          <div className="col-sm-9">
             <input
               type="number"
-              class="form-control"
-              id="inputEmail3"
+              id="inp_mobile_no"
+              name="mobile_no"
+              className="form-control"
               placeholder="Enter Mobile Number"
+              value={formData.mobile_no}
               required
+              onChange={(e) => handleChangeEvent(e)}
             />
           </div>
         </div>
-        <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-3 col-form-label">
+        <div className="form-group row">
+          <label className="col-sm-3 col-form-label">
             CITY <span className="mandatory-red">*</span>
           </label>
-          <div class="col-sm-9">
+          <div className="col-sm-9">
             <input
               type="text"
-              class="form-control"
-              id="inputEmail3"
+              name="city"
+              className="form-control"
               placeholder="Enter City"
+              value={formData.city}
               required
+              onChange={(e) => handleChangeEvent(e)}
             />
           </div>
         </div>
-        <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-3 col-form-label">
+        <div className="form-group row">
+          <label className="col-sm-3 col-form-label">
             STATE <span className="mandatory-red">*</span>
           </label>
-          <div class="col-sm-9">
+          <div className="col-sm-9">
             <input
               type="text"
-              class="form-control"
-              id="inputEmail3"
+              name="state"
+              className="form-control"
               placeholder="Enter State"
+              value={formData.state}
               required
+              onChange={(e) => handleChangeEvent(e)}
             />
           </div>
         </div>
-        <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-3 col-form-label">
+        <div className="form-group row">
+          <label className="col-sm-3 col-form-label">
             AREAS OF INTREST <span className="mandatory-red">*</span>
           </label>
-          <div class="col-sm-9 drop-down">
-            <select ref={areasOfIntrestField} className="form-control" required>
+          <div className="col-sm-9 drop-down">
+            <select
+              onChange={(e) => handleChangeEvent(e)}
+              name="area_of_intrest"
+              className="form-control"
+              value={formData.area_of_intrest}
+              required
+            >
               {[
                 "Select Here",
                 "Education",
@@ -263,12 +326,18 @@ const ThfFellowship = () => {
             <i id="our-work-arrow-id" className="fa fa-caret-down"></i>
           </div>
         </div>
-        <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-3 col-form-label">
+        <div className="form-group row">
+          <label className="col-sm-3 col-form-label">
             SKILL SET <span className="mandatory-red">*</span>
           </label>
-          <div class="col-sm-9 drop-down">
-            <select ref={skillSetField} className="form-control" required>
+          <div className="col-sm-9 drop-down">
+            <select
+              onChange={(e) => handleChangeEvent(e)}
+              name="skill"
+              className="form-control"
+              value={formData.skill}
+              required
+            >
               {[
                 "Select Here",
                 "Doctor",
@@ -295,12 +364,18 @@ const ThfFellowship = () => {
             <i id="our-work-arrow-id" className="fa fa-caret-down"></i>
           </div>
         </div>
-        <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-3 col-form-label">
+        <div className="form-group row">
+          <label className="col-sm-3 col-form-label">
             AVAILABILITY <span className="mandatory-red">*</span>
           </label>
-          <div class="col-sm-9 drop-down">
-            <select ref={availabilityField} className="form-control" required>
+          <div className="col-sm-9 drop-down">
+            <select
+              onChange={(e) => handleChangeEvent(e)}
+              name="availability"
+              className="form-control"
+              value={formData.availability}
+              required
+            >
               {["Select Here", "Part Time", "Full Time"].map((n) =>
                 n === "Select Here" ? (
                   <option value="" key={n}>
@@ -316,25 +391,53 @@ const ThfFellowship = () => {
             <i id="our-work-arrow-id" className="fa fa-caret-down"></i>
           </div>
         </div>
-        <div class="form-group row">
-          <div class="col-sm-12">
-            <button type="submit" class="btn btn-danger">
+        <div style={{ marginTop: "10px" }} className="form-group row">
+          <div className="col-sm-3">
+            <button type="submit" className="btn btn-danger">
               SUBMIT
             </button>
           </div>
+          {Object.keys(addDataResponse).length === 0 &&
+          addDataResponse.constructor === Object ? (
+            ""
+          ) : (
+            <div
+              className="col-sm-9"
+              style={{ display: "flex", alignItems: "center" }}
+            >
+              <p
+                style={{ marginBottom: "30px", padding: "5px" }}
+                className={`${
+                  addDataResponse.success === 0 ? "btn-danger" : "btn-success"
+                }`}
+              >
+                {addDataResponse.message}
+              </p>
+            </div>
+          )}
         </div>
       </form>
       <p className="text text-bold">
-        For any query regarding volunteering opportunities, reach out to us{" "}
+        For any query regarding Volunteering & Internships opportunities, reach
+        out to{" "}
         <a
           style={{ color: "red" }}
-          href="mailto:volunteers@trulyhelpfoundation.org"
+          href="mailto:fellowship@trulyhelpfoundation.org"
         >
-          volunteers@trulyhelpfoundation.org
+          fellowship@trulyhelpfoundation.org
         </a>
       </p>
     </div>
   );
 };
 
-export default ThfFellowship;
+const mapStateToProps = (state) => ({
+  addDataResponse: state.thfFellowshipReducer.addDataResponse,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  joinFormDataAdd: (value) => dispatch(joinFormDataAdd(value)),
+  setInitialState: () => dispatch(setInitialState()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ThfFellowship);

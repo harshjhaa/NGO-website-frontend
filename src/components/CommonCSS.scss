@@ -43,6 +43,9 @@
 .overview-tab,
 .our-approach-tab,
 .thf-fellowship-tab,
+.contact-us-tab,
+.partnership-tab,
+.other-ways-tab,
 .nav-bottom-container {
   .marquee-container {
     -webkit-marquee: auto medium infinite scroll normal;
@@ -93,6 +96,9 @@
     .right-arrow {
       margin: 0px 3px;
     }
+  }
+  .page-content-container {
+    margin-top: 20px;
   }
   .title {
     font-size: 35px;
@@ -194,5 +200,17 @@
   .width-60-prcnt {
     width: 60%;
     margin: auto;
+  }
+  .text-justify {
+    text-align: justify !important;
+  }
+  .margin-top-25 {
+    margin-top: 25px !important;
+  }
+  .margin-bottom-20 {
+    margin-bottom: 20px;
+  }
+  .margin-bottom-30 {
+    margin-bottom: 20px;
   }
 }

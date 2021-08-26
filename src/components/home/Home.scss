@@ -590,7 +590,7 @@
       justify-content: center;
       align-items: center;
       flex-direction: row;
-      .contents{
+      .contents {
         display: flex;
       }
       .testimonial-img {
@@ -629,12 +629,85 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #069;
+      background-color: #C04000;
     }
     img {
       height: 200px;
       width: 200px;
       border-radius: 50%;
+    }
+  }
+
+  .overview-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 98%;
+    margin: 30px auto;
+    text-align: center;
+    font-family: "Work Sans", sans-serif;
+    .span-line {
+      border-bottom: 2px solid #f90;
+      display: inline-block;
+      width: 40px;
+      margin-bottom: 10px;
+      transition: 0.5s;
+    }
+    .box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 0.5px solid orange;
+      border-radius: 30px;
+      padding: 10px;
+      margin: 10px;
+      transition: 0.5s;
+      .box-title {
+        margin-bottom: 10px;
+        font-weight: 600;
+        font-size: 20px;
+        font-family: "Philosopher", sans-serif;
+        color: #2b1c00;
+      }
+    }
+    .box:hover {
+      box-shadow: #dcdcdc 0 2px 2px, #dcdcdc 0 4px 4px, #dcdcdc 0 8px 8px,
+        #dcdcdc 0 16px 16px, #dcdcdc 0 32px 32px;
+      img {
+        transform: scale(1.2);
+      }
+      .span-line {
+        width: 150px;
+      }
+    }
+    .img-container {
+      width: 300px;
+      height: 240px;
+      overflow: hidden;
+    }
+    img {
+      width: 320px;
+      height: 250px;
+      transition: 0.8s;
+    }
+    p {
+      width: 320px;
+      margin-top: 15px;
+      color: #3e2900;
+      line-height: 1.5rem;
+    }
+    .bttn {
+      margin-top: 15px;
+      transition: 0.5s;
+      background-color: #20b7b9;
+      box-shadow: 0 0 1px 1px #46dddf;
+    }
+    .bttn:hover {
+      transform: scale(1.2);
+      box-shadow: 0 0 0 0.3rem #d9fafb;
     }
   }
 }

@@ -15,7 +15,6 @@ function AboutUs() {
     });
     document.getElementById("about-us-tab-id").style.color = "#0096ff";
     document.getElementById("about-us-arrow-id").style.color = "#0096ff";
-
     return () => {
       document.getElementById("about-us-tab-id").style.color = "#000";
       document.getElementById("about-us-arrow-id").style.color = "#000";

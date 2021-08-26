@@ -108,9 +108,9 @@ i {
   align-items: center;
 }
 
-.nav-bottom-list img {
-  display: none;
-}
+// .nav-bottom-list img {
+//   display: none;
+// }
 
 .nav-bottom-list-content {
   display: flex;
@@ -154,7 +154,7 @@ i {
   position: absolute;
   width: 200px;
   border-radius: 0px 10px 10px 10px;
-  box-shadow: 0 0 3px #C5C5C5;
+  box-shadow: 0 0 3px #c5c5c5;
 }
 
 .nav-tab:hover {
@@ -215,10 +215,20 @@ i {
     .social-icons {
       z-index: 9999;
       height: 40px;
-      width: 45px;
+      width: 40px;
+      margin-left: -4px;
       background-repeat: no-repeat;
       background-size: 38px;
       transition: 0.5s;
+    }
+    .social-icon-nav {
+      height: 40px;
+      width: 30px;
+      transition: 0.5s;
+    }
+    .social-icon-nav:hover {
+      width: 35px;
+      transform: rotate(35deg);
     }
     .social-icons:hover {
       background-size: 45px;

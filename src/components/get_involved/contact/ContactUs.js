@@ -1,11 +1,24 @@
 import React, { useState, useEffect, useRef } from "react";
+import { connect } from "react-redux";
 import AOS from "aos";
 import { Link } from "react-router-dom";
 import "../../CommonCSS.scss";
 import "./ContactUs.scss";
+import { writeToUsFormDataAdd, setInitialState } from "./ContactUs.Action";
 
-const ContactUs = () => {
-  const [formData, setFormData] = useState({});
+const ContactUs = ({
+  writeToUsFormDataAdd,
+  setInitialState,
+  contactUsAddDataResponse,
+}) => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    mobile_no: "",
+    query_type: "",
+    query_message: "",
+    preffered_time: "",
+  });
 
   useEffect(() => {
     window.scrollTo({
@@ -18,28 +31,54 @@ const ContactUs = () => {
     return () => {
       document.getElementById("get-involved-tab-id").style.color = "#000";
       document.getElementById("get-involved-arrow-id").style.color = "#000";
+      setFormData({
+        name: "",
+        email: "",
+        mobile_no: "",
+        query_type: "",
+        query_message: "",
+        preffered_time: "",
+      });
     };
   }, []);
 
-  const serveAsField = useRef(null);
-  const areasOfIntrestField = useRef(null);
-  const skillSetField = useRef(null);
-  const availabilityField = useRef(null);
+  useEffect(() => {
+    if (contactUsAddDataResponse.success === 1) {
+      //cleanup
+      setFormData({
+        name: "",
+        email: "",
+        mobile_no: "",
+        query_type: "",
+        query_message: "",
+        preffered_time: "",
+      });
+      setTimeout(() => {
+        setInitialState();
+      }, 5000);
+    } else if (contactUsAddDataResponse.success === 0) {
+      setTimeout(() => {
+        setInitialState();
+      }, 5000);
+    }
+  }, [contactUsAddDataResponse]);
+
+  // useEffect(() => {
+  //   console.log("formData: ", formData);
+  // }, [formData]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (
-      serveAsField.current.value === "Select Here" ||
-      areasOfIntrestField.current.value === "Select Here" ||
-      skillSetField.current.value === "Select Here" ||
-      availabilityField.current.value === "Select Here"
-    ) {
-    } else {
-    }
+    writeToUsFormDataAdd(formData);
+  };
+
+  const handleChangeEvent = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
   return (
-    <div className="thf-fellowship-tab margin-top-4px">
+    <div className="contact-us-tab margin-top-4px">
       <div className="banner">
         <img
           className="banner-img"
@@ -58,93 +97,185 @@ const ContactUs = () => {
       </div>
       <hr style={{ margin: "0px 10px" }} />
       <p style={{ marginTop: "10px" }} className="title">
-        HAVE ANY QUERY: Fill the form
+        WRITE TO US
       </p>
       <form
         data-aos="fade-up"
         data-aos-duration="700"
         onSubmit={(e) => handleSubmit(e)}
       >
-        <div class="form-group row">
-          <label for="inp-name" class="col-sm-3 col-form-label">
+        <div className="form-group row">
+          <label className="col-sm-3 col-form-label">
             NAME <span className="mandatory-red">*</span>
           </label>
-          <div class="col-sm-9">
+          <div className="col-sm-9">
             <input
               type="text"
-              class="form-control"
-              id="inp-name"
+              name="name"
+              className="form-control"
               placeholder="Enter Full Name"
+              value={formData.name}
               required
+              onChange={(e) => handleChangeEvent(e)}
             />
           </div>
         </div>
-        <div class="form-group row">
-          <label for="inp-email" class="col-sm-3 col-form-label">
+        <div className="form-group row">
+          <label className="col-sm-3 col-form-label">
             EMAIL <span className="mandatory-red">*</span>
           </label>
-          <div class="col-sm-9">
+          <div className="col-sm-9">
             <input
               type="email"
-              class="form-control"
-              id="inp-email"
+              name="email"
+              className="form-control"
               placeholder="Enter Email"
+              value={formData.email}
               required
+              onChange={(e) => handleChangeEvent(e)}
             />
           </div>
         </div>
-        <div class="form-group row">
-          <label for="inp-contact-number" class="col-sm-3 col-form-label">
+        <div className="form-group row">
+          <label className="col-sm-3 col-form-label">
             MOBILE <span className="mandatory-red">*</span>
           </label>
-          <div class="col-sm-9">
+          <div className="col-sm-9">
             <input
               type="number"
-              class="form-control"
-              id="inp-contact-number"
+              id="inp_mobile_no-wtsf"
+              name="mobile_no"
+              className="form-control"
               placeholder="Enter Mobile Number"
+              value={formData.mobile_no}
               required
+              onChange={(e) => handleChangeEvent(e)}
             />
           </div>
         </div>
-        <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-3 col-form-label">
+        <div className="form-group row">
+          <label className="col-sm-3 col-form-label">
             QUERY TYPE <span className="mandatory-red">*</span>
           </label>
-          <div class="col-sm-9">
-            <input
-              type="text"
-              class="form-control"
-              id="inp-query-type"
-              placeholder="Enter Query Type"
+          <div className="col-sm-9 drop-down">
+            <select
+              onChange={(e) => handleChangeEvent(e)}
+              name="query_type"
+              className="form-control"
+              value={formData.query_type}
               required
-            />
+            >
+              {[
+                "Select Here",
+                "Donation Related",
+                "Volunteering & Internships",
+                "Media Queries",
+                "Others",
+              ].map((n) =>
+                n === "Select Here" ? (
+                  <option value="" key={n}>
+                    {n}
+                  </option>
+                ) : (
+                  <option value={n} key={n}>
+                    {n}
+                  </option>
+                )
+              )}
+            </select>
+            <i id="our-work-arrow-id" className="fa fa-caret-down"></i>
           </div>
         </div>
-        <div class="form-group row">
-          <label for="inp-preffered-time" class="col-sm-3 col-form-label">
+        <div className="form-group row">
+          <label className="col-sm-3 col-form-label">
+            Query Message <span className="mandatory-red">*</span>
+          </label>
+          <textarea
+            className="form-control col-sm-9"
+            id="query-message-id"
+            name="query_message"
+            placeholder="Enter Query Message"
+            value={formData.query_message}
+            onChange={(e) => handleChangeEvent(e)}
+            required
+          ></textarea>
+        </div>
+        <div className="form-group row">
+          <label className="col-sm-3 col-form-label">
             PREFERRED TIME <span className="mandatory-red">*</span>
             <br />
             <span className="font-12">To receive call</span>
           </label>
-          <div class="col-sm-9">
-            <input
-              type="text"
-              class="form-control"
-              id="inp-preffered-time"
-              placeholder="Enter Time: 12am to 2pm"
+          <div className="col-sm-9 drop-down">
+            <select
+              onChange={(e) => handleChangeEvent(e)}
+              name="preffered_time"
+              className="form-control"
+              value={formData.preffered_time}
               required
-            />
+            >
+              {[
+                "Select Here",
+                "10:00 am to 12:00 pm",
+                "12:00 pm to 02:00 pm",
+                "02:00 pm to 04:00 pm",
+                "04:00 pm to 06:00 pm",
+              ].map((n) =>
+                n === "Select Here" ? (
+                  <option value="" key={n}>
+                    {n}
+                  </option>
+                ) : (
+                  <option value={n} key={n}>
+                    {n}
+                  </option>
+                )
+              )}
+            </select>
+            <i id="our-work-arrow-id" className="fa fa-caret-down"></i>
           </div>
         </div>
-        <div class="form-group row">
-          <div class="col-sm-12">
-            <button type="submit" class="btn btn-danger">
+        <div style={{ marginTop: "10px" }} className="form-group row">
+          <div className="col-sm-3">
+            <button type="submit" className="btn btn-danger">
               SUBMIT
             </button>
           </div>
+          {Object.keys(contactUsAddDataResponse).length === 0 &&
+          contactUsAddDataResponse.constructor === Object ? (
+            ""
+          ) : (
+            <div
+              className="col-sm-9"
+              style={{ display: "flex", alignItems: "center" }}
+            >
+              <p
+                style={{ marginBottom: "30px", padding: "5px" }}
+                className={`${
+                  contactUsAddDataResponse.success === 0
+                    ? "btn-danger"
+                    : "btn-success"
+                }`}
+              >
+                {contactUsAddDataResponse.message}
+              </p>
+            </div>
+          )}
         </div>
       </form>
+      <div className="contact-us-agreement">
+        <p className="agreement-text">
+          By sharing your details, you agree to receive stories and updates from
+          Truly Help foundation via mobile, Whatsap, email and post. If you’d
+          like to change this, please send us an email{" "}
+          <a
+            style={{ color: "red" }}
+            href="mailto:writetous@trulyhelpfoundation.org"
+          >
+            writetous@trulyhelpfoundation.org
+          </a>
+        </p>
+      </div>
       <div className="hr-line">
         <hr />
       </div>
@@ -153,11 +284,11 @@ const ContactUs = () => {
           For More Information on Truly Help Foundation, India, Contact -
         </p>
         <div className="address-container text text-bold width-60-prcnt">
-          Truly Help Foundation Head Office,
+          TRULY HELP FOUNDATION HEAD OFFICE,
           <br />
-          A-229/1, GROUND FLOOR, SHANTI COLONY MANDI PAHARI
+          A-229/1, GROUND FLOOR, SHANTI COLONY,
           <br />
-          DELHI South West Delhi DL 110047 INDIA
+          MANDI PAHARI DELHI, SOUTH WEST DELHI, DL-110047, INDIA
           <br />{" "}
           <a
             style={{ color: "red" }}
@@ -182,8 +313,9 @@ const ContactUs = () => {
         <Link style={{ color: "red" }} to="thf-fellowship">
           Click here
         </Link>{" "}
-        to view job opportunities with Truly Help Foundation. You may also write
-        into{" "}
+        to view job opportunities with Truly Help Foundation.
+        <br />
+        You may also write into{" "}
         <a
           style={{ color: "red" }}
           href="mailto:careers@trulyhelpfoundation.org"
@@ -199,4 +331,13 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+const mapStateToProps = (state) => ({
+  contactUsAddDataResponse: state.contactUsReducer.contactUsAddDataResponse,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  writeToUsFormDataAdd: (value) => dispatch(writeToUsFormDataAdd(value)),
+  setInitialState: () => dispatch(setInitialState()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ContactUs);

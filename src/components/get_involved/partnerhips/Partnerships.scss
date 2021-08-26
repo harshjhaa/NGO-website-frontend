@@ -1,0 +1,95 @@
+.partnership-tab {
+  .why-partner-with-us-contents {
+    text-align: center;
+    font-family: "Work Sans", sans-serif;
+    .box-container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      // .top-box-container,
+      // .bottom-box-container {
+      //   display: flex;
+      //   flex-direction: row;
+      // }
+    }
+    h4 {
+      margin: 13px 0px 0px 0px;
+      font-size: 16.5px;
+      font-weight: bold;
+    }
+    .box {
+      width: 260px;
+      height: 170px;
+      margin: 20px 15px;
+      overflow: hidden;
+      border-radius: 10px;
+      .content {
+        transition: 0.5s;
+      }
+      img {
+        height: 120px;
+        width: 200px;
+        padding-top: 15px;
+      }
+      p {
+        margin: 10px 0px;
+        color: #3e2900;
+        font-size: 13px;
+      }
+    }
+    .box:hover {
+      box-shadow: #dcdcdc 0 2px 2px, #dcdcdc 0 4px 4px, #dcdcdc 0 8px 8px,
+        #dcdcdc 0 16px 16px, #dcdcdc 0 32px 32px;
+    }
+    .bttn-red {
+      background-color: #e5276a;
+    }
+    .bttn-green {
+      background-color: #20b7b9;
+    }
+    .bttn-voilet {
+      background-color: #a943a5;
+    }
+    .bttn-orange {
+      background-color: #f6910e;
+    }
+    .bttn-blue {
+      background-color: #0096ff;
+    }
+    .box-border-red {
+      border-top: 0.1rem solid #e5276a;
+      border-right: 0.1rem solid #e5276a;
+      border-left: 0.1rem solid #e5276a;
+      border-bottom: 0.4rem solid #e5276a;
+    }
+    .box-border-green {
+      border-top: 0.1rem solid #20b7b9;
+      border-right: 0.1rem solid #20b7b9;
+      border-left: 0.1rem solid #20b7b9;
+      border-bottom: 0.4rem solid #20b7b9;
+    }
+    .box-border-voilet {
+      border-top: 0.1rem solid #a943a5;
+      border-right: 0.1rem solid #a943a5;
+      border-left: 0.1rem solid #a943a5;
+      border-bottom: 0.4rem solid #a943a5;
+    }
+    .box-border-orange {
+      border-top: 0.1rem solid #f6910e;
+      border-right: 0.1rem solid #f6910e;
+      border-left: 0.1rem solid #f6910e;
+      border-bottom: 0.4rem solid #f6910e;
+    }
+    .box-border-blue {
+      border-top: 0.1rem solid #0096ff;
+      border-right: 0.1rem solid #0096ff;
+      border-left: 0.1rem solid #0096ff;
+      border-bottom: 0.4rem solid #0096ff;
+    }
+    .bttn:hover {
+      transform: scale(1.2);
+    }
+  }
+}

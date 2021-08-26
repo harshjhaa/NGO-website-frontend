@@ -1,0 +1,48 @@
+.contact-us-tab {
+  form {
+    width: 60%;
+    margin: 20px auto;
+    background-color: rgb(250, 248, 243);
+    padding: 10px;
+    label,
+    .form-control {
+      border-radius: 30px;
+      background-color: #fff;
+    }
+    font-weight: 600;
+    #query-message-id {
+      width: 72%;
+      margin: auto;
+      border-radius: 30px;
+    }
+  }
+  .form-group {
+    margin: 20px 0px;
+  }
+  .drop-down {
+    position: relative;
+  }
+  .fa {
+    position: absolute;
+    color: #000;
+    margin-left: 10px;
+    transition: 0.3s;
+    right: 25px;
+    bottom: 9px;
+  }
+  .mandatory-red {
+    color: red;
+  }
+  .contact-us-agreement {
+    .agreement-text {
+      width: 60%;
+      margin: auto;
+      text-align: justify;
+      color: #3e2900;
+      font-family: "Work Sans", sans-serif;
+    }
+  }
+  .width-60-prcnt {
+    width: 70%;
+  }
+}

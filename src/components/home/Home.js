@@ -5,9 +5,7 @@ import { Link } from "react-router-dom";
 import Slider from "../image_slider/Slider";
 import BoxCube from "./BoxCube";
 import DonateBanner from "../common_components/donate_banner/DonateBanner";
-import SubscribeNewsletter from "../common_components/subscribe_newsletter/SubscribeNewsletter";
 import Acknowledgement from "../common_components/acknowlwdgement/Acknowledgement";
-import WeHelpEach from "../common_components/we_help_each/WeHelpEach";
 import LatestUpdates from "../common_components/latest_updates/LatestUpdates";
 
 import hungerDonateImg from "../assets/images/donate-us-container/donate-hunger.jpg";
@@ -32,13 +30,6 @@ const Home = () => {
     covidBannerContent: "covidBannerContent",
     testimonialContent: "testimonialContent",
   };
-
-  const breakPoints = [
-    { width: 1, itemsToShow: 1 },
-    { width: 550, itemsToShow: 2 },
-    { width: 769, itemsToShow: 3 },
-    { width: 1200, itemsToShow: 4 },
-  ];
 
   const donateImgTitle = "Help us Fight Hunger in Rural Areas";
   const donateImgDescription =
@@ -65,25 +56,6 @@ const Home = () => {
 
   return (
     <div className="home-tab">
-      {/* <marquee
-        className="home-marquee margin-top-80"
-        direction="left"
-        scrollamount="5"
-        behavior="scroll"
-      >
-        <p>
-          Truly Help Foundation is a registered Non-profit organization under
-          section 8 company in india and a Members of THF confederation present
-          in PAN India which works with the most marginalised people to
-          alleviate poverty and reduce social injustice through comprehensive
-          programmes in healthcare, education, livelihoods, sports and
-          humanitarian assistance and rehabilitation. | We are responding to the
-          second wave of COVID-19 by setting up temporary COVID Care Facilities
-          and supporting marginalized communities by providing dry ration and
-          hygiene kits . We are also awaring and preparing communities for covid
-          third wave.
-        </p>
-      </marquee> */}
       <div className="home-img-banner">
         <Slider contentName={sliderContent["topBannerContent"]} />
       </div>
@@ -97,9 +69,6 @@ const Home = () => {
       >
         <p className="title">Dreaming of a Brighter Future</p>
         <div className="home-feature-content-1-container">
-          {/* <div className="home-feature-content-1-vid">
-            <video src="/videos/feature_content_1_vid.mp4" width="400" height="300" autoplay="true" muted="true" loop="true"/>
-          </div> */}
           <div className="box-animation">
             <BoxCube />
           </div>
@@ -116,66 +85,6 @@ const Home = () => {
         <hr />
       </div>
       <span className="span-line"></span>
-      {/* <div
-        className="home-feature-content-2"
-        data-aos="zoom-out-up"
-        data-aos-duration="1000"
-      >
-        <h1>Causes We Are Serving</h1>
-        <div className="home-causes-we-serving-container" id="style-1">
-          <Carousel
-            breakPoints={breakPoints}
-            pagination={false}
-            infiniteLoop={true}
-          >
-            <div className="img-txt">
-              <img src="/images/img_1.jpg" alt="home_img-1" />
-              <h4>EDUCATION</h4>
-              <button className="bttn">
-                <Link className="bttn" to="/education">
-                  EXPLORE
-                </Link>
-              </button>
-            </div>
-            <div className="img-txt">
-              <img src="/images/img_2.jpg" alt="home_img-2" />
-              <h4>HEALTHCARE</h4>
-              <button className="bttn">
-                <Link className="bttn" to="/healthcare">
-                  EXPLORE
-                </Link>
-              </button>
-            </div>
-            <div className="img-txt">
-              <img src="/images/img_3.jpg" alt="home_img-3" />
-              <h4>LIVELIHOODS</h4>
-              <button className="bttn">
-                <Link className="bttn" to="/livelihoods">
-                  EXPLORE
-                </Link>
-              </button>
-            </div>
-            <div className="img-txt">
-              <img src="/images/img_1.jpg" alt="home_img-1" />
-              <h4>SPORTS</h4>
-              <button className="bttn">
-                <Link className="bttn" to="/sports">
-                  EXPLORE
-                </Link>
-              </button>
-            </div>
-            <div className="img-txt">
-              <img src="/images/img_2.jpg" alt="home_img-2" />
-              <h4>HUMANITARIAN</h4>
-              <button className="bttn">
-                <Link className="bttn" to="/humanitarian">
-                  EXPLORE
-                </Link>
-              </button>
-            </div>
-          </Carousel>
-        </div>
-      </div> */}
       <div
         className="causes-we-are-serving-container"
         data-aos="fade-up"
@@ -314,78 +223,8 @@ const Home = () => {
               </div>
             </SwiperSlide>
           </Swiper>
-          {/* <Slider contentName={sliderContent["causesServingContent"]} /> */}
-          {/* <div className="box box-up box-border-red">
-            <div className="content">
-              <img src="/gif/edu-2.gif" alt="home_img-1" />
-              <h4>EDUCATION</h4>
-              <p>
-                Education is one of the main piller of the society, without it
-                India's future is lost!
-              </p>
-              <button className="bttn bttn-red">
-                <Link to="/education">EXPLORE</Link>
-              </button>
-            </div>
-          </div>
-          <div className="box box-down box-border-green">
-            <div className="content">
-              <img src="/gif/health-5.gif" alt="home_img-2" />
-              <h4>HEALTHCARE</h4>
-              <p>
-                Good health makes people strong, increaes thier efficient and
-                inturn benefits society!
-              </p>
-              <button className="bttn bttn-green">
-                <Link to="/healthcare">EXPLORE</Link>
-              </button>
-            </div>
-          </div>
-          <div className="box box-up box-border-voilet">
-            <div className="content">
-              <img src="/gif/liveli-4.gif" alt="home_img-2" />
-              <h4>LIVELIHOODS</h4>
-              <p>
-                Imporvement in the livelihood lead to the upgradation of the
-                standard of living!
-              </p>
-              <button className="bttn bttn-voilet">
-                <Link to="/livelihoods">EXPLORE</Link>
-              </button>
-            </div>
-          </div>
-          <div className="box box-down box-border-orange">
-            <div className="content">
-              <img src="/gif/sports-2.gif" alt="home_img-2" />
-              <h4>SPORTS</h4>
-              <p>
-                Sports helps to evolve the overall mentality of the person by
-                making them active, alert and friendly!
-              </p>
-              <button className="bttn bttn-orange">
-                <Link to="/sports">EXPLORE</Link>
-              </button>
-            </div>
-          </div>
-          <div className="box box-up box-border-blue">
-            <div className="content">
-              <img src="/gif/human-2.gif" alt="home_img-2" />
-              <h4>HUMANITARIAN</h4>
-              <p>
-                Human wlfare is one of the important factor in keeping the
-                society balanced, evolving from time to time!
-              </p>
-              <button className="bttn bttn-blue">
-                <Link to="/humanitarian">EXPLORE</Link>
-              </button>
-            </div>
-          </div> */}
         </div>
       </div>
-      <div className="hr-line">
-        <hr />
-      </div>
-      <WeHelpEach />
       <div className="hr-line">
         <hr />
       </div>
@@ -508,7 +347,7 @@ const Home = () => {
       <div className="hr-line">
         <hr />
       </div>
-      <div
+      {/* <div
         className="home-currently-running-programs"
         data-aos="fade-up"
         data-aos-duration="1000"
@@ -562,7 +401,133 @@ const Home = () => {
             </button>
           </div>
         </div>
+      </div> */}
+      <div className="hr-line">
+        <hr />
       </div>
+      <section>
+        <h1 className="title">CURRENTLY RUNNING PROGRAMES</h1>
+        <div
+          className="overview-container"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <div className="box">
+            <h2 className="box-title">PROVIDE FOOD TO HUNGRY</h2>
+            <span className="span-line"></span>
+            <div className="img-container">
+              <img
+                src="/images/currently-running-programs/food-donate-1.jpg"
+                alt="ing"
+              />
+            </div>
+            <div className="contents">
+              <p>
+                Help those who are in need of food. We distribute food in slum
+                areas and to homeless peoples.
+              </p>
+            </div>
+            <button className="bttn">
+              <Link to="/donate">DONATE</Link>
+            </button>
+          </div>
+          <div className="box">
+            <h2 className="box-title">DONATE HYGIENE KIT</h2>
+            <span className="span-line"></span>
+            <div className="img-container">
+              <img
+                src="/images/currently-running-programs/hygiene-kit-1.jpg"
+                alt="ing"
+              />
+            </div>
+            <div className="contents">
+              <p>
+                Hygiene is one of the most basic need of everyone. Support us by
+                donating hygiene kit.
+              </p>
+            </div>
+            <button className="bttn">
+              <Link to="/donate">DONATE</Link>
+            </button>
+          </div>
+          <div className="box">
+            <h2 className="box-title">DONATE EDUCATIONAL KIT</h2>
+            <span className="span-line"></span>
+            <div className="img-container">
+              <img
+                src="/images/currently-running-programs/education-kit-donate-1.jpg"
+                alt="ing"
+              />
+            </div>
+            <div className="contents">
+              <p>
+                Most of the children in rural areas still lack the basic kit for
+                education. Support us by donating education kit.
+              </p>
+            </div>
+            <button className="bttn bttn-red">
+              <Link to="/donate">DONATE</Link>
+            </button>
+          </div>
+          <div className="box">
+            <h2 className="box-title">DONATE CLOTHS</h2>
+            <span className="span-line"></span>
+            <div className="img-container">
+              <img
+                src="/images/currently-running-programs/donate-cloths-1.jpg"
+                alt="ing"
+              />
+            </div>
+            <div className="contents">
+              <p>
+                Many homeless persons lacks proper clothing, we help them by
+                donating cloths.
+              </p>
+            </div>
+            <button className="bttn">
+              <Link to="/donate">DONATE</Link>
+            </button>
+          </div>
+          <div className="box">
+            <h2 className="box-title">EVERYONE ENJOY FESTIVAL</h2>
+            <span className="span-line"></span>
+            <div className="img-container">
+              <img
+                src="/images/currently-running-programs/enjoy-festival-1.jpg"
+                alt="ing"
+              />
+            </div>
+            <div className="contents">
+              <p>
+                Evryone has wishes to enjoy their favorite festival. We give
+                them the chance to do so.
+              </p>
+            </div>
+            <button className="bttn">
+              <Link to="/donate">DONATE</Link>
+            </button>
+          </div>
+          <div className="box">
+            <h2 className="box-title">DONATE SPORTS KIT FOR CHILDREN</h2>
+            <span className="span-line"></span>
+            <div className="img-container">
+              <img
+                src="/images/currently-running-programs/sports-kit-1.jpg"
+                alt="ing"
+              />
+            </div>
+            <div className="contents">
+              <p>
+                Most of the rural kids who are good in sports are not able to
+                perform well because of the lack of proper sports kit.
+              </p>
+            </div>
+            <button className="bttn">
+              <Link to="/donate">DONATE</Link>
+            </button>
+          </div>
+        </div>
+      </section>
       <div className="hr-line">
         <hr />
       </div>
@@ -582,14 +547,14 @@ const Home = () => {
       <div className="hr-line">
         <hr />
       </div>
-      <div
+      {/* <div
         className="home-testimonial-container"
         data-aos="fade-up"
         data-aos-duration="1000"
       >
         <h1 className="title">TESTIMONIALS</h1>
         <Slider contentName={sliderContent["testimonialContent"]} />
-      </div>
+      </div> */}
       <div className="hr-line">
         <hr />
       </div>
@@ -597,15 +562,11 @@ const Home = () => {
       <div className="hr-line">
         <hr />
       </div>
-      <SubscribeNewsletter />
-      <div className="hr-line">
-        <hr />
-      </div>
-      <DonateBanner
+      {/* <DonateBanner
         contentImage={hungerDonateImg}
         title={donateImgTitle}
         description={donateImgDescription}
-      />
+      /> */}
       <Acknowledgement />
     </div>
   );

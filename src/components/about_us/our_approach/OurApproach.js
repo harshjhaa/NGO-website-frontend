@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import DonateBanner from "../../common_components/donate_banner/DonateBanner";
-import SubscribeNewsletter from "../../common_components/subscribe_newsletter/SubscribeNewsletter";
 import WeHelpEach from "../../common_components/we_help_each/WeHelpEach";
 import hungerDonateImg from "../../assets/images/donate-us-container/donate-hunger.jpg";
 
@@ -55,16 +54,14 @@ function OurApproach() {
       <div
         data-aos="fade-up"
         // data-aos-duration="1000"
-        className="feature-content-1 only-text-container"
+        className="only-text-container"
       >
         <h1 className="title">OUR NICHE</h1>
         <div className="contents">
-          <div className="text-container">
-            <p className="text">
-              Truly Help Foundation's approach is structured arround bringing
-              change at all the levels.
-            </p>
-          </div>
+          <p className="text">
+            Truly Help Foundation's approach is structured arround bringing
+            change at all the levels.
+          </p>
         </div>
         <div className="niche-contents">
           <div className="circle circle-1">
@@ -81,10 +78,6 @@ function OurApproach() {
           </div>
         </div>
       </div>
-      <div className="hr-line">
-        <hr />
-      </div>
-      <SubscribeNewsletter />
       <div className="hr-line">
         <hr />
       </div>

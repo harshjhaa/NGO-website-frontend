@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 // import Slider from '../image_slider/Slider'
 import { Link } from "react-router-dom";
 import "font-awesome/css/font-awesome.min.css";
@@ -34,43 +34,13 @@ const NavbarBottom = () => {
       {/* <div className={`nav-bottom ${navNotshow && "nav-not-show"}`}> */}
       <div className="nav-bottom">
         <Link to="/">
-          {/* <img className="nav-logo" alt="logo" /> */}
           <img className="nav-logo" src="/images/logo_header2.svg" alt="Logo" />
         </Link>
         <ul className="nav-bottom-list">
           <div className="nav-bottom-list-content">
             <div className="nav-tab">
               <li>
-                <Link id="our-work-tab-id">OUR WORK</Link>
-                <i id="our-work-arrow-id" className="fa fa-caret-down"></i>
-              </li>
-              <div className="nav-dropdown-menu">
-                <li>
-                  <Link to="/our-work">OUR WORK</Link>
-                </li>
-                {/* <li>
-                  <Link to="/overview">OVERVIEW</Link>
-                </li> */}
-                <li>
-                  <Link to="/education">EDUCATION</Link>
-                </li>
-                <li>
-                  <Link to="/healthcare">HEALTHCARE</Link>
-                </li>
-                <li>
-                  <Link to="/livelihoods">LIVELIHOODS</Link>
-                </li>
-                <li>
-                  <Link to="/sports">SPORTS</Link>
-                </li>
-                <li>
-                  <Link to="/humanitarian">HUMANITARIAN</Link>
-                </li>
-              </div>
-            </div>
-            <div className="nav-tab">
-              <li>
-                <Link id="about-us-tab-id">ABOUT US</Link>
+                <Link id="about-us-tab-id">WHO WE ARE</Link>
                 <i id="about-us-arrow-id" className="fa fa-caret-down"></i>
               </li>
               <div className="nav-dropdown-menu">
@@ -107,28 +77,43 @@ const NavbarBottom = () => {
             </div>
             <div className="nav-tab">
               <li>
-                <Link id="thf-fellowship-tab-id" to="/thf-fellowship">
-                  THF FELLOWSHIP
-                </Link>
-                {/* <i
-                  id="thf-fellowship-arrow-id"
-                  className="fa fa-caret-down"
-                ></i> */}
+                <Link id="our-work-tab-id">WHAT WE DO</Link>
+                <i id="our-work-arrow-id" className="fa fa-caret-down"></i>
               </li>
-              {/* <div className="nav-dropdown-menu">
+              <div className="nav-dropdown-menu">
                 <li>
-                  <Link to="/volunteering">VOLUNTEERING</Link>
+                  <Link to="/our-work">OUR WORK</Link>
+                </li>
+                {/* <li>
+                  <Link to="/overview">OVERVIEW</Link>
+                </li> */}
+                <li>
+                  <Link to="/education">EDUCATION</Link>
                 </li>
                 <li>
-                  <Link to="/internships">INTERNSHIPS</Link>
+                  <Link to="/healthcare">HEALTHCARE</Link>
                 </li>
-              </div> */}
+                <li>
+                  <Link to="/livelihoods">LIVELIHOODS</Link>
+                </li>
+                <li>
+                  <Link to="/sports">SPORTS</Link>
+                </li>
+                <li>
+                  <Link to="/humanitarian">HUMANITARIAN</Link>
+                </li>
+              </div>
             </div>
             <div className="nav-tab">
               <li>
-                <Link id="emergency-tab-id">
-                  EMERGENCY
+                <Link id="thf-fellowship-tab-id" to="/thf-fellowship">
+                  THF FELLOWSHIP
                 </Link>
+              </li>
+            </div>
+            <div className="nav-tab">
+              <li>
+                <Link id="emergency-tab-id">EMERGENCY</Link>
                 <i id="emergency-arrow-id" className="fa fa-caret-down"></i>
               </li>
               <div className="nav-dropdown-menu">
@@ -142,23 +127,15 @@ const NavbarBottom = () => {
             </div>
             <div className="nav-tab">
               <li>
-                <Link id="get-involved-tab-id">
-                  GET INVOLVED
-                </Link>
+                <Link id="get-involved-tab-id">GET INVOLVED</Link>
                 <i id="get-involved-arrow-id" className="fa fa-caret-down"></i>
               </li>
               <div className="nav-dropdown-menu">
                 <li>
-                  <Link to="/donate">DONATE</Link>
+                  <Link to="/donate">SUPPORT US</Link>
                 </li>
-                {/* <li>
-                  <Link to="/our-donor">OUR DONOR</Link>
-                </li> */}
-                {/* <li>
-                  <Link to="/legacy">LEGACY</Link>
-                </li> */}
                 <li>
-                  <Link to="/partnerships">PARTNERSHIPS</Link>
+                  <Link to="/partnership">PARTNERSHIP</Link>
                 </li>
                 <li>
                   <Link to="/other-ways-to-help">OTHER WAYS TO HELP</Link>
@@ -183,37 +160,59 @@ const NavbarBottom = () => {
             <div className="nav-tab">
               <li>
                 <Link to="/donate" id="nav-donate">
-                  Donate
+                  Donate Now
                 </Link>
               </li>
             </div>
             <div className="nav-tab-social">
               <div className="social-media-icons">
                 <a
-                  className="social-icons icon-twitter"
+                  // className="social-icons icon-twitter"
                   href="https://twitter.com/trulyhelp"
                   target="_blank"
-                ></a>
+                  rel="noreferrer"
+                >
+                  <img
+                    className="social-icon-nav"
+                    src="/svg/twitter-cir-1.svg"
+                  />
+                </a>
                 <a
                   className="social-icons icon-facebook"
                   href="https://www.facebook.com/trulyhelpfoundation"
                   target="_blank"
+                  rel="noreferrer"
                 ></a>
                 <a
-                  className="social-icons icon-linkedin"
+                  // className="social-icons icon-linkedin"
                   href="https://www.linkedin.com/company/truly-help-foundation5aba50213"
                   target="_blank"
-                ></a>
+                  rel="noreferrer"
+                >
+                  <img
+                    className="social-icon-nav"
+                    src="/svg/linkedin-cir-1.svg"
+                  />
+                </a>
                 <a
-                  className="social-icons icon-instagram"
+                  // className="social-icons icon-youtube"
                   href="https://www.instagram.com/trulyhelpfoundation"
                   target="_blank"
-                ></a>
+                  rel="noreferrer"
+                >
+                  <img className="social-icon-nav" src="/svg/insta-cir-1.svg" />
+                </a>
                 <a
-                  className="social-icons icon-youtube"
+                  // className="social-icons icon-youtube"
                   href="https://www.youtube.com/channel/UCRIQBzF05ms8IF13-2ER8VA/featured"
                   target="_blank"
-                ></a>
+                  rel="noreferrer"
+                >
+                  <img
+                    className="social-icon-nav"
+                    src="/svg/youtube-cir-1.svg"
+                  />
+                </a>
               </div>
             </div>
           </div>

@@ -540,6 +540,7 @@
   }
 
   .our-partners-and-supporters-container {
+    padding: 40px 0px;
     width: 85%;
     margin: auto;
     display: flex;
@@ -556,6 +557,11 @@
       display: flex;
       justify-content: space-evenly;
       text-align: center;
+      height: 170px;
+      .swiper-button-next:after,
+      .swiper-button-prev:after {
+        font-size: 30px !important;
+      }
     }
     img {
       margin: 10px 20px;
@@ -628,7 +634,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #C04000;
+      background-color: #c04000;
     }
     img {
       height: 200px;

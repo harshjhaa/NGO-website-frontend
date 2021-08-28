@@ -8,11 +8,6 @@
       flex-direction: row;
       align-items: center;
       justify-content: space-evenly;
-      // .top-box-container,
-      // .bottom-box-container {
-      //   display: flex;
-      //   flex-direction: row;
-      // }
     }
     h4 {
       margin: 13px 0px 0px 0px;
@@ -90,6 +85,45 @@
     }
     .bttn:hover {
       transform: scale(1.2);
+    }
+  }
+  .our-partners-and-supporters-container {
+    padding: 40px 0px;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    .title {
+      font-size: 30px;
+      font-family: "Caveat", cursive;
+      color: #c88200;
+    }
+    .content {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-evenly;
+      text-align: center;
+      height: 170px;
+      .swiper-button-next:after,
+      .swiper-button-prev:after {
+        font-size: 30px !important;
+      }
+    }
+    img {
+      margin: 10px 20px;
+      height: 115px;
+      width: 115px;
+      border-radius: 50%;
+      border: 1px solid #0096ff;
+      transition: 0.2s;
+    }
+    img:hover {
+      transform: scale(1.1);
+      box-shadow: #dcdcdc 0 2px 2px, #dcdcdc 0 4px 4px, #dcdcdc 0 8px 8px,
+        #dcdcdc 0 16px 16px, #dcdcdc 0 32px 32px;
+      // box-shadow: 0 0 8px 0 rgb(0 0 0 / 8%), 0 0 15px 0 rgb(0 0 0 / 2%), 0 0 20px 4px rgb(0 0 0 / 6%);
     }
   }
 }

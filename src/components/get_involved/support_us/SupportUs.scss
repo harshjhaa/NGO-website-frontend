@@ -82,39 +82,4 @@
       }
     }
   }
-  .bank-box-container {
-    display: flex;
-    flex-direction: column;
-    .title {
-      margin-bottom: 30px;
-    }
-    .contents {
-      margin-top: 20px;
-      width: 30%;
-      margin: auto;
-      padding: 15px;
-      border-top: 2px solid #e5276a;
-      border-bottom: 2px solid #e5276a;
-      border-radius: 50px;
-      .box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        img {
-          height: 35px;
-          width: 130px;
-        }
-        .text-info {
-          margin-top: 15px;
-          font-family: "Work Sans", sans-serif;
-          color: black !important;
-        }
-      }
-    }
-    .text-bold {
-      font-family: "Philosopher", sans-serif;
-      font-size: 30px;
-      margin-top: 40px;
-    }
-  }
 }

@@ -55,7 +55,11 @@ import SupportUs from "./components/get_involved/support_us/SupportUs";
 import Footer from "./components/footer/Footer";
 import Blog from "./components/footer/blog/Blog";
 import Resource from "./components/footer/resource/Resource";
-import ProtectionPolicy from "./components/footer/protection_policy/ProtectionPolicy";
+import ChildProtectionPolicy from "./components/footer/child_protection_policy/ChildProtectionPolicy";
+import Disclaimer from "./components/footer/disclaimer/Disclaimer";
+import RefundPolicy from "./components/footer/refund-policy/RefundPolicy";
+import PrivacyPolicy from "./components/footer/privacy-policy/PrivacyPolicy";
+import TermsAndConditions from "./components/footer/terms_and_conditions/TermsAndConditions"
 
 function App() {
   return (
@@ -96,7 +100,7 @@ function App() {
             <Route path="/donate" component={Donate} />
             <Route path="/our-donor" component={OurDonor} />
             <Route path="/legacy" component={Legacy} />
-            <Route path="/partnership" component={Partnerships} />
+            <Route path="/partnerships" component={Partnerships} />
             <Route path="/other-ways-to-help" component={OtherWays} />
             <Route path="/our-programmes" component={OurProgrammes} />
             <Route path="/our-campaigns" component={OurCampaigns} />
@@ -106,8 +110,18 @@ function App() {
             <Route path="/support-us" component={SupportUs} />
             {/* footer-links */}
             <Route path="/blog" component={Blog} />
-            <Route path="/protection-policy" component={ProtectionPolicy} />
+            <Route
+              path="/child-protection-policy"
+              component={ChildProtectionPolicy}
+            />
+            <Route path="/disclaimer" component={Disclaimer} />
             <Route path="/resource" component={Resource} />
+            <Route path="/refund-policy" component={RefundPolicy} />
+            <Route path="/privacy-policy" component={PrivacyPolicy} />
+            <Route
+              path="/terms-and-conditions"
+              component={TermsAndConditions}
+            />
           </Switch>
           <div className="whatsapp-logo-container">
             <a

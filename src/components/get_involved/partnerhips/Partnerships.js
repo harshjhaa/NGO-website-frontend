@@ -2,8 +2,19 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/swiper.min.css";
+import "swiper/components/pagination/pagination.min.css";
+import "swiper/components/navigation/navigation.min.css";
+
 import "../../CommonCSS.scss";
 import "./Partnerships.scss";
+
+// import Swiper core and required modules
+import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper/core";
+// install Swiper modules
+SwiperCore.use([Autoplay, Pagination, Navigation]);
 
 function Partnerships() {
   useEffect(() => {
@@ -129,6 +140,96 @@ function Partnerships() {
             </div>*/}
           </div>
         </section>
+        <div className="hr-line">
+          <hr />
+        </div>
+        <div
+          className="our-partners-and-supporters-container"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <h1 className="title">OUR PARTNERS AND SUPPORTERS</h1>
+          <div className="content">
+            <Swiper
+              slidesPerView={3}
+              spaceBetween={30}
+              slidesPerGroup={3}
+              breakpoints={{
+                960: {
+                  slidesPerView: 3,
+                  spaceBetween: 8,
+                  slidesPerGroup: 3,
+                },
+                720: {
+                  slidesPerView: 2,
+                  spaceBetween: 10,
+                  slidesPerGroup: 2,
+                },
+                540: {
+                  slidesPerView: 1,
+                  spaceBetween: 2,
+                  slidesPerGroup: 1,
+                },
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 2,
+                  slidesPerGroup: 1,
+                },
+              }}
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+              }}
+              loop={true}
+              pagination={{
+                clickable: true,
+              }}
+              navigation={true}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <img src="/images/home/partners/axis.png" alt="partner_img" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src="/images/home/partners/fit-india.png"
+                  alt="partner_img"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="/images/home/partners/gyans.jpg" alt="partner_img" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="/images/home/partners/paytm.jpg" alt="partner_img" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="/images/home/partners/pay-u.png" alt="partner_img" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="/images/home/partners/rbl.png" alt="partner_img" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="/images/home/partners/sai.jpg" alt="partner_img" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src="/images/home/partners/trination.jpg"
+                  alt="partner_img"
+                />
+              </SwiperSlide>
+            </Swiper>
+            {/* <img src="/images/home/partners/axis.png" alt="partner_img" />
+          <img src="/images/home/partners/fit-india.png" alt="partner_img" />
+          <img src="/images/home/partners/gyans.jpg" alt="partner_img" />
+          <img src="/images/home/partners/paytm.jpg" alt="partner_img" />
+        </div>
+        <div className="content">
+          <img src="/images/home/partners/pay-u.png" alt="partner_img" />
+          <img src="/images/home/partners/rbl.png" alt="partner_img" />
+          <img src="/images/home/partners/sai.jpg" alt="partner_img" />
+          <img src="/images/home/partners/trination.jpg" alt="partner_img" /> */}
+          </div>
+        </div>
         <div className="hr-line">
           <hr />
         </div>

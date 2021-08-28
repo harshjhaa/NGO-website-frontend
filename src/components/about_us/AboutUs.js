@@ -111,6 +111,9 @@ function AboutUs() {
           </div>
         </div>
       </div>
+      <div className="hr-line">
+        <hr />
+      </div>
       <br />
     </div>
   );

@@ -283,7 +283,7 @@ const ContactUs = ({
         <p className="title">
           For More Information on Truly Help Foundation, India, Contact -
         </p>
-        <div className="address-container text text-bold width-60-prcnt">
+        <div className="address-container text text-bold">
           TRULY HELP FOUNDATION HEAD OFFICE,
           <br />
           A-229/1, GROUND FLOOR, SHANTI COLONY,

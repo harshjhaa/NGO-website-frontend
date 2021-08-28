@@ -132,7 +132,7 @@ const NavbarBottom = () => {
               </li>
               <div className="nav-dropdown-menu">
                 <li>
-                  <Link to="/donate">SUPPORT US</Link>
+                  <Link to="/support-us">SUPPORT US</Link>
                 </li>
                 <li>
                   <Link to="/partnership">PARTNERSHIP</Link>

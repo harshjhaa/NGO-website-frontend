@@ -8,10 +8,10 @@ import "./OtherWays.scss";
 function OtherWays() {
   useEffect(() => {
     AOS.init();
-    // window.scrollTo({
-    //   top: 0,
-    //   left: 0,
-    // });
+    window.scrollTo({
+      top: 0,
+      left: 0,
+    });
     document.getElementById("get-involved-tab-id").style.color = "#0096ff";
     document.getElementById("get-involved-arrow-id").style.color = "#0096ff";
     return () => {

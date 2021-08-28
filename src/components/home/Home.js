@@ -8,8 +8,6 @@ import DonateBanner from "../common_components/donate_banner/DonateBanner";
 import Acknowledgement from "../common_components/acknowlwdgement/Acknowledgement";
 import LatestUpdates from "../common_components/latest_updates/LatestUpdates";
 
-import hungerDonateImg from "../assets/images/donate-us-container/donate-hunger.jpg";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/swiper.min.css";
@@ -31,15 +29,11 @@ const Home = () => {
     testimonialContent: "testimonialContent",
   };
 
-  const donateImgTitle = "Help us Fight Hunger in Rural Areas";
-  const donateImgDescription =
-    "Some rural residents and households are food insecure,meaning they cannot rely on access to sufficient affordable and nutritious food at all times, increasing the risk of poor health outcomes.";
-
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-    });
+    // window.scrollTo({
+    //   top: 0,
+    //   left: 0,
+    // });
     AOS.init();
     //for handelling twitter
     const anchor = document.createElement("a");
@@ -538,10 +532,16 @@ const Home = () => {
       >
         <h1 className="title">OUR PARTNERS AND SUPPORTERS</h1>
         <div className="content">
-          <img src="/images/company-1.png" alt="home_img-2" />
-          <img src="/images/company-2.jpg" alt="home_img-2" />
-          <img src="/images/company-3.png" alt="home_img-2" />
-          <img src="/images/company-4.png" alt="home_img-2" />
+          <img src="/images/home/partners/axis.png" alt="partner_img" />
+          <img src="/images/home/partners/fit-india.png" alt="partner_img" />
+          <img src="/images/home/partners/gyans.jpg" alt="partner_img" />
+          <img src="/images/home/partners/paytm.jpg" alt="partner_img" />
+        </div>
+        <div className="content">
+          <img src="/images/home/partners/pay-u.png" alt="partner_img" />
+          <img src="/images/home/partners/rbl.png" alt="partner_img" />
+          <img src="/images/home/partners/sai.jpg" alt="partner_img" />
+          <img src="/images/home/partners/trination.jpg" alt="partner_img" />
         </div>
       </div>
       <div className="hr-line">
@@ -555,18 +555,10 @@ const Home = () => {
         <h1 className="title">TESTIMONIALS</h1>
         <Slider contentName={sliderContent["testimonialContent"]} />
       </div> */}
-      <div className="hr-line">
-        <hr />
-      </div>
       <LatestUpdates />
       <div className="hr-line">
         <hr />
       </div>
-      {/* <DonateBanner
-        contentImage={hungerDonateImg}
-        title={donateImgTitle}
-        description={donateImgDescription}
-      /> */}
       <Acknowledgement />
     </div>
   );

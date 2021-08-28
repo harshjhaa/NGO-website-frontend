@@ -27,10 +27,10 @@ const Footer = () => {
             </p>
             <div className="footer-links-1">
               <ul className="footer-list">
-                <li>
+                {/* <li>
                   <Link to="/blog">Blogs</Link>
                 </li>
-                <div className="gap">|</div>
+                <div className="gap">|</div> */}
                 <li>
                   <Link to="/media">Media</Link>
                 </li>
@@ -39,10 +39,10 @@ const Footer = () => {
                   <Link to="/partnerships">Partnerships</Link>
                 </li>
                 <div className="gap">|</div>
-                <li>
+                {/* <li>
                   <Link to="/resource">Resource</Link>
                 </li>
-                <div className="gap">|</div>
+                <div className="gap">|</div> */}
                 <li>
                   <Link to="/contact-us">Contact Us</Link>
                 </li>
@@ -56,7 +56,10 @@ const Footer = () => {
               <div className="social-container display-col">
                 <p className="title">FOLLOW US</p>
                 <div className="social-icons display-row">
-                  <img className="twitter-icon-footer" src="/svg/twitter-sq-2.svg" />
+                  <img
+                    className="twitter-icon-footer"
+                    src="/svg/twitter-sq-2.svg"
+                  />
                   <a
                     className="icons icon-facebook"
                     href="https://www.facebook.com/trulyhelpfoundation"

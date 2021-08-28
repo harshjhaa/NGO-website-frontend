@@ -46,6 +46,10 @@
 .contact-us-tab,
 .partnership-tab,
 .other-ways-tab,
+.our-program-tab,
+.our-campaign-tab,
+.careers-tab,
+.support-us-tab,
 .nav-bottom-container {
   .marquee-container {
     -webkit-marquee: auto medium infinite scroll normal;
@@ -212,5 +216,34 @@
   }
   .margin-bottom-30 {
     margin-bottom: 20px;
+  }
+  form {
+    width: 60%;
+    margin: 20px auto;
+    background-color: rgb(250, 248, 243);
+    padding: 10px;
+    label,
+    .form-control {
+      border-radius: 30px;
+      background-color: #fff;
+    }
+    font-weight: 600;
+    .form-group {
+      margin: 20px 0px;
+    }
+    .mandatory-red {
+      color: red;
+    }
+    .drop-down {
+      position: relative;
+    }
+    .fa {
+      position: absolute;
+      color: #000;
+      margin-left: 10px;
+      transition: 0.3s;
+      right: 25px;
+      bottom: 9px;
+    }
   }
 }

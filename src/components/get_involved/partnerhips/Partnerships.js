@@ -25,7 +25,7 @@ function Partnerships() {
       <div className="banner">
         <img
           className="banner-img"
-          src="/images/partnership-tab/partnership-banner-1.webp"
+          src="/images/partnership-tab/partnership-banner-3.jpg"
         />
         <h1 className="banner-text">PARTNERSHIP</h1>
       </div>
@@ -80,7 +80,7 @@ function Partnerships() {
             <div className="box box-border-red">
               <div className="content">
                 <img
-                  src="/images/partnership-tab/corp-partnership-2.png"
+                  src="/images/partnership-tab/corp-partner-1.png"
                   alt="img"
                 />
                 <h4>CORPORATE PARTNERSHIP</h4>

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import AOS from "aos";
 
 import "../../CommonCSS.scss";
+import "../GetInvolvedCommonCss.scss"
 import "./SupportUs.scss";
 
 function SupportUs() {
@@ -45,7 +46,7 @@ function SupportUs() {
         data-aos="fade-up"
         data-aos-duration="1000"
       >
-        <h1 className="title">We Need Your Help</h1>
+        <h1 className="title">Support Us</h1>
         <div className="container">
           <div className="button-container">
             <div className="fellowshilp-content">
@@ -86,7 +87,7 @@ function SupportUs() {
                 Truly Help Foundation India is a registered Non-profit under
                 Section 8 of the Indian Companies Act, 2013.
               </li>
-              <li className="text">Pan No. - AAATK6911A</li>
+              <li className="text">Pan Number: AAICT6911G</li>
               <li className="text">
                 Truly Help Foundation is registered U/s 12A of Income Tax Act,
                 1961.
@@ -94,10 +95,6 @@ function SupportUs() {
               <li className="text">
                 Support Truly Help Foundation to stand up for persons with
                 intellectual and developmental challenges.
-              </li>
-              <li className="text">
-                FCRA has been applied for. For the time being, we can accept
-                donations only in Indian Rupees (INR).
               </li>
             </ul>
           </div>
@@ -107,26 +104,26 @@ function SupportUs() {
         <hr />
       </div>
       <section
-        className="bank-box-container"
+        className="box"
         data-aos="fade-up"
         data-aos-duration="1000"
       >
         <h1 className="title">Bank Account Details</h1>
         <div className="contents">
-          <div className="box">
+          <div className="box-contents">
             <img className="twitter-icon-footer" src="/svg/axis-logo-1.svg" />
             <div className="text-info">
               TRULY HELP FOUNDATION
               <br />
               AXIS BANK
               <br />
-              Branch Code -003156
+              Branch Code - 003156
               <br />
               Account Number - 921020028281887
               <br />
-              IFSC Code -UTIB0003156
+              IFSC Code - UTIB0003156
               <br />
-              MICR Code -110211192
+              MICR Code - 110211192
             </div>
           </div>
         </div>

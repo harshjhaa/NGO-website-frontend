@@ -2,8 +2,11 @@ import React, { useState, useEffect, useRef } from "react";
 import { connect } from "react-redux";
 import AOS from "aos";
 import { Link } from "react-router-dom";
+
 import "../../CommonCSS.scss";
+import "../GetInvolvedCommonCss.scss";
 import "./ContactUs.scss";
+
 import { writeToUsFormDataAdd, setInitialState } from "./ContactUs.Action";
 
 const ContactUs = ({
@@ -279,7 +282,7 @@ const ContactUs = ({
       <div className="hr-line">
         <hr />
       </div>
-      <section className="contact-address-container">
+      {/* <section className="contact-address-container">
         <p className="title">
           For More Information on Truly Help Foundation, India, Contact -
         </p>
@@ -305,11 +308,71 @@ const ContactUs = ({
             +91 8800202933
           </a>
         </div>
+      </section> */}
+
+      <section data-aos="fade-up" data-aos-duration="1000">
+        <p className="title">
+          For More Information on Truly Help Foundation, India, Contact -
+        </p>
+        <div className="box-container">
+          <div className="box">
+            <div className="contents">
+              <div className="box-contents">
+                <h1 className="title">Email</h1>
+                <div className="text-info">
+                  <a
+                    style={{ color: "red" }}
+                    href="mailto:donorsupport@trulyhelpfoundation.org"
+                  >
+                    donorsupport@trulyhelpfoundation.org
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="box">
+            <div className="contents">
+              <div className="box-contents">
+                <h1 className="title">Address</h1>
+                <div className="text-info" style={{ textAlign: "center" }}>
+                  TRULY HELP FOUNDATION HEAD OFFICE,
+                  <br />
+                  A-229/1, GROUND FLOOR,
+                  <br />
+                  SHANTI COLONY, MANDI PAHARI DELHI,
+                  <br />
+                  SOUTH WEST DELHI, DL-110047,
+                  <br />
+                  INDIA
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="box">
+            <div className="contents">
+              <div className="box-contents">
+                <h1 className="title">Contact</h1>
+                <div className="text-info">
+                  <a style={{ color: "red" }} href="tel:+918800202926">
+                    +91 8800202926
+                  </a>
+                  <br />
+                  <span style={{ textAlign: "center", display: "block" }}>
+                    OR
+                  </span>
+                  <a style={{ color: "red" }} href="tel:+918800202933">
+                    +91 8800202933
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <div className="hr-line">
         <hr />
       </div>
-      <p className="text text-bold width-60-prcnt">
+      <p className="text text-bold">
         <Link style={{ color: "red" }} to="thf-fellowship">
           Click here
         </Link>{" "}

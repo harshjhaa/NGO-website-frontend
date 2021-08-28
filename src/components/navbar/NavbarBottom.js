@@ -135,7 +135,7 @@ const NavbarBottom = () => {
                   <Link to="/support-us">SUPPORT US</Link>
                 </li>
                 <li>
-                  <Link to="/partnership">PARTNERSHIP</Link>
+                  <Link to="/partnerships">PARTNERSHIP</Link>
                 </li>
                 <li>
                   <Link to="/other-ways-to-help">OTHER WAYS TO HELP</Link>
@@ -223,6 +223,7 @@ const NavbarBottom = () => {
         direction="left"
         scrollamount="5"
         behavior="scroll"
+        id="top-marquee"
       >
         <p>
           Truly Help Foundation is a registered Non-profit organization under

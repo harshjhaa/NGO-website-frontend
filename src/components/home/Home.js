@@ -22,6 +22,7 @@ import "./Home.scss";
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper/core";
 // install Swiper modules
 SwiperCore.use([Autoplay, Pagination, Navigation]);
+
 const Home = () => {
   const sliderContent = {
     topBannerContent: "topBannerContent",
@@ -47,6 +48,51 @@ const Home = () => {
     script.setAttribute("src", "https://platform.twitter.com/widgets.js");
     document.getElementsByClassName("twitter-embed")[0].appendChild(script);
   }, []);
+
+  // const causesWeAreServingSwiperData = [
+  //   {
+  //     title: "Education",
+  //     description:
+  //       "Education is one of the main piller of the society, without it India's future is lost!",
+  //     link: "/education",
+  //     imgSrc: "/gif/edu-2.gif",
+  //   },
+  //   {
+  //     title: "HEALTHCARE",
+  //     description:
+  //       "Good health makes people strong, increaes thier efficient and inturn benefits society!",
+  //     link: "/healthcare",
+  //     imgSrc: "/gif/health-5.gif",
+  //   },
+  //   {
+  //     title: "LIVELIHOODS",
+  //     description:
+  //       "Imporvement in the livelihood lead to the upgradation of the standard of living!",
+  //     link: "/livelihoods",
+  //     imgSrc: "/gif/liveli-4.gif",
+  //   },
+  //   {
+  //     title: "HUMANITARIAN",
+  //     description:
+  //       "Human wlfare is one of the important factor in keeping the society balanced, evolving from time to time!",
+  //     link: "/humanitarian",
+  //     imgSrc: "/gif/human-2.gif",
+  //   },
+  //   {
+  //     title: "SPORTS",
+  //     description:
+  //       "Sports helps to evolve the overall mentality of the person by making them active, alert and friendly!",
+  //     link: "/sports",
+  //     imgSrc: "/gif/sports-2.gif",
+  //   },
+  //   {
+  //     title: "Education",
+  //     description:
+  //       "Education is one of the main piller of the society, without it India's future is lost!",
+  //     link: "/education",
+  //     imgSrc: "/gif/edu-2.gif",
+  //   },
+  // ];
 
   return (
     <div className="home-tab">
@@ -89,6 +135,10 @@ const Home = () => {
           className="causes-we-are-serving-contents"
           style={{ position: "relative" }}
         >
+          {/* <SwiperComp
+            name={"CausesWeAreServing"}
+            data={causesWeAreServingSwiperData}
+          /> */}
           <Swiper
             slidesPerView={3}
             spaceBetween={30}
@@ -532,7 +582,75 @@ const Home = () => {
       >
         <h1 className="title">OUR PARTNERS AND SUPPORTERS</h1>
         <div className="content">
-          <img src="/images/home/partners/axis.png" alt="partner_img" />
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={30}
+            slidesPerGroup={3}
+            breakpoints={{
+              960: {
+                slidesPerView: 3,
+                spaceBetween: 8,
+                slidesPerGroup: 3,
+              },
+              720: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+                slidesPerGroup: 2,
+              },
+              540: {
+                slidesPerView: 1,
+                spaceBetween: 2,
+                slidesPerGroup: 1,
+              },
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 2,
+                slidesPerGroup: 1,
+              },
+            }}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <img src="/images/home/partners/axis.png" alt="partner_img" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="/images/home/partners/fit-india.png"
+                alt="partner_img"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="/images/home/partners/gyans.jpg" alt="partner_img" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="/images/home/partners/paytm.jpg" alt="partner_img" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="/images/home/partners/pay-u.png" alt="partner_img" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="/images/home/partners/rbl.png" alt="partner_img" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="/images/home/partners/sai.jpg" alt="partner_img" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="/images/home/partners/trination.jpg"
+                alt="partner_img"
+              />
+            </SwiperSlide>
+          </Swiper>
+          {/* <img src="/images/home/partners/axis.png" alt="partner_img" />
           <img src="/images/home/partners/fit-india.png" alt="partner_img" />
           <img src="/images/home/partners/gyans.jpg" alt="partner_img" />
           <img src="/images/home/partners/paytm.jpg" alt="partner_img" />
@@ -541,7 +659,7 @@ const Home = () => {
           <img src="/images/home/partners/pay-u.png" alt="partner_img" />
           <img src="/images/home/partners/rbl.png" alt="partner_img" />
           <img src="/images/home/partners/sai.jpg" alt="partner_img" />
-          <img src="/images/home/partners/trination.jpg" alt="partner_img" />
+          <img src="/images/home/partners/trination.jpg" alt="partner_img" /> */}
         </div>
       </div>
       <div className="hr-line">

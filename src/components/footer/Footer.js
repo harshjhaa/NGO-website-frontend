@@ -11,7 +11,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <div>
+    <div className="footer-tab">
       <div className="footer-container">
         <div className="footer-logo">
           <img
@@ -163,10 +163,13 @@ const Footer = () => {
       <div className="footer-bottom">
         <ul className="footer-bottom-list">
           <li>
-            <Link to="/copyright">
-              © Copyright 2021 Truly Help Foundation All Rights Reserved Terms &
-              Conditions
+            <Link className="no-cursor-pointer">
+              © Copyright 2021 Truly Help Foundation All Rights Reserved
             </Link>
+          </li>
+          <div className="gap">|</div>
+          <li>
+            <Link to="/terms-and-conditions">Terms & Conditions</Link>
           </li>
           <div className="gap">|</div>
           <li>

@@ -49,6 +49,7 @@ import OurCampaigns from "./components/get_involved/our_campaigns/OurCampaigns";
 import Events from "./components/get_involved/events/Events";
 import Careers from "./components/get_involved/careers/Careers";
 import ContactUs from "./components/get_involved/contact/ContactUs";
+import SupportUs from "./components/get_involved/support_us/SupportUs";
 
 //Footer Tabs
 import Footer from "./components/footer/Footer";
@@ -102,6 +103,7 @@ function App() {
             <Route path="/events" component={Events} />
             <Route path="/careers" component={Careers} />
             <Route path="/contact-us" component={ContactUs} />
+            <Route path="/support-us" component={SupportUs} />
             {/* footer-links */}
             <Route path="/blog" component={Blog} />
             <Route path="/protection-policy" component={ProtectionPolicy} />
